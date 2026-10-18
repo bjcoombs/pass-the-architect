@@ -1,0 +1,38 @@
+{
+  "version": "1.2.0",
+  "title": "Claude Code configuration",
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "In this episode"
+    },
+    {
+      "startTime": 59.49,
+      "title": "Cold open: test conventions"
+    },
+    {
+      "startTime": 554.05,
+      "title": "Segment two: commands and skills"
+    },
+    {
+      "startTime": 891.77,
+      "title": "Segment three: path-specific rules"
+    },
+    {
+      "startTime": 1095.19,
+      "title": "Segment four: MCP in Claude Code"
+    },
+    {
+      "startTime": 1414.84,
+      "title": "Cold open: the verdict"
+    },
+    {
+      "startTime": 1471.82,
+      "title": "Five to remember"
+    },
+    {
+      "startTime": 1552.15,
+      "title": "Recap: the exam tells"
+    }
+  ]
+}

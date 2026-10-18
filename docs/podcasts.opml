@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="2.0">
+  <head>
+    <title>Pass the Architect</title>
+  </head>
+  <body>
+    <outline type="rss" text="Pass the Architect: CCAR-P" title="Pass the Architect: CCAR-P" xmlUrl="https://bjcoombs.github.io/pass-the-architect/ccar-p.xml" htmlUrl="https://bjcoombs.github.io/pass-the-architect/"/>
+    <outline type="rss" text="Pass the Architect: CCAR-F retake" title="Pass the Architect: CCAR-F retake" xmlUrl="https://bjcoombs.github.io/pass-the-architect/ccar-f-retake.xml" htmlUrl="https://bjcoombs.github.io/pass-the-architect/"/>
+  </body>
+</opml>

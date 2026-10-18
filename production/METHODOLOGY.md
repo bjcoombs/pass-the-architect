@@ -12,7 +12,7 @@ Each series is built for one listener sitting one exam on a fixed date. Every ep
 |---|---|---|
 | Official exam guide (PDF) | Domains, weights, task statements and sample items. Together they show what the answer key rewards. | Convert with `pdftotext -layout` and keep the text local, because it is the vendor's document. |
 | Prep course material | Written against the same blueprint as the exam items; the primary source for facts | Cited by path in the series bible |
-| Listener profile | Score-report gaps and miss patterns, used to personalise drills and pushback | `listener-profile.md`, kept local; its structure is in `listener-profile.template.md` |
+| Listener profile | Score-report gaps and miss patterns, used to personalise drills and pushback | `~/.cache/pass-the-architect/listener-profile.md`, kept outside the repository; its structure is in `listener-profile.template.md` |
 | A grounding knowledge base | Used to check every flag, file name and API value before it is spoken | Cited in the bible |
 
 ## Steps
@@ -56,7 +56,7 @@ The full rules are in `SERIES.md`.
 
 - **Model and voices:** ElevenLabs `eleven_turbo_v2_5`, with George for ALEX and Alice for SAM, both British.
 - **Cost:** about 0.2 credits per character in practice, so a 20-minute episode of about 20,000 characters costs about 4,000 credits.
-- **Caching:** each turn is one request, sent with the neighbouring turns as context. Results are cached in `.tts-cache/`, which is not committed. A rerender reuses the cache, so editing a turn pays only for that turn.
+- **Caching:** each turn is one request, sent with the neighbouring turns as context. Results are cached in `~/.cache/pass-the-architect/tts-cache/`, outside the repository so it survives worktree cleanup. A rerender reuses the cache, so editing a turn pays only for that turn.
 - **Spend cap:** `tools/render.py --dry-run` prints the characters a render would bill. A real render refuses to bill more than `--budget` characters (default 0), so every spend has to be asked for.
 - **Pronunciation:** mispronounced words are fixed in `PRONUNCIATIONS` in `render.py`, as respellings used only for speech, such as "re-tries" and "ee-vals". The transcripts keep the real spelling. Test a fix on a short sample, run it back through speech-to-text, and only then rerender whole episodes.
 - **Music:** the intro, sting and outro were generated once with ElevenLabs music and sound effects. They are normalised to -24 LUFS mono (`music/*-norm.mp3`) so they sit under speech, which is about -23 LUFS.

@@ -1,0 +1,42 @@
+{
+  "version": "1.2.0",
+  "title": "The six scenarios",
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "In this episode"
+    },
+    {
+      "startTime": 61.61,
+      "title": "The frame and customer support"
+    },
+    {
+      "startTime": 390.8,
+      "title": "Scenario two: code generation"
+    },
+    {
+      "startTime": 625.91,
+      "title": "Scenario three: multi-agent research"
+    },
+    {
+      "startTime": 871.57,
+      "title": "Scenario four: developer productivity"
+    },
+    {
+      "startTime": 1110.31,
+      "title": "Scenario five: continuous integration"
+    },
+    {
+      "startTime": 1325.31,
+      "title": "Scenario six: structured extraction"
+    },
+    {
+      "startTime": 1559.59,
+      "title": "Patterns across scenarios"
+    },
+    {
+      "startTime": 1661.98,
+      "title": "Recap: the exam tells"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "version": "1.2.0",
+  "title": "Evaluation, Testing & Optimization",
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "In this episode"
+    },
+    {
+      "startTime": 64.32,
+      "title": "Cold open: the passing suite"
+    },
+    {
+      "startTime": 600.75,
+      "title": "Suite pitfalls and A/B tests"
+    },
+    {
+      "startTime": 913.13,
+      "title": "Diagnosing failures"
+    },
+    {
+      "startTime": 1154.07,
+      "title": "Optimization and cost"
+    },
+    {
+      "startTime": 1408.95,
+      "title": "Monitoring in production"
+    },
+    {
+      "startTime": 1638.52,
+      "title": "Five to remember"
+    },
+    {
+      "startTime": 1706.81,
+      "title": "Recap: the exam tells"
+    }
+  ]
+}

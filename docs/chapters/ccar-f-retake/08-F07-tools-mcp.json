@@ -1,0 +1,38 @@
+{
+  "version": "1.2.0",
+  "title": "Tool design and built-in tools",
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "In this episode"
+    },
+    {
+      "startTime": 67.32,
+      "title": "Cold open: the unused index tool"
+    },
+    {
+      "startTime": 464.97,
+      "title": "Segment two: tool error design"
+    },
+    {
+      "startTime": 885.37,
+      "title": "Segment three: tool count and scope"
+    },
+    {
+      "startTime": 1146.04,
+      "title": "Segment four: built-in tools"
+    },
+    {
+      "startTime": 1358.87,
+      "title": "Cold open: the verdict"
+    },
+    {
+      "startTime": 1423.05,
+      "title": "Five to remember"
+    },
+    {
+      "startTime": 1490.65,
+      "title": "Recap: the exam tells"
+    }
+  ]
+}

@@ -3,5 +3,4 @@ production/foundations/audio/
 production/.tts-cache/
 production/dist/
 .DS_Store
-production/listener-profile.md
 __pycache__/

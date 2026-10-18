@@ -1,6 +1,6 @@
 # Listener profile (template)
 
-The real profile lives beside this file as `listener-profile.md` and is not committed. Writers read it to personalise drills and pushback. Fill in what you have; a previous score report is the most useful input.
+The real profile lives at `~/.cache/pass-the-architect/listener-profile.md`, outside the repository. Writers read it to personalise drills and pushback. Fill in what you have; a previous score report is the most useful input.
 
 Exam: <exam code and name>, <date, time>, <test centre or online>.
 

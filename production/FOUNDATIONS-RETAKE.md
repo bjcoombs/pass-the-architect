@@ -47,7 +47,7 @@ Listening order: F00, 10, F04, F05, F06, F01, F02, F03, F07, F08, 11, F09, then 
 ## Sources (paths relative to `~/dev/github.com/forgd-ai/`, private forgd repositories)
 
 - Official exam guide text: the official exam guide PDF converted with pdftotext (`f-guide.txt`, not committed: Anthropic's document). Authoritative for task statements, scenarios, sample questions (section 9) and preparation exercises (section 8). Sample questions may be discussed in F00 only; all other drills are original.
-- Listener profile (gap table, miss patterns, exam interface): `production/listener-profile.md` (local only, not committed; see `listener-profile.template.md`).
+- Listener profile (gap table, miss patterns, exam interface): `~/.cache/pass-the-architect/listener-profile.md`, kept outside the repository (structure in `listener-profile.template.md`).
 - `cca-f-study-pack/cca-f-study-pack-main/`: exam domains, technical and blind-spot guides, anti-patterns, scenario coverage map.
 - `ccf-a-exam-app/ccf-a-exam-app-main/app/questions.json`: 186 domain-tagged questions with explanations, for scenario shapes.
 - `cca-f-study-examples/cca-f-study-examples-main/`: runnable examples per topic.

@@ -1,0 +1,42 @@
+{
+  "version": "1.2.0",
+  "title": "Closing the Foundations Gaps",
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "In this episode"
+    },
+    {
+      "startTime": 72.24,
+      "title": "Cold open: refund before lookup"
+    },
+    {
+      "startTime": 375.25,
+      "title": "Segment two: configuration scope"
+    },
+    {
+      "startTime": 624.46,
+      "title": "Segment three: tool descriptions"
+    },
+    {
+      "startTime": 892.55,
+      "title": "Segment four: the agentic loop"
+    },
+    {
+      "startTime": 1035.98,
+      "title": "Segment five: extraction"
+    },
+    {
+      "startTime": 1418.4,
+      "title": "Segment six: refinement and resumption"
+    },
+    {
+      "startTime": 1567.07,
+      "title": "Five to remember"
+    },
+    {
+      "startTime": 1636.99,
+      "title": "Recap: the exam tells"
+    }
+  ]
+}

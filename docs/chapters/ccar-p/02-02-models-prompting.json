@@ -1,0 +1,38 @@
+{
+  "version": "1.2.0",
+  "title": "Models, Prompting & Context Engineering",
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "In this episode"
+    },
+    {
+      "startTime": 64.23,
+      "title": "Cold open: the claims pipeline"
+    },
+    {
+      "startTime": 565.7,
+      "title": "System prompts and guardrails"
+    },
+    {
+      "startTime": 766.83,
+      "title": "Choosing a prompting technique"
+    },
+    {
+      "startTime": 996.42,
+      "title": "Context windows and tokens"
+    },
+    {
+      "startTime": 1187.76,
+      "title": "Prompt reuse and caching"
+    },
+    {
+      "startTime": 1496.78,
+      "title": "Five to remember"
+    },
+    {
+      "startTime": 1555.6,
+      "title": "Recap: the exam tells"
+    }
+  ]
+}

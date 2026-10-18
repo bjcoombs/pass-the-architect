@@ -1,0 +1,38 @@
+{
+  "version": "1.2.0",
+  "title": "Solution Design & Architecture",
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "In this episode"
+    },
+    {
+      "startTime": 65.44,
+      "title": "Cold open: card disputes"
+    },
+    {
+      "startTime": 480.39,
+      "title": "Choosing a pattern"
+    },
+    {
+      "startTime": 837.21,
+      "title": "Multi-agent systems"
+    },
+    {
+      "startTime": 1150.24,
+      "title": "Business value"
+    },
+    {
+      "startTime": 1257.56,
+      "title": "Cold open: the verdict"
+    },
+    {
+      "startTime": 1324.92,
+      "title": "Five to remember"
+    },
+    {
+      "startTime": 1385.09,
+      "title": "Recap: the exam tells"
+    }
+  ]
+}

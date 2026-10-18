@@ -1,0 +1,38 @@
+{
+  "version": "1.2.0",
+  "title": "Context, review and provenance",
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "In this episode"
+    },
+    {
+      "startTime": 65.41,
+      "title": "Cold open: the uncited statistic"
+    },
+    {
+      "startTime": 548.66,
+      "title": "Segment two: context degradation"
+    },
+    {
+      "startTime": 831.52,
+      "title": "Segment three: aggregate accuracy"
+    },
+    {
+      "startTime": 1118.09,
+      "title": "Segment four: provenance"
+    },
+    {
+      "startTime": 1374.95,
+      "title": "Cold open: the verdict"
+    },
+    {
+      "startTime": 1445.67,
+      "title": "Five to remember"
+    },
+    {
+      "startTime": 1513.09,
+      "title": "Recap: the exam tells"
+    }
+  ]
+}

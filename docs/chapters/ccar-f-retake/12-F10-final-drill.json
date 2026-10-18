@@ -1,0 +1,38 @@
+{
+  "version": "1.2.0",
+  "title": "Foundations final drill",
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "In this episode"
+    },
+    {
+      "startTime": 65.83,
+      "title": "Drill: agentic architecture"
+    },
+    {
+      "startTime": 313.74,
+      "title": "Drill: Claude Code configuration"
+    },
+    {
+      "startTime": 541.21,
+      "title": "Drill: prompts and structured output"
+    },
+    {
+      "startTime": 745.82,
+      "title": "Drill: tool design and MCP"
+    },
+    {
+      "startTime": 965.36,
+      "title": "Drill: context and reliability"
+    },
+    {
+      "startTime": 1136.44,
+      "title": "The anti-patterns"
+    },
+    {
+      "startTime": 1432.94,
+      "title": "Exam day logistics"
+    }
+  ]
+}
