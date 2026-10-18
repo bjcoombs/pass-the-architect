@@ -1,0 +1,38 @@
+{
+  "version": "1.2.0",
+  "title": "Integration I: protocols, capability bloat, identity and auth, progressive discovery",
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "In this episode"
+    },
+    {
+      "startTime": 67.25,
+      "title": "Cold open: the HR assistant"
+    },
+    {
+      "startTime": 472.24,
+      "title": "Authentication and authorization"
+    },
+    {
+      "startTime": 840.13,
+      "title": "Connection mechanisms"
+    },
+    {
+      "startTime": 1083.75,
+      "title": "Progressive discovery"
+    },
+    {
+      "startTime": 1295.07,
+      "title": "Cold open: the verdict"
+    },
+    {
+      "startTime": 1344.46,
+      "title": "Five to remember"
+    },
+    {
+      "startTime": 1417.12,
+      "title": "Recap: the exam tells"
+    }
+  ]
+}

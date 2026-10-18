@@ -232,7 +232,8 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("transcripts", nargs="+", type=pathlib.Path)
     ap.add_argument("--out", type=pathlib.Path, help="default: audio/ beside the transcripts folder")
-    ap.add_argument("--cache", type=pathlib.Path, default=MUSIC.parent / ".tts-cache")
+    # Outside the checkout so it survives worktree cleanup; without it every rerender is billed in full.
+    ap.add_argument("--cache", type=pathlib.Path, default=pathlib.Path.home() / ".cache/pass-the-architect/tts-cache")
     ap.add_argument("--dry-run", action="store_true", help="report characters to be billed; call no API")
     ap.add_argument("--budget", type=int, default=0, help="maximum characters this run may bill (default 0)")
     ap.add_argument("--limit", type=int, default=0, help="render only the first N turns (sample)")

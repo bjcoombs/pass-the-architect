@@ -1,0 +1,38 @@
+{
+  "version": "1.2.0",
+  "title": "Stakeholder Communication & Lifecycle Management",
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "In this episode"
+    },
+    {
+      "startTime": 69.41,
+      "title": "Cold open: the go-live date"
+    },
+    {
+      "startTime": 582.06,
+      "title": "Communicating tradeoffs"
+    },
+    {
+      "startTime": 870.69,
+      "title": "Feedback loops and SLAs"
+    },
+    {
+      "startTime": 1147.7,
+      "title": "Documentation for handoff"
+    },
+    {
+      "startTime": 1329.88,
+      "title": "Supporting the lifecycle"
+    },
+    {
+      "startTime": 1529.47,
+      "title": "Five to remember"
+    },
+    {
+      "startTime": 1604.83,
+      "title": "Recap: the exam tells"
+    }
+  ]
+}

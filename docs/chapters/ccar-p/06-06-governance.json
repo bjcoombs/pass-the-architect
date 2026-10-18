@@ -1,0 +1,38 @@
+{
+  "version": "1.2.0",
+  "title": "Governance, Safety & Risk Management",
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "In this episode"
+    },
+    {
+      "startTime": 68.9,
+      "title": "Cold open: regional claims access"
+    },
+    {
+      "startTime": 364.84,
+      "title": "Guardrails and control points"
+    },
+    {
+      "startTime": 726.87,
+      "title": "Risks and human review"
+    },
+    {
+      "startTime": 1087.32,
+      "title": "Compliance obligations"
+    },
+    {
+      "startTime": 1319.05,
+      "title": "Bias, fairness and transparency"
+    },
+    {
+      "startTime": 1513.54,
+      "title": "Five to remember"
+    },
+    {
+      "startTime": 1572.32,
+      "title": "Recap: the exam tells"
+    }
+  ]
+}

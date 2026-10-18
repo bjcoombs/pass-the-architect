@@ -2,7 +2,7 @@
 
 You are revising one existing transcript of a CCAR-P exam-prep podcast. The listener sits the exam Tuesday 2026-10-20 at 09:00 and failed Foundations partly because real-world instinct overrode the exam's preferred answer. The episode currently reads as tutor and student: SAM explains, ALEX prompts. Make it a genuine two-way conversation where the gotchas get argued out.
 
-Read first: the series bible (production/SERIES.md) and the listener profile (`production/listener-profile.md`, kept local; the shape is in `listener-profile.template.md`), then the transcript you are revising, in full.
+Read first: the series bible (production/SERIES.md) and the listener profile (`~/.cache/pass-the-architect/listener-profile.md`, kept outside the repository; the shape is in `listener-profile.template.md`), then the transcript you are revising, in full.
 
 Add five to seven pushback exchanges, spread across the episode, at the points where a distractor is most tempting. Each exchange runs three to six short turns:
 1. ALEX pushes back with a credible practitioner argument: "in real life I'd...", "isn't that overkill?", "my last client did X and it was fine", "why not just use the bigger model / add logging / add a confirmation?". Make the argument strong. No straw men.

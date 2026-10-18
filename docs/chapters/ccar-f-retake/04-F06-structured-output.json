@@ -1,0 +1,42 @@
+{
+  "version": "1.2.0",
+  "title": "Prompts and structured output",
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "In this episode"
+    },
+    {
+      "startTime": 70.43,
+      "title": "Cold open: invoice payment terms"
+    },
+    {
+      "startTime": 400.13,
+      "title": "Segment two: few-shot examples"
+    },
+    {
+      "startTime": 645.75,
+      "title": "Segment three: structured output"
+    },
+    {
+      "startTime": 984.91,
+      "title": "Segment four: validation and retry"
+    },
+    {
+      "startTime": 1256.58,
+      "title": "Segment five: batch processing"
+    },
+    {
+      "startTime": 1461.74,
+      "title": "Segment six: multi-pass review"
+    },
+    {
+      "startTime": 1680.82,
+      "title": "Five to remember"
+    },
+    {
+      "startTime": 1775.92,
+      "title": "Recap: the exam tells"
+    }
+  ]
+}

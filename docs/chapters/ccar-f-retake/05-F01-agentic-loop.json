@@ -1,0 +1,42 @@
+{
+  "version": "1.2.0",
+  "title": "The agentic loop and enforced workflows",
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "In this episode"
+    },
+    {
+      "startTime": 64.14,
+      "title": "Cold open: the narrating agent"
+    },
+    {
+      "startTime": 334.68,
+      "title": "Segment two: returning tool results"
+    },
+    {
+      "startTime": 533.94,
+      "title": "Segment three: who decides next"
+    },
+    {
+      "startTime": 790.21,
+      "title": "Segment four: enforced prerequisites"
+    },
+    {
+      "startTime": 1011.04,
+      "title": "Segment five: multi-agent errors"
+    },
+    {
+      "startTime": 1297.97,
+      "title": "Cold open: the verdict"
+    },
+    {
+      "startTime": 1368.22,
+      "title": "Five to remember"
+    },
+    {
+      "startTime": 1441.34,
+      "title": "Recap: the exam tells"
+    }
+  ]
+}
