@@ -446,5 +446,68 @@
       "prompt": "Name the five domains with their weights, and the miss pattern you hit most tonight.",
       "answer": "Agentic Architecture 27%, Claude Code Configuration 20%, Prompt Engineering 20%, Tool Design 18%, Context 15%."
     }
-  ]
+  ],
+  "segments": {
+    "In this episode": [
+      "About 40 quick items across all 5 domains, in blueprint order",
+      "Every item set in one of the 6 scenarios",
+      "Spot the guide's own anti-patterns on sight",
+      "What happens on exam day, at the desk and on the screen"
+    ],
+    "Drill: agentic architecture": [
+      "27% of the paper, 10 items; tally misses by domain",
+      "Loop control and stop reasons; choose-two on loop anti-patterns",
+      "Spawning subagents, passing context, parallel Task calls",
+      "Refund threshold enforcement; mixed timestamp formats",
+      "Prompt chain vs dynamic decomposition for legacy tests",
+      "Resuming after changed files; comparing two approaches"
+    ],
+    "Drill: Claude Code configuration": [
+      "20% of the paper, 9 items",
+      "Conventions missing for a new hire; tests after every edit",
+      "Protecting a generated folder; Terraform-only conventions",
+      "A NOT question on path-scoped rules; skill frontmatter fields",
+      "Plan mode vs direct; interacting fixes in a migration script",
+      "CI findings posted as inline comments"
+    ],
+    "Drill: prompts and structured output": [
+      "20% of the paper, 7 items",
+      "False positives that won't move; dismissed naming suggestions",
+      "Drifting comment format",
+      "Invented clauses and unlisted contract types",
+      "Line items that don't add up; which failures a retry fixes",
+      "Batch failures and submission frequency for a 30-hour deadline"
+    ],
+    "Drill: tool design and MCP": [
+      "18% of the paper, 7 items",
+      "tool_choice with unknown document types; a tool that must run first",
+      "Near-identical tool descriptions; Grep preferred over an MCP tool",
+      "Subagent timeouts; a refund outside the return window",
+      "Shared vs experimental MCP servers"
+    ],
+    "Drill: context and reliability": [
+      "15% of the paper, 6 items",
+      "Refund details lost to summarisation",
+      "Which situations escalate now; handoff without a transcript",
+      "Two credible sources with different market sizes",
+      "\"Typical patterns\" hours into exploration",
+      "97% overall accuracy and dropping human review"
+    ],
+    "The anti-patterns": [
+      "Loop ended by text or iteration cap; business rule as prompt instruction",
+      "\"Operation failed\" or empty-as-success; whole workflow ended on one failure",
+      "Escalating on sentiment or confidence; guessing among customer matches",
+      "Self-review; bigger model for uneven review; blocking check in Batches API",
+      "Retrying absent data; 18 tools per agent; team config at home, secrets shared",
+      "Picking one conflicting figure, dropping sources; invented flags or files"
+    ],
+    "Exam day logistics": [
+      "Government photo ID with the name matching registration exactly",
+      "Clear desk: no phones, watches, headphones, notes; stay in webcam view",
+      "Arrive on time; accept the confidentiality agreement",
+      "Checkpoints: 20 by 37 min, 40 by 73, 60 by 110; flag past 2 minutes",
+      "Review button for flagged items; leave nothing blank; eat and drink first",
+      "Morning: anti-patterns and weakest domain only, then stop studying"
+    ]
+  }
 }

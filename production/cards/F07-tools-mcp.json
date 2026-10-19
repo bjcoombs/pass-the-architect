@@ -125,5 +125,70 @@
       "prompt": "Name the four things this episode covered, with the giveaway for each.",
       "answer": "Tool descriptions (\"similar tools\" plus misrouting); error responses (refusal vs outage); tools per agent and tool choice (\"frequently\", text not a tool call); built-in tools (\"non-unique\")."
     }
-  ]
+  ],
+  "segments": {
+    "In this episode": [
+      "Tool descriptions that win the model's choice",
+      "When to split one tool or rename two that overlap",
+      "Errors that tell the agent to retry, fix input or explain",
+      "How many tools per agent; tool_choice auto, any or named",
+      "The right built-in tool: Grep, Glob, Read, Write or Edit"
+    ],
+    "Cold open: the unused index tool": [
+      "Agent never calls the code-index MCP tool; prompt says \"use grep\"",
+      "Task statements 2.1, 2.2, 2.3 and 2.5 in an 18% domain",
+      "Description is the main thing the model uses to pick a tool",
+      "Good description: purpose, input format, returns, examples, edge cases, boundary",
+      "Keyword-sensitive system prompt lines can override good descriptions",
+      "Split multi-job tools; merge or rename tools that overlap"
+    ],
+    "Segment two: tool error design": [
+      "\"Operation failed\" gives the agent nothing to recover from",
+      "MCP isError flag marks a failure as a failure, not data",
+      "Categories: transient, validation, business, permission",
+      "Structure: category, isRetryable boolean, human-readable description",
+      "Business violations: retriable false plus a customer-friendly explanation",
+      "Subagents retry locally; access failure is not an empty result"
+    ],
+    "Segment three: tool count and scope": [
+      "18 tools pick less reliably than 4 or 5",
+      "Tools outside an agent's role tend to get used",
+      "\"Frequently\": one narrow cross-role tool such as verify_fact",
+      "Swap generic tools for constrained ones: fetch_url to load_document",
+      "tool_choice auto, any, forced named tool; the API also has none",
+      "Force the first step only, then back to auto; cross-conversation order in code"
+    ],
+    "Segment four: built-in tools": [
+      "Glob finds files by path; Grep finds text inside them",
+      "Read and Write whole files; Edit replaces a unique anchor",
+      "Non-unique anchor: Read the file, then Write it back",
+      "Dedicated tools beat Bash for plain searches",
+      "Build understanding step by step: Grep entry points, Read imports",
+      "Wrapper modules: list every exported name, then search for each"
+    ],
+    "Cold open: the verdict": [
+      "Answer: B, drop the keyword instruction and expand the description",
+      "Fixes both causes: keyword override and a thin description",
+      "Removing Grep loses the right tool for local searches",
+      "Routing classifier is over-engineering",
+      "Forcing one tool every turn blocks Grep, Read and everything else"
+    ],
+    "Five to remember": [
+      "The description is how the model chooses: input format, examples, edge cases, when vs neighbours",
+      "Split multi-job tools, rename overlapping ones, check the prompt for overriding keywords",
+      "Errors flagged as errors with category, isRetryable and a readable message; business: retriable false",
+      "Empty result is success, access failure is not; subagents retry transient errors locally",
+      "4-5 scoped tools per agent; any, forced, then auto; Glob files, Grep text; Edit fails, Read then Write"
+    ],
+    "Recap: the exam tells": [
+      "If near-identical descriptions cause misrouting, rewrite or rename the tools",
+      "If the prompt says \"whenever... use grep\", a keyword instruction overrides descriptions",
+      "If the agent retries a policy refusal, isError, business category, retriable false",
+      "If an access failure comes back as an empty list, it is an error, not success",
+      "If every timeout goes up and the search restarts, retry locally, pass up partial results",
+      "If one agent holds 18 tools, scope to 4 or 5; \"frequently\" means one narrow tool",
+      "If exactly one tool call is needed and text comes back, tool_choice any",
+      "If \"every test file\", Glob; \"every caller\", Grep; no unique match, Read then Write"
+    ]
+  }
 }

@@ -14,7 +14,9 @@
         "C": "Output classifier that flags claim numbers from other regions",
         "D": "Move to a larger model with stronger safety training"
       },
-      "correct": ["B"],
+      "correct": [
+        "B"
+      ],
       "why": "A system prompt steers but does not enforce. A deterministic check on server-injected identity removes the risk at its root: the forbidden record never reaches the context."
     },
     {
@@ -32,7 +34,10 @@
         "D": "A second toxicity judge from a different vendor on the output",
         "E": "Weekly sampled review of credit transactions"
       },
-      "correct": ["A", "B"],
+      "correct": [
+        "A",
+        "B"
+      ],
       "why": "A puts a provable gate in front of the only side effect. B covers indirect injection, the dominant vector the design ignores. C is a probabilistic fix for a deterministic need."
     },
     {
@@ -49,7 +54,9 @@
         "C": "Route by confidence alone, threshold set low enough to fit 40 items",
         "D": "Post-action audit of all part orders"
       },
-      "correct": ["B"],
+      "correct": [
+        "B"
+      ],
       "why": "Stakes drive routing, confidence sets the volume. A ignores stakes, C sets the threshold by queue size, D catches the bad order after the money is spent."
     },
     {
@@ -66,7 +73,9 @@
         "C": "System prompt instruction to treat all applicants equally",
         "D": "Publish the overall approval rate"
       },
-      "correct": ["B"],
+      "correct": [
+        "B"
+      ],
       "why": "Only B lets anyone reconstruct a decision or rule out a source. A outsources a corpus problem, C is an instruction without evidence, D hides subgroup harm."
     },
     {
@@ -76,5 +85,72 @@
       "prompt": "Name the five task statements from today, and the giveaway in a stem that points to each one.",
       "answer": "Guardrails, risks and failure modes, human in the loop, compliance, bias and fairness. Giveaways: side-effect tool, poisoned document, reviewer capacity, named regulation, one group doing worse."
     }
-  ]
+  ],
+  "segments": {
+    "In this episode": [
+      "The 4 layers of the safety stack and who owns each",
+      "Placing a guardrail and choosing which way it fails",
+      "Walking entry points to find uncovered risks",
+      "Routing human review by stakes",
+      "Regulation to control, owner and evidence artifact",
+      "Tracing an unfair outcome to where it entered"
+    ],
+    "Cold open: regional claims access": [
+      "14% of the exam, about 9 items, 5 task statements",
+      "Stack: trained behaviour, system prompt, runtime screening, authorization",
+      "Anthropic owns 1 layer of 4; the architect owns the other 3",
+      "Trained refusals cannot enforce a rule only your organisation has",
+      "Broad harm is already covered: skip duplicate controls",
+      "Tell: an org-specific rule means the safety-training option loses"
+    ],
+    "Guardrails and control points": [
+      "3 control points: input screening, output screening, tool-call authorization",
+      "Output screening judges words, not actions",
+      "Interpreted intent: model-based; crisp rules and authorization: deterministic",
+      "Indirect injection: screen retrieved content and tool outputs too",
+      "Your own guardrails fail closed and log every blocked gate",
+      "Anthropic's built-in safety controls are not yours to set"
+    ],
+    "Risks and human review": [
+      "5 risks: direct and indirect injection, budget exhaustion, tool abuse, data exposure",
+      "Walk every entry point; the risk assessment is a written deliverable",
+      "Third-party Skills: supply-chain risk to audit, sandbox and source from a registry",
+      "Stakes: reversibility and cost; confidence helps only when calibrated",
+      "Placements: pre-action approval, post-action audit, sampled review",
+      "Blanket review fails on volume and context; show inputs, output, flag reason"
+    ],
+    "Compliance obligations": [
+      "Each obligation: technical control, named owner, evidence artifact",
+      "HIPAA: signed BAA plus the right configuration and eligible features",
+      "FedRAMP: a route authorized at or above the workload's impact level",
+      "GDPR alone does not require EU residency",
+      "Residency covers every copy: logs, caches, monitoring, retention",
+      "A compliant route is a prerequisite, not proof; revalidate on a schedule"
+    ],
+    "Bias, fairness and transparency": [
+      "Fairness enters at corpus, prompt framing, few-shot examples and routing",
+      "The vendor's bias evaluations never saw your corpus",
+      "One decision log serves users, regulators and the build team",
+      "Aggregate dashboards hide subgroup harm: break metrics down",
+      "The decision log holds personal data and sits in the compliance register",
+      "Claims verdict: deterministic authorization in the retrieval tool"
+    ],
+    "Five to remember": [
+      "Vendor owns trained behaviour; the architect owns system prompt, screening and authorization",
+      "3 control points, each with a deliberate fail direction; your guardrails fail closed, screen retrieval too",
+      "Route review by stakes: low confidence plus irreversible or high cost goes to a person, with context",
+      "Every obligation is a control, an owner and a living evidence artifact; a compliant route is not proof",
+      "Fairness enters at corpus, framing, examples and routing; log decisions, break metrics down by subgroup"
+    ],
+    "Recap: the exam tells": [
+      "Safety training handles an org-only rule: think a layer you build; the vendor owns 1 of 4",
+      "Tool sends an email, writes a record or issues a refund: authorization before execution",
+      "Option makes Anthropic's built-in safety fail closed: invented feature",
+      "Retrieved documents or tool outputs: indirect injection, screened before entering context",
+      "Reviewer capacity plus decision volume: route by stakes, with inputs, output and flag reason",
+      "Only GDPR named: no residency rule was stated",
+      "HIPAA: signed BAA, right configuration, eligible features, and an evidence artifact",
+      "Healthy overall metric, one group complaining: 4 entry points plus decision logging"
+    ]
+  }
 }

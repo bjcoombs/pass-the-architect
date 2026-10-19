@@ -14,7 +14,9 @@
         "C": "Cap every subagent at a small number of turns so the full run finishes faster",
         "D": "Tell the report subagent to keep reports short when the question is simple"
       },
-      "correct": ["A"],
+      "correct": [
+        "A"
+      ],
       "why": "Coordinators analyse query requirements and select which subagents to invoke. Word count is a poor proxy for complexity; D treats the symptom at the wrong layer."
     },
     {
@@ -32,7 +34,10 @@
         "D": "Add \"always cite your sources\" to the synthesis subagent's system prompt",
         "E": "Pass the full raw text of every page the search subagent retrieved"
       },
-      "correct": ["A", "B"],
+      "correct": [
+        "A",
+        "B"
+      ],
       "why": "A gives synthesis the material; B keeps each claim tied to its source. Subagents do not inherit parent context (C); D asks for citations it never got."
     },
     {
@@ -49,7 +54,9 @@
         "C": "Log every file write so engineers can review and revert changes",
         "D": "Remove Task from the coordinator's allowed tools so no subagent runs unsupervised"
       },
-      "correct": ["A"],
+      "correct": [
+        "A"
+      ],
       "why": "Removing the tool removes the capability at the root. B is probabilistic and already failed; C is a detective control; D throws away the whole design."
     },
     {
@@ -66,7 +73,9 @@
         "C": "Instruct synthesis to fill thin areas from its own knowledge so the report is complete",
         "D": "Let synthesis call the web search subagent directly whenever it spots a gap"
       },
-      "correct": ["A"],
+      "correct": [
+        "A"
+      ],
       "why": "Gap closing is the coordinator's loop, stopping on coverage. D breaks hub-and-spoke; B is a fixed iteration count; C invents uncited claims."
     },
     {
@@ -83,7 +92,9 @@
         "C": "Add \"review every file with equal care and check cross-file effects\" to the prompt",
         "D": "Spawn one subagent per file and merge their findings as the final review"
       },
-      "correct": ["A"],
+      "correct": [
+        "A"
+      ],
       "why": "Per-file passes fix uneven depth; the integration pass catches broken callers. B is scale over structure; D is half right, with no integration pass."
     },
     {
@@ -100,7 +111,9 @@
         "C": "Spawn one subagent per file in the repository in parallel and merge what they report",
         "D": "Read every file first and only then decide what to investigate"
       },
-      "correct": ["B"],
+      "correct": [
+        "B"
+      ],
       "why": "Intermittent, unknown code, unknown cause: open-ended investigation, so dynamic decomposition. A fixes steps before learning; D is the exhaustive-survey trap."
     },
     {
@@ -110,5 +123,78 @@
       "prompt": "Name the five segments, and the giveaway for each.",
       "answer": "Hub-and-spoke. Isolated context. Spawning with Task. Coverage: duplication and gaps. A fixed pipeline against dynamic decomposition."
     }
-  ]
+  ],
+  "segments": {
+    "In this episode": [
+      "Why every subagent message goes through the coordinator",
+      "What a subagent can see, and what keeps citations alive",
+      "Spawning with the Task tool, parallel work, scoped tools",
+      "Spotting duplication and gaps, closed with a loop",
+      "Fixed pipeline vs a plan that adapts"
+    ],
+    "Cold open: the over-routed query": [
+      "One-line factual question gets a 12-page report from all 4 subagents",
+      "Task statements 1.2, 1.3 and 1.6 in the 27% agentic domain",
+      "Hub-and-spoke: subagents never talk to each other directly",
+      "Coordinator decomposes, delegates and aggregates results",
+      "Why route through the hub: observability, error handling, controlled flow",
+      "A narrow scoped tool for one common need is least privilege"
+    ],
+    "Segment two: isolated context": [
+      "Subagents run in isolated context: no inherited history or memory",
+      "Symptom: fluent report with no citations, gaps filled from general knowledge",
+      "Put complete prior findings directly in the subagent's prompt",
+      "Structured records: claim, evidence excerpt, source, page, date",
+      "Lean means no raw pages or reasoning, not a prose summary",
+      "Trap words: \"summary\", \"relies on the subagent having access\""
+    ],
+    "Segment three: spawning subagents": [
+      "Coordinator spawns via the Task tool; Task must be in allowed tools",
+      "AgentDefinition: description, system prompt, tool restrictions",
+      "Least privilege: each subagent gets only the tools its job needs",
+      "Independent subtasks: several Task calls in one response",
+      "Dependent steps stay sequential",
+      "Subagent prompts: research goals and quality criteria, not procedure"
+    ],
+    "Segment four: duplication and gaps": [
+      "Duplication and gaps both start in the coordinator's decomposition",
+      "Duplication: partition scope by subtopic or source type before delegating",
+      "\"Same subtopics\" or \"tokens doubled\" means unclear task boundaries",
+      "Overly narrow decomposition leaves a broad topic lopsided",
+      "Refinement loop: find gaps, re-delegate targeted queries, re-run synthesis",
+      "Stop on sufficient coverage, not a count"
+    ],
+    "Segment five: decomposition strategy": [
+      "Prompt chaining: fixed steps for predictable, multi-aspect reviews",
+      "Dynamic decomposition: next subtasks come from what was found",
+      "\"Every\", \"always\", \"the same checks\" vs \"unfamiliar\", \"legacy\", \"investigate\"",
+      "Large reviews: per-file passes, then a cross-file integration pass",
+      "Legacy work: map, find high-impact areas, plan that adapts",
+      "Exhaustive survey and fixed complete plan is a trap"
+    ],
+    "Cold open: the verdict": [
+      "Answer: A, coordinator selects only the subagents a query needs",
+      "Length rule: word count is a poor proxy for complexity",
+      "Determinism matters when a rule must hold, not for judgement",
+      "Turn cap hurts broad questions; shorter reports treat the wrong layer",
+      "Tell: every query goes through every subagent"
+    ],
+    "Five to remember": [
+      "Hub-and-spoke: coordinator decomposes, delegates, aggregates, selects; all traffic through it",
+      "Subagents inherit nothing: complete prior findings in the prompt, claim and source together",
+      "Spawn with Task in allowed tools; parallel Task calls in one response; scoped definitions",
+      "Partition scope to stop duplication; read coordinator subtasks for gaps; loop on coverage",
+      "Chain the predictable, decompose the open-ended; per-file plus cross-file passes"
+    ],
+    "Recap: the exam tells": [
+      "If two subagents are wired together directly, keep the coordinator in the middle",
+      "If a report loses citations, pass complete findings structured with their sources",
+      "If a coordinator never delegates, check Task is in its allowed tools",
+      "If searches are independent, several Task calls in one response, not one per turn",
+      "If a subagent edits files it should only read, remove the tool from its definition",
+      "If subagents overlap, partition scope; if lopsided, read the coordinator's subtasks",
+      "If the stem says every, always or the same checks, chain it",
+      "If it says unfamiliar, legacy or investigate, decompose as you go"
+    ]
+  }
 }

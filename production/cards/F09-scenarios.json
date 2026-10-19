@@ -125,5 +125,79 @@
       "prompt": "Name the six scenarios, and the classic trap in each.",
       "answer": "Support: sentiment or self-rated confidence. Code: user-level rule. Research: wrong agent blamed. Dev tools: reading every file. CI: \"be conservative\". Extraction: required field for absent info."
     }
-  ]
+  ],
+  "segments": {
+    "In this episode": [
+      "Read a scenario frame and know what it rules out",
+      "Support, code generation, research, productivity, CI, extraction",
+      "The 3 decisions each scenario keeps probing",
+      "The classic trap in each scenario",
+      "6 patterns that run through all of them"
+    ],
+    "The frame and customer support": [
+      "Glance at the left-column frame every item; reread when it changes",
+      "Frame constraints: 80% first-contact resolution, minimise false positives",
+      "Support: order that must hold lives in code, prerequisite or hook",
+      "Escalation triggers: explicit request, policy gap, no progress",
+      "Multiple matches: ask for another identifier",
+      "Case facts block, trimmed lookups, structured escalation summary"
+    ],
+    "Scenario two: code generation": [
+      "Team-wide config in project scope; personal in the home folder",
+      "Scattered file types: rules file with a paths glob",
+      "CLAUDE.md always loaded; skills on demand",
+      "Skill frontmatter: context: fork, allowed-tools, argument-hint",
+      "Plan mode for many files or approaches; direct for a clear single fix",
+      "Trap: a rule that lives in someone's user-level file"
+    ],
+    "Scenario three: multi-agent research": [
+      "Coordinator decomposes, partitions, selects subagents, loops on gaps",
+      "Task in allowed tools; several Task calls in one response for parallel work",
+      "Subagents inherit nothing; 4 or 5 tools per role",
+      "Structured claim-source mappings; structured error context",
+      "Conflicting credible sources: keep both, annotate, coordinator reconciles",
+      "Trap: blaming a subagent when the coordinator's decomposition is the cause"
+    ],
+    "Scenario four: developer productivity": [
+      "Grep for contents, Glob for paths; Edit fails, Read then Write",
+      "Build understanding step by step from entry points",
+      "Shared .mcp.json with env placeholders; personal ~/.claude.json",
+      "Better MCP tool descriptions; catalogues as MCP resources",
+      "Community servers for standard integrations like Jira",
+      "Subagents, /compact, resume with changed files, fork to compare"
+    ],
+    "Scenario five: continuous integration": [
+      "-p / --print runs unattended; JSON output with a schema",
+      "CLAUDE.md supplies testing standards, fixtures, review criteria",
+      "Explicit categories and few-shot output format; disable a noisy category",
+      "Per-file plus integration passes; prior findings on re-runs",
+      "Blocking checks synchronous; overnight work to Message Batches API",
+      "Trap: \"be conservative\"; independent instance beats self-review"
+    ],
+    "Scenario six: structured extraction": [
+      "Extraction tool with an input schema removes JSON syntax errors",
+      "tool_choice auto, any or named; nullable fields, \"unclear\", \"other\"",
+      "Semantic checks: calculated total beside stated total",
+      "Retry with document, failed extraction and specific error",
+      "Batch: 50% off, 24h, resubmit failures by custom_id; segment accuracy",
+      "Trap: a required field for information that may be absent"
+    ],
+    "Patterns across scenarios": [
+      "What must happen every time lives in code",
+      "Specific beats general; confidence counts only when calibrated",
+      "Context is passed, never assumed",
+      "Absence and failure get honest values",
+      "Fresh eyes and focused passes",
+      "Scope follows audience: team in the project, personal at home"
+    ],
+    "Recap: the exam tells": [
+      "Support: asks for a person, escalate at once; only angry, resolve; rule must hold, hook or prerequisite",
+      "Code generation: behaviour differs between sessions, /memory first; single file, direct; dozens, plan",
+      "Research: narrow report, coordinator's decomposition; vanished citations, claim-source mappings",
+      "Productivity: typical patterns instead of named classes, scratchpad; Jira, community MCP server",
+      "CI: same session reviews its change, independent instance; unknown dismissals, detected_pattern field",
+      "Extraction: unknown type and prose back, tool_choice any; value in another document, null or review",
+      "Glance at the left column every item: the frame often settles the item"
+    ]
+  }
 }

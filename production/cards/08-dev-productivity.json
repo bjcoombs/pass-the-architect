@@ -14,7 +14,9 @@
         "C": "Copy it as a project Skill into each team's repository",
         "D": "Add a paragraph describing it to each team's CLAUDE.md"
       },
-      "correct": ["B"],
+      "correct": [
+        "B"
+      ],
       "why": "\"Could not undo it\" plus \"a named owner\" means governance decides. Org-provisioned Skills have no version pinning or native rollback; a plugin gives a path back."
     },
     {
@@ -31,7 +33,9 @@
         "C": "Raise client timeouts so requests stop failing",
         "D": "Roll back to the previous release and re-run integration tests"
       },
-      "correct": ["B"],
+      "correct": [
+        "B"
+      ],
       "why": "\"First\" with nothing diagnosed means gather evidence. Latency maps to context growth, a slow tool or a cache miss; the larger document set points at context."
     },
     {
@@ -49,7 +53,10 @@
         "D": "Default every session to the most capable model for strong first impressions",
         "E": "Let each engineer build their own configuration to suit personal style"
       },
-      "correct": ["A", "B"],
+      "correct": [
+        "A",
+        "B"
+      ],
       "why": "A fixes lumpy adoption; B adds the missing understanding gate. C widens the gap, D ignores spend posture, E is the drift a shared baseline prevents."
     },
     {
@@ -59,5 +66,63 @@
       "prompt": "Name the three task statements from today, and one mechanism that belongs to each.",
       "answer": "Configuring tools for teams: a plugin for governed Skills. Improving developer workflows: the verification checklist. Debugging and operational support: a runbook and an escalation path."
     }
-  ]
+  ],
+  "segments": {
+    "In this episode": [
+      "7% of the exam, about 4 or 5 items",
+      "A shared Claude Code baseline: guidance versus enforcement",
+      "The right way to get a Skill to a team",
+      "Rollout through champions inside a spend posture",
+      "A 4-part checklist to keep engineering judgment",
+      "Symptom to architecture cause, plus a runbook"
+    ],
+    "Cold open: the shared procedure": [
+      "Team setup: one shared baseline in the repo, not personal setups",
+      "Baseline: project CLAUDE.md, tools and MCP servers, permissions",
+      "CLAUDE.md guides; permissions, hooks and managed settings enforce",
+      "4 Skill routes: org-provisioned, plugin, project Skill, API Skill",
+      "Pick by who needs it and who must update or revoke it",
+      "Champion per department first; spend posture before the first bill"
+    ],
+    "Segment two: developer workflows": [
+      "AI tooling pays off inside the existing workflow",
+      "Failure modes: lumpy adoption and stalling at basic chat",
+      "Access is not adoption",
+      "Checklist: correctness, security, maintainability, human understanding",
+      "Green tests are not understanding",
+      "Linters, small-change exemptions, newer models: compensating controls"
+    ],
+    "Segment three: debugging support": [
+      "Quality decline, no code change: model, prompt or retrieval drift",
+      "Latency spike: context growth, a slow tool or a cache miss",
+      "Intermittent tool failures: authorization, rate limits, unhandled errors",
+      "Cost up on flat usage: model tier creep or caching regression",
+      "Diagnose: reporter's words, 3 hypotheses, evidence to a specific line",
+      "Leave a runbook and an escalation path, not firefighting"
+    ],
+    "Cold open: the verdict": [
+      "Org-provisioned Skill: reach, but no version pinning or native rollback",
+      "Verdict: a plugin with group targeting, versioned updates, a named owner",
+      "Project Skill copies scatter; CLAUDE.md text is not a governed procedure",
+      "Tell: 'could not undo it' plus 'named owner' means governance",
+      "Reach alone, no update need: the org-provisioned Skill is enough"
+    ],
+    "Five to remember": [
+      "Shared baseline in the repo: CLAUDE.md guides; permissions, hooks and managed settings enforce",
+      "Pick the Skills route by who needs it and who updates or revokes it; versioning and rollback: a plugin",
+      "Roll out via a champion per team, then batches, inside a spend posture",
+      "Green tests are not understanding: 4-part checklist; if the author cannot explain it, no merge",
+      "Translate symptom to cause, diagnose what the trigger touched, leave a runbook and escalation path"
+    ],
+    "Recap: the exam tells": [
+      "Consistent, the same way, across teams: shared baseline in the repository",
+      "Engineers must never do something: permissions, hooks or managed settings",
+      "Bad update could not be undone, or a named owner: plugin with versioned updates",
+      "Only reach needed: the org-provisioned Skill is enough",
+      "Usage sits with a handful: lumpy adoption, fixed by champions seeding batches",
+      "Author cannot explain the change: understanding gate, not more automation",
+      "Quality slips: eval set; latency climbs: traces; cost up on flat usage: tier and cache hits",
+      "'First' with nothing diagnosed: pick the option that gathers evidence"
+    ]
+  }
 }

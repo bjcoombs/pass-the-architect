@@ -155,12 +155,15 @@ def duration(path, _seen={}):
 def chapter_marks(path, meta, turns):
     """Chapters keyed by turn index: segment headings, plus question and answer cards from cards/<stem>.json."""
     episode = meta.get("title", path.stem)
+    data = MUSIC.parent / "cards" / f"{path.stem}.json"
+    card_data = json.loads(data.read_text()) if data.exists() else {}
+    drills, bullets = card_data.get("drills", []), card_data.get("segments", {})
     marks = {}
     for i, t in enumerate(turns):
         if t["chapter"]:
-            marks[i] = (t["chapter"], cards.segment(t["chapter"], episode))
-    data = MUSIC.parent / "cards" / f"{path.stem}.json"
-    drills = json.loads(data.read_text())["drills"] if data.exists() else []
+            if bullets and t["chapter"] not in bullets:
+                sys.exit(f"{data.name}: no segments entry for chapter {t['chapter']!r}")
+            marks[i] = (t["chapter"], cards.segment(t["chapter"], episode, bullets.get(t["chapter"])))
 
     def find(prefix):
         hits = [i for i, t in enumerate(turns) if t["line"].startswith(prefix)]
@@ -182,7 +185,12 @@ def chapter_marks(path, meta, turns):
             title = f"Pause and answer {n}"
             marks[q] = (f"{seg} - {title}" if seg else title, cards.recall(d, episode, n, reveal=False))
             if d.get("answer_line"):
-                marks[find(d["answer_line"])] = (f"Answer {n}", cards.recall(d, episode, n, reveal=True))
+                # A recall prompt that opens a bulleted chapter (the recap) is answered by those bullets.
+                card = (cards.segment(seg, episode, bullets[seg]) if seg in bullets
+                        else cards.recall(d, episode, n, reveal=True))
+                marks[find(d["answer_line"])] = (f"Answer {n}", card)
+            elif seg in bullets:
+                marks[q + 1] = (seg, cards.segment(seg, episode, bullets[seg]))
     return marks
 
 

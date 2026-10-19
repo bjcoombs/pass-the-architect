@@ -14,7 +14,9 @@
         "C": "Verify identity and role server-side from SSO; the tool returns only records that identity is entitled to",
         "D": "Log every call to the HR tool and review the logs weekly for misuse"
       },
-      "correct": ["C"],
+      "correct": [
+        "C"
+      ],
       "why": "Identity comes from the server and the tool enforces authorization with it, so it cannot return a record the user isn't entitled to, whatever the model is persuaded to do."
     },
     {
@@ -32,7 +34,10 @@
         "D": "Route every credit through a supervisor confirmation screen",
         "E": "Log all warehouse queries to the security team"
       },
-      "correct": ["A", "C"],
+      "correct": [
+        "A",
+        "C"
+      ],
       "why": "A removes capabilities the role never needs, killing the risk at the root. C scopes the subagent to its job. B, D and E leave the tools in place."
     },
     {
@@ -49,7 +54,9 @@
         "C": "Encrypt the application's request logs at rest",
         "D": "Truncate each request to its first 500 tokens to limit exposure"
       },
-      "correct": ["B"],
+      "correct": [
+        "B"
+      ],
       "why": "Necessity filter: a reference ID is enough for routing, and redaction happens before the call. A ignores your own application's logs; C leaves card numbers in them."
     },
     {
@@ -72,7 +79,10 @@
         "D": "Cut each procedure to its first paragraph to save tokens",
         "E": "Fine-tune a model on all 40 procedures"
       },
-      "correct": ["A", "C"],
+      "correct": [
+        "A",
+        "C"
+      ],
       "why": "Both stage context so each step carries what it needs, and the small stable prefix still gets the caching benefit. A bigger window is a ceiling, not a target."
     },
     {
@@ -80,5 +90,71 @@
       "question_line": "SAM: Before the tease, a test. Pause and name the four task statements this episode covered",
       "prompt": "Name the four task statements this episode covered, and the giveaway for each."
     }
-  ]
+  ],
+  "segments": {
+    "In this episode": [
+      "Spotting capability bloat: remove or gate a tool",
+      "Where identity and authorization must be enforced",
+      "Filtering what enters a Claude call by necessity",
+      "MCP vs direct API tool use vs agent-to-agent",
+      "Progressive vs monolithic context",
+      "Deferred discovery is not least privilege"
+    ],
+    "Cold open: the HR assistant": [
+      "Cold open: an HR assistant on one broad service account",
+      "Integration: 19%, about 12 items, 8 task statements",
+      "5 layers: compliance, identity, authorization, data handling, observability",
+      "Capability bloat: every tool is an attack surface and a cost",
+      "Scope each subagent's tools to its task",
+      "Not needed: remove it; needed but high-stakes: gate it"
+    ],
+    "Authentication and authorization": [
+      "Identity verified on the server, never claimed in the user turn",
+      "Authorization deterministic and in code, before side-effecting calls",
+      "A broad service account is a path around the access policy",
+      "Multi-tenant: isolate with Workspaces, not a shared API key",
+      "The context window is not a data-governance boundary",
+      "Necessity, not convenience, decides what goes in"
+    ],
+    "Connection mechanisms": [
+      "Entry points, build-time interfaces, delivery routes",
+      "MCP and API tool use are different layers, not rivals",
+      "The deciding question is reuse across clients",
+      "Trap: MCP as the default",
+      "Agent SDK for a multi-turn loop in your own product",
+      "Agent-to-agent: delegate an outcome, don't reach past the interface"
+    ],
+    "Progressive discovery": [
+      "Monolithic: bounded, stable, cacheable, needs everything at once",
+      "Progressive: load only what the next step needs",
+      "Skills load name and description first, full instructions on demand",
+      "Tool definitions can be deferred too",
+      "Deferring a tool doesn't remove the permission",
+      "Skills are bundled code: audit, sandbox, vetted registry"
+    ],
+    "Cold open: the verdict": [
+      "Answer: C, server-verified identity enforced by the tool itself",
+      "The tool can't return records the user isn't entitled to",
+      "B: a compensating control at the wrong layer",
+      "A: the model enforcing authorization, role read from the user turn",
+      "D: weekly log review finds a leak a week late"
+    ],
+    "Five to remember": [
+      "Remove, don't watch: drop tools the role doesn't need and record why",
+      "Identity from the server; authorization deterministic, in code at the tool and retrieval layer",
+      "The context window is not a governance boundary: necessity, a reference ID, redact before the call",
+      "MCP for several clients, direct API for one product, Agent SDK for loops, agent-to-agent to delegate",
+      "Progressive by default; monolithic for bounded, stable content; discovery decides when, not whether"
+    ],
+    "Recap: the exam tells": [
+      "Role never uses a tool → remove it, record why; role needs a dangerous tool → keep it, gate it",
+      "User message claims a role, like \"as a manager\" → unverified; identity comes from the server",
+      "Tools on one broad service account → authorization bypass, fixed in code at tool and retrieval",
+      "\"Vendor doesn't retain content\" → your logs still do; unneeded field → reference ID, redact first",
+      "Same tools for several clients → MCP; one product → direct API; another team's agent → agent-to-agent",
+      "Claude Code as a product backend → wrong",
+      "Every procedure and tool definition in every call, selection slipping → Skills and deferred tools",
+      "An option claims deferring a tool removes the risk → discovery decides when it loads, not whether"
+    ]
+  }
 }

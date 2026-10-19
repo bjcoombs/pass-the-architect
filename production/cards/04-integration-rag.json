@@ -15,7 +15,10 @@
         "D": "Raise the number of retrieved chunks to 50 so the right one is somewhere in there",
         "E": "Add a banner telling technicians to double-check fault codes against the printed manual"
       },
-      "correct": ["A", "B"],
+      "correct": [
+        "A",
+        "B"
+      ],
       "why": "Hierarchical chunking fixes the cut-off steps in section-numbered manuals; a sparse index fused with RRF fixes exact fault codes, which dense-only misses."
     },
     {
@@ -32,7 +35,9 @@
         "C": "Answer prescription status with a tool call to the pharmacy system; keep refill policy in retrieval",
         "D": "Raise the similarity threshold so only close matches are used"
       },
-      "correct": ["C"],
+      "correct": [
+        "C"
+      ],
       "why": "Prescription status is live state, so a direct call; refill policy is stable knowledge, so retrieval. A narrows the staleness window but keeps a snapshot doing a live job."
     },
     {
@@ -50,7 +55,10 @@
         "D": "Alert when cost exceeds 150% of the 7-day average",
         "E": "Move to a larger model"
       },
-      "correct": ["A", "C"],
+      "correct": [
+        "A",
+        "C"
+      ],
       "why": "Silent retrieval drift as the corpus grows: A measures retrieval separately in production, C puts retrieval quality in the eval loop for the documents that change."
     },
     {
@@ -67,7 +75,9 @@
         "C": "Raise the max output tokens cap so fewer answers get cut short",
         "D": "Stop logging requests to shave time off each call"
       },
-      "correct": ["B"],
+      "correct": [
+        "B"
+      ],
       "why": "B attacks latency where it comes from without losing anything required. A loses the exact-match recall 40% of queries need; C makes latency worse."
     },
     {
@@ -75,5 +85,72 @@
       "question_line": "SAM: Before the tease, a test. Pause and name the six segments, or the giveaway for each.",
       "prompt": "Name the six segments of this episode, or the giveaway for each."
     }
-  ]
+  ],
+  "segments": {
+    "In this episode": [
+      "Chunking by document structure",
+      "Indexing by how queries are phrased",
+      "Live state needs a tool call; stable knowledge suits retrieval",
+      "Catching retrieval drift that never shows in the output",
+      "Defending a cost and latency configuration",
+      "What to monitor at scale"
+    ],
+    "Cold open: service manuals": [
+      "Cold open: wrong fault codes and cut-off repair steps",
+      "The retrieval layer enforces access control, not the model",
+      "Chunk by source structure: fixed, semantic or hierarchical",
+      "Index by query phrasing: dense, sparse or hybrid",
+      "Reciprocal rank fusion: the low-tuning default for merging",
+      "Size the pipeline to the query patterns you actually have"
+    ],
+    "Segment three: retrieval versus live state": [
+      "Most common mistake: retrieval doing a tool call's job",
+      "Live state: order status, inventory, prices, balances",
+      "Symptoms: stale answers, normal latency, no errors",
+      "Retrieval tuning won't fix a data-architecture problem",
+      "Similarity is not truth",
+      "Separate live-state and static-knowledge queries"
+    ],
+    "Segment four: silent drift": [
+      "RAG pipelines degrade silently as documents are added",
+      "3 causes: no reindex, misaligned representations, refresh schedule",
+      "Retrieval quality is invisible in the output",
+      "Track retrieval precision separately, against a labelled set",
+      "Retrieval config changes go through the eval gate",
+      "Draft acceptance or revision is the outcome signal"
+    ],
+    "Segment five: accuracy and latency": [
+      "Every design trades retrieval quality, latency and maintenance",
+      "Justify a configuration by its load-bearing constraint",
+      "Design to p95 latency, not the median",
+      "Cost ceiling and latency budget must both hold",
+      "Levers: prompt caching, tier routing, fallback chains, streaming",
+      "Raising max output tokens raises cost and latency"
+    ],
+    "Segment six: observability at scale": [
+      "LLM systems fail with subtly wrong answers, not crashes",
+      "Log request, response, context and outcome",
+      "Model drift, data drift, model update effect",
+      "Aggregate-only dashboards hide costly, wrong requests",
+      "Workspaces per tenant; a shared trace ID across agents",
+      "Translate metrics into business KPIs at design time"
+    ],
+    "Five to remember": [
+      "Chunk by what the corpus is: fixed for weak structure, semantic for prose, hierarchical for numbered",
+      "Index by query phrasing: sparse for exact tokens, dense for paraphrase, hybrid with rank fusion",
+      "Live state gets a tool call; better chunkers, refreshes and thresholds don't fix a snapshot",
+      "Retrieval drift is silent: measure retrieval precision on a labelled set, in evals and production",
+      "Name the load-bearing constraint, design to p95, meet cost and latency together, monitor per request"
+    ],
+    "Recap: the exam tells": [
+      "Section-numbered documents, answers cut off mid-procedure → hierarchical chunking",
+      "Exact codes come back wrong on a dense-only index → add sparse, merged with reciprocal rank fusion",
+      "Answers contradict the database, latency normal, no errors → live state in an index: tool call",
+      "Output scores flat, users revise more as the corpus grows → silent drift: measure retrieval precision",
+      "p95 breaching, long stable prompt, top tier → caching and tier routing, keeping the index",
+      "Dashboards healthy on averages but the budget is burning → per-request decomposition",
+      "Model pinned but the input mix changed → data drift",
+      "Raising max output tokens to fix latency → wrong direction: it raises cost and latency"
+    ]
+  }
 }

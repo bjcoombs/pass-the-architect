@@ -17,8 +17,8 @@
     <item>
       <title>12. Foundations final drill</title>
       <description>About forty rapid-fire items across the five Foundations domains, weighted by the blueprint and by the last attempt's gaps, each set in one of the six scenarios, then the guide's named anti-patterns and a calm walk through exam day.</description>
-      <enclosure url="https://github.com/bjcoombs/pass-the-architect/releases/download/ccar-f-retake/12-F10-final-drill.mp3" length="34810625" type="audio/mpeg"/>
-      <guid isPermaLink="false">pass-the-architect-ccar-f-retake-F10-final-drill-8cb6827d</guid>
+      <enclosure url="https://github.com/bjcoombs/pass-the-architect/releases/download/ccar-f-retake/12-F10-final-drill.mp3" length="35550165" type="audio/mpeg"/>
+      <guid isPermaLink="false">pass-the-architect-ccar-f-retake-F10-final-drill-6269a903</guid>
       <pubDate>Sun, 18 Oct 2026 06:12:00 +0000</pubDate>
       <itunes:duration>0:25:49</itunes:duration>
       <itunes:episodeType>full</itunes:episodeType>
@@ -27,8 +27,8 @@
     <item>
       <title>11. The six scenarios</title>
       <description>All six Foundations scenarios in the exam guide's order: the system, its primary domains, the three decisions the exam keeps probing, the classic trap, an argued distractor and a drill for each, then the patterns that run through all six.</description>
-      <enclosure url="https://github.com/bjcoombs/pass-the-architect/releases/download/ccar-f-retake/11-F09-scenarios.mp3" length="32079037" type="audio/mpeg"/>
-      <guid isPermaLink="false">pass-the-architect-ccar-f-retake-F09-scenarios-2aa39de5</guid>
+      <enclosure url="https://github.com/bjcoombs/pass-the-architect/releases/download/ccar-f-retake/11-F09-scenarios.mp3" length="33090821" type="audio/mpeg"/>
+      <guid isPermaLink="false">pass-the-architect-ccar-f-retake-F09-scenarios-23e8b232</guid>
       <pubDate>Sun, 18 Oct 2026 06:11:00 +0000</pubDate>
       <itunes:duration>0:30:14</itunes:duration>
       <itunes:episodeType>full</itunes:episodeType>
@@ -37,8 +37,8 @@
     <item>
       <title>10. Closing the Foundations Gaps</title>
       <description>A bonus episode on the applied configuration and API mechanics that both Architect exams test inside their scenarios: enforcement versus guidance, settings and M C P scope, tool sequencing, the agentic loop, extraction schemas, review routing and feedback loops.</description>
-      <enclosure url="https://github.com/bjcoombs/pass-the-architect/releases/download/ccar-f-retake/10-11-foundations-gaps.mp3" length="31423920" type="audio/mpeg"/>
-      <guid isPermaLink="false">pass-the-architect-ccar-f-retake-11-foundations-gaps-7b458e37</guid>
+      <enclosure url="https://github.com/bjcoombs/pass-the-architect/releases/download/ccar-f-retake/10-11-foundations-gaps.mp3" length="32365119" type="audio/mpeg"/>
+      <guid isPermaLink="false">pass-the-architect-ccar-f-retake-11-foundations-gaps-29121f54</guid>
       <pubDate>Sun, 18 Oct 2026 06:10:00 +0000</pubDate>
       <itunes:duration>0:29:22</itunes:duration>
       <itunes:episodeType>full</itunes:episodeType>
@@ -47,8 +47,8 @@
     <item>
       <title>09. Context, review and provenance</title>
       <description>Keeping exact facts alive through long sessions, exploring large codebases without context degradation, routing extractions to human review by calibrated confidence and stratified sampling, and carrying sources and conflicts intact through multi-agent synthesis.</description>
-      <enclosure url="https://github.com/bjcoombs/pass-the-architect/releases/download/ccar-f-retake/09-F08-context-reliability.mp3" length="29051206" type="audio/mpeg"/>
-      <guid isPermaLink="false">pass-the-architect-ccar-f-retake-F08-context-reliability-c8e1f2b7</guid>
+      <enclosure url="https://github.com/bjcoombs/pass-the-architect/releases/download/ccar-f-retake/09-F08-context-reliability.mp3" length="29880138" type="audio/mpeg"/>
+      <guid isPermaLink="false">pass-the-architect-ccar-f-retake-F08-context-reliability-6a2d1b5e</guid>
       <pubDate>Sun, 18 Oct 2026 06:09:00 +0000</pubDate>
       <itunes:duration>0:27:21</itunes:duration>
       <itunes:episodeType>full</itunes:episodeType>
@@ -57,8 +57,8 @@
     <item>
       <title>08. Tool design and built-in tools</title>
       <description>How Claude picks a tool, how a tool should fail, how many tools each agent should hold, and which built-in tool fits which job: task statements 2.1, 2.2, 2.3 and 2.5, drilled in the customer support and developer productivity scenarios.</description>
-      <enclosure url="https://github.com/bjcoombs/pass-the-architect/releases/download/ccar-f-retake/08-F07-tools-mcp.mp3" length="29231829" type="audio/mpeg"/>
-      <guid isPermaLink="false">pass-the-architect-ccar-f-retake-F07-tools-mcp-7d5a32b4</guid>
+      <enclosure url="https://github.com/bjcoombs/pass-the-architect/releases/download/ccar-f-retake/08-F07-tools-mcp.mp3" length="29972818" type="audio/mpeg"/>
+      <guid isPermaLink="false">pass-the-architect-ccar-f-retake-F07-tools-mcp-4bff868b</guid>
       <pubDate>Sun, 18 Oct 2026 06:08:00 +0000</pubDate>
       <itunes:duration>0:27:05</itunes:duration>
       <itunes:episodeType>full</itunes:episodeType>
@@ -67,8 +67,8 @@
     <item>
       <title>07. Hooks, sessions and escalation</title>
       <description>Agent SDK hooks that block, redirect and normalise; when to resume, fork or start fresh with a summary; and the escalation triggers the exam trusts versus the ones it calls unreliable.</description>
-      <enclosure url="https://github.com/bjcoombs/pass-the-architect/releases/download/ccar-f-retake/07-F03-hooks-sessions.mp3" length="27988457" type="audio/mpeg"/>
-      <guid isPermaLink="false">pass-the-architect-ccar-f-retake-F03-hooks-sessions-055d6b37</guid>
+      <enclosure url="https://github.com/bjcoombs/pass-the-architect/releases/download/ccar-f-retake/07-F03-hooks-sessions.mp3" length="28658655" type="audio/mpeg"/>
+      <guid isPermaLink="false">pass-the-architect-ccar-f-retake-F03-hooks-sessions-60aa0c03</guid>
       <pubDate>Sun, 18 Oct 2026 06:07:00 +0000</pubDate>
       <itunes:duration>0:25:54</itunes:duration>
       <itunes:episodeType>full</itunes:episodeType>
@@ -77,8 +77,8 @@
     <item>
       <title>06. Coordinators, subagents and decomposition</title>
       <description>How a coordinator runs a team of subagents: hub-and-spoke routing, isolated subagent context and explicit context passing, the Task tool and parallel spawning, scoped subagent tools, coverage loops, and when to pick a fixed pipeline over dynamic decomposition.</description>
-      <enclosure url="https://github.com/bjcoombs/pass-the-architect/releases/download/ccar-f-retake/06-F02-coordinators.mp3" length="31033605" type="audio/mpeg"/>
-      <guid isPermaLink="false">pass-the-architect-ccar-f-retake-F02-coordinators-dc5fb9cd</guid>
+      <enclosure url="https://github.com/bjcoombs/pass-the-architect/releases/download/ccar-f-retake/06-F02-coordinators.mp3" length="31942436" type="audio/mpeg"/>
+      <guid isPermaLink="false">pass-the-architect-ccar-f-retake-F02-coordinators-cb43101e</guid>
       <pubDate>Sun, 18 Oct 2026 06:06:00 +0000</pubDate>
       <itunes:duration>0:28:55</itunes:duration>
       <itunes:episodeType>full</itunes:episodeType>
@@ -87,8 +87,8 @@
     <item>
       <title>05. The agentic loop and enforced workflows</title>
       <description>Stop reasons, appending tool results to a stateless API, forced tool choice for first calls, programmatic prerequisites, structured handoffs, and how errors should travel between agents. Drilled in the customer support and multi-agent research scenarios.</description>
-      <enclosure url="https://github.com/bjcoombs/pass-the-architect/releases/download/ccar-f-retake/05-F01-agentic-loop.mp3" length="27454262" type="audio/mpeg"/>
-      <guid isPermaLink="false">pass-the-architect-ccar-f-retake-F01-agentic-loop-cbb562b0</guid>
+      <enclosure url="https://github.com/bjcoombs/pass-the-architect/releases/download/ccar-f-retake/05-F01-agentic-loop.mp3" length="28225908" type="audio/mpeg"/>
+      <guid isPermaLink="false">pass-the-architect-ccar-f-retake-F01-agentic-loop-90506857</guid>
       <pubDate>Sun, 18 Oct 2026 06:05:00 +0000</pubDate>
       <itunes:duration>0:25:44</itunes:duration>
       <itunes:episodeType>full</itunes:episodeType>
@@ -97,8 +97,8 @@
     <item>
       <title>04. Prompts and structured output</title>
       <description>Explicit review criteria, few-shot examples, tool use with JSON schemas and tool choice, validation and retry loops, the Message Batches API, and independent review passes, drilled inside the extraction and continuous integration scenarios.</description>
-      <enclosure url="https://github.com/bjcoombs/pass-the-architect/releases/download/ccar-f-retake/04-F06-structured-output.mp3" length="34932550" type="audio/mpeg"/>
-      <guid isPermaLink="false">pass-the-architect-ccar-f-retake-F06-structured-output-451dff29</guid>
+      <enclosure url="https://github.com/bjcoombs/pass-the-architect/releases/download/ccar-f-retake/04-F06-structured-output.mp3" length="35828868" type="audio/mpeg"/>
+      <guid isPermaLink="false">pass-the-architect-ccar-f-retake-F06-structured-output-a658d94d</guid>
       <pubDate>Sun, 18 Oct 2026 06:04:00 +0000</pubDate>
       <itunes:duration>0:31:59</itunes:duration>
       <itunes:episodeType>full</itunes:episodeType>
@@ -107,8 +107,8 @@
     <item>
       <title>03. Plan mode, refinement and CI</title>
       <description>When to plan and when to just make the change, how to steer Claude Code with examples, tests and targeted feedback, and how to run it in a CI pipeline that posts clean, non-duplicated, low-noise review comments.</description>
-      <enclosure url="https://github.com/bjcoombs/pass-the-architect/releases/download/ccar-f-retake/03-F05-claude-code-workflows.mp3" length="26738818" type="audio/mpeg"/>
-      <guid isPermaLink="false">pass-the-architect-ccar-f-retake-F05-claude-code-workflows-78615f85</guid>
+      <enclosure url="https://github.com/bjcoombs/pass-the-architect/releases/download/ccar-f-retake/03-F05-claude-code-workflows.mp3" length="27449268" type="audio/mpeg"/>
+      <guid isPermaLink="false">pass-the-architect-ccar-f-retake-F05-claude-code-workflows-60c29d1e</guid>
       <pubDate>Sun, 18 Oct 2026 06:03:00 +0000</pubDate>
       <itunes:duration>0:25:08</itunes:duration>
       <itunes:episodeType>full</itunes:episodeType>
@@ -117,8 +117,8 @@
     <item>
       <title>02. Claude Code configuration</title>
       <description>Where each instruction lives in Claude Code and who receives it: the CLAUDE dot md hierarchy, imports and rules files, project and personal commands and skills, path-scoped rules, and M C P servers at project and user scope.</description>
-      <enclosure url="https://github.com/bjcoombs/pass-the-architect/releases/download/ccar-f-retake/02-F04-claude-code-config.mp3" length="29189530" type="audio/mpeg"/>
-      <guid isPermaLink="false">pass-the-architect-ccar-f-retake-F04-claude-code-config-3664089e</guid>
+      <enclosure url="https://github.com/bjcoombs/pass-the-architect/releases/download/ccar-f-retake/02-F04-claude-code-config.mp3" length="29960339" type="audio/mpeg"/>
+      <guid isPermaLink="false">pass-the-architect-ccar-f-retake-F04-claude-code-config-996938f8</guid>
       <pubDate>Sun, 18 Oct 2026 06:02:00 +0000</pubDate>
       <itunes:duration>0:27:38</itunes:duration>
       <itunes:episodeType>full</itunes:episodeType>
@@ -127,8 +127,8 @@
     <item>
       <title>01. Your Five Miss Patterns</title>
       <description>A bonus episode on the five answering habits that cost marks at Foundations, with a one-line self-check and a trap-built drill for each, the guide's thesis, and a pacing plan for the Pearson VUE interface.</description>
-      <enclosure url="https://github.com/bjcoombs/pass-the-architect/releases/download/ccar-f-retake/01-10-miss-patterns.mp3" length="23834042" type="audio/mpeg"/>
-      <guid isPermaLink="false">pass-the-architect-ccar-f-retake-10-miss-patterns-0ea95a79</guid>
+      <enclosure url="https://github.com/bjcoombs/pass-the-architect/releases/download/ccar-f-retake/01-10-miss-patterns.mp3" length="24635829" type="audio/mpeg"/>
+      <guid isPermaLink="false">pass-the-architect-ccar-f-retake-10-miss-patterns-aa4931cc</guid>
       <pubDate>Sun, 18 Oct 2026 06:01:00 +0000</pubDate>
       <itunes:duration>0:21:04</itunes:duration>
       <itunes:episodeType>full</itunes:episodeType>
@@ -137,8 +137,8 @@
     <item>
       <title>00. Foundations game plan</title>
       <description>How the Foundations exam is built: sixty items across four of six scenarios, the domain weights, a pacing plan for the Pearson VUE screen, and a four-step method worked through three official sample questions.</description>
-      <enclosure url="https://github.com/bjcoombs/pass-the-architect/releases/download/ccar-f-retake/00-F00-game-plan.mp3" length="18030427" type="audio/mpeg"/>
-      <guid isPermaLink="false">pass-the-architect-ccar-f-retake-F00-game-plan-711e2211</guid>
+      <enclosure url="https://github.com/bjcoombs/pass-the-architect/releases/download/ccar-f-retake/00-F00-game-plan.mp3" length="18607354" type="audio/mpeg"/>
+      <guid isPermaLink="false">pass-the-architect-ccar-f-retake-F00-game-plan-c7dde6e8</guid>
       <pubDate>Sun, 18 Oct 2026 06:00:00 +0000</pubDate>
       <itunes:duration>0:16:57</itunes:duration>
       <itunes:episodeType>full</itunes:episodeType>
