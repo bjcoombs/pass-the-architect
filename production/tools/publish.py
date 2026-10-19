@@ -4,9 +4,10 @@
 Usage (from production/): uv run --with mutagen tools/publish.py [--icloud] [--github --site ../docs]
 
 --icloud  copies each series to iCloud Drive as "NN - Title.mp3".
---github  uploads the MP3s as release assets (one release per series) and writes
-          the feeds, chapter JSON, OPML, covers and index page into --site, a checkout
-          of the GitHub Pages repo. Commit and push that checkout afterwards.
+--github  uploads the MP3s as release assets (one release per series). Needs --site.
+--site    writes the feeds, feed stylesheet, chapter JSON, OPML, covers and index page
+          into this directory, the GitHub Pages folder. Without --github it rewrites
+          them without uploading. Commit and push afterwards.
 """
 import argparse
 import datetime
@@ -169,6 +170,7 @@ def feed(series, staged, site):
     </item>""")
     image = f"{BASE_URL}/{cover(series, site).name}"
     xml = f"""<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="feed.xsl"?>
 <rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:podcast="https://podcastindex.org/namespace/1.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>{escape(series['title'])}</title>
@@ -220,6 +222,8 @@ def opml_and_index(site):
 </ul></body></html>
 """)
     (site / "robots.txt").write_text("User-agent: *\nDisallow: /\n")
+    # Browsers render the feeds through this stylesheet; podcast apps ignore it.
+    shutil.copyfile(pathlib.Path(__file__).with_name("feed.xsl"), site / "feed.xsl")
 
 
 def main():
@@ -236,8 +240,9 @@ def main():
             to_icloud(series, staged)
         if args.github:
             to_release(series, staged)
+        if args.site:
             feed(series, staged, args.site)
-    if args.github:
+    if args.site:
         opml_and_index(args.site)
 
 

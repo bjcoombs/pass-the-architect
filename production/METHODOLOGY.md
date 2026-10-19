@@ -78,6 +78,7 @@ Then commit `docs/` and push.
 - **`--icloud`** copies each series to iCloud Drive as `NN - Title.mp3` and moves stale files to the Trash.
 - **GUIDs** include a hash of the file, so podcast apps download an episode again when it changes.
 - **`--github`** uploads the MP3s as release assets, one release per series, so the git history stays small. It also writes the feeds, chapter JSON, covers, OPML and index page into `docs/`, which GitHub Pages serves.
+- **`--site` alone** rewrites `docs/` without uploading, for changes to the feed format or the stylesheet (`tools/feed.xsl`).
 - **Keeping it unlisted:** the feeds carry `itunes:block` and the site carries `noindex`. Subscribe by URL and never submit a feed to a directory.
 
 ## Adapting to another exam
