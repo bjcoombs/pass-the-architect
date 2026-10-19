@@ -4,35 +4,78 @@
   "chapters": [
     {
       "startTime": 0.0,
-      "title": "In this episode"
+      "title": "In this episode",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/01-01-solution-design/00.jpg"
     },
     {
       "startTime": 65.44,
-      "title": "Cold open: card disputes"
+      "title": "Cold open: card disputes - Question 1: Bank card dispute emails",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/01-01-solution-design/01.jpg"
     },
     {
       "startTime": 480.39,
-      "title": "Choosing a pattern"
+      "title": "Choosing a pattern",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/01-01-solution-design/02.jpg"
+    },
+    {
+      "startTime": 754.41,
+      "title": "Question 2: Technician notes extraction format drift",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/01-01-solution-design/03.jpg"
+    },
+    {
+      "startTime": 805.61,
+      "title": "Answer 2",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/01-01-solution-design/04.jpg"
     },
     {
       "startTime": 837.21,
-      "title": "Multi-agent systems"
+      "title": "Multi-agent systems",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/01-01-solution-design/05.jpg"
+    },
+    {
+      "startTime": 932.8,
+      "title": "Question 3: Hospital record review fan-out",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/01-01-solution-design/06.jpg"
+    },
+    {
+      "startTime": 981.12,
+      "title": "Answer 3",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/01-01-solution-design/07.jpg"
     },
     {
       "startTime": 1150.24,
-      "title": "Business value"
+      "title": "Business value",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/01-01-solution-design/08.jpg"
+    },
+    {
+      "startTime": 1200.3,
+      "title": "Question 4: Government consultation response themeing",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/01-01-solution-design/09.jpg"
+    },
+    {
+      "startTime": 1231.54,
+      "title": "Answer 4",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/01-01-solution-design/10.jpg"
     },
     {
       "startTime": 1257.56,
-      "title": "Cold open: the verdict"
+      "title": "Cold open: the verdict",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/01-01-solution-design/11.jpg"
+    },
+    {
+      "startTime": 1259.49,
+      "title": "Answer 1",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/01-01-solution-design/12.jpg"
     },
     {
       "startTime": 1324.92,
-      "title": "Five to remember"
+      "title": "Five to remember",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/01-01-solution-design/13.jpg"
     },
     {
       "startTime": 1385.09,
-      "title": "Recap: the exam tells"
+      "title": "Recap: the exam tells - Pause and answer 5",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/01-01-solution-design/14.jpg"
     }
   ]
 }

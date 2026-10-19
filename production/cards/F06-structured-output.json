@@ -1,0 +1,169 @@
+{
+  "drills": [
+    {
+      "kind": "mcq",
+      "label": "Cold open",
+      "question_line": "SAM: Structured data extraction scenario. A logistics company extracts supplier invoices with a tool-use schema",
+      "answer_line": "SAM: When the value is in the document, that is exactly right. Read the",
+      "scenario": "Structured data extraction",
+      "stem": "A logistics company extracts supplier invoices with a tool-use schema and a validation-retry loop. Payment terms fail validation on about 1 invoice in 8; those say \"terms as per master agreement\", which is not in the input. 3 retries with the error appended still fail. What to the architect change?",
+      "choose": 1,
+      "options": {
+        "A": "Raise the retry limit to 5 and make the appended error message more specific",
+        "B": "Value is absent from the source: stop retrying, return null with a reason, route or supply the agreement",
+        "C": "Add few-shot examples of correctly extracted payment terms",
+        "D": "Move the pipeline to a larger model"
+      },
+      "correct": [
+        "B"
+      ],
+      "why": "The master agreement is not part of the input. Retry fixes format, never absence; A's best case is a fabricated term, and no model reads a document it was not given."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Choose two. Continuous integration scenario. A payments company's review",
+      "answer_line": "SAM: Both. A defines what to report and what to skip. C protects trust",
+      "scenario": "Continuous integration",
+      "stem": "A payments company's review bot has a 60% dismissal rate. Most dismissed findings are style nits and \"this comment may be outdated\" warnings; security findings are rarely dismissed. Which two changes best restore precision?",
+      "choose": 2,
+      "options": {
+        "A": "Report bugs and security issues; skip minor style and established local patterns",
+        "B": "Add \"be conservative and only report high-confidence findings\" to the prompt",
+        "C": "Temporarily disable comment-accuracy while rewriting it to flag only comments that contradict the code",
+        "D": "Three reviewer instances vote; post only findings two of them agree on",
+        "E": "Post only findings the model rates as high severity"
+      },
+      "correct": [
+        "A",
+        "C"
+      ],
+      "why": "A defines what to report and what to skip. C protects trust in the accurate categories while the noisy one is fixed. B is the vague instruction the guide names as failing."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Structured data extraction scenario. A pharmaceutical company extracts",
+      "answer_line": "SAM: That is miss pattern four, a rule learned last week applied beyond",
+      "scenario": "Structured data extraction",
+      "stem": "A pharmaceutical company extracts sample size and primary endpoint from studies. With a methods section, extraction is accurate; where the details sit in the results narrative, sample size comes back null, though a reviewer can find it in the text. Best fix?",
+      "choose": 1,
+      "options": {
+        "A": "Few-shot examples of correct extraction from studies with the details embedded in the narrative",
+        "B": "Make the sample size field nullable so the null is legal",
+        "C": "Add a retry loop that re-asks when the field is null",
+        "D": "Add a prompt sentence saying sample size may appear anywhere"
+      },
+      "correct": [
+        "A"
+      ],
+      "why": "The value is in the source, in a shape the model was not shown. Nullable is for absent data; B makes the wrong answer legal, C re-asks with no new information."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Structured data extraction scenario. A bank's operations team receives",
+      "answer_line": "SAM: B. Any guarantees a tool call and lets the model pick the schema that",
+      "scenario": "Structured data extraction",
+      "stem": "A bank's operations team receives a mixed inbox of invoices, receipts and contracts, with no reliable way to tell which is which beforehand. Each type has its own extraction tool. With tool choice on auto, about 5% of responses come back as prose with no tool call. What should change?",
+      "choose": 1,
+      "options": {
+        "A": "Keep auto and add a firm instruction to always call a tool",
+        "B": "Set tool choice to any",
+        "C": "Force the invoice extraction tool, since invoices are the most common type",
+        "D": "Remove the tools and ask for JSON in the prompt"
+      },
+      "correct": [
+        "B"
+      ],
+      "why": "Any guarantees a tool call and lets the model pick the schema that fits. A can still return prose; C forces the wrong schema onto receipts and contracts."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Choose two. Structured data extraction scenario. A utility company",
+      "answer_line": "SAM: Both. A gives ambiguity an honest answer; B gives unlisted faults",
+      "scenario": "Structured data extraction",
+      "stem": "A utility company extracts fault reports from free-text visit notes into a schema with a 6-value fault category enum. Vague notes are labelled \"electrical\" with no basis, and new faults that fit none of the 6 are forced into the nearest category. Which two schema changes address these?",
+      "choose": 2,
+      "options": {
+        "A": "Add an \"unclear\" value for notes that do not support a confident category",
+        "B": "Add an \"other\" value with a free-text fault detail field",
+        "C": "Replace the enum with a free-text category field",
+        "D": "Keep the field required and instruct the model to pick the closest category",
+        "E": "Expand the enum to 40 values covering every fault the team can imagine"
+      },
+      "correct": [
+        "A",
+        "B"
+      ],
+      "why": "A gives ambiguity an honest answer; B gives unlisted faults somewhere to go with the detail preserved. E is scale instead of structure."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Continuous integration scenario. A retailer's review bot posts about",
+      "answer_line": "SAM: A. It turns dismissals into data you can group. B is confidence filtering",
+      "scenario": "Continuous integration",
+      "stem": "A retailer's review bot posts about 40 findings a day and developers dismiss about a third. The team wants to cut false positives but cannot tell which kinds of finding are dismissed, because findings are free-form comments. What should the architect add first?",
+      "choose": 1,
+      "options": {
+        "A": "A detected pattern field on each structured finding, so dismissals can be analysed by pattern",
+        "B": "An instruction to report only findings the model is confident developers will accept",
+        "C": "A rule that hides any finding not acted on within a week",
+        "D": "A larger model for the review step"
+      },
+      "correct": [
+        "A"
+      ],
+      "why": "It turns dismissals into data you can group. B is confidence filtering again, C hides symptoms and destroys the signal, D makes the same calls."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Choose two. Structured data extraction scenario. A law firm batches",
+      "answer_line": "SAM: Miss pattern two: one good clause, the speed, attached to a fatal",
+      "scenario": "Structured data extraction",
+      "stem": "A law firm batches 12,000 contracts overnight. In the morning, 160 requests have failed, most because the contract exceeded the context limit. Which two steps are correct?",
+      "choose": 2,
+      "options": {
+        "A": "Resubmit only the failed requests, identified by their custom IDs",
+        "B": "Split the oversized contracts into chunks before resubmitting them",
+        "C": "Resubmit the full batch so every result comes from the same run",
+        "D": "Send the failed requests unchanged through the synchronous API",
+        "E": "Raise the maximum output tokens and resubmit"
+      },
+      "correct": [
+        "A",
+        "B"
+      ],
+      "why": "Resubmit only the failures, changed. Unchanged (D) they fail again, just faster; C redoes 11,840 successes; E changes output length when the problem is input size."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Continuous integration scenario. A health-tech team's pipeline has",
+      "answer_line": "SAM: A. Fresh context removes the bias. B and C are the self-review instructions",
+      "scenario": "Continuous integration",
+      "stem": "A health-tech pipeline has Claude Code generate unit tests for each pull request, then review them for gaps in the same session. The review almost never finds anything, but engineers keep finding untested branches. What is the best change?",
+      "choose": 1,
+      "options": {
+        "A": "Review in a separate, independent Claude instance given the code and tests but not the generation reasoning",
+        "B": "Tell the generation session to review its tests critically before finishing",
+        "C": "Enable extended thinking for the generation session",
+        "D": "Run the same-session review three times and merge the results"
+      },
+      "correct": [
+        "A"
+      ],
+      "why": "Fresh context removes the bias. Self-review instructions and extended thinking lose to an independent instance; D repeats the same bias three times."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Before we finish, your turn. Pause and name the six things this episode covered, with",
+      "answer_line": "ALEX: Explicit criteria, giveaway \"be conservative\". Few-shot, giveaway",
+      "prompt": "Name the six things this episode covered, with the giveaway for each.",
+      "answer": "Explicit criteria (\"be conservative\"), few-shot (varied shapes), tool choice (parse failure, unknown type), retry (\"not part of the input\"), batch (custom ID), review (\"same session\")."
+    }
+  ]
+}

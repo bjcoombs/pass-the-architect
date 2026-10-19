@@ -4,35 +4,83 @@
   "chapters": [
     {
       "startTime": 0.0,
-      "title": "In this episode"
+      "title": "In this episode",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/06-06-governance/00.jpg"
     },
     {
       "startTime": 68.9,
-      "title": "Cold open: regional claims access"
+      "title": "Cold open: regional claims access - Question 1: Insurer claims assistant, regional access",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/06-06-governance/01.jpg"
     },
     {
       "startTime": 364.84,
-      "title": "Guardrails and control points"
+      "title": "Guardrails and control points",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/06-06-governance/02.jpg"
+    },
+    {
+      "startTime": 618.06,
+      "title": "Question 2: Retail support agent issuing store credit",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/06-06-governance/03.jpg"
+    },
+    {
+      "startTime": 700.06,
+      "title": "Answer 2",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/06-06-governance/04.jpg"
     },
     {
       "startTime": 726.87,
-      "title": "Risks and human review"
+      "title": "Risks and human review",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/06-06-governance/05.jpg"
+    },
+    {
+      "startTime": 1006.33,
+      "title": "Question 3: Field-service agent, 40 reviews a day",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/06-06-governance/06.jpg"
+    },
+    {
+      "startTime": 1053.54,
+      "title": "Answer 3",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/06-06-governance/07.jpg"
     },
     {
       "startTime": 1087.32,
-      "title": "Compliance obligations"
+      "title": "Compliance obligations",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/06-06-governance/08.jpg"
     },
     {
       "startTime": 1319.05,
-      "title": "Bias, fairness and transparency"
+      "title": "Bias, fairness and transparency",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/06-06-governance/09.jpg"
+    },
+    {
+      "startTime": 1408.26,
+      "title": "Question 4: Bank credit assistant, regulator challenge",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/06-06-governance/10.jpg"
+    },
+    {
+      "startTime": 1445.7,
+      "title": "Answer 4",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/06-06-governance/11.jpg"
+    },
+    {
+      "startTime": 1467.76,
+      "title": "Answer 1",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/06-06-governance/12.jpg"
     },
     {
       "startTime": 1513.54,
-      "title": "Five to remember"
+      "title": "Five to remember",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/06-06-governance/13.jpg"
     },
     {
       "startTime": 1572.32,
-      "title": "Recap: the exam tells"
+      "title": "Recap: the exam tells - Pause and answer 5",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/06-06-governance/14.jpg"
+    },
+    {
+      "startTime": 1581.96,
+      "title": "Answer 5",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/06-06-governance/15.jpg"
     }
   ]
 }

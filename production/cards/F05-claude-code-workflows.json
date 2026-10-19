@@ -1,0 +1,98 @@
+{
+  "drills": [
+    {
+      "kind": "mcq",
+      "label": "Cold open",
+      "question_line": "SAM: Scenario five, Claude Code for Continuous Integration. A payments team runs an automated review",
+      "answer_line": "SAM: A. Include the prior findings and instruct the review",
+      "scenario": "Claude Code for Continuous Integration",
+      "stem": "An automated review runs on every push to a pull request. After each new commit the same 11 comments reappear, and two flag problems the author already fixed. What should the team change?",
+      "choose": 1,
+      "options": {
+        "A": "Give the review the previous run's findings; report only issues that are new or still unaddressed",
+        "B": "Have the posting script hash each comment's text and skip any comment posted before",
+        "C": "Run the review only once, when the pull request is opened",
+        "D": "Add \"do not repeat earlier feedback\" to the review prompt"
+      },
+      "correct": ["A"],
+      "why": "The model rewords findings, so hashes change, and a hash cannot know a problem was fixed. Only a review that sees its prior findings can judge that."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Code Generation scenario. A logistics team will replace its logging library",
+      "answer_line": "SAM: B. Sixty files and unknown wrappers are the plan-mode triggers",
+      "scenario": "Code generation with Claude Code",
+      "stem": "A team will replace its logging library across about 60 files. Some modules wrap the old logger in helper functions, and nobody is sure how many. What is the best approach?",
+      "choose": 1,
+      "options": {
+        "A": "Direct execution file by file, fixing each module as it comes up",
+        "B": "Plan mode to map usage and design the migration, then carry it out with direct execution",
+        "C": "A detailed prompt describing the new logging calls, run once in direct execution across the repo",
+        "D": "Start with direct execution and switch to plan mode if the wrappers cause trouble"
+      },
+      "correct": ["B"],
+      "why": "60 files and unknown wrappers are plan-mode triggers: plan the migration, then execute it. A means rework; C assumes a design; D waits for known complexity."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Choose two. Code Generation scenario. Claude Code has written a script that moves loyalty-programme accounts",
+      "answer_line": "SAM: B is right. D is the miss. The stem told you the conversion",
+      "scenario": "Code generation with Claude Code",
+      "stem": "Choose two. A migration script has three problems: no-tier accounts come out as \"None\" not empty; points are rounded before currency conversion, and the two steps interact; a log message has a typo. Which two approaches fix this most effectively?",
+      "choose": 2,
+      "options": {
+        "A": "Describe the rounding and conversion problem in one detailed message, because the fixes interact",
+        "B": "A specific test case: an account with no tier in, an empty tier value as expected output",
+        "C": "All three problems in one message ending \"please be more careful with edge cases\"",
+        "D": "Ask for the rounding fix now, then the conversion fix later once rounding is correct",
+        "E": "Ask Claude to rewrite the script from scratch from a longer description"
+      },
+      "correct": ["A", "B"],
+      "why": "Interacting problems go in one message; one at a time is for independent ones. B names the failing case. C adds vague feedback; E throws away working code."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. CI scenario. A review job runs Claude Code in print mode",
+      "answer_line": "SAM: C. The script needs machine-parseable findings",
+      "scenario": "Claude Code for Continuous Integration",
+      "stem": "A review job runs Claude Code in print mode and a script turns its output into inline comments. About one run in ten, the script fails because the output is a paragraph of prose followed by a findings list. What should change?",
+      "choose": 1,
+      "options": {
+        "A": "Add a regular expression to the script that extracts the list from the prose",
+        "B": "Add \"respond with JSON only\" to the prompt",
+        "C": "Use the JSON output format with a schema for the findings",
+        "D": "Retry the job when parsing fails"
+      },
+      "correct": ["C"],
+      "why": "Structured output enforced through the CLI with a schema. B is probabilistic; A works around the symptom; D repeats the unreliable call."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Choose two. CI scenario. A hospital software team's automated reviewer",
+      "answer_line": "SAM: B and C. B is categorical criteria with examples",
+      "scenario": "Claude Code for Continuous Integration",
+      "stem": "Choose two. A reviewer posts about 40 comments per PR: naming preferences, possible-null warnings on values already checked upstream, and occasional real security issues. Developers now dismiss every comment. Which two changes best restore trust?",
+      "choose": 2,
+      "options": {
+        "A": "Add \"only report findings you are highly confident in\" to the review prompt",
+        "B": "Explicit criteria: report bugs and security, skip naming and style, a code example per severity level",
+        "C": "Temporarily switch off the possible-null category while its prompt is improved",
+        "D": "Run the review three times and post only findings in at least two runs",
+        "E": "Switch to a larger model"
+      },
+      "correct": ["B", "C"],
+      "why": "Categorical criteria with examples raise precision; switching off the noisy category restores trust now. A is the named confidence-word trap."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Retrieval before the tease. Pause and name the three segments, and one technique from each.",
+      "answer_line": "ALEX: Plan mode against direct execution, with the Explore subagent.",
+      "prompt": "Name the three segments, and one technique from each.",
+      "answer": "Plan mode against direct execution, with the Explore subagent. Iterative refinement, five techniques. Claude Code in CI."
+    }
+  ]
+}

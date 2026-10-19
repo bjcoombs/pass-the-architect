@@ -4,31 +4,68 @@
   "chapters": [
     {
       "startTime": 0.0,
-      "title": "In this episode"
+      "title": "In this episode",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/08-08-dev-productivity/00.jpg"
     },
     {
       "startTime": 66.85,
-      "title": "Cold open: the shared procedure"
+      "title": "Cold open: the shared procedure - Question 1: Hospital procedure shared across six teams",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/08-08-dev-productivity/01.jpg"
     },
     {
       "startTime": 354.11,
-      "title": "Segment two: developer workflows"
+      "title": "Segment two: developer workflows",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/08-08-dev-productivity/02.jpg"
     },
     {
       "startTime": 546.76,
-      "title": "Segment three: debugging support"
+      "title": "Segment three: debugging support",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/08-08-dev-productivity/03.jpg"
+    },
+    {
+      "startTime": 671.69,
+      "title": "Question 2: Bank coding assistant slowing down",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/08-08-dev-productivity/04.jpg"
+    },
+    {
+      "startTime": 729.63,
+      "title": "Answer 2",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/08-08-dev-productivity/05.jpg"
+    },
+    {
+      "startTime": 755.32,
+      "title": "Question 3: Lumpy adoption, unexplained merged change",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/08-08-dev-productivity/06.jpg"
+    },
+    {
+      "startTime": 812.18,
+      "title": "Answer 3",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/08-08-dev-productivity/07.jpg"
     },
     {
       "startTime": 830.92,
-      "title": "Cold open: the verdict"
+      "title": "Cold open: the verdict",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/08-08-dev-productivity/08.jpg"
+    },
+    {
+      "startTime": 863.2,
+      "title": "Answer 1",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/08-08-dev-productivity/09.jpg"
     },
     {
       "startTime": 918.25,
-      "title": "Five to remember"
+      "title": "Five to remember",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/08-08-dev-productivity/10.jpg"
     },
     {
       "startTime": 971.27,
-      "title": "Recap: the exam tells"
+      "title": "Recap: the exam tells - Pause and answer 4",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/08-08-dev-productivity/11.jpg"
+    },
+    {
+      "startTime": 979.24,
+      "title": "Answer 4",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/08-08-dev-productivity/12.jpg"
     }
   ]
 }

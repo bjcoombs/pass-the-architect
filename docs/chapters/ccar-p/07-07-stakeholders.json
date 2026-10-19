@@ -4,35 +4,93 @@
   "chapters": [
     {
       "startTime": 0.0,
-      "title": "In this episode"
+      "title": "In this episode",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/07-07-stakeholders/00.jpg"
     },
     {
       "startTime": 69.41,
-      "title": "Cold open: the go-live date"
+      "title": "Cold open: the go-live date - Question 1: Retail sponsor wants a go-live date",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/07-07-stakeholders/01.jpg"
+    },
+    {
+      "startTime": 478.6,
+      "title": "Question 2: Benefits agency, unmentioned retention rule",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/07-07-stakeholders/02.jpg"
+    },
+    {
+      "startTime": 546.47,
+      "title": "Answer 2",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/07-07-stakeholders/03.jpg"
     },
     {
       "startTime": 582.06,
-      "title": "Communicating tradeoffs"
+      "title": "Communicating tradeoffs",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/07-07-stakeholders/04.jpg"
+    },
+    {
+      "startTime": 796.01,
+      "title": "Question 3: Bank COO approves full-context design",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/07-07-stakeholders/05.jpg"
+    },
+    {
+      "startTime": 840.39,
+      "title": "Answer 3",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/07-07-stakeholders/06.jpg"
     },
     {
       "startTime": 870.69,
-      "title": "Feedback loops and SLAs"
+      "title": "Feedback loops and SLAs",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/07-07-stakeholders/07.jpg"
+    },
+    {
+      "startTime": 1007.87,
+      "title": "Question 4: Repair assistant, four weeks of drift",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/07-07-stakeholders/08.jpg"
+    },
+    {
+      "startTime": 1079.62,
+      "title": "Answer 4",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/07-07-stakeholders/09.jpg"
     },
     {
       "startTime": 1147.7,
-      "title": "Documentation for handoff"
+      "title": "Documentation for handoff",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/07-07-stakeholders/10.jpg"
     },
     {
       "startTime": 1329.88,
-      "title": "Supporting the lifecycle"
+      "title": "Supporting the lifecycle",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/07-07-stakeholders/11.jpg"
+    },
+    {
+      "startTime": 1398.74,
+      "title": "Question 5: Sponsor wants outcome document early",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/07-07-stakeholders/12.jpg"
+    },
+    {
+      "startTime": 1442.6,
+      "title": "Answer 5",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/07-07-stakeholders/13.jpg"
+    },
+    {
+      "startTime": 1488.84,
+      "title": "Answer 1",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/07-07-stakeholders/14.jpg"
     },
     {
       "startTime": 1529.47,
-      "title": "Five to remember"
+      "title": "Five to remember",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/07-07-stakeholders/15.jpg"
     },
     {
       "startTime": 1604.83,
-      "title": "Recap: the exam tells"
+      "title": "Recap: the exam tells - Pause and answer 6",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/07-07-stakeholders/16.jpg"
+    },
+    {
+      "startTime": 1612.94,
+      "title": "Answer 6",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/07-07-stakeholders/17.jpg"
     }
   ]
 }

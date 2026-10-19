@@ -4,39 +4,93 @@
   "chapters": [
     {
       "startTime": 0.0,
-      "title": "In this episode"
+      "title": "In this episode",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/05-F01-agentic-loop/00.jpg"
     },
     {
       "startTime": 64.14,
-      "title": "Cold open: the narrating agent"
+      "title": "Cold open: the narrating agent - Question 1: Customer support resolution agent",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/05-F01-agentic-loop/01.jpg"
     },
     {
       "startTime": 334.68,
-      "title": "Segment two: returning tool results"
+      "title": "Segment two: returning tool results - Question 2: Multi-agent research system",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/05-F01-agentic-loop/02.jpg"
+    },
+    {
+      "startTime": 435.09,
+      "title": "Answer 2",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/05-F01-agentic-loop/03.jpg"
     },
     {
       "startTime": 533.94,
-      "title": "Segment three: who decides next"
+      "title": "Segment three: who decides next",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/05-F01-agentic-loop/04.jpg"
+    },
+    {
+      "startTime": 709.78,
+      "title": "Question 3: Multi-agent research system",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/05-F01-agentic-loop/05.jpg"
+    },
+    {
+      "startTime": 760.12,
+      "title": "Answer 3",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/05-F01-agentic-loop/06.jpg"
     },
     {
       "startTime": 790.21,
-      "title": "Segment four: enforced prerequisites"
+      "title": "Segment four: enforced prerequisites",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/05-F01-agentic-loop/07.jpg"
+    },
+    {
+      "startTime": 901.93,
+      "title": "Question 4: Customer support resolution agent",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/05-F01-agentic-loop/08.jpg"
+    },
+    {
+      "startTime": 968.51,
+      "title": "Answer 4",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/05-F01-agentic-loop/09.jpg"
     },
     {
       "startTime": 1011.04,
-      "title": "Segment five: multi-agent errors"
+      "title": "Segment five: multi-agent errors",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/05-F01-agentic-loop/10.jpg"
+    },
+    {
+      "startTime": 1205.24,
+      "title": "Question 5: Multi-agent research system",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/05-F01-agentic-loop/11.jpg"
+    },
+    {
+      "startTime": 1271.09,
+      "title": "Answer 5",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/05-F01-agentic-loop/12.jpg"
     },
     {
       "startTime": 1297.97,
-      "title": "Cold open: the verdict"
+      "title": "Cold open: the verdict",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/05-F01-agentic-loop/13.jpg"
+    },
+    {
+      "startTime": 1315.79,
+      "title": "Answer 1",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/05-F01-agentic-loop/14.jpg"
     },
     {
       "startTime": 1368.22,
-      "title": "Five to remember"
+      "title": "Five to remember",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/05-F01-agentic-loop/15.jpg"
     },
     {
       "startTime": 1441.34,
-      "title": "Recap: the exam tells"
+      "title": "Recap: the exam tells - Pause and answer 6",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/05-F01-agentic-loop/16.jpg"
+    },
+    {
+      "startTime": 1448.61,
+      "title": "Answer 6",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/05-F01-agentic-loop/17.jpg"
     }
   ]
 }

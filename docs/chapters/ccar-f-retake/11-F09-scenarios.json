@@ -4,39 +4,113 @@
   "chapters": [
     {
       "startTime": 0.0,
-      "title": "In this episode"
+      "title": "In this episode",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/11-F09-scenarios/00.jpg"
     },
     {
       "startTime": 61.61,
-      "title": "The frame and customer support"
+      "title": "The frame and customer support",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/11-F09-scenarios/01.jpg"
+    },
+    {
+      "startTime": 289.42,
+      "title": "Question 1: Customer support",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/11-F09-scenarios/02.jpg"
+    },
+    {
+      "startTime": 338.32,
+      "title": "Answer 1",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/11-F09-scenarios/03.jpg"
     },
     {
       "startTime": 390.8,
-      "title": "Scenario two: code generation"
+      "title": "Scenario two: code generation",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/11-F09-scenarios/04.jpg"
+    },
+    {
+      "startTime": 549.15,
+      "title": "Question 2: Code generation",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/11-F09-scenarios/05.jpg"
+    },
+    {
+      "startTime": 598.71,
+      "title": "Answer 2",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/11-F09-scenarios/06.jpg"
     },
     {
       "startTime": 625.91,
-      "title": "Scenario three: multi-agent research"
+      "title": "Scenario three: multi-agent research",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/11-F09-scenarios/07.jpg"
+    },
+    {
+      "startTime": 789.05,
+      "title": "Question 3: Multi-agent research",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/11-F09-scenarios/08.jpg"
+    },
+    {
+      "startTime": 846.13,
+      "title": "Answer 3",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/11-F09-scenarios/09.jpg"
     },
     {
       "startTime": 871.57,
-      "title": "Scenario four: developer productivity"
+      "title": "Scenario four: developer productivity",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/11-F09-scenarios/10.jpg"
+    },
+    {
+      "startTime": 1047.43,
+      "title": "Question 4: Developer productivity",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/11-F09-scenarios/11.jpg"
+    },
+    {
+      "startTime": 1083.42,
+      "title": "Answer 4",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/11-F09-scenarios/12.jpg"
     },
     {
       "startTime": 1110.31,
-      "title": "Scenario five: continuous integration"
+      "title": "Scenario five: continuous integration",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/11-F09-scenarios/13.jpg"
+    },
+    {
+      "startTime": 1264.99,
+      "title": "Question 5: Continuous integration",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/11-F09-scenarios/14.jpg"
+    },
+    {
+      "startTime": 1305.26,
+      "title": "Answer 5",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/11-F09-scenarios/15.jpg"
     },
     {
       "startTime": 1325.31,
-      "title": "Scenario six: structured extraction"
+      "title": "Scenario six: structured extraction",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/11-F09-scenarios/16.jpg"
+    },
+    {
+      "startTime": 1489.89,
+      "title": "Question 6: Structured extraction",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/11-F09-scenarios/17.jpg"
+    },
+    {
+      "startTime": 1531.22,
+      "title": "Answer 6",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/11-F09-scenarios/18.jpg"
     },
     {
       "startTime": 1559.59,
-      "title": "Patterns across scenarios"
+      "title": "Patterns across scenarios",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/11-F09-scenarios/19.jpg"
     },
     {
       "startTime": 1661.98,
-      "title": "Recap: the exam tells"
+      "title": "Recap: the exam tells - Pause and answer 7",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/11-F09-scenarios/20.jpg"
+    },
+    {
+      "startTime": 1669.2,
+      "title": "Answer 7",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/11-F09-scenarios/21.jpg"
     }
   ]
 }

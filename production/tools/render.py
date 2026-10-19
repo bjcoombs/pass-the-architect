@@ -1,14 +1,16 @@
 #!/usr/bin/env python3
 """Render ALEX/SAM transcripts to MP3 with the ElevenLabs text-to-speech API.
 
-Usage: uv run --with requests tools/render.py [--limit N] [--dry-run] [--out DIR] transcript.md...
+Usage: uv run --with requests --with mutagen --with pillow tools/render.py [--limit N] [--dry-run] [--out DIR] transcript.md...
 
 Each speaker turn becomes one TTS request, cached by a hash of the request
 including the neighbouring turns, so reruns cost nothing. A turn whose own text
 is unchanged reuses its clip even when a neighbour was edited, so an edit pays
 only for the edited turn. --dry-run reports the characters a render would bill. Turns are joined with short gaps. A "## Title" line in the body starts an
-MP3 chapter at the next turn; chapters are also written to <stem>.chapters.json
-in Podcasting 2.0 format for the RSS feed.
+MP3 chapter at the next turn. cards/<stem>.json adds a chapter at each drill
+question (artwork showing the options) and at its answer (artwork marking the
+correct ones). Chapters are embedded as ID3 CHAP frames with titles and images,
+and written to <stem>.chapters.json (Podcasting 2.0) with images in cards/<stem>/.
 The API key is read from ELEVENLABS_API_KEY or the elevenlabs MCP server
 entry in ~/.claude.json.
 """
@@ -19,10 +21,14 @@ import json
 import os
 import pathlib
 import re
+import shutil
 import subprocess
 import sys
 
 import requests
+from mutagen.id3 import APIC, CHAP, CTOC, ID3, TIT2, CTOCFlags
+
+import cards
 
 VOICES = {
     "ALEX": "JBFqnCBsd6RMkjVDRZzb",  # George - warm British male
@@ -76,7 +82,8 @@ def parse(path):
         for pattern, spoken in PRONUNCIATIONS.items():
             speech = re.sub(pattern, spoken, speech)
         if speech:
-            turns.append({"speaker": speaker, "text": speech, "pause": pause, "sting": sting, "chapter": chapter})
+            turns.append({"speaker": speaker, "text": speech, "pause": pause, "sting": sting, "chapter": chapter,
+                          "line": line})
             chapter = None
     return meta, turns
 
@@ -145,25 +152,64 @@ def duration(path, _seen={}):
     return _seen[path]
 
 
-def chapter_files(meta, playlist, marks, stem, cache, out_dir):
-    """Turn (playlist index, title) marks into an ffmetadata file and a chapters JSON."""
-    starts, t = [], 0.0
-    for i, entry in enumerate(playlist):
-        starts.append(t)
-        t += duration(entry)
-    total = t
-    chapters = [(0.0 if n == 0 else starts[i], title) for n, (i, title) in enumerate(marks)]
-    ffmeta = [";FFMETADATA1"]
-    for n, (start, title) in enumerate(chapters):
+def chapter_marks(path, meta, turns):
+    """Chapters keyed by turn index: segment headings, plus question and answer cards from cards/<stem>.json."""
+    episode = meta.get("title", path.stem)
+    marks = {}
+    for i, t in enumerate(turns):
+        if t["chapter"]:
+            marks[i] = (t["chapter"], cards.segment(t["chapter"], episode))
+    data = MUSIC.parent / "cards" / f"{path.stem}.json"
+    drills = json.loads(data.read_text())["drills"] if data.exists() else []
+
+    def find(prefix):
+        hits = [i for i, t in enumerate(turns) if t["line"].startswith(prefix)]
+        if len(hits) != 1:
+            sys.exit(f"{data.name}: {len(hits)} turns start with {prefix[:60]!r}")
+        return hits[0]
+
+    for n, d in enumerate(drills, 1):
+        q = find(d["question_line"])
+        seg = marks.get(q, (None,))[0]
+        if d["kind"] == "mcq":
+            if not set(d["correct"]) <= set(d["options"]) or len(d["correct"]) != d.get("choose", 1):
+                sys.exit(f"{data.name}: drill {n} correct {d['correct']} does not fit its options or choose count")
+            title = f"Question {n}: {d.get('scenario') or d.get('label', 'Drill')}"
+            marks[q] = (f"{seg} - {title}" if seg else title, cards.question(d, episode, n))
+            if d.get("answer_line"):
+                marks[find(d["answer_line"])] = (f"Answer {n}", cards.answer(d, episode, n))
+        else:
+            title = f"Pause and answer {n}"
+            marks[q] = (f"{seg} - {title}" if seg else title, cards.recall(d, episode, n, reveal=False))
+            if d.get("answer_line"):
+                marks[find(d["answer_line"])] = (f"Answer {n}", cards.recall(d, episode, n, reveal=True))
+    return marks
+
+
+def write_chapters(mp3, meta, chapters, total, stem, out_dir):
+    """Embed ID3 chapters with titles and artwork, and write Podcasting 2.0 JSON plus the images beside the MP3."""
+    tags = ID3(mp3)
+    tags.delall("CHAP")
+    tags.delall("CTOC")
+    img_dir = out_dir / "cards" / stem
+    shutil.rmtree(img_dir, ignore_errors=True)
+    img_dir.mkdir(parents=True)
+    ids, entries = [], []
+    for n, (start, title, img) in enumerate(chapters):
         end = chapters[n + 1][0] if n + 1 < len(chapters) else total
-        ffmeta += ["[CHAPTER]", "TIMEBASE=1/1000", f"START={int(start * 1000)}", f"END={int(end * 1000)}",
-                   "title=" + re.sub(r"([=;#\\\n])", r"\\\1", title)]
-    meta_path = cache / f"{stem}.ffmeta"
-    meta_path.write_text("\n".join(ffmeta) + "\n")
+        cid = f"ch{n:03d}"  # zero-padded so frame order matches play order
+        ids.append(cid)
+        tags.add(CHAP(element_id=cid, start_time=int(start * 1000), end_time=int(end * 1000),
+                      sub_frames=[TIT2(encoding=3, text=[title]),
+                                  APIC(encoding=3, mime="image/jpeg", type=0, desc=cid, data=img)]))
+        name = f"{n:02d}.jpg"
+        (img_dir / name).write_bytes(img)
+        entries.append({"startTime": round(start, 2), "title": title, "img": name})
+    tags.add(CTOC(element_id="toc", flags=CTOCFlags.TOP_LEVEL | CTOCFlags.ORDERED, child_element_ids=ids,
+                  sub_frames=[TIT2(encoding=3, text=["Chapters"])]))
+    tags.save(mp3, v2_version=3)
     (out_dir / f"{stem}.chapters.json").write_text(json.dumps(
-        {"version": "1.2.0", "title": meta.get("title", stem),
-         "chapters": [{"startTime": round(s, 2), "title": title} for s, title in chapters]}, indent=2) + "\n")
-    return meta_path, len(chapters)
+        {"version": "1.2.0", "title": meta.get("title", stem), "chapters": entries}, indent=2) + "\n")
 
 
 def episode_label(episode):
@@ -196,10 +242,11 @@ def render(path, out_dir, cache, key, limit, album, dry_run=False):
     beat = silence(cache, 0.6)
     intro, sting, outro = (MUSIC / f"{name}-norm.mp3" for name in ("intro", "sting", "outro"))
     entries = [intro, beat] if intro.exists() else []
-    marks = []  # (index into entries, chapter title)
-    for t, clip in zip(turns, clips):
-        if t["chapter"]:
-            marks.append((len(entries), t["chapter"]))
+    by_turn = chapter_marks(path, meta, turns) if not limit else {}
+    marks = []  # (index into entries, chapter title, card image)
+    for i, (t, clip) in enumerate(zip(turns, clips)):
+        if i in by_turn:
+            marks.append((len(entries), *by_turn[i]))
         entries += [clip, pause if t["pause"] else gap]
         if t["sting"] and sting.exists():
             entries += [sting, beat]
@@ -209,12 +256,8 @@ def render(path, out_dir, cache, key, limit, album, dry_run=False):
     playlist.write_text("".join(f"file '{e}'\n" for e in entries))
     suffix = "-sample" if limit else ""
     out = out_dir / f"{path.stem}{suffix}.mp3"
-    chapter_args, n_chapters = [], 0
-    if marks and not limit:
-        meta_path, n_chapters = chapter_files(meta, entries, marks, path.stem, cache, out_dir)
-        chapter_args = ["-f", "ffmetadata", "-i", str(meta_path), "-map", "0:a", "-map_chapters", "1"]
     subprocess.run(
-        ["ffmpeg", "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", str(playlist), *chapter_args,
+        ["ffmpeg", "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", str(playlist),
          "-af", "aresample=44100", "-ac", "1", "-b:a", "128k",  # resample: mixed TTS/music frames break lame otherwise
          "-metadata", f"title={episode_label(meta.get('episode', ''))} {meta.get('title', path.stem)}",
          "-metadata", f"album={album}",
@@ -224,6 +267,15 @@ def render(path, out_dir, cache, key, limit, album, dry_run=False):
          str(out)],
         check=True,
     )
+    n_chapters = 0
+    if marks:
+        starts, total = [], 0.0
+        for e in entries:
+            starts.append(total)
+            total += duration(e)
+        chapters = [(0.0 if n == 0 else starts[i], title, img) for n, (i, title, img) in enumerate(marks)]
+        write_chapters(out, meta, chapters, total, path.stem, out_dir)
+        n_chapters = len(chapters)
     chars = sum(len(t["text"]) for t in turns)
     print(f"{out}  turns={len(turns)} chars={chars} chapters={n_chapters}")
 

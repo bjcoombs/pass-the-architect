@@ -4,31 +4,98 @@
   "chapters": [
     {
       "startTime": 0.0,
-      "title": "In this episode"
+      "title": "In this episode",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/07-F03-hooks-sessions/00.jpg"
     },
     {
       "startTime": 66.13,
-      "title": "Cold open: the refund limit"
+      "title": "Cold open: the refund limit - Question 1: Customer support resolution agent",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/07-F03-hooks-sessions/01.jpg"
+    },
+    {
+      "startTime": 444.77,
+      "title": "Question 2: Customer support resolution agent",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/07-F03-hooks-sessions/02.jpg"
+    },
+    {
+      "startTime": 489.93,
+      "title": "Answer 2",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/07-F03-hooks-sessions/03.jpg"
     },
     {
       "startTime": 544.41,
-      "title": "Segment two: sessions"
+      "title": "Segment two: sessions",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/07-F03-hooks-sessions/04.jpg"
+    },
+    {
+      "startTime": 694.68,
+      "title": "Question 3: Code generation with Claude Code",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/07-F03-hooks-sessions/05.jpg"
+    },
+    {
+      "startTime": 749.18,
+      "title": "Answer 3",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/07-F03-hooks-sessions/06.jpg"
+    },
+    {
+      "startTime": 795.69,
+      "title": "Question 4: Code generation with Claude Code",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/07-F03-hooks-sessions/07.jpg"
+    },
+    {
+      "startTime": 856.72,
+      "title": "Answer 4",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/07-F03-hooks-sessions/08.jpg"
     },
     {
       "startTime": 911.37,
-      "title": "Segment three: escalation"
+      "title": "Segment three: escalation",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/07-F03-hooks-sessions/09.jpg"
+    },
+    {
+      "startTime": 1135.86,
+      "title": "Question 5: Customer support resolution agent",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/07-F03-hooks-sessions/10.jpg"
+    },
+    {
+      "startTime": 1191.01,
+      "title": "Answer 5",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/07-F03-hooks-sessions/11.jpg"
+    },
+    {
+      "startTime": 1228.42,
+      "title": "Question 6: Customer support resolution agent",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/07-F03-hooks-sessions/12.jpg"
+    },
+    {
+      "startTime": 1279.3,
+      "title": "Answer 6",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/07-F03-hooks-sessions/13.jpg"
     },
     {
       "startTime": 1325.41,
-      "title": "Cold open: the verdict"
+      "title": "Cold open: the verdict",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/07-F03-hooks-sessions/14.jpg"
+    },
+    {
+      "startTime": 1344.97,
+      "title": "Answer 1",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/07-F03-hooks-sessions/15.jpg"
     },
     {
       "startTime": 1384.34,
-      "title": "Five to remember"
+      "title": "Five to remember",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/07-F03-hooks-sessions/16.jpg"
     },
     {
       "startTime": 1447.62,
-      "title": "Recap: the exam tells"
+      "title": "Recap: the exam tells - Pause and answer 7",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/07-F03-hooks-sessions/17.jpg"
+    },
+    {
+      "startTime": 1456.7,
+      "title": "Answer 7",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/07-F03-hooks-sessions/18.jpg"
     }
   ]
 }

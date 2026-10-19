@@ -1,0 +1,60 @@
+{
+  "drills": [
+    {
+      "kind": "mcq",
+      "label": "Cold open",
+      "question_line": "SAM: Before anything else, an item. A team runs a customer-support agent that can read tickets, draft replies",
+      "answer_line": "SAM: Model size has nothing to do with authorization scope.",
+      "scenario": "Customer-support agent tool scope",
+      "stem": "A customer-support agent can read tickets, draft replies, issue refunds and delete user accounts. Support staff only ever read tickets and draft replies. Applying least privilege, which change best reduces risk?",
+      "choose": 1,
+      "options": {
+        "A": "Add logging to the refund and delete tools so misuse can be audited later",
+        "B": "Remove the refund and delete tools from the agent's configuration",
+        "C": "Keep all the tools but add a confirmation prompt before refunds and deletions",
+        "D": "Replace the agent with a larger model that follows instructions more reliably"
+      },
+      "correct": ["B"],
+      "why": "Least privilege means the capability is gone, so the attack surface is gone. Logging is detective, confirmation is a speed bump, and model size is not authorization scope."
+    },
+    {
+      "kind": "mcq",
+      "label": "Sample item",
+      "question_line": "SAM: An application sends the same eight-thousand-token system prompt and policy document on every request",
+      "answer_line": "ALEX: Constraint words: \"same on every request\", \"both latency and cost\"",
+      "scenario": "Repeated 8,000-token system prompt",
+      "stem": "An application sends the same 8,000-token system prompt and policy document on every request, followed by a short user message that changes each time. Latency and cost are both concerns. Which optimization most directly addresses both?",
+      "choose": 1,
+      "options": {
+        "A": "Truncate the policy document to the first 1,000 tokens",
+        "B": "Switch to the smallest available model regardless of task fit",
+        "C": "Put the static system prompt and policy before the dynamic content and enable prompt caching",
+        "D": "Move the policy document into a few-shot example block"
+      },
+      "correct": ["C"],
+      "why": "Caching keys off a stable prefix: fixed content first, varying content after. A cache hit cuts input cost on the reused part and reduces time to first token."
+    },
+    {
+      "kind": "mcq",
+      "label": "Sample item",
+      "question_line": "SAM: A rag system suddenly returns confident but incorrect answers after a document refresh. Latency and model",
+      "answer_line": "ALEX: Trigger: document refresh. Component it touched: the index. B.",
+      "scenario": "RAG answers wrong after refresh",
+      "stem": "A RAG system suddenly returns confident but incorrect answers after a document refresh. Latency and model version are unchanged. What is the most likely first place to investigate?",
+      "choose": 1,
+      "options": {
+        "A": "The model weights have silently changed",
+        "B": "The retrieval or indexing step is returning irrelevant or stale chunks",
+        "C": "The temperature setting is too low",
+        "D": "The context window has shrunk"
+      },
+      "correct": ["B"],
+      "why": "The refresh touched the index. Unchanged model version kills A; nothing about a refresh changes temperature or the context window."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Before the tease, a test. Pause and name the topics this episode covered",
+      "prompt": "Name the topics this episode covered, with the giveaway for each if you can."
+    }
+  ]
+}

@@ -33,6 +33,7 @@ Each series is built for one listener sitting one exam on a fixed date. Every ep
    - the body;
    - a retrieval prompt, then a recap framed as exam tells.
 6. **Chapters.** Put a `## Title` line before the first turn and after each `[sting]`. Headings are never spoken, so they can be changed at any time for free.
+   **Question and answer cards.** For each episode, `cards/<transcript stem>.json` lists every drill: the transcript line where it is asked, the line where the correct answer is first stated, a short on-screen stem, the options, the correct letters and a one-line reason. `render.py` turns each drill into two chapters. The question chapter's artwork shows the stem and options, so a listener who pauses can answer from the screen. The answer chapter's artwork highlights the correct options. Recall prompts get a prompt card and, where the transcript answers them, an answer card. Agents extracted the files from the finished transcripts; the renderer fails if a line prefix does not match exactly one turn.
 7. **Render** with `tools/render.py`, then **publish** with `tools/publish.py`.
 
 The learning design in short:
@@ -60,21 +61,22 @@ The full rules are in `SERIES.md`.
 - **Spend cap:** `tools/render.py --dry-run` prints the characters a render would bill. A real render refuses to bill more than `--budget` characters (default 0), so every spend has to be asked for.
 - **Pronunciation:** mispronounced words are fixed in `PRONUNCIATIONS` in `render.py`, as respellings used only for speech, such as "re-tries" and "ee-vals". The transcripts keep the real spelling. Test a fix on a short sample, run it back through speech-to-text, and only then rerender whole episodes.
 - **Music:** the intro, sting and outro were generated once with ElevenLabs music and sound effects. They are normalised to -24 LUFS mono (`music/*-norm.mp3`) so they sit under speech, which is about -23 LUFS.
-- **Chapters:** each MP3 carries ID3 chapters, and `<episode>.chapters.json` (Podcasting 2.0 format) is written beside it for the feed.
+- **Chapters:** each MP3 carries ID3 chapters (CHAP frames, each with a title and a JPEG card, written with mutagen; `tools/cards.py` draws the cards). `<episode>.chapters.json` (Podcasting 2.0 format) and the card images are written beside it for the feed. Retag with mutagen, never ffmpeg: `-map_metadata -1` drops chapter titles and ffmpeg cannot write chapter images.
 
 ## Publishing
 
 `tools/publish.py` holds the listening order for each series. It numbers files from 00 by position, and the hosts say that number aloud, so changing the order means changing the spoken lines too. `tools/renumber_retake.py` is a worked example.
 
 ```
-uv run --with requests tools/render.py --budget 0 transcripts/*.md
-uv run --with requests tools/render.py --budget 0 --album "..." foundations/transcripts/*.md
-python3 tools/publish.py --icloud --github --site ../docs
+uv run --with requests --with mutagen --with pillow tools/render.py --budget 0 transcripts/*.md
+uv run --with requests --with mutagen --with pillow tools/render.py --budget 0 --album "..." foundations/transcripts/*.md
+uv run --with mutagen tools/publish.py --icloud --github --site ../docs
 ```
 
 Then commit `docs/` and push.
 
 - **`--icloud`** copies each series to iCloud Drive as `NN - Title.mp3` and moves stale files to the Trash.
+- **GUIDs** include a hash of the file, so podcast apps download an episode again when it changes.
 - **`--github`** uploads the MP3s as release assets, one release per series, so the git history stays small. It also writes the feeds, chapter JSON, covers, OPML and index page into `docs/`, which GitHub Pages serves.
 - **Keeping it unlisted:** the feeds carry `itunes:block` and the site carries `noindex`. Subscribe by URL and never submit a feed to a directory.
 

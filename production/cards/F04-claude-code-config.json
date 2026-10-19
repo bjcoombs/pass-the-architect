@@ -1,0 +1,98 @@
+{
+  "drills": [
+    {
+      "kind": "mcq",
+      "label": "Cold open",
+      "question_line": "SAM: Code Generation with Claude Code scenario. A team's monorepo has test files in every package",
+      "answer_line": "SAM: Forty copies that drift, and every new package starts with none.",
+      "scenario": "Code generation with Claude Code",
+      "stem": "A monorepo has test files in every package. Testing conventions sit in the root CLAUDE.md, so they load in every session. The team wants them to load only when Claude works on a test file. What should they do?",
+      "choose": 1,
+      "options": {
+        "A": "Add a CLAUDE.md with the testing conventions to every directory that contains tests",
+        "B": "Move them to a .claude/rules file with a paths frontmatter field of **/*.test.tsx",
+        "C": "Ask each developer to move the conventions into their own user-level CLAUDE.md",
+        "D": "Turn the conventions into a skill that developers invoke before writing tests"
+      },
+      "correct": ["B"],
+      "why": "One glob rule covers every test file and loads only on contact. Per-directory copies drift; user level misses new hires; a skill depends on remembering."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Code Generation with Claude Code scenario. Two developers on the same repository",
+      "answer_line": "SAM: Miss pattern three: \"first step\" read as \"most effective\".",
+      "scenario": "Code generation with Claude Code",
+      "stem": "Two developers on the same repository report that Claude follows the team's error-handling convention in one developer's sessions and not the other's. What should the architect do first?",
+      "choose": 1,
+      "options": {
+        "A": "Run /memory in both developers' sessions and compare which memory files are loaded",
+        "B": "Rewrite the convention in capitals with an example",
+        "C": "Add a PreToolUse hook that blocks edits which break the convention",
+        "D": "Move both developers to a larger model"
+      },
+      "correct": ["A"],
+      "why": "\"First\": same repo, different behaviour points to differing config, likely a user-level file. Diagnose before you build; C skips the diagnosis."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Choose two. Code Generation with Claude Code scenario. A team's codebase-impact skill",
+      "answer_line": "SAM: Both. A answers \"buries the session\"",
+      "scenario": "Code generation with Claude Code",
+      "stem": "Choose two. A codebase-impact skill needs the module name, but developers often invoke it with no arguments and get a vague result. When it runs, it reads dozens of files and buries the session. Which two frontmatter changes address these problems?",
+      "choose": 2,
+      "options": {
+        "A": "Add context: fork so the analysis runs in an isolated sub-agent context",
+        "B": "Add an argument-hint so developers are prompted for the module name",
+        "C": "Add allowed-tools listing the shell tool so the skill can search faster",
+        "D": "Move the skill's instructions into the root CLAUDE.md so they are always available",
+        "E": "Add a line to the skill body asking Claude to keep its output short"
+      },
+      "correct": ["A", "B"],
+      "why": "A answers \"buries the session\"; B answers \"invoked with no arguments\". C widens access and fixes neither; D loads a task workflow into every session."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Code Generation with Claude Code scenario. A platform team writes Terraform",
+      "answer_line": "SAM: A. One glob catches every Terraform file wherever it lives",
+      "scenario": "Code generation with Claude Code",
+      "stem": "Terraform lives in an infra folder and in each service's deploy subfolder. The team wants its Terraform conventions applied whenever Claude edits any Terraform file, and loaded at no other time. What is the best approach?",
+      "choose": 1,
+      "options": {
+        "A": "A .claude/rules file with a paths field matching **/*.tf",
+        "B": "A CLAUDE.md in the infra folder containing the conventions",
+        "C": "A section in the root CLAUDE.md headed \"when editing Terraform\"",
+        "D": "A skill that developers run before editing Terraform"
+      },
+      "correct": ["A"],
+      "why": "One glob catches every Terraform file and loads only then. B misses the deploy folders; C loads every session; D relies on someone remembering."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Choose two. Developer Productivity with Claude scenario. A team's agent has a code-search",
+      "answer_line": "SAM: Both. B fixes the description that loses to Grep",
+      "scenario": "Developer productivity",
+      "stem": "Choose two. The agent uses Grep instead of the code-search MCP tool for tracing callers, and makes 15 exploratory calls to discover table structures before every query. Which two changes address the root causes?",
+      "choose": 2,
+      "options": {
+        "A": "Expose the database schemas as an MCP resource so the agent sees available data without exploring",
+        "B": "Expand the code-search tool's description: capabilities, outputs, when to use it instead of Grep",
+        "C": "Remove Grep from the agent's tools",
+        "D": "Raise the agent's maximum number of turns so the exploration finishes",
+        "E": "Replace both servers with a single custom server that combines them"
+      },
+      "correct": ["A", "B"],
+      "why": "B fixes the description that loses to Grep; A removes the need to explore. C is a blunt cut, D pays for the symptom, E is over-engineering."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Recall first. Pause and name the four segments, and the question that runs under all of them.",
+      "answer_line": "ALEX: The CLAUDE dot md hierarchy, commands and skills, path-specific rules",
+      "prompt": "Name the four segments, and the question that runs under all of them.",
+      "answer": "CLAUDE.md hierarchy, commands and skills, path-specific rules, MCP in Claude Code. Who receives the instruction, and when it loads."
+    }
+  ]
+}

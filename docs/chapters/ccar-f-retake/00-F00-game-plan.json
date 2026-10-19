@@ -4,31 +4,68 @@
   "chapters": [
     {
       "startTime": 0.0,
-      "title": "In this episode"
+      "title": "In this episode",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/00-F00-game-plan/00.jpg"
     },
     {
       "startTime": 62.09,
-      "title": "Cold open: misrouted tool calls"
+      "title": "Cold open: misrouted tool calls - Question 1: Customer support resolution agent",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/00-F00-game-plan/01.jpg"
     },
     {
       "startTime": 322.89,
-      "title": "Domain weights and pacing"
+      "title": "Domain weights and pacing",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/00-F00-game-plan/02.jpg"
     },
     {
       "startTime": 437.77,
-      "title": "The four-step method"
+      "title": "The four-step method",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/00-F00-game-plan/03.jpg"
+    },
+    {
+      "startTime": 528.24,
+      "title": "Question 2: Customer support resolution agent",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/00-F00-game-plan/04.jpg"
+    },
+    {
+      "startTime": 578.65,
+      "title": "Answer 2",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/00-F00-game-plan/05.jpg"
+    },
+    {
+      "startTime": 640.47,
+      "title": "Question 3: Code generation with Claude Code",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/00-F00-game-plan/06.jpg"
+    },
+    {
+      "startTime": 674.58,
+      "title": "Answer 3",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/00-F00-game-plan/07.jpg"
     },
     {
       "startTime": 735.72,
-      "title": "Cold open: the verdict"
+      "title": "Cold open: the verdict",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/00-F00-game-plan/08.jpg"
+    },
+    {
+      "startTime": 753.58,
+      "title": "Answer 1",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/00-F00-game-plan/09.jpg"
     },
     {
       "startTime": 813.21,
-      "title": "Using the series"
+      "title": "Using the series",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/00-F00-game-plan/10.jpg"
     },
     {
       "startTime": 910.86,
-      "title": "Recap: the exam tells"
+      "title": "Recap: the exam tells - Pause and answer 4",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/00-F00-game-plan/11.jpg"
+    },
+    {
+      "startTime": 920.91,
+      "title": "Answer 4",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/00-F00-game-plan/12.jpg"
     }
   ]
 }

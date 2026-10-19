@@ -19,8 +19,10 @@ These are unofficial study notes, not Anthropic material, and contain no exam it
   - `SERIES.md` and `FOUNDATIONS-RETAKE.md`: the series bibles.
   - `transcripts/` and `foundations/transcripts/`: the episodes.
   - `briefs/`: the revision briefs given to the writing agents.
+  - `cards/`: per-episode drill data (question, options, correct answer) behind the chapter artwork.
   - `tools/`:
-    - `render.py`: ElevenLabs text-to-speech with a cache, chapters and a spend cap.
+    - `render.py`: ElevenLabs text-to-speech with a cache, chapters with artwork, and a spend cap.
+    - `cards.py`: draws the segment, question and answer cards.
     - `publish.py`: copies to iCloud, uploads release assets and writes the feeds.
     - `renumber_retake.py`: makes the spoken episode numbers match the listening order.
   - `music/`: intro, sting and outro.

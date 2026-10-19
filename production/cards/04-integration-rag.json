@@ -1,0 +1,79 @@
+{
+  "drills": [
+    {
+      "kind": "mcq",
+      "label": "Cold open",
+      "question_line": "SAM: Here's a scenario. Choose two. A field service company gives its technicians an assistant over twelve years",
+      "answer_line": "SAM: A and B. A, hierarchical chunking, fixes the cut-off steps",
+      "scenario": "Service manual assistant retrieval",
+      "stem": "An assistant over 12 years of section-numbered service manuals uses fixed 500-token chunks and a dense-only index. Exact fault codes (say E417) get answers about other codes, and repair steps come back cut off, with no sign of the compressor model. Which two changes best fix both complaints?",
+      "choose": 2,
+      "options": {
+        "A": "Re-chunk hierarchically, keeping each numbered section and its parent model heading together",
+        "B": "Add a sparse keyword index beside the dense one; merge the ranked lists with reciprocal rank fusion",
+        "C": "Move to the most capable model tier",
+        "D": "Raise the number of retrieved chunks to 50 so the right one is somewhere in there",
+        "E": "Add a banner telling technicians to double-check fault codes against the printed manual"
+      },
+      "correct": ["A", "B"],
+      "why": "Hierarchical chunking fixes the cut-off steps in section-numbered manuals; a sparse index fused with RRF fixes exact fault codes, which dense-only misses."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. A retail pharmacy chain runs a patient assistant. It answers",
+      "answer_line": "SAM: C. Prescription status is live state owned by the pharmacy system",
+      "scenario": "Pharmacy prescription-ready status",
+      "stem": "A pharmacy's patient assistant answers refill-policy questions and whether a prescription is ready, both from one vector index refreshed nightly. Patients arrive to collect prescriptions the assistant said were ready, and they aren't. What's the best fix?",
+      "choose": 1,
+      "options": {
+        "A": "Refresh the index every 15 minutes",
+        "B": "Switch to a stronger embedding model",
+        "C": "Answer prescription status with a tool call to the pharmacy system; keep refill policy in retrieval",
+        "D": "Raise the similarity threshold so only close matches are used"
+      },
+      "correct": ["C"],
+      "why": "Prescription status is live state, so a direct call; refill policy is stable knowledge, so retrieval. A narrows the staleness window but keeps a snapshot doing a live job."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Choose two. A public-sector benefits agency runs a caseworker assistant",
+      "answer_line": "SAM: A and C. The pattern is silent retrieval drift as the corpus grows.",
+      "scenario": "Caseworker assistant silent policy drift",
+      "stem": "A benefits agency's caseworker assistant runs over a policy library that gains new circulars weekly. After 4 months the model-graded answer score is flat, but caseworkers revise more drafts, several citing recently changed policies. Which two actions best address this?",
+      "choose": 2,
+      "options": {
+        "A": "Log retrieval precision per request against a labelled grounding set; alert below threshold",
+        "B": "Keep the model-graded answer score as the single quality signal, since it hasn't moved",
+        "C": "Add queries on newly added circulars to the labelled retrieval eval set; run it on every index update",
+        "D": "Alert when cost exceeds 150% of the 7-day average",
+        "E": "Move to a larger model"
+      },
+      "correct": ["A", "C"],
+      "why": "Silent retrieval drift as the corpus grows: A measures retrieval separately in production, C puts retrieval quality in the eval loop for the documents that change."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. A bank's contact-centre assistant is breaching its p ninety-five",
+      "answer_line": "SAM: B. It attacks the latency where it's coming from",
+      "scenario": "Contact-centre p95 latency breach",
+      "stem": "A bank's contact-centre assistant breaches its p95 latency target. It sends a long, stable policy prompt every call, runs every query on the top tier, and uses a hybrid index. About 40% of queries are exact product codes. Cost is within budget. What's the best first change?",
+      "choose": 1,
+      "options": {
+        "A": "Drop the sparse index to save retrieval time",
+        "B": "Cache the stable policy prompt and route routine queries to a faster tier, keeping the hybrid index",
+        "C": "Raise the max output tokens cap so fewer answers get cut short",
+        "D": "Stop logging requests to shave time off each call"
+      },
+      "correct": ["B"],
+      "why": "B attacks latency where it comes from without losing anything required. A loses the exact-match recall 40% of queries need; C makes latency worse."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Before the tease, a test. Pause and name the six segments, or the giveaway for each.",
+      "prompt": "Name the six segments of this episode, or the giveaway for each."
+    }
+  ]
+}

@@ -4,39 +4,123 @@
   "chapters": [
     {
       "startTime": 0.0,
-      "title": "In this episode"
+      "title": "In this episode",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/09-10-miss-patterns/00.jpg"
     },
     {
       "startTime": 62.86,
-      "title": "Pattern one: real-world instinct"
+      "title": "Pattern one: real-world instinct",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/09-10-miss-patterns/01.jpg"
+    },
+    {
+      "startTime": 159.52,
+      "title": "Question 1: Scheduling assistant, reliability before launch",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/09-10-miss-patterns/02.jpg"
+    },
+    {
+      "startTime": 214.63,
+      "title": "Answer 1",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/09-10-miss-patterns/03.jpg"
     },
     {
       "startTime": 264.68,
-      "title": "Pattern two: one wrong clause"
+      "title": "Pattern two: one wrong clause",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/09-10-miss-patterns/04.jpg"
+    },
+    {
+      "startTime": 294.99,
+      "title": "Question 2: Benefits assistant nearing cost ceiling",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/09-10-miss-patterns/05.jpg"
+    },
+    {
+      "startTime": 364.96,
+      "title": "Answer 2",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/09-10-miss-patterns/06.jpg"
     },
     {
       "startTime": 414.92,
-      "title": "Pattern three: misreading the stem"
+      "title": "Pattern three: misreading the stem",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/09-10-miss-patterns/07.jpg"
+    },
+    {
+      "startTime": 446.11,
+      "title": "Question 3: Bank prompt validation, shadow testing",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/09-10-miss-patterns/08.jpg"
+    },
+    {
+      "startTime": 487.12,
+      "title": "Answer 3",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/09-10-miss-patterns/09.jpg"
+    },
+    {
+      "startTime": 509.07,
+      "title": "Question 4: Benefits triage, one region over-reviewed",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/09-10-miss-patterns/10.jpg"
+    },
+    {
+      "startTime": 563.8,
+      "title": "Answer 4",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/09-10-miss-patterns/11.jpg"
+    },
+    {
+      "startTime": 591.23,
+      "title": "Question 5: Benefits triage, skewed routing rule",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/09-10-miss-patterns/12.jpg"
+    },
+    {
+      "startTime": 626.04,
+      "title": "Answer 5",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/09-10-miss-patterns/13.jpg"
     },
     {
       "startTime": 652.48,
-      "title": "Pattern four: rules beyond scope"
+      "title": "Pattern four: rules beyond scope",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/09-10-miss-patterns/14.jpg"
+    },
+    {
+      "startTime": 698.85,
+      "title": "Question 6: Order tracker, peak-hour rate limits",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/09-10-miss-patterns/15.jpg"
+    },
+    {
+      "startTime": 745.48,
+      "title": "Answer 6",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/09-10-miss-patterns/16.jpg"
     },
     {
       "startTime": 778.22,
-      "title": "Pattern five: imported constraints"
+      "title": "Pattern five: imported constraints",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/09-10-miss-patterns/17.jpg"
+    },
+    {
+      "startTime": 809.22,
+      "title": "Question 7: Retail returns-policy staff assistant",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/09-10-miss-patterns/18.jpg"
+    },
+    {
+      "startTime": 866.6,
+      "title": "Answer 7",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/09-10-miss-patterns/19.jpg"
     },
     {
       "startTime": 918.8,
-      "title": "Thesis, interface and pacing"
+      "title": "Thesis, interface and pacing",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/09-10-miss-patterns/20.jpg"
     },
     {
       "startTime": 1115.54,
-      "title": "The five checks"
+      "title": "The five checks",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/09-10-miss-patterns/21.jpg"
     },
     {
       "startTime": 1146.32,
-      "title": "Recap: the exam tells"
+      "title": "Recap: the exam tells - Pause and answer 8",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/09-10-miss-patterns/22.jpg"
+    },
+    {
+      "startTime": 1154.84,
+      "title": "Answer 8",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/09-10-miss-patterns/23.jpg"
     }
   ]
 }

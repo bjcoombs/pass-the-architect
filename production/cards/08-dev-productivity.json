@@ -1,0 +1,63 @@
+{
+  "drills": [
+    {
+      "kind": "mcq",
+      "label": "Cold open",
+      "question_line": "SAM: A hospital group's platform team wrote a procedure that checks code changes for patient data leaking",
+      "answer_line": "SAM: It does. So, B. A plugin gives group targeting",
+      "scenario": "Hospital procedure shared across six teams",
+      "stem": "A platform team's procedure checks code changes for patient data leaking into logs. Six product teams must run it the same way. Last month a bad shared prompt edit hit every team for a week before anyone could undo it. How should the procedure reach the teams?",
+      "choose": 1,
+      "options": {
+        "A": "Upload it as an org-provisioned Skill under Organization settings",
+        "B": "Plugin assigned to all six teams' groups, version-controlled updates from a repo, a named owner",
+        "C": "Copy it as a project Skill into each team's repository",
+        "D": "Add a paragraph describing it to each team's CLAUDE.md"
+      },
+      "correct": ["B"],
+      "why": "\"Could not undo it\" plus \"a named owner\" means governance decides. Org-provisioned Skills have no version pinning or native rollback; a plugin gives a path back."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. A retail bank's internal coding assistant has slowed noticeably",
+      "answer_line": "ALEX: So B.",
+      "scenario": "Bank coding assistant slowing down",
+      "stem": "A bank's internal coding assistant has slowed noticeably over three weeks. Nothing was deployed; the team recently pointed it at a much larger document set. What should the architect do first?",
+      "choose": 1,
+      "options": {
+        "A": "Switch to a smaller, faster model",
+        "B": "Use request traces to find the slowest span: tokens per request, slowest tool call, cache behaviour",
+        "C": "Raise client timeouts so requests stop failing",
+        "D": "Roll back to the previous release and re-run integration tests"
+      },
+      "correct": ["B"],
+      "why": "\"First\" with nothing diagnosed means gather evidence. Latency maps to context growth, a slow tool or a cache miss; the larger document set points at context."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Choose two. A field-service company gave three hundred engineers",
+      "answer_line": "ALEX: A and B.",
+      "scenario": "Lumpy adoption, unexplained merged change",
+      "stem": "300 engineers got Claude Code two months ago. Usage sits with a handful of people, and last week a generated change merged that its author could not explain. Which two actions address the root causes?",
+      "choose": 2,
+      "options": {
+        "A": "A champion in each team converts a real workflow, then seeds adoption in batches",
+        "B": "Verification checklist: correctness, security, maintainability, human understanding, automated where possible",
+        "C": "Exempt changes under 50 lines from security review to keep queues moving",
+        "D": "Default every session to the most capable model for strong first impressions",
+        "E": "Let each engineer build their own configuration to suit personal style"
+      },
+      "correct": ["A", "B"],
+      "why": "A fixes lumpy adoption; B adds the missing understanding gate. C widens the gap, D ignores spend posture, E is the drift a shared baseline prevents."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Before the recap, pause and name the three task statements from today, and one mechanism that belongs to each. [pause]",
+      "answer_line": "ALEX: Configuring tools for teams, with a plugin for governed Skills.",
+      "prompt": "Name the three task statements from today, and one mechanism that belongs to each.",
+      "answer": "Configuring tools for teams: a plugin for governed Skills. Improving developer workflows: the verification checklist. Debugging and operational support: a runbook and an escalation path."
+    }
+  ]
+}

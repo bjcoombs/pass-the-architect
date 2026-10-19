@@ -1,0 +1,129 @@
+{
+  "drills": [
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Choose two. Which two situations should go to escalate to human? A,",
+      "answer_line": "SAM: The churn risk is real, and the anger needs acknowledging. But the",
+      "scenario": "Customer support",
+      "stem": "Which two situations should go to escalate to human?",
+      "choose": 2,
+      "options": {
+        "A": "On a routine return, the customer writes \"I want a person, not a bot.\"",
+        "B": "Refund wanted to a different card; refund policy says nothing about changing payment methods",
+        "C": "Customer in capitals and swearing about a late parcel that qualifies for a standard refund",
+        "D": "The agent rates its own confidence at 4 out of 10",
+        "E": "Get customer returns 3 accounts matching the customer's name"
+      },
+      "correct": [
+        "A",
+        "B"
+      ],
+      "why": "A is an explicit request: honour it at once. B is policy silence. C is within the agent's capability; D is self-reported confidence; E needs another identifier."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. A retail team's project CLAUDE dot md requires a shared error-handling",
+      "answer_line": "SAM: Miss pattern three. A is the first step: slash memory shows whether",
+      "scenario": "Code generation",
+      "stem": "A retail team's project CLAUDE.md requires a shared error-handling helper. In one package Claude keeps ignoring it, and developers say the behaviour differs between sessions. What should they do first?",
+      "choose": 1,
+      "options": {
+        "A": "Run /memory there to see which memory files are actually loaded",
+        "B": "Restate the rule in capitals at the top of the project CLAUDE.md",
+        "C": "Copy the rule into each developer's user-level CLAUDE.md",
+        "D": "Add a hook that rejects any edit that skips the helper"
+      },
+      "correct": [
+        "A"
+      ],
+      "why": "\"First\" and \"differs between sessions\": /memory shows whether the file is loading at all. B is louder guidance; D enforces before anyone has diagnosed."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Choose two. A public health research run produces reports whose claims",
+      "answer_line": "SAM: Both. Attribution was lost in the hand-off, so the hand-off has to",
+      "scenario": "Multi-agent research",
+      "stem": "A public health research run produces reports whose claims carry no citations, although the web search subagent's results included URLs and dates. Which two changes fix the root cause?",
+      "choose": 2,
+      "options": {
+        "A": "Search and analysis subagents return claim-source mappings that synthesis must preserve and merge",
+        "B": "Pass findings to synthesis as structured data keeping content separate from URLs and other metadata",
+        "C": "Add \"always cite your sources\" to the report subagent's system prompt",
+        "D": "Give the synthesis subagent web search so it can find the sources again",
+        "E": "Move synthesis to a model with a larger context window"
+      },
+      "correct": [
+        "A",
+        "B"
+      ],
+      "why": "Attribution was lost in the hand-off, so the hand-off has to carry it. C asks for citations the report agent no longer has; E cannot restore unpassed mappings."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Three hours into mapping a legacy insurance claims system, the agent",
+      "answer_line": "SAM: A. Talk of typical patterns instead of named classes is how the guide",
+      "scenario": "Developer productivity",
+      "stem": "3 hours into mapping a legacy insurance claims system, the agent stops naming the classes it found earlier and says things like \"services like this usually follow a repository pattern\". What is the best change?",
+      "choose": 1,
+      "options": {
+        "A": "Keep a scratchpad file of key findings and consult it for later questions",
+        "B": "Raise the maximum output tokens",
+        "C": "Start a new session and have it read every file again",
+        "D": "Add \"be specific\" to the system prompt"
+      },
+      "correct": [
+        "A"
+      ],
+      "why": "Typical patterns instead of named classes is context degradation, and a scratchpad file keeps findings across that boundary. D asks for detail already lost."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. A bank's review bot posts findings, and developers dismiss about a",
+      "answer_line": "SAM: A. It turns dismissals into data you can count, which is the guide's",
+      "scenario": "Continuous integration",
+      "stem": "A bank's review bot posts findings, and developers dismiss about a third. The team wants to know which code constructs produce the dismissed findings, so they can fix the prompt for those. What should they add?",
+      "choose": 1,
+      "options": {
+        "A": "A detected pattern field on each finding, so dismissals group by the construct that triggered them",
+        "B": "An instruction to report only findings the model is confident about",
+        "C": "A move from synchronous calls to the Message Batches API",
+        "D": "A free-text box where developers explain each dismissal"
+      },
+      "correct": [
+        "A"
+      ],
+      "why": "It turns dismissals into data you can count. B is the confidence-filtering trap; C changes cost, not precision; D produces comments nobody aggregates."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. A logistics firm has three extraction tools: one for bills of lading,",
+      "answer_line": "SAM: A. Any guarantees a tool call and still lets the model choose the",
+      "scenario": "Structured extraction",
+      "stem": "A logistics firm has 3 extraction tools: bills of lading, customs declarations, delivery receipts. The type isn't known in advance, and sometimes the model replies with prose instead of calling a tool, which breaks the downstream loader. What fixes this?",
+      "choose": 1,
+      "options": {
+        "A": "Set tool choice to any",
+        "B": "Force the bill of lading tool on every request",
+        "C": "Keep tool choice on auto and tell the model to always use a tool",
+        "D": "Merge the three into one schema with every field optional"
+      },
+      "correct": [
+        "A"
+      ],
+      "why": "Any guarantees a tool call and lets the model choose the right schema when several exist and the type is unknown. C is still probabilistic."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Before the last word, your turn. Pause and name the six scenarios, and the classic trap",
+      "answer_line": "ALEX: Customer support, escalating on sentiment or self-rated confidence.",
+      "prompt": "Name the six scenarios, and the classic trap in each.",
+      "answer": "Support: sentiment or self-rated confidence. Code: user-level rule. Research: wrong agent blamed. Dev tools: reading every file. CI: \"be conservative\". Extraction: required field for absent info."
+    }
+  ]
+}

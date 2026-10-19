@@ -4,35 +4,93 @@
   "chapters": [
     {
       "startTime": 0.0,
-      "title": "In this episode"
+      "title": "In this episode",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/09-F08-context-reliability/00.jpg"
     },
     {
       "startTime": 65.41,
-      "title": "Cold open: the uncited statistic"
+      "title": "Cold open: the uncited statistic - Question 1: Multi-agent research",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/09-F08-context-reliability/01.jpg"
+    },
+    {
+      "startTime": 420.67,
+      "title": "Question 2: Multi-agent research",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/09-F08-context-reliability/02.jpg"
+    },
+    {
+      "startTime": 493.54,
+      "title": "Answer 2",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/09-F08-context-reliability/03.jpg"
     },
     {
       "startTime": 548.66,
-      "title": "Segment two: context degradation"
+      "title": "Segment two: context degradation",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/09-F08-context-reliability/04.jpg"
+    },
+    {
+      "startTime": 737.25,
+      "title": "Question 3: Code generation",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/09-F08-context-reliability/05.jpg"
+    },
+    {
+      "startTime": 798.69,
+      "title": "Answer 3",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/09-F08-context-reliability/06.jpg"
     },
     {
       "startTime": 831.52,
-      "title": "Segment three: aggregate accuracy"
+      "title": "Segment three: aggregate accuracy",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/09-F08-context-reliability/07.jpg"
+    },
+    {
+      "startTime": 1027.3,
+      "title": "Question 4: Structured extraction",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/09-F08-context-reliability/08.jpg"
+    },
+    {
+      "startTime": 1091.02,
+      "title": "Answer 4",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/09-F08-context-reliability/09.jpg"
     },
     {
       "startTime": 1118.09,
-      "title": "Segment four: provenance"
+      "title": "Segment four: provenance",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/09-F08-context-reliability/10.jpg"
+    },
+    {
+      "startTime": 1283.37,
+      "title": "Question 5: Multi-agent research",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/09-F08-context-reliability/11.jpg"
+    },
+    {
+      "startTime": 1329.81,
+      "title": "Answer 5",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/09-F08-context-reliability/12.jpg"
     },
     {
       "startTime": 1374.95,
-      "title": "Cold open: the verdict"
+      "title": "Cold open: the verdict",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/09-F08-context-reliability/13.jpg"
+    },
+    {
+      "startTime": 1388.83,
+      "title": "Answer 1",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/09-F08-context-reliability/14.jpg"
     },
     {
       "startTime": 1445.67,
-      "title": "Five to remember"
+      "title": "Five to remember",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/09-F08-context-reliability/15.jpg"
     },
     {
       "startTime": 1513.09,
-      "title": "Recap: the exam tells"
+      "title": "Recap: the exam tells - Pause and answer 6",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/09-F08-context-reliability/16.jpg"
+    },
+    {
+      "startTime": 1521.2,
+      "title": "Answer 6",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/09-F08-context-reliability/17.jpg"
     }
   ]
 }

@@ -1,0 +1,115 @@
+{
+  "drills": [
+    {
+      "kind": "mcq",
+      "label": "Cold open",
+      "question_line": "SAM: Customer support scenario. Policy says refunds above five hundred dollars need a human.",
+      "answer_line": "SAM: Right. A loses because PostToolUse fires after execution",
+      "scenario": "Customer support resolution agent",
+      "stem": "Refunds above $500 need a human. A PostToolUse hook on process_refund posts an alert to finance whenever an over-$500 refund goes through. Over-limit refunds are still reaching customers. What should change?",
+      "choose": 1,
+      "options": {
+        "A": "Keep the hook and add an automatic reversal when the alert fires",
+        "B": "Hook that intercepts process_refund before it runs, blocks over $500, tells agent to escalate_to_human",
+        "C": "Add the limit to the system prompt in capitals with two few-shot examples",
+        "D": "Intercept the call before it runs and block over-limit amounts with a generic \"operation not permitted\""
+      },
+      "correct": ["B"],
+      "why": "B blocks before execution and redirects to escalation: both verbs. PostToolUse fires after the money moves; a generic error (D) leaves the agent no next step."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Customer support scenario. Choose two. Which two requirements should be enforced with Agent SDK hooks",
+      "answer_line": "SAM: A and C. A is outgoing-call interception",
+      "scenario": "Customer support resolution agent",
+      "stem": "Choose two. Which two requirements should be enforced with Agent SDK hooks rather than system prompt instructions?",
+      "choose": 2,
+      "options": {
+        "A": "Refunds above $500 must never be issued without human approval",
+        "B": "The agent should acknowledge frustration before proposing a fix",
+        "C": "Third-party MCP order dates (Unix timestamps) must reach the agent in the same format as your own tools'",
+        "D": "The agent should escalate when policy does not cover the customer's request",
+        "E": "Replies should stay under 150 words"
+      },
+      "correct": ["A", "C"],
+      "why": "A: checkable threshold with a financial consequence, intercepted before the call. C: PostToolUse normalisation of a server you cannot fix. B, D, E are judgement or style."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Code generation scenario. A developer spent an hour in Claude Code mapping a payments module",
+      "answer_line": "SAM: B. \"Compare two approaches\" plus \"from the existing analysis\"",
+      "scenario": "Code generation with Claude Code",
+      "stem": "After an hour mapping a payments module in Claude Code, the team wants to compare two testing strategies (contract tests vs property-based tests) and pick one. What should the developer do?",
+      "choose": 1,
+      "options": {
+        "A": "Start two new sessions, one per strategy, each mapping the module again so neither is biased",
+        "B": "Use fork_session to create two branches from the existing analysis, one strategy in each",
+        "C": "Try the first strategy in the current session, revert the files, then try the second",
+        "D": "Ask the current session to describe both strategies and recommend one without writing tests"
+      },
+      "correct": ["B"],
+      "why": "Two approaches from a shared baseline is the fork case. A repeats an hour of work; C carries the first attempt's reasoning; D compares descriptions, not results."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Code generation scenario. Two weeks ago a developer ran a named Claude Code session",
+      "answer_line": "SAM: That's the miss I wanted to hear. Miss pattern four",
+      "scenario": "Code generation with Claude Code",
+      "stem": "Two weeks ago a named session analysed an auth service. Since then another team replaced the token library and rewrote most of the service's files. The developer wants to continue. What is the most reliable approach?",
+      "choose": 1,
+      "options": {
+        "A": "Resume the named session with --resume and list the changed files so it re-analyses them",
+        "B": "Resume the named session and ask it to carry on",
+        "C": "New session seeded with a structured summary of findings that still apply, reading the current code",
+        "D": "Fork the old session so the original stays intact while the fork re-analyses"
+      },
+      "correct": ["C"],
+      "why": "Targeted re-analysis fits when prior context is mostly valid. Most files changed and the library was replaced, so nearly every tool result is stale."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Customer support scenario. A customer gives the name Jordan Lee",
+      "answer_line": "SAM: A. The customer knows who they are; one extra turn removes the guess.",
+      "scenario": "Customer support resolution agent",
+      "stem": "A customer named Jordan Lee asks to cancel an order. get_customer returns three Jordan Lee accounts. The agent picks the one with an open order and sometimes cancels the wrong customer's order. What is the best fix?",
+      "choose": 1,
+      "options": {
+        "A": "Ask for another identifier (email or order number) on multiple matches, before any account action",
+        "B": "Change get_customer to return only the highest-ranked match",
+        "C": "Proceed with the most likely account and state its email in the reply so the customer can correct it",
+        "D": "Have the agent rate its confidence in the match and ask only when it falls below 7"
+      },
+      "correct": ["A"],
+      "why": "One extra turn removes the guess. B hides ambiguity in the tool; D is self-reported confidence; C confirms only after acting: one wrong clause."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Customer support scenario. Choose two. Which two situations should trigger escalation",
+      "answer_line": "SAM: A and C. A is an explicit request: honour it now",
+      "scenario": "Customer support resolution agent",
+      "stem": "Choose two. Which two situations should trigger escalation to a human?",
+      "choose": 2,
+      "options": {
+        "A": "Customer writes \"I want to talk to a real person\" about a duplicate charge the agent could refund in one step",
+        "B": "Sentiment analysis scores the customer's last three messages as strongly negative",
+        "C": "Request to transfer loyalty points to family; policy covers earning and redeeming, silent on transfers",
+        "D": "The agent rates its own confidence in a refund decision as 5 out of 10",
+        "E": "Customer annoyed a replacement is late, has not asked for a person, policy covers the case"
+      },
+      "correct": ["A", "C"],
+      "why": "A is an explicit request: honour it now. C is a policy gap. Sentiment and self-rated confidence are unreliable; E is frustration within capability."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: A recall check before the tease. Pause and name the three topics, and the word in a stem",
+      "answer_line": "ALEX: Hooks, where the giveaway is timing.",
+      "prompt": "Name the three topics, and the word in a stem that gives each one away.",
+      "answer": "Hooks: timing. Sessions: how much changed. Escalation: whether the customer actually asked for a person."
+    }
+  ]
+}

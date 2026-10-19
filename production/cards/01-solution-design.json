@@ -1,0 +1,78 @@
+{
+  "drills": [
+    {
+      "kind": "mcq",
+      "label": "Cold open",
+      "question_line": "SAM: Let's start with an item. A retail bank wants Claude to handle card dispute emails: read the message",
+      "answer_line": "SAM: B, and every piece maps to this episode.",
+      "scenario": "Bank card dispute emails",
+      "stem": "A bank's agent handles card dispute emails: decide provisional-credit eligibility under the bank's published rule, look up the transaction in core banking, draft a reply. Pilot traces show every email followed one of three paths. Which change best fits the requirements?",
+      "choose": 1,
+      "options": {
+        "A": "Keep the agent and add a logging tool that records each eligibility decision for audit",
+        "B": "Routing workflow: Claude extracts and drafts, rules engine decides, tool fetches, human approves big credits",
+        "C": "Move the agent to Opus with extended thinking so eligibility judgments improve",
+        "D": "Index the transaction history in a vector store so the agent needs fewer tool calls"
+      },
+      "correct": ["B"],
+      "why": "Three observed paths rule out an agent. The published rule stays in the rules engine, live transactions need a tool call, and a human approves larger credits."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. A field-service company extracts part numbers, fault codes and dates",
+      "answer_line": "ALEX: B. Format is a valid trigger, but only after prompting has failed",
+      "scenario": "Technician notes extraction format drift",
+      "stem": "A field-service company extracts part numbers, fault codes and dates from technician notes. Formats vary run to run and downstream parsing breaks. Volume is moderate, latency not critical. An engineer proposes fine-tuning, since consistent format is an accepted reason. Best next step?",
+      "choose": 1,
+      "options": {
+        "A": "Fine-tune now",
+        "B": "Add an output contract, then structured outputs or evaluator-optimizer; fine-tune only if format still fails",
+        "C": "Convert the extraction into an agent that retries until parsing succeeds",
+        "D": "Move the extraction to Opus"
+      },
+      "correct": ["B"],
+      "why": "Format is a valid fine-tuning trigger only after prompting has failed, and nobody has tried a proper output contract."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Choose two. A hospital network reviews a patient's records before",
+      "answer_line": "ALEX: A and B. A catches the count gap, B recovers at the boundary",
+      "scenario": "Hospital record review fan-out",
+      "stem": "A hospital network reviews a patient's records before a procedure, one subagent per document. The report reads \"38 documents reviewed, no contraindications found\". The file held 40. Which two changes address the root cause?",
+      "choose": 2,
+      "options": {
+        "A": "A synthesis rule that results returned must equal documents dispatched, flagging any shortfall",
+        "B": "Retry failed or empty subagent results, recording any that still fail as gaps",
+        "C": "Upgrade the orchestrator to the most capable model",
+        "D": "Have the orchestrator re-read every document itself",
+        "E": "A dashboard of average subagent latency"
+      },
+      "correct": ["A", "B"],
+      "why": "A catches the count gap at synthesis; B recovers at the subagent boundary, where recovery is possible. A smarter orchestrator still counts only what came back."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. A government agency gets tens of thousands of consultation responses",
+      "answer_line": "ALEX: Nearly said productivity. But reading everything wasn't possible before",
+      "scenario": "Government consultation response themeing",
+      "stem": "A government agency gets tens of thousands of consultation responses. Staff read a 10% sample because reading all is impossible. With Claude themeing every response and analysts reviewing the themes, every response is now considered. Which pillar does this primarily advance?",
+      "choose": 1,
+      "options": {
+        "A": "Efficiency",
+        "B": "Productivity",
+        "C": "Transformation",
+        "D": "Solution cost"
+      },
+      "correct": ["C"],
+      "why": "Reading every response was not possible before, so it is transformation. Efficiency is the same sample faster; productivity is more of work the team could already do."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Before the tease, your turn. Pause and name the main segments of this episode",
+      "prompt": "Name the main segments of this episode, or the giveaway for each."
+    }
+  ]
+}

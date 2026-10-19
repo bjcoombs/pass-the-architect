@@ -4,35 +4,103 @@
   "chapters": [
     {
       "startTime": 0.0,
-      "title": "In this episode"
+      "title": "In this episode",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/08-F07-tools-mcp/00.jpg"
     },
     {
       "startTime": 67.32,
-      "title": "Cold open: the unused index tool"
+      "title": "Cold open: the unused index tool - Question 1: Developer productivity",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/08-F07-tools-mcp/01.jpg"
+    },
+    {
+      "startTime": 372.98,
+      "title": "Question 2: Developer productivity",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/08-F07-tools-mcp/02.jpg"
+    },
+    {
+      "startTime": 440.13,
+      "title": "Answer 2",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/08-F07-tools-mcp/03.jpg"
     },
     {
       "startTime": 464.97,
-      "title": "Segment two: tool error design"
+      "title": "Segment two: tool error design",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/08-F07-tools-mcp/04.jpg"
+    },
+    {
+      "startTime": 678.92,
+      "title": "Question 3: Customer support",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/08-F07-tools-mcp/05.jpg"
+    },
+    {
+      "startTime": 737.63,
+      "title": "Answer 3",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/08-F07-tools-mcp/06.jpg"
+    },
+    {
+      "startTime": 777.54,
+      "title": "Question 4: Developer productivity",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/08-F07-tools-mcp/07.jpg"
+    },
+    {
+      "startTime": 854.4,
+      "title": "Answer 4",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/08-F07-tools-mcp/08.jpg"
     },
     {
       "startTime": 885.37,
-      "title": "Segment three: tool count and scope"
+      "title": "Segment three: tool count and scope",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/08-F07-tools-mcp/09.jpg"
+    },
+    {
+      "startTime": 1070.67,
+      "title": "Question 5: Customer support",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/08-F07-tools-mcp/10.jpg"
+    },
+    {
+      "startTime": 1115.25,
+      "title": "Answer 5",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/08-F07-tools-mcp/11.jpg"
     },
     {
       "startTime": 1146.04,
-      "title": "Segment four: built-in tools"
+      "title": "Segment four: built-in tools",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/08-F07-tools-mcp/12.jpg"
+    },
+    {
+      "startTime": 1298.54,
+      "title": "Question 6: Developer productivity",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/08-F07-tools-mcp/13.jpg"
+    },
+    {
+      "startTime": 1339.51,
+      "title": "Answer 6",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/08-F07-tools-mcp/14.jpg"
     },
     {
       "startTime": 1358.87,
-      "title": "Cold open: the verdict"
+      "title": "Cold open: the verdict",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/08-F07-tools-mcp/15.jpg"
+    },
+    {
+      "startTime": 1370.59,
+      "title": "Answer 1",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/08-F07-tools-mcp/16.jpg"
     },
     {
       "startTime": 1423.05,
-      "title": "Five to remember"
+      "title": "Five to remember",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/08-F07-tools-mcp/17.jpg"
     },
     {
       "startTime": 1490.65,
-      "title": "Recap: the exam tells"
+      "title": "Recap: the exam tells - Pause and answer 7",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/08-F07-tools-mcp/18.jpg"
+    },
+    {
+      "startTime": 1498.34,
+      "title": "Answer 7",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/08-F07-tools-mcp/19.jpg"
     }
   ]
 }

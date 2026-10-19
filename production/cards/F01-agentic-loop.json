@@ -1,0 +1,97 @@
+{
+  "drills": [
+    {
+      "kind": "mcq",
+      "label": "Cold open",
+      "question_line": "SAM: Customer support scenario. Your agent runs on the Agent SDK with the four M C P tools",
+      "answer_line": "SAM: But it is a probabilistic fix for a deterministic need, and it still uses text as the completion signal",
+      "scenario": "Customer support resolution agent",
+      "stem": "The agent says \"Let me pull up that order for you\" and then nothing happens. The loop code shows the reply to the customer and stops whenever the response contains any text. Which change fixes it?",
+      "choose": 1,
+      "options": {
+        "A": "Instruct the model never to write text in the same response as a tool call",
+        "B": "Keep looping until the reply contains a closing phrase such as \"anything else I can help with\"",
+        "C": "Continue while the stop reason is tool_use; stop when the stop reason is end_turn",
+        "D": "Run every conversation for six iterations, then show the latest text"
+      },
+      "correct": ["C"],
+      "why": "Text alongside a tool call is legitimate; text as a completion signal is the anti-pattern. A is a probabilistic fix, B parses language, D makes a cap primary."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Segment two, how results get back in. Pause here and answer before we go on. Multi-agent research scenario.",
+      "answer_line": "SAM: And blaming the wrong layer. The answer is B.",
+      "scenario": "Multi-agent research system",
+      "stem": "A web search subagent runs the same search three times, then gives up with no findings. Each request contains only the system prompt and the original task. The search tool returned good results every time. What is the root cause and fix?",
+      "choose": 1,
+      "options": {
+        "A": "No loop limit; cap the subagent at three search calls so it returns what it has",
+        "B": "Tool call and result never appended; append both and send the full history on every request",
+        "C": "Model chooses tools badly; replace with a fixed sequence of one search then a summary",
+        "D": "Add each search result as a new user message, leaving out the model's own tool call to save tokens"
+      },
+      "correct": ["B"],
+      "why": "The Messages API is stateless: the model never saw the result, so it has not searched yet. Your code resends the full history, every call and every result."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Multi-agent research scenario. The document analysis subagent has three tools",
+      "answer_line": "SAM: A. Forced selection guarantees the extraction call happens first",
+      "scenario": "Multi-agent research system",
+      "stem": "A document analysis subagent has an extraction tool (identifier, title, date) and two lookup tools that need that identifier. It often calls the lookups first, and they fail. What is the most effective fix?",
+      "choose": 1,
+      "options": {
+        "A": "Force the extraction tool on the first request via tool_choice, then set tool_choice to auto",
+        "B": "Set tool_choice to any on every request",
+        "C": "Add a system prompt line saying always extract first",
+        "D": "Merge all three tools into one"
+      },
+      "correct": ["A"],
+      "why": "Forced selection guarantees extraction runs first; auto afterwards lets the lookups use the identifier. Any guarantees a tool call, not which tool."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Customer support scenario. A refund request goes over the limit",
+      "answer_line": "SAM: But the stem is about a human who needs to act fast",
+      "scenario": "Customer support resolution agent",
+      "stem": "A refund request goes over the agent's limit and it calls escalate_to_human. Humans spend five minutes asking the customer to repeat everything, and some reverse checks the agent already did. What should the escalation contain?",
+      "choose": 1,
+      "options": {
+        "A": "Structured summary: customer ID, order, root cause, refund amount, what was verified, recommended action",
+        "B": "The full conversation transcript, so nothing is lost",
+        "C": "A one-line note: customer requests refund above limit",
+        "D": "Nothing extra; have the human ask the customer to explain again"
+      },
+      "correct": ["A"],
+      "why": "Humans lack the transcript and need to act fast: compile a structured summary. A transcript hands over the work, not its result."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Choose two. Multi-agent research scenario. Researching a drug's safety record",
+      "answer_line": "SAM: Both. A gives the coordinator the failure type",
+      "scenario": "Multi-agent research system",
+      "stem": "Choose two. A journal database returns 11 papers, a court filings database returns 0 matches, and a regulator's archive times out on all 3 retries after returning 2 documents. Which two belong in the subagent's report to the coordinator?",
+      "choose": 2,
+      "options": {
+        "A": "Regulator archive as an access failure: query attempted, 2 partial documents, an alternative such as a mirror",
+        "B": "Court filings search as a successful query that found no matches",
+        "C": "One combined figure, 67% source coverage, with details in the logs",
+        "D": "Regulator archive as zero results, so the run completes cleanly",
+        "E": "A terminal error that stops the run, because one of three sources failed"
+      },
+      "correct": ["A", "B"],
+      "why": "A carries failure type, attempt, partial results and an alternative. B keeps a real empty result real. D is silent suppression; E terminates on one failure."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Before the tease, a recall check. Pause and name the five topics we covered",
+      "answer_line": "ALEX: Stop reason and the loop. The stateless API.",
+      "prompt": "Name the five topics covered, with the giveaway for each.",
+      "answer": "Stop reason and the loop. The stateless API. Forced tool choice against a prerequisite in code. Multi-concern requests and handoffs. Errors between agents."
+    }
+  ]
+}
