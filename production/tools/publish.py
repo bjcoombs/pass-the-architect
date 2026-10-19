@@ -37,7 +37,7 @@ SERIES = [
         "label": "CCAR-P",
         "description": "A two-host study series for the Claude Certified Architect - Professional exam: "
                        "every blueprint domain, drills, and the traps the distractors set.",
-        "episodes": ["00", "01", "02", "03", "04", "05", "06", "07", "08", "10", "11", "09"],
+        "episodes": ["00", "01", "02", "03", "04", "05", "06", "07", "08", "10", "11", "09", "12"],
     },
     {
         "slug": "ccar-f-retake",

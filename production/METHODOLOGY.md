@@ -69,7 +69,7 @@ The full rules are in `SERIES.md`.
 
 ```
 uv run --with requests --with mutagen --with pillow tools/render.py --budget 0 transcripts/*.md
-uv run --with requests --with mutagen --with pillow tools/render.py --budget 0 --album "..." foundations/transcripts/*.md
+uv run --with requests --with mutagen --with pillow tools/render.py --budget 0 foundations/transcripts/*.md
 uv run --with mutagen tools/publish.py --icloud --github --site ../docs
 ```
 
