@@ -1,0 +1,108 @@
+{
+  "drills": [
+    {
+      "kind": "mcq",
+      "label": "Cold open",
+      "question_line": "SAM: Here is your opening item. A retail chain's head of operations has just watched your prototype",
+      "answer_line": "SAM: Because a sponsor hears any verdict as a commitment",
+      "scenario": "Retail sponsor wants a go-live date",
+      "stem": "A delighted head of operations asks you to commit today to a six-week build and a go-live date. You do not yet know daily contract volume, the longest input size, or the latency requirement. What is the best next action?",
+      "choose": 1,
+      "options": {
+        "A": "Commit to six weeks to keep momentum, refine scope in the first sprint",
+        "B": "Issue a provisional feasibility verdict from the prototype, clearly labelled provisional",
+        "C": "Gather volume, input size range and latency first, then give a verdict and write boundaries into the SOW",
+        "D": "Propose the largest model tier for headroom on whatever volume turns up"
+      },
+      "correct": [
+        "C"
+      ],
+      "why": "A sponsor hears any verdict as a commitment. Volume, input size and latency are inputs to the verdict; the prototype only answered the capability question."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. A public-sector benefits agency briefs you. The requirements",
+      "answer_line": "ALEX: So C.",
+      "scenario": "Benefits agency, unmentioned retention rule",
+      "stem": "Your drafted requirements for a benefits agency say documents are retained for 12 months, but nobody mentioned retention. What is the best next action?",
+      "choose": 1,
+      "options": {
+        "A": "Delete the retention item, since it was not requested",
+        "B": "Keep it, because 12 months is standard practice",
+        "C": "Label it an assumption, assign an owner, and ask the agency's compliance lead",
+        "D": "Leave it in and let the legal review catch any problem"
+      },
+      "correct": [
+        "C"
+      ],
+      "why": "Retention is a must-prove constraint. An assumption that traces to no statement is the most dangerous kind: label it, give it an owner, and ask."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Choose two. A bank's chief operating officer must approve keeping",
+      "answer_line": "ALEX: A and B.",
+      "scenario": "Bank COO approves full-context design",
+      "stem": "A bank COO must approve keeping long policy documents in full context rather than building retrieval. Your draft covers the simpler design and the per-call cost. Which two additions most improve the chance of an informed decision?",
+      "choose": 2,
+      "options": {
+        "A": "Projected monthly cost at forecast production volume, with caching evaluated",
+        "B": "Cost of moving to retrieval after the system is built around full context",
+        "C": "Detailed explanation of chunk sizes and embedding choices",
+        "D": "Recommend deferring the decision until after launch",
+        "E": "The p99 latency distribution from the prototype"
+      },
+      "correct": [
+        "A",
+        "B"
+      ],
+      "why": "A turns a per-call rate into the number the executive owns. B is the reversal cost, the missing third element of a tradeoff."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. A field-service company's repair-guidance assistant has seen",
+      "answer_line": "SAM: Yes. D. The signal already exists; the decision layer is missing",
+      "scenario": "Repair assistant, four weeks of drift",
+      "stem": "A repair-guidance assistant's eval score has fallen for four straight weeks. Error rate is flat, no alert has fired, and a regional manager says answers feel weaker. What is the best next action?",
+      "choose": 1,
+      "options": {
+        "A": "Add more dashboards so the drift is easier to see",
+        "B": "Raise it at the next scheduled quarterly review",
+        "C": "Move to a larger model tier",
+        "D": "Diagnose prompt, data or model drift, add a quality-drift trigger with an owner, escalate once confirmed"
+      },
+      "correct": [
+        "D"
+      ],
+      "why": "The signal already exists; the decision layer is missing. Fix the loop and the cause. B is how this pattern burns seven weeks."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Four weeks after launch, the sponsor of a claims-triage assistant",
+      "answer_line": "ALEX: C.",
+      "scenario": "Sponsor wants outcome document early",
+      "stem": "Four weeks after launch, a claims-triage sponsor wants the outcome document today for a CFO expansion meeting. Baseline processing time was measured before launch. What is the best next action?",
+      "choose": 1,
+      "options": {
+        "A": "Send volume, latency and error-rate figures now",
+        "B": "Extrapolate the after metric from the first week's data",
+        "C": "Name the measurement owner, confirm the authorisation log records, schedule completion at a set milestone",
+        "D": "Tell the sponsor outcome reporting waits for the quarterly review"
+      },
+      "correct": [
+        "C"
+      ],
+      "why": "The gate is not yet satisfied: the after metric needs runtime. A answers \"does it run\", B asserts a number without data, D withholds expectation-setting."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Your turn first. Pause and name the five task statements we covered, and the artefact each one leaves behind. [pause]",
+      "answer_line": "ALEX: Discovery leaves a translation table. Tradeoffs leave a decision package.",
+      "prompt": "Name the five task statements we covered, and the artefact each one leaves behind.",
+      "answer": "Discovery: translation table. Tradeoffs: decision package. Feedback loops and SLAs: governance table. Documentation: decision log and control register. Lifecycle: an artefact gating each transition."
+    }
+  ]
+}

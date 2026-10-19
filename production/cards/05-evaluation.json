@@ -1,0 +1,96 @@
+{
+  "drills": [
+    {
+      "kind": "mcq",
+      "label": "Cold open",
+      "question_line": "SAM: Opening item. A health insurer's claims team revises its extraction prompt. The eval suite passes",
+      "answer_line": "SAM: The answer is B. The trigger was a prompt change",
+      "scenario": "Passing suite, missing incident dates",
+      "stem": "A health insurer's claims team revises its extraction prompt. The eval suite passes at 99%. A week later, adjusters report missing incident dates on scanned, partly handwritten forms. The model version is pinned and latency hasn't moved. Most likely root cause?",
+      "choose": 1,
+      "options": {
+        "A": "The model's behaviour changed under the pinned version",
+        "B": "The golden dataset predates the prompt change and holds few or no scanned, handwritten forms",
+        "C": "The judge model grading the extractions is too lenient",
+        "D": "The temperature is too high"
+      },
+      "correct": ["B"],
+      "why": "The trigger was a prompt change; the suite kept passing because the golden dataset predates it and lacks the failing input class. Pinning rules out A."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Choose two. A retailer's returns assistant reads an order",
+      "answer_line": "ALEX: A and C. A is a known-value comparison. C is the identifier scan.",
+      "scenario": "Retailer returns assistant checks",
+      "stem": "A retailer's returns assistant reads an order, approves or routes the return, and drafts a reply. Which two checks should be code-based?",
+      "choose": 2,
+      "options": {
+        "A": "The refund amount in the reply matches the order system",
+        "B": "The reply's tone is empathetic and on-brand",
+        "C": "The reply contains no order number belonging to another customer",
+        "D": "The reply correctly captures why the customer is returning the item",
+        "E": "Escalation was the right call on an ambiguous, partly damaged item"
+      },
+      "correct": ["A", "C"],
+      "why": "A is a known-value comparison and C is an identifier scan, both deterministic. Tone and meaning go to a judge; the ambiguous escalation is judge or human territory."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. A state benefits agency tests a revised prompt on its eligibility",
+      "answer_line": "SAM: B. A treats noise as signal; it's the underpowered-test distractor",
+      "scenario": "Eligibility chatbot A/B test",
+      "stem": "A state benefits agency tests a revised prompt on its eligibility chatbot. 60 sessions per version give task success of 71% against 64%. The product owner wants to ship today. Best next step?",
+      "choose": 1,
+      "options": {
+        "A": "Ship, because 7 points is large",
+        "B": "Pre-specify metrics, calculate sample size, assign sessions randomly and consistently, run to that size",
+        "C": "Move to a more capable model first",
+        "D": "Keep the test running and stop as soon as the gap reaches significance"
+      },
+      "correct": ["B"],
+      "why": "60 a side is a confirmation check, not a test. A treats noise as signal, C changes a different variable, and D runs until you see what you want."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. A retailer's product assistant tells a customer a blender",
+      "answer_line": "ALEX: Retrieval worked, so it isn't rag. The model asserted something",
+      "scenario": "Blender warranty hallucination",
+      "stem": "A retailer's product assistant tells a customer a blender has a 5-year warranty. The trace shows the right product page was retrieved, and it says 2 years. Best fix?",
+      "choose": 1,
+      "options": {
+        "A": "Add \"never make up warranty terms\" to the system prompt",
+        "B": "Move to the most capable tier",
+        "C": "Require each warranty claim to cite a retrieved passage and verify the term against it before replying",
+        "D": "Lower the temperature"
+      },
+      "correct": ["C"],
+      "why": "Retrieval worked; the model asserted something not in its context. That is hallucination, and grounding plus verification removes it at the root."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Choose two. A field service dispatch assistant takes sixty thousand",
+      "answer_line": "SAM: Right. A attacks the dominant input cost and helps latency.",
+      "scenario": "Dispatch assistant over cost ceiling",
+      "stem": "A dispatch assistant takes 60,000 calls a month with a 6,000-token system prompt that rarely changes. It's over its cost ceiling with a tight latency target, and makes nightly work-order summaries needed by morning. Which two changes close the gap without losing required content?",
+      "choose": 2,
+      "options": {
+        "A": "Put the stable system prompt first, volatile content after, and enable prompt caching",
+        "B": "Raise the max tokens cap",
+        "C": "Move every call to the most capable tier",
+        "D": "Send the nightly summaries through the Batch API",
+        "E": "Cut the system prompt in half"
+      },
+      "correct": ["A", "D"],
+      "why": "A attacks the dominant input cost and helps latency; D moves work that can wait onto discounted pricing. E is the blunt cut that loses required content."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Before the tease, a test. Pause and name the main segments, or the giveaway for each.",
+      "prompt": "Name the main segments of this episode, or the giveaway for each."
+    }
+  ]
+}

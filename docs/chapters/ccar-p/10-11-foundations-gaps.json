@@ -4,39 +4,108 @@
   "chapters": [
     {
       "startTime": 0.0,
-      "title": "In this episode"
+      "title": "In this episode",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/10-11-foundations-gaps/00.jpg"
     },
     {
       "startTime": 72.24,
-      "title": "Cold open: refund before lookup"
+      "title": "Cold open: refund before lookup - Question 1: Bank agent refunds before lookup",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/10-11-foundations-gaps/01.jpg"
     },
     {
       "startTime": 375.25,
-      "title": "Segment two: configuration scope"
+      "title": "Segment two: configuration scope",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/10-11-foundations-gaps/02.jpg"
+    },
+    {
+      "startTime": 550.91,
+      "title": "Question 2: Team-wide MCP server with personal tokens",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/10-11-foundations-gaps/03.jpg"
+    },
+    {
+      "startTime": 601.67,
+      "title": "Answer 2",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/10-11-foundations-gaps/04.jpg"
     },
     {
       "startTime": 624.46,
-      "title": "Segment three: tool descriptions"
+      "title": "Segment three: tool descriptions",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/10-11-foundations-gaps/05.jpg"
+    },
+    {
+      "startTime": 719.88,
+      "title": "Question 3: Booking tool returns \"request failed\"",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/10-11-foundations-gaps/06.jpg"
+    },
+    {
+      "startTime": 791.92,
+      "title": "Answer 3",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/10-11-foundations-gaps/07.jpg"
     },
     {
       "startTime": 892.55,
-      "title": "Segment four: the agentic loop"
+      "title": "Segment four: the agentic loop",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/10-11-foundations-gaps/08.jpg"
+    },
+    {
+      "startTime": 945.85,
+      "title": "Question 4: Benefits assistant forgets case number",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/10-11-foundations-gaps/09.jpg"
+    },
+    {
+      "startTime": 996.45,
+      "title": "Answer 4",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/10-11-foundations-gaps/10.jpg"
     },
     {
       "startTime": 1035.98,
-      "title": "Segment five: extraction"
+      "title": "Segment five: extraction",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/10-11-foundations-gaps/11.jpg"
+    },
+    {
+      "startTime": 1166.83,
+      "title": "Question 5: Invoice extraction invents values",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/10-11-foundations-gaps/12.jpg"
+    },
+    {
+      "startTime": 1217.73,
+      "title": "Answer 5",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/10-11-foundations-gaps/13.jpg"
+    },
+    {
+      "startTime": 1290.62,
+      "title": "Question 6: Lender extraction review queue flooded",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/10-11-foundations-gaps/14.jpg"
+    },
+    {
+      "startTime": 1338.83,
+      "title": "Answer 6",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/10-11-foundations-gaps/15.jpg"
     },
     {
       "startTime": 1418.4,
-      "title": "Segment six: refinement and resumption"
+      "title": "Segment six: refinement and resumption",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/10-11-foundations-gaps/16.jpg"
+    },
+    {
+      "startTime": 1517.01,
+      "title": "Answer 1",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/10-11-foundations-gaps/17.jpg"
     },
     {
       "startTime": 1567.07,
-      "title": "Five to remember"
+      "title": "Five to remember",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/10-11-foundations-gaps/18.jpg"
     },
     {
       "startTime": 1636.99,
-      "title": "Recap: the exam tells"
+      "title": "Recap: the exam tells - Pause and answer 7",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/10-11-foundations-gaps/19.jpg"
+    },
+    {
+      "startTime": 1644.07,
+      "title": "Answer 7",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/10-11-foundations-gaps/20.jpg"
     }
   ]
 }

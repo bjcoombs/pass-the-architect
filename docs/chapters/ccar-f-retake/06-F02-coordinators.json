@@ -4,39 +4,108 @@
   "chapters": [
     {
       "startTime": 0.0,
-      "title": "In this episode"
+      "title": "In this episode",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/06-F02-coordinators/00.jpg"
     },
     {
       "startTime": 63.07,
-      "title": "Cold open: the over-routed query"
+      "title": "Cold open: the over-routed query - Question 1: Multi-agent research system",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/06-F02-coordinators/01.jpg"
     },
     {
       "startTime": 290.83,
-      "title": "Segment two: isolated context"
+      "title": "Segment two: isolated context",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/06-F02-coordinators/02.jpg"
+    },
+    {
+      "startTime": 426.84,
+      "title": "Question 2: Multi-agent research system",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/06-F02-coordinators/03.jpg"
+    },
+    {
+      "startTime": 488.15,
+      "title": "Answer 2",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/06-F02-coordinators/04.jpg"
     },
     {
       "startTime": 522.32,
-      "title": "Segment three: spawning subagents"
+      "title": "Segment three: spawning subagents",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/06-F02-coordinators/05.jpg"
+    },
+    {
+      "startTime": 598.7,
+      "title": "Question 3: Developer productivity",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/06-F02-coordinators/06.jpg"
+    },
+    {
+      "startTime": 649.9,
+      "title": "Answer 3",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/06-F02-coordinators/07.jpg"
     },
     {
       "startTime": 851.26,
-      "title": "Segment four: duplication and gaps"
+      "title": "Segment four: duplication and gaps",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/06-F02-coordinators/08.jpg"
+    },
+    {
+      "startTime": 991.5,
+      "title": "Question 4: Multi-agent research system",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/06-F02-coordinators/09.jpg"
+    },
+    {
+      "startTime": 1059.82,
+      "title": "Answer 4",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/06-F02-coordinators/10.jpg"
     },
     {
       "startTime": 1119.24,
-      "title": "Segment five: decomposition strategy"
+      "title": "Segment five: decomposition strategy",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/06-F02-coordinators/11.jpg"
+    },
+    {
+      "startTime": 1222.81,
+      "title": "Question 5: Developer productivity",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/06-F02-coordinators/12.jpg"
+    },
+    {
+      "startTime": 1275.85,
+      "title": "Answer 5",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/06-F02-coordinators/13.jpg"
+    },
+    {
+      "startTime": 1368.48,
+      "title": "Question 6: Developer productivity",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/06-F02-coordinators/14.jpg"
+    },
+    {
+      "startTime": 1426.07,
+      "title": "Answer 6",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/06-F02-coordinators/15.jpg"
     },
     {
       "startTime": 1458.25,
-      "title": "Cold open: the verdict"
+      "title": "Cold open: the verdict",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/06-F02-coordinators/16.jpg"
+    },
+    {
+      "startTime": 1476.22,
+      "title": "Answer 1",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/06-F02-coordinators/17.jpg"
     },
     {
       "startTime": 1550.76,
-      "title": "Five to remember"
+      "title": "Five to remember",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/06-F02-coordinators/18.jpg"
     },
     {
       "startTime": 1626.07,
-      "title": "Recap: the exam tells"
+      "title": "Recap: the exam tells - Pause and answer 7",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/06-F02-coordinators/19.jpg"
+    },
+    {
+      "startTime": 1633.48,
+      "title": "Answer 7",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/06-F02-coordinators/20.jpg"
     }
   ]
 }

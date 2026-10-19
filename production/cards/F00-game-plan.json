@@ -1,0 +1,62 @@
+{
+  "drills": [
+    {
+      "kind": "mcq",
+      "label": "Cold open",
+      "question_line": "SAM: An item before anything else. Customer support scenario. Production logs show the agent often calls get customer",
+      "answer_line": "SAM: But the stem says the descriptions are minimal.",
+      "scenario": "Customer support resolution agent",
+      "stem": "The agent often calls get_customer for order questions instead of lookup_order. Both tools have one-line descriptions and accept similar identifiers. What is the most effective first step to improve tool selection?",
+      "choose": 1,
+      "options": {
+        "A": "Add 5-8 few-shot examples to the system prompt routing order questions to lookup_order",
+        "B": "Expand each tool's description: input formats, example queries, edge cases, when to use it vs the other",
+        "C": "Add a routing layer that parses each message and pre-selects a tool by keyword",
+        "D": "Merge both into one lookup_entity tool that works out which backend to query"
+      },
+      "correct": ["B"],
+      "why": "Descriptions are minimal, and descriptions are the primary mechanism for tool choice. \"First step\" rules out merging; routing is over-engineering."
+    },
+    {
+      "kind": "mcq",
+      "label": "Sample question",
+      "question_line": "SAM: Pause here and answer before we go on. Second sample, same scenario. In twelve percent of cases the agent skips get customer",
+      "answer_line": "ALEX: Constraint words: \"most effectively\", \"incorrect refunds\".",
+      "scenario": "Customer support resolution agent",
+      "stem": "In 12% of cases the agent skips get_customer and calls lookup_order using only the customer's name, occasionally causing the wrong account and an incorrect refund. What change most effectively addresses this?",
+      "choose": 1,
+      "options": {
+        "A": "A programmatic prerequisite blocking lookup_order and process_refund until get_customer returns a verified ID",
+        "B": "A system prompt stating verification through get_customer is mandatory before any order operation",
+        "C": "Few-shot examples showing the agent always calling get_customer first",
+        "D": "A routing classifier that enables only the tools appropriate to each request type"
+      },
+      "correct": ["A"],
+      "why": "When compliance must be deterministic, prompt instructions have a non-zero failure rate. Order that must hold lives in code. D acts on the wrong component."
+    },
+    {
+      "kind": "mcq",
+      "label": "Sample question",
+      "question_line": "SAM: Pause here and answer before we go on. Third sample, Claude Code scenario. You want a slash command called review",
+      "answer_line": "ALEX: A. \"Every developer, clone or pull\" means version control",
+      "scenario": "Code generation with Claude Code",
+      "stem": "You want a /review slash command that runs the team's checklist, available to every developer when they clone or pull the repository. Where does the file go?",
+      "choose": 1,
+      "options": {
+        "A": "The .claude/commands folder in the project repository",
+        "B": "The commands folder under .claude in each developer's home directory",
+        "C": "The CLAUDE.md file at the project root",
+        "D": "A .claude/config.json file with a commands array"
+      },
+      "correct": ["A"],
+      "why": "Everyone on the repository means project scope, committed. B is personal scope, C holds instructions not commands, D is an invented file."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: One more pass before we go. Pause and name the five parts of the game plan",
+      "answer_line": "ALEX: Sixty items in a hundred and twenty minutes, with the number to select on every item.",
+      "prompt": "Name the five parts of the game plan: the format, the scenarios, the weights, the pacing, and the method.",
+      "answer": "60 items in 120 minutes, number to select on every item. 4 scenarios of 6. Agentic biggest at 27%. Checkpoints at items 20, 40, 60. Four steps, five distractor families."
+    }
+  ]
+}

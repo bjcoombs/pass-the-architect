@@ -1,0 +1,115 @@
+{
+  "drills": [
+    {
+      "kind": "mcq",
+      "label": "Cold open",
+      "question_line": "SAM: A bank's support agent can look up customers and issue refunds. The system prompt says to look up",
+      "answer_line": "SAM: But this is a bank, and money moves on that call. So, B.",
+      "scenario": "Bank agent refunds before lookup",
+      "stem": "A bank's support agent can look up customers and issue refunds. The system prompt says to look up the customer first, but in about one conversation in 100 it refunds before any lookup. What fixes it?",
+      "choose": 1,
+      "options": {
+        "A": "Rewrite the instruction in capitals and add three few-shot examples showing the lookup first",
+        "B": "Refund tool rejects calls without a customer ID from a successful lookup, returning an actionable error",
+        "C": "Remove the refund tool and send every refund to a human",
+        "D": "Move to a larger model that follows instructions more reliably"
+      },
+      "correct": ["B"],
+      "why": "Money moves on that call, so the order must hold every time. A improves the odds but cannot guarantee them; order that must hold lives in code."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. A healthcare software team of eight wants every developer to use",
+      "answer_line": "SAM: B. Shared, versioned, no secret in the repo.",
+      "scenario": "Team-wide MCP server with personal tokens",
+      "stem": "A team of eight wants every developer to use the same code-hosting MCP server. Each developer has a personal access token. Today only two have it configured. What should the architect do?",
+      "choose": 1,
+      "options": {
+        "A": "Add the server to the project's .mcp.json with the token committed, so it works on clone",
+        "B": "Add the server to the project's .mcp.json, referencing each token via an environment-variable placeholder",
+        "C": "Ask each developer to add the server at user scope on their own machine",
+        "D": "Describe the server and its setup steps in CLAUDE.md"
+      },
+      "correct": ["B"],
+      "why": "Shared, versioned, no secret in the repo. A leaks a credential, C is eight drifting personal setups, D is guidance about configuration, not configuration."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. A utility company's field-service agent calls an M C P tool to book",
+      "answer_line": "SAM: That is miss pattern two: one correct clause welded to a wrong one. The answer is A",
+      "scenario": "Booking tool returns \"request failed\"",
+      "stem": "A field-service agent's MCP booking tool returns \"request failed\" when the scheduler times out, and the agent gives up or keeps retrying a booking the customer's plan does not allow. What is the best change?",
+      "choose": 1,
+      "options": {
+        "A": "Return errors flagged as errors, with a category, whether to retry, and an actionable explanation",
+        "B": "Have the tool retry silently up to ten times before returning anything",
+        "C": "Add a system-prompt instruction telling the agent never to retry",
+        "D": "Return an empty result on any failure so the agent moves on"
+      },
+      "correct": ["A"],
+      "why": "The agent cannot tell a timeout from a policy refusal unless the error says which. B hides failure and still retries the unretryable one."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. A public-sector benefits assistant asks a citizen for their case number",
+      "answer_line": "ALEX: B. The API is stateless.",
+      "scenario": "Benefits assistant forgets case number",
+      "stem": "A benefits assistant asks for a case number, calls a lookup tool, and three turns later asks again. Logs show each request carries the system prompt and only the latest user message. What is the root cause and fix?",
+      "choose": 1,
+      "options": {
+        "A": "Context window too small; move to a model with a larger window",
+        "B": "Messages API keeps no memory; resend the full conversation, including tool call and result, every request",
+        "C": "Model ignores earlier turns; add an instruction to remember case numbers",
+        "D": "Raise maximum output tokens so the model can hold more state"
+      },
+      "correct": ["B"],
+      "why": "A standard Messages API call keeps nothing between requests; your code holds the history and sends all of it every turn. A, C and D assume it was ever sent."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Choose two. A procurement team extracts supplier invoices.",
+      "answer_line": "SAM: Both. A gives absence a legal value; B gives an unlisted currency one.",
+      "scenario": "Invoice extraction invents values",
+      "stem": "Supplier invoice extraction has two failures: a purchase order number appears on invoices that have none, and currencies outside the five listed are reported as the closest listed one. Which two changes address the root causes?",
+      "choose": 2,
+      "options": {
+        "A": "Make the PO field nullable and instruct the model to return null when absent",
+        "B": "Add an \"other\" currency enum value with a free-text field for the actual currency",
+        "C": "Make every field required so missing data is caught",
+        "D": "Move to a larger model",
+        "E": "Add a second model pass that rewrites any value it suspects was invented"
+      },
+      "correct": ["A", "B"],
+      "why": "A gives absence a legal value; B gives an unlisted currency one. C is the cause, not the fix. D is scale; E adds a second probabilistic step."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Choose two. A lender's document pipeline sends all four thousand",
+      "answer_line": "SAM: Both. They put attention on low confidence and high-risk document types.",
+      "scenario": "Lender extraction review queue flooded",
+      "stem": "A lender's pipeline sends all 4,000 daily extractions to three reviewers, and errors still reach the loan system. Which two changes best focus review where it is needed?",
+      "choose": 2,
+      "options": {
+        "A": "Route fields whose confidence falls below a threshold calibrated on labelled documents",
+        "B": "Always route document types with a history of low accuracy, such as handwritten income statements",
+        "C": "Add five more reviewers so every extraction is still checked",
+        "D": "Use the model's own stated confidence with a fixed, uncalibrated threshold",
+        "E": "Stop human review entirely and rely on the schema"
+      },
+      "correct": ["A", "B"],
+      "why": "They put attention on low confidence and high-risk document types. C is scale instead of structure, D trusts an unchecked number, E removes a needed gate."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Before we wrap, pause and name the six segments from today, each by the symptom that opened it. [pause]",
+      "answer_line": "ALEX: Unformatted files despite a CLAUDE dot md line.",
+      "prompt": "Name the six segments from today, each by the symptom that opened it.",
+      "answer": "Unformatted files despite a CLAUDE.md line; new hire missing the MCP server; wrong tool / no orders when DB down; agent stops half-done; invented policy numbers; three rounds of still wrong."
+    }
+  ]
+}

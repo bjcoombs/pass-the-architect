@@ -4,35 +4,78 @@
   "chapters": [
     {
       "startTime": 0.0,
-      "title": "In this episode"
+      "title": "In this episode",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/02-02-models-prompting/00.jpg"
     },
     {
       "startTime": 64.23,
-      "title": "Cold open: the claims pipeline"
+      "title": "Cold open: the claims pipeline - Question 1: Insurer claims pipeline over budget",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/02-02-models-prompting/01.jpg"
+    },
+    {
+      "startTime": 490.52,
+      "title": "Question 2: Bank support router latency",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/02-02-models-prompting/02.jpg"
+    },
+    {
+      "startTime": 533.85,
+      "title": "Answer 2",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/02-02-models-prompting/03.jpg"
     },
     {
       "startTime": 565.7,
-      "title": "System prompts and guardrails"
+      "title": "System prompts and guardrails",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/02-02-models-prompting/04.jpg"
     },
     {
       "startTime": 766.83,
-      "title": "Choosing a prompting technique"
+      "title": "Choosing a prompting technique",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/02-02-models-prompting/05.jpg"
+    },
+    {
+      "startTime": 873.03,
+      "title": "Question 3: Ticket triage priority swayed by tone",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/02-02-models-prompting/06.jpg"
+    },
+    {
+      "startTime": 958.39,
+      "title": "Answer 3",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/02-02-models-prompting/07.jpg"
     },
     {
       "startTime": 996.42,
-      "title": "Context windows and tokens"
+      "title": "Context windows and tokens",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/02-02-models-prompting/08.jpg"
     },
     {
       "startTime": 1187.76,
-      "title": "Prompt reuse and caching"
+      "title": "Prompt reuse and caching",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/02-02-models-prompting/09.jpg"
+    },
+    {
+      "startTime": 1322.97,
+      "title": "Question 4: Field-service cache never hits",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/02-02-models-prompting/10.jpg"
+    },
+    {
+      "startTime": 1367.62,
+      "title": "Answer 4",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/02-02-models-prompting/11.jpg"
+    },
+    {
+      "startTime": 1442.54,
+      "title": "Answer 1",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/02-02-models-prompting/12.jpg"
     },
     {
       "startTime": 1496.78,
-      "title": "Five to remember"
+      "title": "Five to remember",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/02-02-models-prompting/13.jpg"
     },
     {
       "startTime": 1555.6,
-      "title": "Recap: the exam tells"
+      "title": "Recap: the exam tells - Pause and answer 5",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/02-02-models-prompting/14.jpg"
     }
   ]
 }

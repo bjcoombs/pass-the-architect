@@ -4,35 +4,88 @@
   "chapters": [
     {
       "startTime": 0.0,
-      "title": "In this episode"
+      "title": "In this episode",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/05-05-evaluation/00.jpg"
     },
     {
       "startTime": 64.32,
-      "title": "Cold open: the passing suite"
+      "title": "Cold open: the passing suite - Question 1: Passing suite, missing incident dates",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/05-05-evaluation/01.jpg"
+    },
+    {
+      "startTime": 531.23,
+      "title": "Question 2: Retailer returns assistant checks",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/05-05-evaluation/02.jpg"
+    },
+    {
+      "startTime": 572.64,
+      "title": "Answer 2",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/05-05-evaluation/03.jpg"
     },
     {
       "startTime": 600.75,
-      "title": "Suite pitfalls and A/B tests"
+      "title": "Suite pitfalls and A/B tests",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/05-05-evaluation/04.jpg"
+    },
+    {
+      "startTime": 796.52,
+      "title": "Question 3: Eligibility chatbot A/B test",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/05-05-evaluation/05.jpg"
+    },
+    {
+      "startTime": 877.75,
+      "title": "Answer 3",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/05-05-evaluation/06.jpg"
     },
     {
       "startTime": 913.13,
-      "title": "Diagnosing failures"
+      "title": "Diagnosing failures",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/05-05-evaluation/07.jpg"
+    },
+    {
+      "startTime": 1096.72,
+      "title": "Question 4: Blender warranty hallucination",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/05-05-evaluation/08.jpg"
+    },
+    {
+      "startTime": 1129.86,
+      "title": "Answer 4",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/05-05-evaluation/09.jpg"
     },
     {
       "startTime": 1154.07,
-      "title": "Optimization and cost"
+      "title": "Optimization and cost",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/05-05-evaluation/10.jpg"
+    },
+    {
+      "startTime": 1336.92,
+      "title": "Question 5: Dispatch assistant over cost ceiling",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/05-05-evaluation/11.jpg"
+    },
+    {
+      "startTime": 1388.34,
+      "title": "Answer 5",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/05-05-evaluation/12.jpg"
     },
     {
       "startTime": 1408.95,
-      "title": "Monitoring in production"
+      "title": "Monitoring in production",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/05-05-evaluation/13.jpg"
+    },
+    {
+      "startTime": 1599.98,
+      "title": "Answer 1",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/05-05-evaluation/14.jpg"
     },
     {
       "startTime": 1638.52,
-      "title": "Five to remember"
+      "title": "Five to remember",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/05-05-evaluation/15.jpg"
     },
     {
       "startTime": 1706.81,
-      "title": "Recap: the exam tells"
+      "title": "Recap: the exam tells - Pause and answer 6",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/05-05-evaluation/16.jpg"
     }
   ]
 }

@@ -4,31 +4,63 @@
   "chapters": [
     {
       "startTime": 0.0,
-      "title": "In this episode"
+      "title": "In this episode",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/00-00-game-plan/00.jpg"
     },
     {
       "startTime": 65.53,
-      "title": "Cold open, format and weights"
+      "title": "Cold open, format and weights - Question 1: Customer-support agent tool scope",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/00-00-game-plan/01.jpg"
     },
     {
       "startTime": 308.55,
-      "title": "Choose-two items and pacing"
+      "title": "Choose-two items and pacing",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/00-00-game-plan/02.jpg"
     },
     {
       "startTime": 400.25,
-      "title": "The four-question method"
+      "title": "The four-question method",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/00-00-game-plan/03.jpg"
+    },
+    {
+      "startTime": 508.03,
+      "title": "Answer 1",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/00-00-game-plan/04.jpg"
     },
     {
       "startTime": 547.82,
-      "title": "Samples two and three"
+      "title": "Samples two and three",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/00-00-game-plan/05.jpg"
+    },
+    {
+      "startTime": 549.8,
+      "title": "Question 2: Repeated 8,000-token system prompt",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/00-00-game-plan/06.jpg"
+    },
+    {
+      "startTime": 588.6,
+      "title": "Answer 2",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/00-00-game-plan/07.jpg"
+    },
+    {
+      "startTime": 656.97,
+      "title": "Question 3: RAG answers wrong after refresh",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/00-00-game-plan/08.jpg"
+    },
+    {
+      "startTime": 685.79,
+      "title": "Answer 3",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/00-00-game-plan/09.jpg"
     },
     {
       "startTime": 758.86,
-      "title": "Using the series"
+      "title": "Using the series",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/00-00-game-plan/10.jpg"
     },
     {
       "startTime": 817.22,
-      "title": "Recap: the exam tells"
+      "title": "Recap: the exam tells - Pause and answer 4",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/00-00-game-plan/11.jpg"
     }
   ]
 }

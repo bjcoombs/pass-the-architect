@@ -4,35 +4,78 @@
   "chapters": [
     {
       "startTime": 0.0,
-      "title": "In this episode"
+      "title": "In this episode",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/04-04-integration-rag/00.jpg"
     },
     {
       "startTime": 62.28,
-      "title": "Cold open: service manuals"
+      "title": "Cold open: service manuals - Question 1: Service manual assistant retrieval",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/04-04-integration-rag/01.jpg"
     },
     {
       "startTime": 416.73,
-      "title": "Segment three: retrieval versus live state"
+      "title": "Segment three: retrieval versus live state",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/04-04-integration-rag/02.jpg"
+    },
+    {
+      "startTime": 534.19,
+      "title": "Question 2: Pharmacy prescription-ready status",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/04-04-integration-rag/03.jpg"
+    },
+    {
+      "startTime": 581.17,
+      "title": "Answer 2",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/04-04-integration-rag/04.jpg"
     },
     {
       "startTime": 617.94,
-      "title": "Segment four: silent drift"
+      "title": "Segment four: silent drift",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/04-04-integration-rag/05.jpg"
+    },
+    {
+      "startTime": 718.29,
+      "title": "Question 3: Caseworker assistant silent policy drift",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/04-04-integration-rag/06.jpg"
+    },
+    {
+      "startTime": 779.76,
+      "title": "Answer 3",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/04-04-integration-rag/07.jpg"
     },
     {
       "startTime": 828.51,
-      "title": "Segment five: accuracy and latency"
+      "title": "Segment five: accuracy and latency",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/04-04-integration-rag/08.jpg"
+    },
+    {
+      "startTime": 964.3,
+      "title": "Question 4: Contact-centre p95 latency breach",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/04-04-integration-rag/09.jpg"
+    },
+    {
+      "startTime": 1014.06,
+      "title": "Answer 4",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/04-04-integration-rag/10.jpg"
     },
     {
       "startTime": 1045.96,
-      "title": "Segment six: observability at scale"
+      "title": "Segment six: observability at scale",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/04-04-integration-rag/11.jpg"
+    },
+    {
+      "startTime": 1250.08,
+      "title": "Answer 1",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/04-04-integration-rag/12.jpg"
     },
     {
       "startTime": 1290.71,
-      "title": "Five to remember"
+      "title": "Five to remember",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/04-04-integration-rag/13.jpg"
     },
     {
       "startTime": 1349.12,
-      "title": "Recap: the exam tells"
+      "title": "Recap: the exam tells - Pause and answer 5",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/04-04-integration-rag/14.jpg"
     }
   ]
 }

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Publish rendered episodes in listening order: iCloud Drive, GitHub release assets, and RSS feeds.
 
-Usage (from production/): python3 tools/publish.py [--icloud] [--github --site ../docs]
+Usage (from production/): uv run --with mutagen tools/publish.py [--icloud] [--github --site ../docs]
 
 --icloud  copies each series to iCloud Drive as "NN - Title.mp3".
 --github  uploads the MP3s as release assets (one release per series) and writes
@@ -11,11 +11,14 @@ Usage (from production/): python3 tools/publish.py [--icloud] [--github --site .
 import argparse
 import datetime
 import email.utils
+import hashlib
 import json
 import pathlib
 import shutil
 import subprocess
 from xml.sax.saxutils import escape, quoteattr
+
+from mutagen.id3 import ID3, TALB, TCON, TIT2, TPE1, TRCK
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 ICLOUD = pathlib.Path.home() / "Library/Mobile Documents/com~apple~CloudDocs"
@@ -80,14 +83,14 @@ def stage(series):
         meta = front_matter(tr)
         audio = tr.parent.parent / "audio" / f"{tr.stem}.mp3"
         out = dist / f"{n:02d}-{tr.stem}.mp3"
-        subprocess.run(
-            ["ffmpeg", "-y", "-loglevel", "error", "-i", str(audio), "-map", "0:a", "-c", "copy",
-             "-map_metadata", "-1", "-map_chapters", "0",
-             "-metadata", f"title={n:02d} {meta['title']}", "-metadata", f"track={n + 1}",
-             "-metadata", f"album={series['title']}", "-metadata", f"artist={AUTHOR}",
-             "-metadata", "genre=Podcast", str(out)],
-            check=True,
-        )
+        # Retag a copy with mutagen: ffmpeg would drop the chapter titles and artwork.
+        shutil.copyfile(audio, out)
+        tags = ID3(out)
+        for frame in (TIT2(encoding=3, text=[f"{n:02d} {meta['title']}"]), TRCK(encoding=3, text=[str(n + 1)]),
+                      TALB(encoding=3, text=[series["title"]]), TPE1(encoding=3, text=[AUTHOR]),
+                      TCON(encoding=3, text=["Podcast"])):
+            tags.setall(frame.FrameID, [frame])
+        tags.save(out, v2_version=3)
         staged.append((n, tr, meta, out))
     return staged
 
@@ -114,6 +117,11 @@ def to_release(series, staged):
     subprocess.run(["gh", "release", "upload", tag, "-R", REPO, "--clobber", *[str(s[3]) for s in staged]], check=True)
 
 
+def digest(mp3):
+    """Short content hash for the GUID, so podcast apps fetch an episode again when its audio or chapters change."""
+    return hashlib.sha256(mp3.read_bytes()).hexdigest()[:8]
+
+
 def cover(series, site):
     out = site / f"cover-{series['slug']}.png"
     if not out.exists():
@@ -138,14 +146,23 @@ def feed(series, staged, site):
         chapters = tr.parent.parent / "audio" / f"{tr.stem}.chapters.json"
         chapter_tag = ""
         if chapters.exists():
-            shutil.copyfile(chapters, chapters_dir / f"{mp3.stem}.json")
+            data = json.loads(chapters.read_text())
+            img_src = chapters.parent / "cards" / tr.stem
+            img_dst = chapters_dir / mp3.stem
+            shutil.rmtree(img_dst, ignore_errors=True)
+            if img_src.exists():
+                shutil.copytree(img_src, img_dst)
+            for c in data["chapters"]:
+                if "img" in c:
+                    c["img"] = f"{BASE_URL}/chapters/{series['slug']}/{mp3.stem}/{c['img']}"
+            (chapters_dir / f"{mp3.stem}.json").write_text(json.dumps(data, indent=2) + "\n")
             chapter_tag = (f'\n      <podcast:chapters url="{BASE_URL}/chapters/{series["slug"]}/{mp3.stem}.json"'
                            f' type="application/json+chapters"/>')
         items.append(f"""    <item>
       <title>{escape(f"{n:02d}. {meta['title']}")}</title>
       <description>{escape(meta.get('description', ''))}</description>
       <enclosure url={quoteattr(url)} length="{mp3.stat().st_size}" type="audio/mpeg"/>
-      <guid isPermaLink="false">pass-the-architect-{series['slug']}-{tr.stem}</guid>
+      <guid isPermaLink="false">pass-the-architect-{series['slug']}-{tr.stem}-{digest(mp3)}</guid>
       <pubDate>{email.utils.format_datetime(start + datetime.timedelta(minutes=n))}</pubDate>
       <itunes:duration>{duration(mp3)}</itunes:duration>
       <itunes:episodeType>full</itunes:episodeType>{chapter_tag}

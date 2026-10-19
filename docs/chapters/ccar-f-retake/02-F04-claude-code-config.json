@@ -4,35 +4,93 @@
   "chapters": [
     {
       "startTime": 0.0,
-      "title": "In this episode"
+      "title": "In this episode",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/02-F04-claude-code-config/00.jpg"
     },
     {
       "startTime": 59.49,
-      "title": "Cold open: test conventions"
+      "title": "Cold open: test conventions - Question 1: Code generation with Claude Code",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/02-F04-claude-code-config/01.jpg"
+    },
+    {
+      "startTime": 419.26,
+      "title": "Question 2: Code generation with Claude Code",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/02-F04-claude-code-config/02.jpg"
+    },
+    {
+      "startTime": 475.36,
+      "title": "Answer 2",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/02-F04-claude-code-config/03.jpg"
     },
     {
       "startTime": 554.05,
-      "title": "Segment two: commands and skills"
+      "title": "Segment two: commands and skills",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/02-F04-claude-code-config/04.jpg"
+    },
+    {
+      "startTime": 804.93,
+      "title": "Question 3: Code generation with Claude Code",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/02-F04-claude-code-config/05.jpg"
+    },
+    {
+      "startTime": 862.34,
+      "title": "Answer 3",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/02-F04-claude-code-config/06.jpg"
     },
     {
       "startTime": 891.77,
-      "title": "Segment three: path-specific rules"
+      "title": "Segment three: path-specific rules",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/02-F04-claude-code-config/07.jpg"
+    },
+    {
+      "startTime": 1020.05,
+      "title": "Question 4: Code generation with Claude Code",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/02-F04-claude-code-config/08.jpg"
+    },
+    {
+      "startTime": 1069.66,
+      "title": "Answer 4",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/02-F04-claude-code-config/09.jpg"
     },
     {
       "startTime": 1095.19,
-      "title": "Segment four: MCP in Claude Code"
+      "title": "Segment four: MCP in Claude Code",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/02-F04-claude-code-config/10.jpg"
+    },
+    {
+      "startTime": 1328.05,
+      "title": "Question 5: Developer productivity",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/02-F04-claude-code-config/11.jpg"
+    },
+    {
+      "startTime": 1391.26,
+      "title": "Answer 5",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/02-F04-claude-code-config/12.jpg"
     },
     {
       "startTime": 1414.84,
-      "title": "Cold open: the verdict"
+      "title": "Cold open: the verdict",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/02-F04-claude-code-config/13.jpg"
+    },
+    {
+      "startTime": 1426.92,
+      "title": "Answer 1",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/02-F04-claude-code-config/14.jpg"
     },
     {
       "startTime": 1471.82,
-      "title": "Five to remember"
+      "title": "Five to remember",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/02-F04-claude-code-config/15.jpg"
     },
     {
       "startTime": 1552.15,
-      "title": "Recap: the exam tells"
+      "title": "Recap: the exam tells - Pause and answer 6",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/02-F04-claude-code-config/16.jpg"
+    },
+    {
+      "startTime": 1559.19,
+      "title": "Answer 6",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/02-F04-claude-code-config/17.jpg"
     }
   ]
 }

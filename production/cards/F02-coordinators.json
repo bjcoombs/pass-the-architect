@@ -1,0 +1,114 @@
+{
+  "drills": [
+    {
+      "kind": "mcq",
+      "label": "Cold open",
+      "question_line": "SAM: Multi-agent research system. A user asks, \"What year did the E U A I Act enter into force?\"",
+      "answer_line": "SAM: A. That is the guide's skill bullet almost word for word",
+      "scenario": "Multi-agent research system",
+      "stem": "Asked \"What year did the EU AI Act enter into force?\", the coordinator sends it to all four subagents and returns a 12-page cited report three minutes later. It does this for every question, simple or broad. Which change fixes this best?",
+      "choose": 1,
+      "options": {
+        "A": "Coordinator analyses what each query needs and invokes only the subagents it calls for",
+        "B": "A rule that sends any query under 15 words down a short path",
+        "C": "Cap every subagent at a small number of turns so the full run finishes faster",
+        "D": "Tell the report subagent to keep reports short when the question is simple"
+      },
+      "correct": ["A"],
+      "why": "Coordinators analyse query requirements and select which subagents to invoke. Word count is a poor proxy for complexity; D treats the symptom at the wrong layer."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Multi-agent research system. Reports on contested topics come back with citations missing",
+      "answer_line": "SAM: A and B. A gives synthesis the material",
+      "scenario": "Multi-agent research system",
+      "stem": "Choose two. Reports on contested topics lack citations, and twice gave one market-size figure where two sources disagreed. The coordinator spawns synthesis with a one-paragraph prose summary of what search and analysis found.",
+      "choose": 2,
+      "options": {
+        "A": "Include the complete search and analysis findings directly in the synthesis subagent's prompt",
+        "B": "Pass each finding as a structured record: claim, evidence excerpt, source URL or document, page number",
+        "C": "Spawn synthesis inside the coordinator's session so it inherits earlier findings automatically",
+        "D": "Add \"always cite your sources\" to the synthesis subagent's system prompt",
+        "E": "Pass the full raw text of every page the search subagent retrieved"
+      },
+      "correct": ["A", "B"],
+      "why": "A gives synthesis the material; B keeps each claim tied to its source. Subagents do not inherit parent context (C); D asks for citations it never got."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Developer productivity. Your agent uses an explore subagent to map an unfamiliar legacy service",
+      "answer_line": "ALEX: A. Take the tool away and it cannot write.",
+      "scenario": "Developer productivity",
+      "stem": "An explore subagent maps a legacy service before engineers change it. Twice this week it edited files while \"tidying\", and one edit broke a build. The system prompt already says read only. What is the best change?",
+      "choose": 1,
+      "options": {
+        "A": "Restrict the explore subagent's definition to the Read, Grep and Glob tools",
+        "B": "Rewrite the system prompt in capitals and add an example of a read-only run",
+        "C": "Log every file write so engineers can review and revert changes",
+        "D": "Remove Task from the coordinator's allowed tools so no subagent runs unsupervised"
+      },
+      "correct": ["A"],
+      "why": "Removing the tool removes the capability at the root. B is probabilistic and already failed; C is a detective control; D throws away the whole design."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Multi-agent research system. A user asks how European hospitals are adopting A I.",
+      "answer_line": "SAM: That's miss pattern one, real-world instinct overriding the guide",
+      "scenario": "Multi-agent research system",
+      "stem": "Asked how European hospitals are adopting AI, synthesis covers imaging and scheduling well but has almost nothing on nursing workflows or procurement, both named in the request. Which design closes gaps like this best?",
+      "choose": 1,
+      "options": {
+        "A": "Coordinator checks output against the request, re-queries missing areas, re-runs synthesis until coverage",
+        "B": "Run the whole pipeline three times on every request and merge the three reports",
+        "C": "Instruct synthesis to fill thin areas from its own knowledge so the report is complete",
+        "D": "Let synthesis call the web search subagent directly whenever it spots a gap"
+      },
+      "correct": ["A"],
+      "why": "Gap closing is the coordinator's loop, stopping on coverage. D breaks hub-and-spoke; B is a fixed iteration count; C invents uncited claims."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Developer productivity. An engineer asks your agent to review a twenty-two-file branch",
+      "answer_line": "SAM: A. Per-file passes fix the uneven depth",
+      "scenario": "Developer productivity",
+      "stem": "Reviewing a 22-file branch, the agent is thorough on the first few files, shallow on the rest, and missed that a renamed field in one module broke two callers elsewhere. What is the best change?",
+      "choose": 1,
+      "options": {
+        "A": "A local analysis pass on each file, then a separate cross-file integration pass",
+        "B": "Move to a model with a larger context window so all 22 files fit comfortably",
+        "C": "Add \"review every file with equal care and check cross-file effects\" to the prompt",
+        "D": "Spawn one subagent per file and merge their findings as the final review"
+      },
+      "correct": ["A"],
+      "why": "Per-file passes fix uneven depth; the integration pass catches broken callers. B is scale over structure; D is half right, with no integration pass."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Developer productivity. An engineer asks the agent to find out why a legacy billing export",
+      "answer_line": "SAM: B. Intermittent, unknown code, root cause not yet known",
+      "scenario": "Developer productivity",
+      "stem": "Find out why a legacy billing export sometimes drops records overnight. Nobody on the team knows the code. Which decomposition fits?",
+      "choose": 1,
+      "options": {
+        "A": "Fixed five-step pipeline: export script, scheduler config, database schema, logs, report",
+        "B": "Map structure with Grep and Glob, form hypotheses, create next subtasks from each finding, reprioritise",
+        "C": "Spawn one subagent per file in the repository in parallel and merge what they report",
+        "D": "Read every file first and only then decide what to investigate"
+      },
+      "correct": ["B"],
+      "why": "Intermittent, unknown code, unknown cause: open-ended investigation, so dynamic decomposition. A fixes steps before learning; D is the exhaustive-survey trap."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Before the next episode, recall. Pause and name the five segments, and the giveaway for each.",
+      "answer_line": "ALEX: Hub-and-spoke. Isolated context. Spawning with Task.",
+      "prompt": "Name the five segments, and the giveaway for each.",
+      "answer": "Hub-and-spoke. Isolated context. Spawning with Task. Coverage: duplication and gaps. A fixed pipeline against dynamic decomposition."
+    }
+  ]
+}

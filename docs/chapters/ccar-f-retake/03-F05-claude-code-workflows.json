@@ -4,31 +4,88 @@
   "chapters": [
     {
       "startTime": 0.0,
-      "title": "In this episode"
+      "title": "In this episode",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/03-F05-claude-code-workflows/00.jpg"
     },
     {
       "startTime": 63.35,
-      "title": "Cold open: repeating review comments"
+      "title": "Cold open: repeating review comments - Question 1: Claude Code for Continuous Integration",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/03-F05-claude-code-workflows/01.jpg"
+    },
+    {
+      "startTime": 410.01,
+      "title": "Question 2: Code generation with Claude Code",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/03-F05-claude-code-workflows/02.jpg"
+    },
+    {
+      "startTime": 458.64,
+      "title": "Answer 2",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/03-F05-claude-code-workflows/03.jpg"
     },
     {
       "startTime": 489.05,
-      "title": "Segment two: iterative refinement"
+      "title": "Segment two: iterative refinement",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/03-F05-claude-code-workflows/04.jpg"
+    },
+    {
+      "startTime": 702.94,
+      "title": "Question 3: Code generation with Claude Code",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/03-F05-claude-code-workflows/05.jpg"
+    },
+    {
+      "startTime": 779.75,
+      "title": "Answer 3",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/03-F05-claude-code-workflows/06.jpg"
     },
     {
       "startTime": 829.16,
-      "title": "Segment three: Claude Code in CI"
+      "title": "Segment three: Claude Code in CI",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/03-F05-claude-code-workflows/07.jpg"
+    },
+    {
+      "startTime": 1075.81,
+      "title": "Question 4: Claude Code for Continuous Integration",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/03-F05-claude-code-workflows/08.jpg"
+    },
+    {
+      "startTime": 1117.75,
+      "title": "Answer 4",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/03-F05-claude-code-workflows/09.jpg"
+    },
+    {
+      "startTime": 1143.27,
+      "title": "Question 5: Claude Code for Continuous Integration",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/03-F05-claude-code-workflows/10.jpg"
+    },
+    {
+      "startTime": 1201.97,
+      "title": "Answer 5",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/03-F05-claude-code-workflows/11.jpg"
     },
     {
       "startTime": 1234.75,
-      "title": "Cold open: the verdict"
+      "title": "Cold open: the verdict",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/03-F05-claude-code-workflows/12.jpg"
+    },
+    {
+      "startTime": 1280.09,
+      "title": "Answer 1",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/03-F05-claude-code-workflows/13.jpg"
     },
     {
       "startTime": 1323.92,
-      "title": "Five to remember"
+      "title": "Five to remember",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/03-F05-claude-code-workflows/14.jpg"
     },
     {
       "startTime": 1398.91,
-      "title": "Recap: the exam tells"
+      "title": "Recap: the exam tells - Pause and answer 6",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/03-F05-claude-code-workflows/15.jpg"
+    },
+    {
+      "startTime": 1405.94,
+      "title": "Answer 6",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/03-F05-claude-code-workflows/16.jpg"
     }
   ]
 }

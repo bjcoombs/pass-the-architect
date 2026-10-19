@@ -1,0 +1,450 @@
+{
+  "drills": [
+    {
+      "kind": "recall",
+      "question_line": "SAM: Developer tools. The loop exits whenever a response contains text, so the agent stops",
+      "answer_line": "ALEX: The stop reason. Continue while it is tool use, append the tool results",
+      "prompt": "Developer tools. The loop exits whenever a response contains text, so the agent stops with a tool call pending. What should drive the loop?",
+      "answer": "The stop reason. Continue while it is tool use, appending tool results to the history; stop on end turn."
+    },
+    {
+      "kind": "mcq",
+      "label": "Rapid fire",
+      "question_line": "SAM: Support agent. Choose two. Which are anti-patterns for ending the loop? A, stopping when the stop reason is",
+      "answer_line": "ALEX: B and C: parsing natural language, and an arbitrary cap as the primary",
+      "scenario": "Support agent",
+      "stem": "Which two are anti-patterns for ending the loop?",
+      "choose": 2,
+      "options": {
+        "A": "Stopping when the stop reason is end turn",
+        "B": "Stopping when the reply contains \"your issue is resolved\"",
+        "C": "A cap of 10 iterations as the main stopping rule",
+        "D": "Appending tool results before the next request",
+        "E": "Continuing while the stop reason is tool use"
+      },
+      "correct": [
+        "B",
+        "C"
+      ],
+      "why": "Parsing natural language, and an arbitrary cap as the primary stop. The other three are the correct loop."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Research system. Every attempt by the coordinator to spawn a subagent is rejected. What",
+      "answer_line": "ALEX: \"Task\" in the coordinator's allowed tools. That is the spawning mechanism.",
+      "prompt": "Research system. Every attempt by the coordinator to spawn a subagent is rejected. What is missing?",
+      "answer": "\"Task\" in the coordinator's allowed tools. That is the spawning mechanism."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Research system. The synthesis subagent writes a report that ignores the search results.",
+      "answer_line": "ALEX: Put the complete findings in its prompt, as structured data keeping",
+      "prompt": "Research system. The synthesis subagent writes a report that ignores the search results; the coordinator assumed it could see them. Fix?",
+      "answer": "Put the complete findings in its prompt as structured data, with source URL, document name and page number beside each claim. Subagents inherit nothing."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Research system. The coordinator launches four search subagents, one per turn, and latency",
+      "answer_line": "ALEX: Emit all four Task calls in a single coordinator response, so they",
+      "prompt": "Research system. The coordinator launches 4 search subagents, one per turn, and latency is poor.",
+      "answer": "Emit all 4 Task calls in a single coordinator response, so they run in parallel."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Support agent. Policy sends refunds above five hundred dollars to a human. The prompt",
+      "answer_line": "ALEX: A hook that intercepts the process refund call, blocks anything above",
+      "prompt": "Support agent. Policy sends refunds above $500 to a human. The prompt says so, and a $600 refund went through last week.",
+      "answer": "A hook that intercepts the process refund call, blocks anything above the threshold and redirects to escalate to human."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Support agent. One M C P tool returns Unix timestamps, another I S O eight six oh one",
+      "answer_line": "ALEX: A PostToolUse hook that normalizes the formats before the model sees",
+      "prompt": "Support agent. One MCP tool returns Unix timestamps, another ISO 8601 dates, and the agent compares them wrongly.",
+      "answer": "A PostToolUse hook that normalizes the formats before the model sees the results."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Developer tools. \"Add comprehensive tests to this legacy billing module.\" Fixed prompt",
+      "answer_line": "SAM: Dynamic: map the structure, find high-impact areas, then a prioritized",
+      "prompt": "Developer tools. \"Add comprehensive tests to this legacy billing module.\" Fixed prompt chain, or dynamic decomposition?",
+      "answer": "Dynamic: map the structure, find high-impact areas, then a prioritized plan that adapts as dependencies appear. Chaining is for predictable reviews."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Developer tools. You resume yesterday's named investigation with dash dash resume, and",
+      "answer_line": "ALEX: Name the two files for targeted re-analysis. If most of yesterday's",
+      "prompt": "Developer tools. You resume yesterday's named investigation with --resume, and 2 files changed overnight. What do you tell it?",
+      "answer": "Name the 2 files for targeted re-analysis. If most of yesterday's results are stale, start fresh with an injected structured summary."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: And to compare two refactoring approaches from that same analysis? [pause]",
+      "answer_line": "ALEX: Fork session: two independent branches from a shared baseline. [sting]",
+      "prompt": "And to compare two refactoring approaches from that same analysis?",
+      "answer": "Fork session: two independent branches from a shared baseline."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Claude Code team. A new hire's sessions ignore the team's testing conventions, which live",
+      "answer_line": "ALEX: User level, never shared. Move them to the project CLAUDE dot md,",
+      "prompt": "Claude Code team. A new hire's sessions ignore the team's testing conventions, which live in a senior engineer's CLAUDE.md in her home directory.",
+      "answer": "User level, never shared. Move them to the project CLAUDE.md, commit, and check with /memory which files load."
+    },
+    {
+      "kind": "mcq",
+      "label": "Rapid fire",
+      "question_line": "SAM: Claude Code team. Choose two. Tests must run after every file edit, and the CLAUDE dot md line asking for",
+      "answer_line": "ALEX: A and B. C is louder guidance, D needs someone to remember, E reaches",
+      "scenario": "Claude Code team",
+      "stem": "Tests must run after every file edit, and the CLAUDE.md line asking for it is followed most of the time. Choose two.",
+      "choose": 2,
+      "options": {
+        "A": "A PostToolUse hook on the file-edit tools that runs the affected tests",
+        "B": "That hook in project settings, committed",
+        "C": "The CLAUDE.md line rewritten in capitals",
+        "D": "A skill developers run after editing",
+        "E": "The hook in your user settings"
+      },
+      "correct": [
+        "A",
+        "B"
+      ],
+      "why": "C is louder guidance, D needs someone to remember, E reaches only you."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Claude Code team. Nobody may edit the generated client folder. Simplest enforcement? [pause]",
+      "answer_line": "ALEX: A permission deny rule in settings. A PreToolUse hook only if the",
+      "prompt": "Claude Code team. Nobody may edit the generated client folder. Simplest enforcement?",
+      "answer": "A permission deny rule in settings. A PreToolUse hook only if the rule needs more precision than a pattern can give."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Claude Code team. Terraform conventions should load only when someone edits Terraform",
+      "answer_line": "ALEX: A file in dot claude slash rules whose YAML frontmatter paths field",
+      "prompt": "Claude Code team. Terraform conventions should load only when someone edits Terraform files.",
+      "answer": "A file in .claude/rules whose YAML frontmatter paths field globs everything under the terraform folder."
+    },
+    {
+      "kind": "mcq",
+      "label": "Rapid fire",
+      "question_line": "SAM: Claude Code team. Which of these is NOT a reason to put a convention in a path-scoped rule in dot claude slash",
+      "answer_line": "SAM: B is a reason. The answer is C: always-on universal standards belong",
+      "scenario": "Claude Code team",
+      "stem": "Which of these is NOT a reason to put a convention in a path-scoped rule in .claude/rules?",
+      "choose": 1,
+      "options": {
+        "A": "It covers test files scattered across directories",
+        "B": "It loads only when matching files are edited",
+        "C": "The convention applies to every file, all the time",
+        "D": "One glob matches files by type wherever they sit"
+      },
+      "correct": [
+        "C"
+      ],
+      "why": "Always-on universal standards belong in the root CLAUDE.md. B is a reason; picking it is the true option picked on a NOT question."
+    },
+    {
+      "kind": "mcq",
+      "label": "Rapid fire",
+      "question_line": "SAM: Claude Code team. Choose two. A scaffolding skill must never run destructive commands, and developers keep",
+      "answer_line": "ALEX: A and B. Context fork isolates verbose output, which is not the problem",
+      "scenario": "Claude Code team",
+      "stem": "A scaffolding skill must never run destructive commands, and developers keep invoking it without the component name. Which two frontmatter fields?",
+      "choose": 2,
+      "options": {
+        "A": "allowed-tools",
+        "B": "argument-hint",
+        "C": "context fork",
+        "D": "paths",
+        "E": "A longer description"
+      },
+      "correct": [
+        "A",
+        "B"
+      ],
+      "why": "Context fork isolates verbose output, which is not the problem here."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Claude Code team. A single-file bug with a clear stack trace, and then a library migration",
+      "answer_line": "ALEX: Direct for the bug. For the migration, plan mode to investigate and",
+      "prompt": "Claude Code team. A single-file bug with a clear stack trace, then a library migration touching about 50 files. Plan mode or direct for each?",
+      "answer": "Direct for the bug. For the migration, plan mode to investigate and design, the Explore subagent for verbose discovery, then direct execution of the plan."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Claude Code team. Two rounds of prose have not fixed a migration script's null handling,",
+      "answer_line": "ALEX: Specific test cases: input with nulls, exact expected output. The",
+      "prompt": "Claude Code team. Two rounds of prose have not fixed a migration script's null handling, which interacts with its default-value logic. A log wording issue is separate.",
+      "answer": "Specific test cases: input with nulls, exact expected output. The interacting pair in one detailed message; the log wording separately."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: C I pipeline. Review findings must be posted as inline pull request comments by a script.",
+      "answer_line": "ALEX: Dash p for non-interactive mode, with dash dash output format json",
+      "prompt": "CI pipeline. Review findings must be posted as inline pull request comments by a script.",
+      "answer": "-p for non-interactive mode, with --output-format json and --json-schema, so the findings are machine-parseable."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: C I pipeline. The review prompt says \"only report high-confidence findings\", and false",
+      "answer_line": "ALEX: Replace it with explicit categories: report bugs and security issues,",
+      "prompt": "CI pipeline. The review prompt says \"only report high-confidence findings\", and false positives have not moved.",
+      "answer": "Replace it with explicit categories: report bugs and security issues, skip minor style and local patterns."
+    },
+    {
+      "kind": "mcq",
+      "label": "Rapid fire",
+      "question_line": "SAM: C I pipeline. Choose two. Developers dismiss most naming suggestions and now ignore every finding. A, temporarily",
+      "answer_line": "SAM: A and B. \"Be conservative\" is the guide's own example of an instruction",
+      "scenario": "CI pipeline",
+      "stem": "Developers dismiss most naming suggestions and now ignore every finding. Choose two.",
+      "choose": 2,
+      "options": {
+        "A": "Temporarily disable the naming category while improving its prompt",
+        "B": "Add a detected pattern field so dismissals can be analyzed",
+        "C": "Tell the model to be more conservative",
+        "D": "Post only findings seen in two of three runs",
+        "E": "Raise the severity threshold everywhere"
+      },
+      "correct": [
+        "A",
+        "B"
+      ],
+      "why": "\"Be conservative\" is the guide's own example of an instruction that fails to improve precision. D suppresses intermittent real bugs; E punishes categories that work."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: C I pipeline. Detailed instructions are in place, and the comment format still drifts.",
+      "answer_line": "ALEX: Two to four few-shot examples showing the exact format: location,",
+      "prompt": "CI pipeline. Detailed instructions are in place, and the comment format still drifts.",
+      "answer": "2 to 4 few-shot examples showing the exact format: location, issue, severity, suggested fix."
+    },
+    {
+      "kind": "mcq",
+      "label": "Rapid fire",
+      "question_line": "SAM: Extraction. Choose two. Contracts lacking a governing-law clause get an invented one, and unlisted contract",
+      "answer_line": "ALEX: A and B. C causes the invention, D retries for information that is",
+      "scenario": "Extraction",
+      "stem": "Contracts lacking a governing-law clause get an invented one, and unlisted contract types land on the nearest listed type. Choose two.",
+      "choose": 2,
+      "options": {
+        "A": "Make governing law nullable; absent means null",
+        "B": "Add \"other\" plus a detail string to the type enum, and \"unclear\" for ambiguous cases",
+        "C": "Make every field required",
+        "D": "Retry until the field has a value",
+        "E": "A larger model"
+      },
+      "correct": [
+        "A",
+        "B"
+      ],
+      "why": "C causes the invention, D retries for information that is not there, and E is scale instead of structure."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Extraction. Strict schema through tool use, and invoice line items still do not add up",
+      "answer_line": "ALEX: The schema removes syntax errors, not semantic ones. Extract a calculated",
+      "prompt": "Extraction. Strict schema through tool use, and invoice line items still do not add up to the total.",
+      "answer": "The schema removes syntax errors, not semantic ones. Extract a calculated total beside the stated total and flag any gap, with a conflict-detected boolean."
+    },
+    {
+      "kind": "mcq",
+      "label": "Rapid fire",
+      "question_line": "SAM: Extraction. Choose two. Which failures will a retry carrying the specific validation error likely fix? A,",
+      "answer_line": "ALEX: A and C. The rest is absent information. The retry carries the document,",
+      "scenario": "Extraction",
+      "stem": "Which two failures will a retry carrying the specific validation error likely fix?",
+      "choose": 2,
+      "options": {
+        "A": "A date in the wrong format",
+        "B": "A value that exists only in an appendix nobody provided",
+        "C": "Values placed in the wrong fields",
+        "D": "A field the source does not contain",
+        "E": "A page missing from the scan"
+      },
+      "correct": [
+        "A",
+        "C"
+      ],
+      "why": "The rest is absent information. The retry carries the document, the failed extraction and the specific errors."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Extraction. An overnight Message Batches run loses forty documents to the context limit.",
+      "answer_line": "ALEX: Resubmit only the forty, by custom I D, chunked. Submit every four",
+      "prompt": "Extraction. An overnight batch run loses 40 documents to the context limit. With a 30-hour deadline and up to 24 hours of processing, how often do you submit?",
+      "answer": "Resubmit only the 40, by custom ID, chunked. Submit every 4 hours: 4 of waiting plus 24 of processing fits inside 30."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Extraction. Three extraction tools, the document type is unknown, and sometimes the model",
+      "answer_line": "ALEX: Any. It must call a tool, and it can pick which.",
+      "prompt": "Extraction. Three extraction tools, the document type is unknown, and sometimes the model answers in prose. Tool choice?",
+      "answer": "Any. It must call a tool, and it can pick which."
+    },
+    {
+      "kind": "mcq",
+      "label": "Rapid fire",
+      "question_line": "SAM: Extraction. Choose two. Extract metadata must run before the enrichment tools. Which two? A, force extract",
+      "answer_line": "SAM: A and B. Forcing it on every request means enrichment never runs;",
+      "scenario": "Extraction",
+      "stem": "Extract metadata must run before the enrichment tools. Which two?",
+      "choose": 2,
+      "options": {
+        "A": "Force extract metadata by name with tool choice on the first request",
+        "B": "Handle enrichment in follow-up turns once the metadata is back",
+        "C": "Tool choice any on the first request",
+        "D": "A system prompt line saying always call extract metadata first",
+        "E": "Force extract metadata on every request"
+      },
+      "correct": [
+        "A",
+        "B"
+      ],
+      "why": "Forcing it on every request means enrichment never runs. C lets it pick any tool, and D is guidance."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Developer tools. Two M C P tools, search docs and find docs, have near-identical descriptions,",
+      "answer_line": "ALEX: Rename and rewrite so each says what it does, its input format, an",
+      "prompt": "Developer tools. Two MCP tools, search docs and find docs, have near-identical descriptions, and the agent misroutes between them.",
+      "answer": "Rename and rewrite so each says what it does, its input format, an example query, and when to use it instead of the other."
+    },
+    {
+      "kind": "mcq",
+      "label": "Rapid fire",
+      "question_line": "SAM: Developer tools. Choose two. The agent prefers Grep over a more capable M C P code-index tool, and the system",
+      "answer_line": "ALEX: A and B. C throws away the right tool for plain content search, D",
+      "scenario": "Developer tools",
+      "stem": "The agent prefers Grep over a more capable MCP code-index tool, and the system prompt says \"always search the files first\". Choose two.",
+      "choose": 2,
+      "options": {
+        "A": "Expand the MCP tool's description of capabilities and outputs",
+        "B": "Revise that keyword-sensitive instruction",
+        "C": "Remove Grep",
+        "D": "A routing classifier",
+        "E": "A larger model"
+      },
+      "correct": [
+        "A",
+        "B"
+      ],
+      "why": "C throws away the right tool for plain content search, D is over-engineering, and E is scale."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Research system. The search subagent hits a timeout. What happens first? [pause]",
+      "answer_line": "SAM: First it retries locally, because a timeout is transient; only what",
+      "prompt": "Research system. The search subagent hits a timeout. What happens first?",
+      "answer": "It retries locally, because a timeout is transient. Only what it cannot resolve goes up, with what was attempted and partial results."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Support agent. Process refund rejects a request outside the return window. What should",
+      "answer_line": "ALEX: The is-error flag, a business category, retryable false, and a customer-friendly",
+      "prompt": "Support agent. Process refund rejects a request outside the return window. What should the response carry?",
+      "answer": "The is-error flag, a business category, retryable false, and a customer-friendly explanation the agent can pass on."
+    },
+    {
+      "kind": "mcq",
+      "label": "Rapid fire",
+      "question_line": "SAM: Developer tools. Choose two. A shared schema M C P server for the team, and one engineer's experimental server.",
+      "answer_line": "ALEX: A and B. Tools from both servers are discovered at connection time",
+      "scenario": "Developer tools",
+      "stem": "A shared schema MCP server for the team, and one engineer's experimental server. Choose two.",
+      "choose": 2,
+      "options": {
+        "A": "The shared one in the project's .mcp.json, token as an environment-variable placeholder",
+        "B": "The experimental one in .claude.json in that engineer's home directory",
+        "C": "The experimental one in the project file",
+        "D": "The shared one in each user's config",
+        "E": "The literal token in the project file, since the repository is private"
+      },
+      "correct": [
+        "A",
+        "B"
+      ],
+      "why": "Tools from both servers are discovered at connection time and available together."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Support agent. After summarization, \"a two hundred and forty-seven dollar refund on order",
+      "answer_line": "ALEX: A persistent case facts block of amounts, dates, order numbers and",
+      "prompt": "Support agent. After summarization, \"a $247 refund on order 8812, promised by Friday\" has become \"customer wants a refund\".",
+      "answer": "A persistent case facts block of amounts, dates, order numbers and statuses, in every prompt, outside the summarized history. Trim lookups to relevant fields."
+    },
+    {
+      "kind": "mcq",
+      "label": "Rapid fire",
+      "question_line": "SAM: Support agent. Choose two. Which call for escalating now? A, the customer asks for a human. B, a competitor",
+      "answer_line": "SAM: A and B. The stem never raised identity risk: two matches means asking",
+      "scenario": "Support agent",
+      "stem": "Which two call for escalating now?",
+      "choose": 2,
+      "options": {
+        "A": "The customer asks for a human",
+        "B": "A competitor price match, when policy covers only your own site's prices",
+        "C": "Anger over a late delivery the agent can fix",
+        "D": "Get customer returns two accounts",
+        "E": "Self-rated confidence of 4 out of 10"
+      },
+      "correct": [
+        "A",
+        "B"
+      ],
+      "why": "Two matches means asking for another identifier. C is sentiment, not complexity, so acknowledge it and offer the fix. E is uncalibrated self-report."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Support agent. When it does escalate, the human cannot see the transcript. [pause]",
+      "answer_line": "ALEX: A structured handoff: customer I D, root cause, refund amount, recommended",
+      "prompt": "Support agent. When it does escalate, the human cannot see the transcript.",
+      "answer": "A structured handoff: customer ID, root cause, refund amount, recommended action."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Research system. Two credible sources give different market sizes. [pause]",
+      "answer_line": "ALEX: Keep both, each annotated with its source, with publication dates",
+      "prompt": "Research system. Two credible sources give different market sizes.",
+      "answer": "Keep both, each annotated with its source and publication date, so a difference in time is not read as a contradiction. The coordinator decides how to reconcile."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Developer tools. Hours into exploring, the agent talks about \"typical patterns\" instead",
+      "answer_line": "ALEX: A scratchpad file of key findings it refers back to, subagents for",
+      "prompt": "Developer tools. Hours into exploring, the agent talks about \"typical patterns\" instead of the classes it found earlier.",
+      "answer": "A scratchpad file of key findings it refers back to, subagents for the verbose exploration, and /compact when discovery output fills the context."
+    },
+    {
+      "kind": "mcq",
+      "label": "Rapid fire",
+      "question_line": "SAM: Extraction. Choose two. Accuracy is ninety-seven percent overall, and the team wants to drop human review.",
+      "answer_line": "ALEX: A and B. The aggregate can hide a document type that fails badly,",
+      "scenario": "Extraction",
+      "stem": "Accuracy is 97% overall, and the team wants to drop human review. What comes first? Choose two.",
+      "choose": 2,
+      "options": {
+        "A": "Accuracy by document type and field",
+        "B": "Ongoing stratified random sampling of high-confidence extractions",
+        "C": "Drop review now",
+        "D": "Route on raw model confidence with a fixed threshold",
+        "E": "Review everything forever"
+      },
+      "correct": [
+        "A",
+        "B"
+      ],
+      "why": "The aggregate can hide a document type that fails badly, and field-level confidence only routes well once it is calibrated on a labelled set."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Before the day itself, one more pass. Pause and name the five domains with their weights,",
+      "answer_line": "ALEX: Agentic Architecture twenty-seven, Claude Code Configuration twenty,",
+      "prompt": "Name the five domains with their weights, and the miss pattern you hit most tonight.",
+      "answer": "Agentic Architecture 27%, Claude Code Configuration 20%, Prompt Engineering 20%, Tool Design 18%, Context 15%."
+    }
+  ]
+}

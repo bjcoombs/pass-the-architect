@@ -1,0 +1,80 @@
+{
+  "drills": [
+    {
+      "kind": "mcq",
+      "label": "Cold open",
+      "question_line": "SAM: Here's your opener. A health insurer runs a claims assistant for its adjusters. Policy says",
+      "answer_line": "SAM: And A is the tempting distractor. It's better than nothing",
+      "scenario": "Insurer claims assistant, regional access",
+      "stem": "Policy says adjusters may only see claims from their own region. Claude refused every red-team prompt, but in production an adjuster politely asks for another region's claim and gets it. Which change closes the gap?",
+      "choose": 1,
+      "options": {
+        "A": "Add the regional rule to the system prompt",
+        "B": "Deterministic authorization check in the retrieval tool, keyed to server-injected adjuster identity",
+        "C": "Output classifier that flags claim numbers from other regions",
+        "D": "Move to a larger model with stronger safety training"
+      },
+      "correct": ["B"],
+      "why": "A system prompt steers but does not enforce. A deterministic check on server-injected identity removes the risk at its root: the forbidden record never reaches the context."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. A retail support agent answers from a product knowledge base",
+      "answer_line": "ALEX: Then A and B.",
+      "scenario": "Retail support agent issuing store credit",
+      "stem": "A retail support agent answers from a product knowledge base and can issue store credit through a tool. Today the only control is a toxicity judge on the final response. Which two additions most directly close the largest gaps?",
+      "choose": 2,
+      "options": {
+        "A": "Deterministic authorization on caller identity and credit limit before the store-credit tool runs",
+        "B": "Screen retrieved knowledge-base passages for embedded instructions before they enter the context",
+        "C": "System prompt sentence: never issue credit above $50",
+        "D": "A second toxicity judge from a different vendor on the output",
+        "E": "Weekly sampled review of credit transactions"
+      },
+      "correct": ["A", "B"],
+      "why": "A puts a provable gate in front of the only side effect. B covers indirect injection, the dominant vector the design ignores. C is a probabilistic fix for a deterministic need."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. A field-service agent schedules technician visits, which customers",
+      "answer_line": "ALEX: B. Stakes drive routing, confidence sets the volume.",
+      "scenario": "Field-service agent, 40 reviews a day",
+      "stem": "A field-service agent schedules visits customers can rebook freely, and orders non-returnable parts above $5,000. Reviewers handle about 40 items a day; the agent makes 2,000 decisions. Which routing design fits?",
+      "choose": 1,
+      "options": {
+        "A": "Route every decision below 90% confidence to review",
+        "B": "Low-confidence part orders to pre-action approval, sample scheduling, show inputs, output and flag reason",
+        "C": "Route by confidence alone, threshold set low enough to fit 40 items",
+        "D": "Post-action audit of all part orders"
+      },
+      "correct": ["B"],
+      "why": "Stakes drive routing, confidence sets the volume. A ignores stakes, C sets the threshold by queue size, D catches the bad order after the money is spent."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. A bank's credit-support assistant is challenged by a regulator",
+      "answer_line": "SAM: Yes. A outsources a problem that entered through the bank's own corpus.",
+      "scenario": "Bank credit assistant, regulator challenge",
+      "stem": "A regulator asks a bank whether similar applicants were treated comparably by its credit-support assistant. The team logs final recommendations only. What is the most important change?",
+      "choose": 1,
+      "options": {
+        "A": "Ask the model vendor for its latest bias evaluation",
+        "B": "Log inputs, retrieved context, output and routing per decision, queryable and retained per the register",
+        "C": "System prompt instruction to treat all applicants equally",
+        "D": "Publish the overall approval rate"
+      },
+      "correct": ["B"],
+      "why": "Only B lets anyone reconstruct a decision or rule out a source. A outsources a corpus problem, C is an instruction without evidence, D hides subgroup harm."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Before the recap, your turn. Pause and name the five task statements from today",
+      "answer_line": "ALEX: Guardrails and safety controls, risks and failure modes, human in the loop",
+      "prompt": "Name the five task statements from today, and the giveaway in a stem that points to each one.",
+      "answer": "Guardrails, risks and failure modes, human in the loop, compliance, bias and fairness. Giveaways: side-effect tool, poisoned document, reviewer capacity, named regulation, one group doing worse."
+    }
+  ]
+}

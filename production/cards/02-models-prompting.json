@@ -1,0 +1,78 @@
+{
+  "drills": [
+    {
+      "kind": "mcq",
+      "label": "Cold open",
+      "question_line": "SAM: Here's the first item. An insurer runs a three-step claims pipeline: classify the incoming claim",
+      "answer_line": "SAM: Back to the cold open. The claims pipeline on the top tier with thinking on",
+      "scenario": "Insurer claims pipeline over budget",
+      "stem": "An insurer's three-step claims pipeline (classify, summarise documents, compose an adjuster note) runs every step on the top tier with extended thinking on. Monthly cost is 5x budget and median latency is past target. What should the architect do first?",
+      "choose": 1,
+      "options": {
+        "A": "Move every step to the smallest tier",
+        "B": "Build an eval set per step, set pass thresholds in advance, move each step to the lowest tier that passes",
+        "C": "Keep the top tier and truncate the supporting documents to cut input tokens",
+        "D": "Fine-tune a smaller model on the top tier's outputs"
+      },
+      "correct": ["B"],
+      "why": "Measure before moving: per-step evals with thresholds set first. A downgrades without evidence, C drops evidence the adjuster needs, D jumps to fine-tuning."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. A retail bank's support router sorts incoming messages into one",
+      "answer_line": "SAM: Correct. A router that needs no reasoning gains nothing from a thinking pass",
+      "scenario": "Bank support router latency",
+      "stem": "A retail bank's support router sorts messages into one of six queues, on a mid tier with extended thinking enabled. Accuracy meets the target, but the router adds noticeable latency to every conversation. What's the best change?",
+      "choose": 1,
+      "options": {
+        "A": "Move the router to the top tier so it finishes its reasoning faster",
+        "B": "Disable extended thinking and confirm on the eval set that accuracy holds",
+        "C": "Add three worked examples per queue to the prompt",
+        "D": "Cache the router's responses for a day"
+      },
+      "correct": ["B"],
+      "why": "A router that needs no reasoning gains nothing from a thinking pass but pays its latency and cost every request. Confirm on the eval: config changes are behaviour changes."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. This one is choose two. A field-service company's ticket triage prompt",
+      "answer_line": "SAM: The answer is A and B. The rubric defines severity by impact",
+      "scenario": "Ticket triage priority swayed by tone",
+      "stem": "A field-service company's ticket triage prompt assigns priority by business impact. Angrily worded feature requests keep getting top priority. Which two changes address the root cause?",
+      "choose": 2,
+      "options": {
+        "A": "Add a few-shot example of an urgently worded feature request correctly given the lowest priority",
+        "B": "Add an explicit rubric instruction to judge priority by impact and ignore tone",
+        "C": "Move the prompt to a larger model tier",
+        "D": "Enable extended thinking",
+        "E": "Add a dashboard tracking the distribution of priorities each day"
+      },
+      "correct": ["A", "B"],
+      "why": "The rubric never says to ignore tone, so B closes that gap; the judgment is easier to show than describe, so A gives the counter-case. E is detective and fixes nothing."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. A field-service assistant builds every request as follows",
+      "answer_line": "ALEX: B. The timestamp changes on every call, so the prefix never matches.",
+      "scenario": "Field-service cache never hits",
+      "stem": "A field-service assistant builds each request: current timestamp and technician ID, then a 6,000-token equipment manual and safety rules, then the question. Calls arrive every few seconds. Caching is enabled, but the cache-read token count is always zero. What's the best fix?",
+      "choose": 1,
+      "options": {
+        "A": "Lengthen the cache lifetime",
+        "B": "Move the timestamp and technician ID after the manual and safety rules so the fixed block is the prefix",
+        "C": "Switch to a smaller model tier",
+        "D": "Summarise the manual down to 500 tokens"
+      },
+      "correct": ["B"],
+      "why": "The timestamp changes on every call, so the prefix never matches. Reorder, then confirm hits in the usage field. D is the blunt cut that discards safety content."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Before the tease, a test. Pause and name the five task statements we covered",
+      "prompt": "Name the five task statements this episode covered, or the giveaway for each."
+    }
+  ]
+}

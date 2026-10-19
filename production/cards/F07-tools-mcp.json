@@ -1,0 +1,129 @@
+{
+  "drills": [
+    {
+      "kind": "mcq",
+      "label": "Cold open",
+      "question_line": "SAM: Developer productivity scenario. An Agent SDK agent helps engineers explore a large monorepo. It has the built-in",
+      "answer_line": "ALEX: I'm moving to B. The prompt line is a keyword trigger: the word \"search\"",
+      "scenario": "Developer productivity",
+      "stem": "An Agent SDK agent explores a large monorepo with built-in Grep and an MCP code-index tool that searches every repository. The system prompt says \"Whenever the user asks you to search, use grep for speed.\" On cross-repository questions the code-index tool is never called. Best fix?",
+      "choose": 1,
+      "options": {
+        "A": "Remove Grep from the agent's tool set",
+        "B": "Drop the keyword instruction; expand the code-index description, including when to use it over Grep",
+        "C": "Add a routing classifier that sends cross-repository questions to the code-index tool",
+        "D": "Set tool choice to force the code-index tool on every turn"
+      },
+      "correct": [
+        "B"
+      ],
+      "why": "B fixes both causes: a keyword instruction overriding the descriptions, and a description too thin to win. A throws away a tool that is right for local searches."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Choose two. Developer productivity scenario. An internal agent has",
+      "answer_line": "SAM: A and B. A removes the generic tool doing three jobs; B gives each",
+      "scenario": "Developer productivity",
+      "stem": "An internal agent has one tool, code helper, with a mode parameter for explain, find usages and generate tests. Its description is \"Helps with code.\" It picks the wrong mode about a third of the time and the output shape varies. Which two changes best address this?",
+      "choose": 2,
+      "options": {
+        "A": "Split code helper into 3 purpose-specific tools, each with a defined input and output contract",
+        "B": "Give each tool's description its input format, example queries, edge cases, and when to use it",
+        "C": "Tell the agent in the system prompt to think carefully about which mode to choose",
+        "D": "Move to a larger model that infers intent better",
+        "E": "Add a validation layer that rejects wrong-shaped outputs and asks the model to try again"
+      },
+      "correct": [
+        "A",
+        "B"
+      ],
+      "why": "A removes the generic tool doing three jobs; B gives each new tool what the model needs to choose it. E catches bad output after the fact and leaves the cause."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Customer support scenario. A customer whose loyalty plan excludes refunds",
+      "answer_line": "SAM: That is miss pattern one: the real-world instinct beating the guide's",
+      "scenario": "Customer support",
+      "stem": "A customer whose loyalty plan excludes refunds on sale items asks for one on a sale purchase. The refund tool returns \"Operation failed\"; the agent retries twice, then apologizes vaguely. First-contact resolution on these cases is falling. Best fix?",
+      "choose": 1,
+      "options": {
+        "A": "Return an error flagged as an error, business category, retriable false, customer-friendly explanation",
+        "B": "Add exponential backoff to the agent's retries",
+        "C": "Route every failed refund to the escalate to human tool",
+        "D": "Add a system-prompt instruction to apologize clearly when a refund fails"
+      },
+      "correct": [
+        "A"
+      ],
+      "why": "With a business category and retriable false, the agent stops retrying and explains the rule, resolving on first contact. C sends resolvable cases to humans."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Choose two. Developer productivity scenario. A coordinator delegates",
+      "answer_line": "SAM: A and B. A separates \"no access\" from \"no incidents\". B keeps recovery",
+      "scenario": "Developer productivity",
+      "stem": "A subagent searches an incident-tracking MCP server. Its credentials lack access to one team's project, and the tool returns zero results for it. Timeouts happen now and then; the subagent sends each straight up, and the coordinator restarts the whole search. Which two changes are best?",
+      "choose": 2,
+      "options": {
+        "A": "Return the access failure as an error, permission category, is retryable false, not an empty result",
+        "B": "Retry timeouts locally; pass up only unresolved errors, with partial results and what was tried",
+        "C": "Return an empty list for every failure so the coordinator's logic stays simple",
+        "D": "Have the coordinator re-run any empty search three times in case it was a failure",
+        "E": "Give the subagent admin credentials for every project"
+      },
+      "correct": [
+        "A",
+        "B"
+      ],
+      "why": "A separates \"no access\" from \"no incidents\". B keeps recovery local and gives the coordinator what it needs. E widens access beyond the role."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Customer support scenario. A triage step has three tools: route to",
+      "answer_line": "SAM: B. Any guarantees a tool call and still lets the model pick which",
+      "scenario": "Customer support",
+      "stem": "A triage step has 3 tools: route to billing, route to returns, route to account security. Downstream code expects exactly one tool call per message. About 1 message in 20, the model replies with friendly text instead and the message sits unrouted. What should tool choice be?",
+      "choose": 1,
+      "options": {
+        "A": "Auto, with a stronger system-prompt instruction to always route",
+        "B": "Any",
+        "C": "Forced selection of route to billing, since billing is the most common case",
+        "D": "None, with routing done by parsing the model's text reply"
+      },
+      "correct": [
+        "B"
+      ],
+      "why": "Any guarantees a tool call and still lets the model pick which of the three. A is probabilistic; C sends every security case to billing."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Developer productivity scenario. An engineer asks the agent to find",
+      "answer_line": "SAM: B. Glob narrows by path, Grep by content, and nothing is read in full",
+      "scenario": "Developer productivity",
+      "stem": "An engineer asks the agent to find every test file that calls a deprecated helper named format currency. The project has thousands of files. Which approach fits best?",
+      "choose": 1,
+      "options": {
+        "A": "Read every file in the repository, then filter for test files that mention the helper",
+        "B": "Glob for files matching the test-file pattern, then Grep those files for format currency",
+        "C": "Grep the whole repository for the word \"test\"",
+        "D": "Use Bash to list every directory, then Read each test file one by one"
+      },
+      "correct": [
+        "B"
+      ],
+      "why": "Glob narrows by path, Grep by content, and nothing is read in full until it matters. A reads everything up front; D does Glob's job by hand."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Before we finish, your turn. Pause and name the four things this episode covered, with",
+      "answer_line": "ALEX: Tool descriptions, giveaway \"similar tools\" plus misrouting. Error",
+      "prompt": "Name the four things this episode covered, with the giveaway for each.",
+      "answer": "Tool descriptions (\"similar tools\" plus misrouting); error responses (refusal vs outage); tools per agent and tool choice (\"frequently\", text not a tool call); built-in tools (\"non-unique\")."
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "drills": [
+    {
+      "kind": "mcq",
+      "label": "Cold open",
+      "question_line": "SAM: Here's your item. A company runs an internal H R assistant built on the Agent S D K. Employees ask",
+      "answer_line": "SAM: C is right. Identity comes from the server, and the tool enforces",
+      "scenario": "Internal HR assistant record access",
+      "stem": "An internal HR assistant on the Agent SDK calls an HR database tool via one service account that reads every employee record. The system prompt says: return only the requester's records, plus direct reports if the user says they are a manager. Which change best closes the security gap?",
+      "choose": 1,
+      "options": {
+        "A": "Add few-shot examples showing the assistant refusing requests for other people's records",
+        "B": "Add an output classifier that blocks any response containing another employee's name",
+        "C": "Verify identity and role server-side from SSO; the tool returns only records that identity is entitled to",
+        "D": "Log every call to the HR tool and review the logs weekly for misuse"
+      },
+      "correct": ["C"],
+      "why": "Identity comes from the server and the tool enforces authorization with it, so it cannot return a record the user isn't entitled to, whatever the model is persuaded to do."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Choose two. A field-service company gives its technicians an agent",
+      "answer_line": "SAM: A and C. A removes capabilities the role never needs",
+      "scenario": "Technician agent with leftover pilot tools",
+      "stem": "Technicians' agent looks up work orders, checks parts stock and searches manuals. Pilot config also has a tool running arbitrary SQL on the warehouse and a customer-credit tool. A manual-search subagent shares the orchestrator's full tool set. Which two changes best reduce risk?",
+      "choose": 2,
+      "options": {
+        "A": "Remove the SQL and credit tools, and record why each was removed",
+        "B": "Add a system prompt instruction telling the agent never to issue credits",
+        "C": "Restrict the manual-search subagent to read-only search tools",
+        "D": "Route every credit through a supervisor confirmation screen",
+        "E": "Log all warehouse queries to the security team"
+      },
+      "correct": ["A", "C"],
+      "why": "A removes capabilities the role never needs, killing the risk at the root. C scopes the subagent to its job. B, D and E leave the tools in place."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. A retail bank routes customer complaints to the right team",
+      "answer_line": "SAM: B. Necessity filter, reference identifier for routing",
+      "scenario": "Bank complaint routing data handling",
+      "stem": "A retail bank uses Claude to summarize complaint text and pick a category. The server sends the complaint plus the full customer record: card number, date of birth, home address, account number. Which change best addresses the data-handling risk?",
+      "choose": 1,
+      "options": {
+        "A": "No change, because the API does not retain conversation content by default",
+        "B": "Send only the complaint text and a complaint reference ID; strip other fields on the server before the call",
+        "C": "Encrypt the application's request logs at rest",
+        "D": "Truncate each request to its first 500 tokens to limit exposure"
+      },
+      "correct": ["B"],
+      "why": "Necessity filter: a reference ID is enough for routing, and redaction happens before the call. A ignores your own application's logs; C leaves card numbers in them."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Pause here and answer before we go on. Three quick ones: name the mechanism.",
+      "prompt": "Name the mechanism: a service for 3 Claude clients; 2 tools used by 1 product only; a procurement agent needing another team's risk agent."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Choose two. A public-sector benefits agent has all forty casework",
+      "answer_line": "SAM: A and C. Both stage context so each step carries what it needs",
+      "scenario": "Benefits agent context bloat",
+      "stem": "A public-sector benefits agent has all 40 casework procedures in its system prompt, plus definitions for 30 tools, on every call. Most cases use 2 or 3 procedures. Tool selection accuracy is slipping and per-call cost keeps rising. Which two changes best address this?",
+      "choose": 2,
+      "options": {
+        "A": "Package each procedure as a Skill, so only its description loads until a case needs it",
+        "B": "Move to a model with a larger context window",
+        "C": "Defer tool definitions until needed, keeping a small stable prefix that can be cached",
+        "D": "Cut each procedure to its first paragraph to save tokens",
+        "E": "Fine-tune a model on all 40 procedures"
+      },
+      "correct": ["A", "C"],
+      "why": "Both stage context so each step carries what it needs, and the small stable prefix still gets the caching benefit. A bigger window is a ceiling, not a target."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Before the tease, a test. Pause and name the four task statements this episode covered",
+      "prompt": "Name the four task statements this episode covered, and the giveaway for each."
+    }
+  ]
+}

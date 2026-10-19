@@ -4,39 +4,128 @@
   "chapters": [
     {
       "startTime": 0.0,
-      "title": "In this episode"
+      "title": "In this episode",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/04-F06-structured-output/00.jpg"
     },
     {
       "startTime": 70.43,
-      "title": "Cold open: invoice payment terms"
+      "title": "Cold open: invoice payment terms - Question 1: Structured data extraction",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/04-F06-structured-output/01.jpg"
+    },
+    {
+      "startTime": 310.97,
+      "title": "Question 2: Continuous integration",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/04-F06-structured-output/02.jpg"
+    },
+    {
+      "startTime": 369.31,
+      "title": "Answer 2",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/04-F06-structured-output/03.jpg"
     },
     {
       "startTime": 400.13,
-      "title": "Segment two: few-shot examples"
+      "title": "Segment two: few-shot examples",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/04-F06-structured-output/04.jpg"
+    },
+    {
+      "startTime": 532.48,
+      "title": "Question 3: Structured data extraction",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/04-F06-structured-output/05.jpg"
+    },
+    {
+      "startTime": 596.72,
+      "title": "Answer 3",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/04-F06-structured-output/06.jpg"
     },
     {
       "startTime": 645.75,
-      "title": "Segment three: structured output"
+      "title": "Segment three: structured output",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/04-F06-structured-output/07.jpg"
+    },
+    {
+      "startTime": 778.99,
+      "title": "Question 4: Structured data extraction",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/04-F06-structured-output/08.jpg"
+    },
+    {
+      "startTime": 825.48,
+      "title": "Answer 4",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/04-F06-structured-output/09.jpg"
+    },
+    {
+      "startTime": 902.15,
+      "title": "Question 5: Structured data extraction",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/04-F06-structured-output/10.jpg"
+    },
+    {
+      "startTime": 959.51,
+      "title": "Answer 5",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/04-F06-structured-output/11.jpg"
     },
     {
       "startTime": 984.91,
-      "title": "Segment four: validation and retry"
+      "title": "Segment four: validation and retry",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/04-F06-structured-output/12.jpg"
+    },
+    {
+      "startTime": 1182.09,
+      "title": "Question 6: Continuous integration",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/04-F06-structured-output/13.jpg"
+    },
+    {
+      "startTime": 1233.46,
+      "title": "Answer 6",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/04-F06-structured-output/14.jpg"
     },
     {
       "startTime": 1256.58,
-      "title": "Segment five: batch processing"
+      "title": "Segment five: batch processing",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/04-F06-structured-output/15.jpg"
+    },
+    {
+      "startTime": 1378.29,
+      "title": "Question 7: Structured data extraction",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/04-F06-structured-output/16.jpg"
+    },
+    {
+      "startTime": 1440.76,
+      "title": "Answer 7",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/04-F06-structured-output/17.jpg"
     },
     {
       "startTime": 1461.74,
-      "title": "Segment six: multi-pass review"
+      "title": "Segment six: multi-pass review",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/04-F06-structured-output/18.jpg"
+    },
+    {
+      "startTime": 1553.36,
+      "title": "Question 8: Continuous integration",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/04-F06-structured-output/19.jpg"
+    },
+    {
+      "startTime": 1601.11,
+      "title": "Answer 8",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/04-F06-structured-output/20.jpg"
+    },
+    {
+      "startTime": 1633.08,
+      "title": "Answer 1",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/04-F06-structured-output/21.jpg"
     },
     {
       "startTime": 1680.82,
-      "title": "Five to remember"
+      "title": "Five to remember",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/04-F06-structured-output/22.jpg"
     },
     {
       "startTime": 1775.92,
-      "title": "Recap: the exam tells"
+      "title": "Recap: the exam tells - Pause and answer 9",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/04-F06-structured-output/23.jpg"
+    },
+    {
+      "startTime": 1783.56,
+      "title": "Answer 9",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/04-F06-structured-output/24.jpg"
     }
   ]
 }

@@ -1,0 +1,110 @@
+{
+  "drills": [
+    {
+      "kind": "mcq",
+      "label": "Cold open",
+      "question_line": "SAM: Multi-agent research scenario. The system writes a report on electric bus adoption in European cities. The",
+      "answer_line": "SAM: Verification passes are useful, and it would catch some of these.",
+      "scenario": "Multi-agent research",
+      "stem": "A report says electric bus adoption reached 31%, with no citation. One subagent found 31% in a ministry dataset from this year, another 22% in an industry survey from 2 years earlier. Each handed the synthesis agent a prose summary. Best fix?",
+      "choose": 1,
+      "options": {
+        "A": "Tell the synthesis agent to always prefer the most recent source and cite it",
+        "B": "Subagents return claim-source mappings with excerpts and dates; report shows both figures with sources",
+        "C": "Add a fact-checking subagent after synthesis that re-searches every statistic",
+        "D": "Pass the full raw documents to the synthesis agent instead of summaries"
+      },
+      "correct": [
+        "B"
+      ],
+      "why": "Prose summaries dropped attribution and dates, so fix the hand-off's structure. C is detective, after the damage; A imports newest-wins and hides the other figure."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Choose two. Multi-agent research scenario. The coordinator passes twelve",
+      "answer_line": "SAM: B is right. D is the miss. Instinct says a direct instruction fixes",
+      "scenario": "Multi-agent research",
+      "stem": "The coordinator passes 12 long narrative document analysis reports, reasoning included, to the synthesis agent. Its context is nearly full, and its reports regularly omit findings from reports in the middle of the batch. Which two changes best address this?",
+      "choose": 2,
+      "options": {
+        "A": "Subagents return structured key facts with citations and relevance scores, not narrative reasoning",
+        "B": "A key findings summary at the start of the input, and a section header for each subagent's detail",
+        "C": "Increase max tokens on the synthesis call so it has room for all 12",
+        "D": "Tell the synthesis agent to read every section with equal care, especially the middle ones",
+        "E": "Truncate each report to its first 500 words so the batch fits"
+      },
+      "correct": [
+        "A",
+        "B"
+      ],
+      "why": "Summary first and explicit headers fix position effects; structured upstream output fits a tight budget. D is a request, not a structural change; C caps output only."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Code generation scenario. After three hours exploring an unfamiliar",
+      "answer_line": "SAM: B. It persists findings, isolates the per-service exploration and",
+      "scenario": "Code generation",
+      "stem": "After 3 hours exploring an unfamiliar insurance platform, Claude Code contradicts earlier answers and describes \"common approaches\" rather than the modules it found. The next phase is a migration plan touching 4 services. What is the most effective approach?",
+      "choose": 1,
+      "options": {
+        "A": "Run /clear and re-explore from the beginning with a tighter prompt",
+        "B": "Record findings in a scratchpad file; a subagent per service gets their summary; refer back later",
+        "C": "Switch to a model with a larger context window and continue in the same session",
+        "D": "Add a CLAUDE.md line telling Claude to always name specific classes"
+      },
+      "correct": [
+        "B"
+      ],
+      "why": "B persists findings, isolates per-service exploration and injects the phase summary. A discards valid findings; C is scale instead of structure; D treats a symptom."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Choose two. Structured extraction scenario. A customs broker extracts",
+      "answer_line": "SAM: Both. A checks the segments the average hides, before automation.",
+      "scenario": "Structured extraction",
+      "stem": "A customs broker extracts shipment declarations. Validation accuracy is 97% overall, and the team plans to auto-approve every extraction with field confidence above 0.9. Which two steps should come with that change?",
+      "choose": 2,
+      "options": {
+        "A": "Measure accuracy by document type and field on labelled data; confirm every segment first",
+        "B": "After launch, review a stratified random sample of auto-approved extractions",
+        "C": "Auto-approve now, because 97% beats the human team's measured accuracy",
+        "D": "Ask the model to re-check any extraction it rated above 0.9 before approval",
+        "E": "Review only the lowest-confidence 10% of extractions from now on"
+      },
+      "correct": [
+        "A",
+        "B"
+      ],
+      "why": "A checks the segments the average hides, before automation. B keeps measuring error rates after it. C trusts the aggregate the guide warns about."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Multi-agent research scenario. A document analysis subagent finds that",
+      "answer_line": "SAM: That is miss pattern five, importing a constraint the stem never stated.",
+      "scenario": "Multi-agent research",
+      "stem": "A document analysis subagent finds that two credible industry reports give different figures for the same market's size in the same year. What should it do?",
+      "choose": 1,
+      "options": {
+        "A": "Report the figure from the more recently published report",
+        "B": "Return both figures with sources, excerpts and dates, marked conflicting; coordinator reconciles",
+        "C": "Leave the market size out of its output, since the value is uncertain",
+        "D": "Report the average of the two figures with both sources cited"
+      },
+      "correct": [
+        "B"
+      ],
+      "why": "Conflict included, annotated, coordinator decides. A imports a constraint; C is silent suppression; D invents a number neither source reported."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Before we finish, your turn. Pause and name the four task statements we covered, with",
+      "answer_line": "ALEX: Long interactions, giveaway \"exact\" or \"the customer later disputes\".",
+      "prompt": "Name the four task statements covered, with the giveaway word for each.",
+      "answer": "Long interactions (\"exact\", \"the customer later disputes\"); codebase exploration (\"typical patterns\"); human review (\"97% overall\"); provenance (\"two credible sources\")."
+    }
+  ]
+}

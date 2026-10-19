@@ -1,0 +1,132 @@
+{
+  "drills": [
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. A field-service scheduling assistant passed its pilot",
+      "answer_line": "SAM: That is pattern one, word for word. The course says the opposite",
+      "scenario": "Scheduling assistant, reliability before launch",
+      "stem": "A field-service scheduling assistant goes to production in three weeks. The tech lead says retries and fallbacks can wait until the first incident shows where they are needed. What should the architect do?",
+      "choose": 1,
+      "options": {
+        "A": "Agree: launch lean, add reliability controls once incidents show where they belong",
+        "B": "Build backoff retries, a fallback chain and a circuit breaker into the initial design, each at its own layer",
+        "C": "Add a status page and on-call alerting so outages are spotted quickly",
+        "D": "Move to a more capable model tier to reduce failures"
+      },
+      "correct": ["B"],
+      "why": "Retries, fallbacks and circuit breakers are much harder to add to a system not designed for them, so build them in from the start. C is detective, D is scale."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. A public-sector benefits assistant sends the same long policy",
+      "answer_line": "SAM: You stopped reading A halfway. A timestamp at the top",
+      "scenario": "Benefits assistant nearing cost ceiling",
+      "stem": "A benefits assistant sends the same long policy system prompt on every request, arriving every few seconds through the day. Monthly cost is about to breach its ceiling. Which two belong in the plan?",
+      "choose": 2,
+      "options": {
+        "A": "Cache the stable policy prefix, and put the current date and time at the top of the system prompt",
+        "B": "Stable policy first, user's message after it, prompt caching enabled on that prefix",
+        "C": "Enable caching and budget every request, including the first, at the cache read rate",
+        "D": "Project cost at production volume: cache read rate plus higher write cost on first use, vs the ceiling",
+        "E": "Switch to the smallest model tier to cut cost, build the eval set later"
+      },
+      "correct": ["B", "D"],
+      "why": "A timestamp at the top changes the prefix every call, so the cache never hits. C ignores that cache writes cost more. E changes tier before any eval exists."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. A bank wants to validate a new prompt version for its statement-summary",
+      "answer_line": "SAM: It is, which is why it is wrong here. The question says NOT.",
+      "scenario": "Bank prompt validation, shadow testing",
+      "stem": "A bank wants to validate a new prompt version for its statement-summary feature. Which of the following is NOT a reason to prefer shadow testing over a live A/B split?",
+      "choose": 1,
+      "options": {
+        "A": "A single bad output carries too much risk",
+        "B": "Traffic is too low to power a live split before the change is needed",
+        "C": "Regulation may not allow customers to see an unvalidated change",
+        "D": "The team needs real downstream user behaviour to score the change"
+      },
+      "correct": ["D"],
+      "why": "The question says NOT. A, B and C are reasons for shadow testing. D is its cost: no user sees the shadow output, so scoring relies on offline rubrics."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Now a pair. Same scenario, two questions. Pause here and answer before we go on. A benefits triage system",
+      "answer_line": "SAM: That answers \"most effective\", and it guesses.",
+      "scenario": "Benefits triage, one region over-reviewed",
+      "stem": "A benefits triage system has a healthy overall accuracy dashboard, but applicants from one region go to manual review far more often. There is no per-region breakdown and no decision-level log. What is the first step?",
+      "choose": 1,
+      "options": {
+        "A": "Rebalance the retrieval corpus",
+        "B": "Add a system-prompt instruction to treat every region equally",
+        "C": "Break outcomes down by region and add decision-level logging to find which entry point caused the skew",
+        "D": "Request the model provider's bias evaluation results"
+      },
+      "correct": ["C"],
+      "why": "With no breakdown and no log, you cannot say which of the four entry points caused the skew. First you instrument. A answers \"most effective\" and guesses."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Second question. The logs now show a routing rule sends any application with a non-standard address format",
+      "answer_line": "ALEX: A. The rule is the cause, fix the rule.",
+      "scenario": "Benefits triage, skewed routing rule",
+      "stem": "The logs now show a routing rule sends any application with a non-standard address format to manual review, and that format is common in the affected region. What is the most effective fix?",
+      "choose": 1,
+      "options": {
+        "A": "Change the routing rule at its source and recheck the per-region breakdown",
+        "B": "Add a second reviewer for every manual-review case from that region",
+        "C": "A more capable model that parses addresses better",
+        "D": "A prompt line telling the model to ignore address format"
+      },
+      "correct": ["A"],
+      "why": "The routing rule is the cause, so fix it. B is a compensating control that leaves the skew; C and D blame the model, which did not do this."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. A retail order-tracking assistant gets intermittent rate-limit errors",
+      "answer_line": "SAM: That is pattern four. A rate limit at peak is transient",
+      "scenario": "Order tracker, peak-hour rate limits",
+      "stem": "A retail order-tracking assistant gets intermittent 429 rate-limit errors at peak hours. Requests are otherwise well formed and succeed off-peak. What should the design do?",
+      "choose": 1,
+      "options": {
+        "A": "Never retry; return the error to the user immediately and log it",
+        "B": "Exponential backoff with capped attempts and wait, then fallback to another tier or a cached response",
+        "C": "Retry immediately in a loop until the call succeeds",
+        "D": "Move every request to the most capable model"
+      },
+      "correct": ["B"],
+      "why": "A rate limit at peak is transient, the textbook case for exponential backoff. C is the flood backoff prevents; A fails users who would succeed seconds later."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. A retailer is building an internal assistant that answers store staff",
+      "answer_line": "SAM: Find the words. The brief never mentions residency.",
+      "scenario": "Retail returns-policy staff assistant",
+      "stem": "A retailer's internal assistant answers staff questions about the returns policy. The policy changes monthly and the team wants new model features as soon as they ship. Nothing else is specified. Choose two.",
+      "choose": 2,
+      "options": {
+        "A": "Build on the direct Anthropic API",
+        "B": "Route through a cloud provider in a fixed region, because company data must stay in-region",
+        "C": "Keep the policy as a versioned document retrieved at call time, so monthly changes need no prompt rewrite",
+        "D": "Send every answer to human review first, because retail AI output is regulated",
+        "E": "Sign a business associate agreement before launch"
+      },
+      "correct": ["A", "C"],
+      "why": "The brief never mentions residency; the direct API is the default with newest features first. C has \"changes monthly\" behind it. D and E invent regulations."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Before the last word, pause and name the five patterns without looking back",
+      "answer_line": "ALEX: Instinct over the key, the launch-lean reliability item.",
+      "prompt": "Name the five miss patterns without looking back, and the drill that caught Alex on each.",
+      "answer": "Instinct over the key (launch lean); one wrong clause (timestamp in caching); misreading the stem (NOT, first vs most); rule past scope (never retry); imported constraint (residency)."
+    }
+  ]
+}
