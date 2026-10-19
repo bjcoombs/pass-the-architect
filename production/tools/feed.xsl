@@ -34,6 +34,7 @@
           li { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 1rem; margin-bottom: .75rem; }
           h2 { font-size: 1.05rem; margin: 0 0 .25rem; }
           audio { width: 100%; margin-top: .6rem; }
+          .download { font-size: .9rem; }
           a { color: var(--accent); }
           @media (max-width: 480px) { header { flex-direction: column; align-items: flex-start; } }
         </style>
@@ -61,6 +62,8 @@
                 <p class="muted"><xsl:value-of select="itunes:duration"/></p>
                 <p><xsl:value-of select="description"/></p>
                 <audio controls="controls" preload="none" src="{enclosure/@url}"/>
+                <!-- Safari will not play GitHub release assets, which are served as application/octet-stream. -->
+                <p class="download"><a href="{enclosure/@url}">Download MP3</a></p>
               </li>
             </xsl:for-each>
           </ol>
