@@ -15,6 +15,16 @@
     <itunes:explicit>false</itunes:explicit>
     <itunes:category text="Education"/>
     <item>
+      <title>12. Practice Exam Gaps: thinking, retention, effort and injection</title>
+      <description>A short bonus episode on five platform facts a practice exam tested and the series had not covered: thinking block retention by model, append-only history on Fable 5.1, the scope of zero data retention, effort sweeps before orchestration, and keeping your own instructions out of tool results.</description>
+      <enclosure url="https://github.com/bjcoombs/pass-the-architect/releases/download/ccar-p/12-12-practice-gaps.mp3" length="18043037" type="audio/mpeg"/>
+      <guid isPermaLink="false">pass-the-architect-ccar-p-12-practice-gaps-4f4fc3ca</guid>
+      <pubDate>Sun, 18 Oct 2026 06:12:00 +0000</pubDate>
+      <itunes:duration>0:14:52</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <podcast:chapters url="https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/12-12-practice-gaps.json" type="application/json+chapters"/>
+    </item>
+    <item>
       <title>11. The Final Drill: night-before rapid fire</title>
       <description>Thirty-five rapid-fire items across all seven domains, weighted like the exam, then the distractor families to reject on sight and a calm walk through exam-day logistics.</description>
       <enclosure url="https://github.com/bjcoombs/pass-the-architect/releases/download/ccar-p/11-09-final-drill.mp3" length="30002720" type="audio/mpeg"/>

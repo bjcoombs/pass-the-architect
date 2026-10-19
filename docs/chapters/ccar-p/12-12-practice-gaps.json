@@ -1,0 +1,106 @@
+{
+  "version": "1.2.0",
+  "title": "Practice Exam Gaps: thinking, retention, effort and injection",
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "In this episode",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/12-12-practice-gaps/00.jpg"
+    },
+    {
+      "startTime": 60.7,
+      "title": "Cold open: the swelling context - Question 1: Research agent, context growing from old thinking",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/12-12-practice-gaps/01.jpg"
+    },
+    {
+      "startTime": 117.91,
+      "title": "Thinking blocks by model",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/12-12-practice-gaps/02.jpg"
+    },
+    {
+      "startTime": 200.02,
+      "title": "Append-only history on Fable",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/12-12-practice-gaps/03.jpg"
+    },
+    {
+      "startTime": 263.53,
+      "title": "Question 2: Returns assistant, cache misses and binding errors",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/12-12-practice-gaps/04.jpg"
+    },
+    {
+      "startTime": 314.62,
+      "title": "Answer 2",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/12-12-practice-gaps/05.jpg"
+    },
+    {
+      "startTime": 332.96,
+      "title": "What zero data retention covers",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/12-12-practice-gaps/06.jpg"
+    },
+    {
+      "startTime": 418.4,
+      "title": "Question 3: Clinic-scheduling vendor, ZDR claim to auditors",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/12-12-practice-gaps/07.jpg"
+    },
+    {
+      "startTime": 471.87,
+      "title": "Answer 3",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/12-12-practice-gaps/08.jpg"
+    },
+    {
+      "startTime": 489.54,
+      "title": "Effort before orchestration",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/12-12-practice-gaps/09.jpg"
+    },
+    {
+      "startTime": 557.15,
+      "title": "Question 4: Claims-review agent, one dependent chain",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/12-12-practice-gaps/10.jpg"
+    },
+    {
+      "startTime": 597.97,
+      "title": "Answer 4",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/12-12-practice-gaps/11.jpg"
+    },
+    {
+      "startTime": 611.85,
+      "title": "Instructions in tool results",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/12-12-practice-gaps/12.jpg"
+    },
+    {
+      "startTime": 669.47,
+      "title": "Question 5: Accounts-payable agent, threat model",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/12-12-practice-gaps/13.jpg"
+    },
+    {
+      "startTime": 716.79,
+      "title": "Answer 5",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/12-12-practice-gaps/14.jpg"
+    },
+    {
+      "startTime": 729.69,
+      "title": "Cold open: the verdict",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/12-12-practice-gaps/15.jpg"
+    },
+    {
+      "startTime": 739.54,
+      "title": "Answer 1",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/12-12-practice-gaps/16.jpg"
+    },
+    {
+      "startTime": 766.1,
+      "title": "Five to remember",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/12-12-practice-gaps/17.jpg"
+    },
+    {
+      "startTime": 809.93,
+      "title": "Recap: the exam tells - Pause and answer 6",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/12-12-practice-gaps/18.jpg"
+    },
+    {
+      "startTime": 815.76,
+      "title": "Answer 6",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-p/12-12-practice-gaps/19.jpg"
+    }
+  ]
+}

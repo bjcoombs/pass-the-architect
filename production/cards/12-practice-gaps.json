@@ -1,0 +1,184 @@
+{
+  "drills": [
+    {
+      "kind": "mcq",
+      "label": "Cold open",
+      "question_line": "SAM: A legal research agent runs on Claude Opus five.",
+      "answer_line": "SAM: A. Retention is the default on keep-all models",
+      "scenario": "Research agent, context growing from old thinking",
+      "stem": "A research agent on Claude Opus 5 sees input tokens grow far faster than its retrieved documents. Every earlier assistant turn's thinking blocks are still in each request. What is going on, and what should the team do?",
+      "choose": 1,
+      "options": {
+        "A": "Documented default for Opus 5; use thinking block clearing via context editing to reclaim space",
+        "B": "The API always strips old thinking, so the client is duplicating blocks; fix the serialiser",
+        "C": "Turn thinking off for the rest of the conversation",
+        "D": "A client bug; delete every thinking block older than two turns before each request"
+      },
+      "correct": [
+        "A"
+      ],
+      "why": "Opus 5 keeps all prior thinking, counted as input. B describes last-turn-only models. C loses reasoning and fails at xhigh and max. D hand-edits the prefix."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. A retailer's returns assistant on Fable five point one",
+      "answer_line": "SAM: Right. B lengthens the life of a prefix that never matches.",
+      "scenario": "Returns assistant, cache misses and binding errors",
+      "stem": "A returns assistant on Fable 5.1 rebuilds its system prompt every call: role, returns policy, then today's order details. Cache hits are near zero and follow-ups fail with a binding error. What fixes both?",
+      "choose": 1,
+      "options": {
+        "A": "Fixed system prompt for role and policy; each order's details in the user turn",
+        "B": "Set a one-hour cache time to live",
+        "C": "Strip all earlier thinking blocks before each request",
+        "D": "Move everything into the first user message, empty system prompt"
+      },
+      "correct": [
+        "A"
+      ],
+      "why": "A stable prefix caches and stops invalidating thinking blocks. B cannot make a changing prefix match. C leaves the cache cold. D still changes the first thing sent."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Choose two. A clinic-scheduling vendor has Z D R",
+      "answer_line": "ALEX: A and C. B is the HIPAA blocking rule",
+      "scenario": "Clinic-scheduling vendor, ZDR claim to auditors",
+      "stem": "A vendor with ZDR plans to tell auditors Anthropic keeps nothing. They use the Messages API, the Files API for referral letters, and nightly batches. Which two statements correct the plan?",
+      "choose": 2,
+      "options": {
+        "A": "Files and batch jobs fall outside ZDR and follow their own retention",
+        "B": "The API rejects ineligible features under ZDR, so the plan is safe",
+        "C": "Content flagged by trust and safety may still be kept for up to two years",
+        "D": "ZDR switches on by default for paid organisations",
+        "E": "A new organisation under the same account inherits ZDR"
+      },
+      "correct": [
+        "A",
+        "C"
+      ],
+      "why": "ZDR covers eligible features only and does not block the rest; blocking is HIPAA behaviour. It is requested through sales and enabled per organisation."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. An insurer's claims-review agent",
+      "answer_line": "SAM: B. C may save money, but it dodges",
+      "scenario": "Claims-review agent, one dependent chain",
+      "stem": "A claims-review agent reasons through one claim file in a single dependent chain, well inside one context window. The team wants a cheaper design. What does the guidance suggest first?",
+      "choose": 1,
+      "options": {
+        "A": "A frontier planner with three cheaper workers",
+        "B": "Keep one model and sweep effort for the cheapest level that holds quality",
+        "C": "Move to the Batch API and change nothing else",
+        "D": "An advisor pattern with the cheapest model as executor"
+      },
+      "correct": [
+        "B"
+      ],
+      "why": "For one dependent chain in one context, the single model at lower effort came out ahead. Batch dodges the question; A and D add a model the work does not justify."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Choose two. An accounts-payable agent",
+      "answer_line": "SAM: Correct. Ask who controls the text.",
+      "scenario": "Accounts-payable agent, threat model",
+      "stem": "An accounts-payable agent reads supplier invoices and emails. Which two belong in the indirect-injection section of its threat model?",
+      "choose": 2,
+      "options": {
+        "A": "A supplier email hides text telling the agent to change bank details on file",
+        "B": "A user role-plays as an auditor over several turns to get past a refusal",
+        "C": "The developer's formatting rules, placed inside the tool result, are ignored as possibly injected",
+        "D": "One account trips the same content filter all week and is throttled"
+      },
+      "correct": [
+        "A",
+        "C"
+      ],
+      "why": "Indirect: a trusted user, third-party content. Claude treats tool-result content as untrusted, so your own instructions there may be ignored. B and D are the user as adversary."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Before the last word, pause and name the five gaps",
+      "answer_line": "ALEX: Thinking retention by model. Append-only history on Fable.",
+      "prompt": "Name the five gaps this episode closed without looking back.",
+      "answer": "Thinking retention by model; append-only history on Fable 5.1; the edges of ZDR; effort before orchestration; instructions out of tool results."
+    }
+  ],
+  "segments": {
+    "In this episode": [
+      "Which models keep earlier thinking, and how to reclaim the space",
+      "Why rebuilding the system prompt breaks a Fable 5.1 conversation",
+      "What zero data retention does and does not cover",
+      "Why an effort sweep comes before an orchestrator",
+      "Why your own instructions stay out of tool results",
+      "Choose-two: read every option to the last word"
+    ],
+    "Thinking blocks by model": [
+      "Keep all prior turns: Opus 4.5+, Sonnet 4.6+, Haiku 5.5, Fable and Mythos",
+      "Last turn only: earlier Opus and Sonnet, Haiku up to 4.5; API strips old blocks",
+      "Retained thinking counts as input like any other history",
+      "Reclaim space with thinking block clearing (context editing); cache restarts there",
+      "In a tool-use turn, pass thinking back complete and unmodified",
+      "Opus 5 at xhigh or max: thinking cannot be disabled (400)"
+    ],
+    "Append-only history on Fable": [
+      "Each thinking block is bound to the system prompt, tools and earlier messages",
+      "Change any of them: 400, 'bound to a different conversation'",
+      "Causes: rebuilt system prompt or tools, edited turns, injected then deleted reminders",
+      "Same root cause as a cache that never hits",
+      "Fix: stable system prompt; per-request content in the user turn",
+      "New instructions: mid-conversation system message; trim with context editing or compaction"
+    ],
+    "What zero data retention covers": [
+      "Requested through sales, enabled per organisation; new orgs need it separately",
+      "Eligible features only: Files API kept until deleted or expired; Batch 29 days",
+      "Code execution, MCP connector, Managed Agents also outside it",
+      "Under ZDR the API does not block ineligible features; HIPAA-ready does (400)",
+      "Flagged by trust and safety: kept up to 2 years; legal holds apply",
+      "Fable and Mythos need 30-day retention: not under ZDR unless authorised"
+    ],
+    "Effort before orchestration": [
+      "Tune one model before adding a second",
+      "Sweep 2 or 3 effort levels on your own traffic, each in its own session",
+      "Plot score against spend: the baseline any pairing must beat",
+      "Orchestrator pays only for a long cost tail or work beyond one context",
+      "One dependent chain in one context: single model at lower effort wins",
+      "Advisor helps only if the executor consults it and lacks the capability"
+    ],
+    "Instructions in tool results": [
+      "Indirect injection: the user is trusted, third-party content is not",
+      "Deliver untrusted content in tool results, with its source named",
+      "System prompt: tool content is data and never overrides the user",
+      "JSON-encode untrusted strings; screen tool output; least privilege",
+      "Your own instructions in a tool result may be ignored or flagged",
+      "Send them in the next user turn or a mid-conversation system message"
+    ],
+    "Five to remember": [
+      "Newer models keep all prior thinking; clear it with thinking block clearing",
+      "Fable 5.1 history is append-only: rebuilt system prompt = binding error + cold cache",
+      "ZDR: per organisation, eligible features only, not enforced, flagged content kept",
+      "Sweep effort on one model before splitting the work",
+      "Your instructions go in the user turn, never inside a tool result"
+    ],
+    "Recap: the exam tells": [
+      "Context grows from old thinking → keep-all default, thinking block clearing",
+      "'Bound to a different conversation' or no cache hits → system prompt rebuilt per request",
+      "ZDR covers everything, blocks features, or is automatic → wrong",
+      "One dependent chain in one context → single model, effort sweep; batch is a dodge",
+      "Third-party text → indirect injection",
+      "Developer instruction inside a tool result → expect it ignored"
+    ],
+    "Cold open: the swelling context": [
+      "Opus 5 research agent",
+      "Input grows faster than retrieved documents",
+      "Old thinking blocks in every request"
+    ],
+    "Cold open: the verdict": [
+      "Which group is Opus 5 in?",
+      "Documented default or client bug?",
+      "What is the documented lever?"
+    ]
+  }
+}
