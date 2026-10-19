@@ -22,7 +22,10 @@
         "D": "Output filter that masks salary figures",
         "E": "A more capable model"
       },
-      "correct": ["A", "C"],
+      "correct": [
+        "A",
+        "C"
+      ],
       "why": "A system-prompt line can be talked past, not enforcement. Identity comes from the server and access is enforced at retrieval."
     },
     {
@@ -82,7 +85,10 @@
         "D": "Sending the email",
         "E": "Approving an out-of-warranty exception"
       },
-      "correct": ["A", "C"],
+      "correct": [
+        "A",
+        "C"
+      ],
       "why": "Warranty status is an authoritative lookup for the system of record, sending belongs to the delivery system, and the exception is a human call."
     },
     {
@@ -142,7 +148,10 @@
         "D": "Fine-tune right away",
         "E": "Output filter that downgrades tickets containing exclamation marks"
       },
-      "correct": ["A", "B"],
+      "correct": [
+        "A",
+        "B"
+      ],
       "why": "Nothing points at model capability; this is an underspecified prompt, so fix the prompt."
     },
     {
@@ -188,7 +197,10 @@
         "D": "Non-regression limits on latency and cost",
         "E": "Segmenting results by request type"
       },
-      "correct": ["A", "C"],
+      "correct": [
+        "A",
+        "C"
+      ],
       "why": "An underpowered sample and a metric chosen after the results each invalidate the test. The other three are good practice."
     },
     {
@@ -234,7 +246,10 @@
         "D": "A low-confidence typo fix in a draft",
         "E": "A routine FAQ answer"
       },
-      "correct": ["B", "C"],
+      "correct": [
+        "B",
+        "C"
+      ],
       "why": "Stakes come from cost and reversibility; confidence only decides how much high-stakes volume can skip review, and only when it is calibrated."
     },
     {
@@ -287,7 +302,10 @@
         "D": "A list of who attended each design meeting",
         "E": "The decisions, with no rationale, to keep it short"
       },
-      "correct": ["A", "C"],
+      "correct": [
+        "A",
+        "C"
+      ],
       "why": "A diagram shows intent, not rationale or evidence."
     },
     {
@@ -318,5 +336,63 @@
       "prompt": "Name the seven domains in weight order, with one tell you'd look for in each.",
       "answer": "Integration, Solution Design, Evaluation, then Governance and Stakeholders tied, then Models and Prompting, and Developer Productivity last."
     }
-  ]
+  ],
+  "segments": {
+    "In this episode": [
+      "35 rapid-fire items across all 7 domains, in exam proportions",
+      "The 1 domain to replay in the morning",
+      "Distractor families named on sight",
+      "A calm plan for exam day"
+    ],
+    "Drill: Integration": [
+      "No new material; keep a tally of misses by domain",
+      "Integration: 19%, 7 items; 2+ misses means replay episodes 3 and 4",
+      "Too many connected tools for the job; a claimed HR director role",
+      "MCP server or plain API tool use",
+      "Indexing part numbers and loose descriptions; chunking contracts",
+      "Stale order status; a support assistant that loads everything"
+    ],
+    "Drill: design, models, evaluation": [
+      "Solution Design 17%: agent or workflow, what Claude owns, a fan-out timeout",
+      "Value pillars, checklist-bound drafts, a 5-agent proposal",
+      "Models 13%: 'most capable everywhere', cache misses, angry-ticket urgency",
+      "Fine-tuning after one draft; one procedure across 3 teams",
+      "Evaluation 16%: grading a known value, trusting an LLM judge",
+      "What invalidates an A/B test; validating a medical summarizer"
+    ],
+    "Drill: governance to productivity": [
+      "Cost rising on flat usage",
+      "Governance 14%: refund guardrails, screening timeouts, pre-action approval",
+      "Subgroup harm in loan triage; 'HIPAA: handled'",
+      "Stakeholders 14%: 'seamless', the missing tradeoff element, SLA sources",
+      "Successor documentation; heading off the first production invoice",
+      "Productivity 7%: distributing a versioned Skill; an unexplained change"
+    ],
+    "The distractor families": [
+      "Watching a risk it could remove; adding agents or MCP the need lacks",
+      "A bigger model with no capability gap; blaming an untouched component",
+      "Hitting cost or latency by cutting required content, logging or review",
+      "Policy in the system prompt or user-typed identity; screening only user input",
+      "Everything to review or routing by confidence alone; a guardrail failing open",
+      "Retrieval tuning for live state, caching off for staleness; editing the grader"
+    ],
+    "Exam day logistics": [
+      "Government photo ID, name matching your registration exactly",
+      "Clear desk: no notes, phones, watches, headphones or recorders",
+      "Accept the confidentiality agreement or the session ends",
+      "Eat beforehand, bring water, arrive on time",
+      "1:45 an item: item 21 by 37 min, 42 by 73, 63 by 110",
+      "Morning: replay the families and your weakest domain, then stop"
+    ],
+    "Final retrieval": [
+      "Weight order: Integration, Design, Evaluation, Governance = Stakeholders, Models, Productivity",
+      "Integration: live state needs a tool call; typed identity needs server injection and retrieval access",
+      "Design: known steps plus audit record means workflow; fan-out needs a coverage rule at synthesis",
+      "Models: cache hits collapse, find the timestamp; angry tickets urgent, fix with rubric and example",
+      "Evaluation: known correct value means code-based grader; no unvalidated exposure means shadow testing",
+      "Governance: side-effect tool behind an output filter needs authorization first; screens fail closed",
+      "Stakeholders: look for the missing reversal cost",
+      "Productivity: versioning and rollback means a plugin; unexplained change means hold it"
+    ]
+  }
 }

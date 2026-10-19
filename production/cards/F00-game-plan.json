@@ -14,7 +14,9 @@
         "C": "Add a routing layer that parses each message and pre-selects a tool by keyword",
         "D": "Merge both into one lookup_entity tool that works out which backend to query"
       },
-      "correct": ["B"],
+      "correct": [
+        "B"
+      ],
       "why": "Descriptions are minimal, and descriptions are the primary mechanism for tool choice. \"First step\" rules out merging; routing is over-engineering."
     },
     {
@@ -31,7 +33,9 @@
         "C": "Few-shot examples showing the agent always calling get_customer first",
         "D": "A routing classifier that enables only the tools appropriate to each request type"
       },
-      "correct": ["A"],
+      "correct": [
+        "A"
+      ],
       "why": "When compliance must be deterministic, prompt instructions have a non-zero failure rate. Order that must hold lives in code. D acts on the wrong component."
     },
     {
@@ -48,7 +52,9 @@
         "C": "The CLAUDE.md file at the project root",
         "D": "A .claude/config.json file with a commands array"
       },
-      "correct": ["A"],
+      "correct": [
+        "A"
+      ],
       "why": "Everyone on the repository means project scope, committed. B is personal scope, C holds instructions not commands, D is an invented file."
     },
     {
@@ -58,5 +64,62 @@
       "prompt": "Name the five parts of the game plan: the format, the scenarios, the weights, the pacing, and the method.",
       "answer": "60 items in 120 minutes, number to select on every item. 4 scenarios of 6. Agentic biggest at 27%. Checkpoints at items 20, 40, 60. Four steps, five distractor families."
     }
-  ]
+  ],
+  "segments": {
+    "In this episode": [
+      "The paper: 60 items, 4 scenarios drawn from 6, 5 weighted domains",
+      "Pacing with 3 checkpoints and the Review button",
+      "A 4-step method for reading any item",
+      "5 families of wrong answers, recognised on sight",
+      "The method applied to 3 official sample questions"
+    ],
+    "Cold open: misrouted tool calls": [
+      "Agent calls get_customer for order questions instead of lookup_order",
+      "Both tools: one-line descriptions, similar identifiers",
+      "60 items in 120 minutes; pass mark a scaled 720 of 1000",
+      "Choose-N items: read the number first, judge each option alone",
+      "6 scenarios in the bank, 4 drawn per sitting",
+      "Scenario panel on the left carries constraints the item never repeats"
+    ],
+    "Domain weights and pacing": [
+      "Agentic Architecture 27% (~16) · Claude Code Config 20% (~12)",
+      "Prompting and Structured Output 20% (~12) · Tools and MCP 18% (~11)",
+      "Context Management and Reliability 15% (~9)",
+      "Zero-score gaps are mechanics: the cheapest marks to win back",
+      "About 1:50 per item: item 20 by 37 min, 40 by 73, 60 by 110",
+      "Past 2 minutes: best answer, flag, move on"
+    ],
+    "The four-step method": [
+      "1. Constraint words: most effective, first step, NOT, every, money",
+      "2. Which component the trigger touches",
+      "3. Smallest mechanism that guarantees the outcome",
+      "4. Strike out half-right options: one wrong clause and it goes",
+      "Distractors: probabilistic fix, over-engineering, wrong layer",
+      "Distractors: invented features, scale instead of structure"
+    ],
+    "Cold open: the verdict": [
+      "Answer: B, expand each tool's description",
+      "Tool descriptions are the main mechanism for choosing a tool",
+      "Few-shot works around minimal descriptions: a rule carried past its scope",
+      "Merging tools is valid but too heavy for a first step",
+      "Routing layer is over-engineering",
+      "Tell: \"minimal descriptions\" plus \"first step\""
+    ],
+    "Using the series": [
+      "Episodes 1 and 10 built on the Foundations score report",
+      "Episode 1: the 5 miss patterns; episode 10: zero-score mechanics",
+      "Order: 0, 1, then 2-9 by topic, 10, 11 scenarios, 12 exam eve",
+      "On pause: say your answer out loud first",
+      "Choose-two drills: true or false for every option"
+    ],
+    "Recap: the exam tells": [
+      "If an item says choose two, judge each option alone, like 5 true-or-false questions",
+      "If the left panel changes, reread the whole scenario",
+      "If item 20 comes after 37 minutes, or an item passes 2 minutes, answer, flag, move on",
+      "If the last line says first step, rule out anything heavier than the cheapest fix",
+      "If a prompt instruction guards money or identity, it is a probabilistic fix",
+      "If an option names a file or flag you have never seen, treat it as invented",
+      "If the tool descriptions are minimal, the fix lives in the descriptions"
+    ]
+  }
 }

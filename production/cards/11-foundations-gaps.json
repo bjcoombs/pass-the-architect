@@ -14,7 +14,9 @@
         "C": "Remove the refund tool and send every refund to a human",
         "D": "Move to a larger model that follows instructions more reliably"
       },
-      "correct": ["B"],
+      "correct": [
+        "B"
+      ],
       "why": "Money moves on that call, so the order must hold every time. A improves the odds but cannot guarantee them; order that must hold lives in code."
     },
     {
@@ -31,7 +33,9 @@
         "C": "Ask each developer to add the server at user scope on their own machine",
         "D": "Describe the server and its setup steps in CLAUDE.md"
       },
-      "correct": ["B"],
+      "correct": [
+        "B"
+      ],
       "why": "Shared, versioned, no secret in the repo. A leaks a credential, C is eight drifting personal setups, D is guidance about configuration, not configuration."
     },
     {
@@ -48,7 +52,9 @@
         "C": "Add a system-prompt instruction telling the agent never to retry",
         "D": "Return an empty result on any failure so the agent moves on"
       },
-      "correct": ["A"],
+      "correct": [
+        "A"
+      ],
       "why": "The agent cannot tell a timeout from a policy refusal unless the error says which. B hides failure and still retries the unretryable one."
     },
     {
@@ -65,7 +71,9 @@
         "C": "Model ignores earlier turns; add an instruction to remember case numbers",
         "D": "Raise maximum output tokens so the model can hold more state"
       },
-      "correct": ["B"],
+      "correct": [
+        "B"
+      ],
       "why": "A standard Messages API call keeps nothing between requests; your code holds the history and sends all of it every turn. A, C and D assume it was ever sent."
     },
     {
@@ -83,7 +91,10 @@
         "D": "Move to a larger model",
         "E": "Add a second model pass that rewrites any value it suspects was invented"
       },
-      "correct": ["A", "B"],
+      "correct": [
+        "A",
+        "B"
+      ],
       "why": "A gives absence a legal value; B gives an unlisted currency one. C is the cause, not the fix. D is scale; E adds a second probabilistic step."
     },
     {
@@ -101,7 +112,10 @@
         "D": "Use the model's own stated confidence with a fixed, uncalibrated threshold",
         "E": "Stop human review entirely and rely on the schema"
       },
-      "correct": ["A", "B"],
+      "correct": [
+        "A",
+        "B"
+      ],
       "why": "They put attention on low confidence and high-risk document types. C is scale instead of structure, D trusts an unchecked number, E removes a needed gate."
     },
     {
@@ -111,5 +125,80 @@
       "prompt": "Name the six segments from today, each by the symptom that opened it.",
       "answer": "Unformatted files despite a CLAUDE.md line; new hire missing the MCP server; wrong tool / no orders when DB down; agent stops half-done; invented policy numbers; three rounds of still wrong."
     }
-  ]
+  ],
+  "segments": {
+    "In this episode": [
+      "Guidance versus enforcement: hooks and permissions",
+      "MCP server scope without committing a secret",
+      "Tool descriptions and structured errors the model can act on",
+      "The agentic loop on stop reasons, resending the history",
+      "Extraction schemas, review routing, feedback loops",
+      "Refining and resuming sessions without wasted work"
+    ],
+    "Cold open: refund before lookup": [
+      "Foundations marks leaked on mechanics; items open with a symptom",
+      "CLAUDE.md guides; permissions, hooks and managed settings enforce",
+      "'Always', 'every time': louder wording is a probabilistic fix",
+      "'After every edit': a PostToolUse hook in project settings",
+      "CI is deterministic but detects drift after the fact",
+      "'Never touch': deny rule, PreToolUse hook, or managed settings org-wide"
+    ],
+    "Segment two: configuration scope": [
+      "Project scope: shared, versioned .claude settings and .mcp.json",
+      "User scope: personal, every project; local: personal, one project",
+      "Precedence: managed, CLI arguments, local, project, user; deny beats allow",
+      "Secrets as environment-variable placeholders, never committed",
+      "Scope test: who needs it?",
+      "Server unused: check it with /mcp, then read the tool descriptions"
+    ],
+    "Segment three: tool descriptions": [
+      "Wrong tool picked: fix overlapping descriptions at source",
+      "Descriptions: what, when to use it, input format, an example call",
+      "An empty list on failure reads as 'nothing found'",
+      "Errors flagged with a category, retryability and an actionable message",
+      "Tool choice settings: auto, any, tool, none",
+      "Forcing a tool guarantees one call on one turn, not an order"
+    ],
+    "Segment four: the agentic loop": [
+      "Loop while the stop reason is tool use; end turn means done",
+      "Max tokens means truncated, not a tool call",
+      "Refusal needs its own route; pause turn means continue",
+      "Check the stop reason, not the prose",
+      "The Messages API is stateless: resend the full history every request",
+      "Resent history grows context: caching and trimming matter"
+    ],
+    "Segment five: extraction": [
+      "Required non-nullable fields invite invented values",
+      "Nullable where the source may lack it; 'unknown' and 'other' enum values",
+      "Strict mode guarantees shape, not truth",
+      "Route review by calibrated confidence, document type, field ambiguity",
+      "Sample the auto-approved stream to measure unseen errors",
+      "Failures as structured metadata feed schema, examples and evals"
+    ],
+    "Segment six: refinement and resumption": [
+      "Concrete input-output examples beat prose descriptions",
+      "Batch interacting issues; send independent ones one at a time",
+      "Resume and name exactly which files changed",
+      "Mostly stale context: fresh session with a structured summary",
+      "Refund verdict: the tool requires a verified lookup ID and returns an error",
+      "An order that must hold before money moves lives in code"
+    ],
+    "Five to remember": [
+      "CLAUDE.md guides; permissions, hooks and managed settings enforce; after every edit: PostToolUse hook",
+      "Project scope shared and versioned, user scope personal; shared MCP servers use env-variable secrets",
+      "Tool choice forces a call per turn; order is checked in code; loop on tool use, resend all history",
+      "Missing data needs a legal value: nullable, unknown or other; route review by calibrated confidence",
+      "Failure metadata feeds schema, examples and evals; refine concretely, resume naming what changed"
+    ],
+    "Recap: the exam tells": [
+      "Always, every time, after every edit: hook or permission; CI is detective, the hook acts at the edit",
+      "Token or key committed to the repo: strike it; env placeholder, scope by who needs it",
+      "Wrong tool picked: descriptions; empty versus failed: errors with a category and retry flag",
+      "Order must hold before money moves: a check in code, not tool choice alone",
+      "Agent stops mid-task: check the stop reason; forgets earlier turns: history not resent",
+      "Missing or plausible: nullable fields and an other or unknown value",
+      "Reviewers rubber-stamp: route by calibrated confidence, document type and ambiguous fields",
+      "Recurring errors: structured metadata; stalled refinement: a concrete example; resume naming changes"
+    ]
+  }
 }

@@ -165,5 +165,79 @@
       "prompt": "Name the six things this episode covered, with the giveaway for each.",
       "answer": "Explicit criteria (\"be conservative\"), few-shot (varied shapes), tool choice (parse failure, unknown type), retry (\"not part of the input\"), batch (custom ID), review (\"same session\")."
     }
-  ]
+  ],
+  "segments": {
+    "In this episode": [
+      "Fix a noisy review bot with explicit criteria, not \"be conservative\"",
+      "When 2 to 4 few-shot examples beat more instructions",
+      "tool_choice auto, any or a named tool; schemas with nullable, unclear, other",
+      "Failures a retry can fix vs ones it never will",
+      "Planning a batch run and its resubmission",
+      "Why a generator should not review its own work"
+    ],
+    "Cold open: invoice payment terms": [
+      "Payment terms fail validation on 1 invoice in 8, despite 3 retries",
+      "Those invoices say \"terms as per master agreement\"",
+      "\"Be conservative\" and \"high-confidence only\" barely move precision",
+      "Categorical criteria: report bugs and security, skip style and local patterns",
+      "Define each severity level with a concrete code example",
+      "Temporarily disable a noisy category to protect trust in the rest"
+    ],
+    "Segment two: few-shot examples": [
+      "Detailed instructions still inconsistent: add few-shot examples",
+      "2 to 4 targeted examples aimed at the ambiguous cases",
+      "Examples show why one action beat a plausible alternative",
+      "Teach acceptable code vs genuine issues; generalise to novel patterns",
+      "Extraction: examples from each document shape cut nulls and hallucination",
+      "Value present but null is an example problem; absent value is nullable"
+    ],
+    "Segment three: structured output": [
+      "Tool use with a JSON schema eliminates JSON syntax errors",
+      "tool_choice auto may return text; any forces a call, model picks the tool",
+      "Forced named tool: one extraction must run first",
+      "Strict schemas guarantee shape, not meaning",
+      "Required only if every document has it; enums get \"unclear\" and \"other\"",
+      "Format normalisation rules go in the prompt beside the schema"
+    ],
+    "Segment four: validation and retry": [
+      "Retry carries document, failed extraction and specific validation errors",
+      "Retries fix format and structural errors",
+      "Retries never fix information absent from the source",
+      "\"Always retry\" and \"never retry\" both lose",
+      "Calculated total beside stated total, plus a conflict_detected flag",
+      "detected_pattern field turns dismissals into groupable data"
+    ],
+    "Segment five: batch processing": [
+      "Message Batches API: 50% cheaper, up to 24 hours, no latency guarantee",
+      "For non-blocking work: overnight reports, audits, nightly tests",
+      "No multi-turn tool calling inside a batch request",
+      "Match results by custom_id, never by order",
+      "SLA: submit every 4 hours for a 28-hour worst case inside 30",
+      "Resubmit only failures by custom_id, changed; refine prompts on a sample"
+    ],
+    "Segment six: multi-pass review": [
+      "Same session reviewing its own code keeps its generation reasoning",
+      "Independent instance beats self-review or extended thinking",
+      "Per-file passes plus a separate cross-file integration pass",
+      "Per-finding confidence routes low-confidence findings to a human",
+      "Tell: \"not part of the input\" marks the limit of retry"
+    ],
+    "Five to remember": [
+      "Explicit categories beat \"be conservative\"; severity examples; temporarily disable noisy categories",
+      "Inconsistent output: 2-4 targeted few-shot examples; value present but null is an example problem",
+      "Tool use stops syntax errors only; auto, any, named tool; required, unclear, other; normalise in prompt",
+      "Retry with document, extraction, errors; fixes format not absence; totals, conflict flag, pattern field",
+      "Batch: half price, 24h, no tool round trips, custom_id, resubmit failures changed; independent reviewer"
+    ],
+    "Recap: the exam tells": [
+      "If developers dismiss findings and an option says high-confidence only, pick named categories",
+      "If instructions give inconsistent output, or values in the text come back null, few-shot",
+      "If JSON fails to parse, tool use with a schema",
+      "If the document type is unknown and prose comes back, tool_choice any; must run first, named tool",
+      "If the value lives in a document nobody provided, stop retrying, null with reason, route it",
+      "If line items don't add up, calculated total plus conflict flag; unknown dismissals, pattern field",
+      "If work is overnight and non-blocking, batch; mid-request tool calls or merge-blocking, not batch",
+      "If the session that wrote the code reviews it, use an independent instance"
+    ]
+  }
 }

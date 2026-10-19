@@ -14,7 +14,9 @@
         "C": "Ask each developer to move the conventions into their own user-level CLAUDE.md",
         "D": "Turn the conventions into a skill that developers invoke before writing tests"
       },
-      "correct": ["B"],
+      "correct": [
+        "B"
+      ],
       "why": "One glob rule covers every test file and loads only on contact. Per-directory copies drift; user level misses new hires; a skill depends on remembering."
     },
     {
@@ -31,7 +33,9 @@
         "C": "Add a PreToolUse hook that blocks edits which break the convention",
         "D": "Move both developers to a larger model"
       },
-      "correct": ["A"],
+      "correct": [
+        "A"
+      ],
       "why": "\"First\": same repo, different behaviour points to differing config, likely a user-level file. Diagnose before you build; C skips the diagnosis."
     },
     {
@@ -49,7 +53,10 @@
         "D": "Move the skill's instructions into the root CLAUDE.md so they are always available",
         "E": "Add a line to the skill body asking Claude to keep its output short"
       },
-      "correct": ["A", "B"],
+      "correct": [
+        "A",
+        "B"
+      ],
       "why": "A answers \"buries the session\"; B answers \"invoked with no arguments\". C widens access and fixes neither; D loads a task workflow into every session."
     },
     {
@@ -66,7 +73,9 @@
         "C": "A section in the root CLAUDE.md headed \"when editing Terraform\"",
         "D": "A skill that developers run before editing Terraform"
       },
-      "correct": ["A"],
+      "correct": [
+        "A"
+      ],
       "why": "One glob catches every Terraform file and loads only then. B misses the deploy folders; C loads every session; D relies on someone remembering."
     },
     {
@@ -84,7 +93,10 @@
         "D": "Raise the agent's maximum number of turns so the exploration finishes",
         "E": "Replace both servers with a single custom server that combines them"
       },
-      "correct": ["A", "B"],
+      "correct": [
+        "A",
+        "B"
+      ],
       "why": "B fixes the description that loses to Grep; A removes the need to explore. C is a blunt cut, D pays for the symptom, E is over-engineering."
     },
     {
@@ -94,5 +106,69 @@
       "prompt": "Name the four segments, and the question that runs under all of them.",
       "answer": "CLAUDE.md hierarchy, commands and skills, path-specific rules, MCP in Claude Code. Who receives the instruction, and when it loads."
     }
-  ]
+  ],
+  "segments": {
+    "In this episode": [
+      "Find where an instruction lives when one teammate doesn't get it",
+      "Split a bloated CLAUDE.md into imports and rules files",
+      "Project vs personal commands and skills, and their frontmatter",
+      "Scope a rule to one file type with a paths glob",
+      "Fix MCP setups where the agent ignores a better tool or over-explores"
+    ],
+    "Cold open: test conventions": [
+      "Test conventions in root CLAUDE.md load in every session",
+      "CLAUDE.md levels: user (~/.claude), project (repo root), directory",
+      "User level reaches only you and never travels through version control",
+      "Who is it for? Whole team: project. Only you: user",
+      "/memory shows which memory files loaded in a session",
+      "@ imports and .claude/rules/ topic files organise; they don't save context"
+    ],
+    "Segment two: commands and skills": [
+      "Project commands: .claude/commands/ in the repo; user: ~/.claude/commands/",
+      "Skills: .claude/skills/<name>/SKILL.md with frontmatter",
+      "context: fork isolates verbose or exploratory output",
+      "allowed-tools restricts what the skill can run",
+      "argument-hint prompts for a required parameter",
+      "Personal variant under a different name; CLAUDE.md always loads, skills on demand"
+    ],
+    "Segment three: path-specific rules": [
+      "Unscoped rules files load every session, like CLAUDE.md",
+      "paths frontmatter: list of globs; rule loads only for matching files",
+      "terraform/**/* or **/*.test.tsx as examples",
+      "Directory CLAUDE.md suits one folder owned by one team",
+      "Tell words: \"spread throughout\", \"regardless of directory\", \"all test files\""
+    ],
+    "Segment four: MCP in Claude Code": [
+      "Shared servers in project .mcp.json with ${GITHUB_TOKEN} placeholders",
+      "Personal or experimental servers in ~/.claude.json",
+      "All servers' tools discovered at connection, alongside built-ins",
+      "Agent prefers Grep: expand the MCP tool's description",
+      "Standard integration like Jira: use a community server",
+      "MCP resources expose a catalogue such as schemas, cutting exploratory calls"
+    ],
+    "Cold open: the verdict": [
+      "Answer: B, a rules file with a paths glob for test files",
+      "Per-directory CLAUDE.md: 40 copies that drift, none for new packages",
+      "User-level CLAUDE.md never reaches the next new hire",
+      "A skill depends on someone remembering to invoke it",
+      "Tell: \"every package\" and \"only when\""
+    ],
+    "Five to remember": [
+      "User-level files reach only you; teammate missing something: move to project, check /memory",
+      "@ imports and .claude/rules/ topic files keep CLAUDE.md modular; paths stops loading",
+      "paths glob loads only for matching files; spread out: glob; one folder: directory CLAUDE.md",
+      "Project commands and skills in the repo; personal in home dir; fork, allowed-tools, argument-hint",
+      "Shared .mcp.json with env placeholders; better descriptions, community servers, resources"
+    ],
+    "Recap: the exam tells": [
+      "If one new teammate is missing what others get, think user level and /memory",
+      "If the root file is hundreds of lines, think @ imports and .claude/rules/ topic files",
+      "If a skill floods the session, context: fork; destructive risk, allowed-tools",
+      "If a skill runs without its parameter, argument-hint; personal change, a personal variant",
+      "If conventions cover one file type across the tree, a rules file with a paths glob",
+      "If the agent keeps using Grep over an MCP tool, fix that tool's description",
+      "If it explores tables before every query, expose a resource",
+      "If the plan is to build a Jira server, use the community one"
+    ]
+  }
 }

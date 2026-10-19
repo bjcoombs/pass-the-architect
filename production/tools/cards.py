@@ -9,7 +9,9 @@ from PIL import Image, ImageDraw, ImageFont
 
 SIZE = 1400
 MARGIN = 90
-FONT = "/System/Library/Fonts/Helvetica.ttc"  # index 0 regular, 1 bold
+# Arial, not Helvetica: Helvetica has no arrow glyph, which the recap bullets use.
+FONT = "/System/Library/Fonts/Supplemental/Arial.ttf"
+FONT_BOLD = "/System/Library/Fonts/Supplemental/Arial Bold.ttf"
 BG = (24, 32, 48)
 TEXT = (240, 242, 245)
 MUTED = (140, 150, 168)
@@ -19,7 +21,7 @@ WRONG_TEXT = (110, 118, 134)
 
 
 def font(size, bold=False):
-    return ImageFont.truetype(FONT, size, index=1 if bold else 0)
+    return ImageFont.truetype(FONT_BOLD if bold else FONT, size)
 
 
 def wrap(text, fnt, width):
@@ -50,16 +52,39 @@ def encode(img):
     return buf.getvalue()
 
 
-def segment(title, episode):
-    img = Image.new("RGB", (SIZE, SIZE), BG)
-    d = ImageDraw.Draw(img)
-    header(d, "segment", "PASS THE ARCHITECT", episode)
-    f = font(96, True)
-    lines = wrap(title, f, SIZE - 2 * MARGIN)
-    y = (SIZE - len(lines) * 116) // 2
-    for line in lines:
-        d.text((MARGIN, y), line, font=f, fill=TEXT)
-        y += 116
+def segment(title, episode, bullets=None):
+    """Title card; with bullets, the chapter's points under the title, shrunk until they fit."""
+    width = SIZE - 2 * MARGIN
+    if not bullets:
+        img = Image.new("RGB", (SIZE, SIZE), BG)
+        d = ImageDraw.Draw(img)
+        header(d, "segment", "PASS THE ARCHITECT", episode)
+        f = font(96, True)
+        lines = wrap(title, f, width)
+        y = (SIZE - len(lines) * 116) // 2
+        for line in lines:
+            d.text((MARGIN, y), line, font=f, fill=TEXT)
+            y += 116
+        return encode(img)
+    for size in range(52, 23, -2):
+        img = Image.new("RGB", (SIZE, SIZE), BG)
+        d = ImageDraw.Draw(img)
+        y = header(d, "segment", "PASS THE ARCHITECT", episode)
+        title_font = font(size + 22, True)
+        for line in wrap(title, title_font, width):
+            d.text((MARGIN, y), line, font=title_font, fill=TEXT)
+            y += int((size + 22) * 1.2)
+        y += size
+        body = font(size)
+        for b in bullets:
+            lines = wrap(b, body, width - 60)
+            d.ellipse([MARGIN, y + size * 0.38, MARGIN + size * 0.36, y + size * 0.74], fill=ACCENT["segment"])
+            for line in lines:
+                d.text((MARGIN + 60, y), line, font=body, fill=TEXT)
+                y += int(size * 1.22)
+            y += int(size * 0.55)
+        if y <= SIZE - 60:
+            break
     return encode(img)
 
 

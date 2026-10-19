@@ -14,7 +14,9 @@
         "C": "Add a status page and on-call alerting so outages are spotted quickly",
         "D": "Move to a more capable model tier to reduce failures"
       },
-      "correct": ["B"],
+      "correct": [
+        "B"
+      ],
       "why": "Retries, fallbacks and circuit breakers are much harder to add to a system not designed for them, so build them in from the start. C is detective, D is scale."
     },
     {
@@ -32,7 +34,10 @@
         "D": "Project cost at production volume: cache read rate plus higher write cost on first use, vs the ceiling",
         "E": "Switch to the smallest model tier to cut cost, build the eval set later"
       },
-      "correct": ["B", "D"],
+      "correct": [
+        "B",
+        "D"
+      ],
       "why": "A timestamp at the top changes the prefix every call, so the cache never hits. C ignores that cache writes cost more. E changes tier before any eval exists."
     },
     {
@@ -49,7 +54,9 @@
         "C": "Regulation may not allow customers to see an unvalidated change",
         "D": "The team needs real downstream user behaviour to score the change"
       },
-      "correct": ["D"],
+      "correct": [
+        "D"
+      ],
       "why": "The question says NOT. A, B and C are reasons for shadow testing. D is its cost: no user sees the shadow output, so scoring relies on offline rubrics."
     },
     {
@@ -66,7 +73,9 @@
         "C": "Break outcomes down by region and add decision-level logging to find which entry point caused the skew",
         "D": "Request the model provider's bias evaluation results"
       },
-      "correct": ["C"],
+      "correct": [
+        "C"
+      ],
       "why": "With no breakdown and no log, you cannot say which of the four entry points caused the skew. First you instrument. A answers \"most effective\" and guesses."
     },
     {
@@ -83,7 +92,9 @@
         "C": "A more capable model that parses addresses better",
         "D": "A prompt line telling the model to ignore address format"
       },
-      "correct": ["A"],
+      "correct": [
+        "A"
+      ],
       "why": "The routing rule is the cause, so fix it. B is a compensating control that leaves the skew; C and D blame the model, which did not do this."
     },
     {
@@ -100,7 +111,9 @@
         "C": "Retry immediately in a loop until the call succeeds",
         "D": "Move every request to the most capable model"
       },
-      "correct": ["B"],
+      "correct": [
+        "B"
+      ],
       "why": "A rate limit at peak is transient, the textbook case for exponential backoff. C is the flood backoff prevents; A fails users who would succeed seconds later."
     },
     {
@@ -118,7 +131,10 @@
         "D": "Send every answer to human review first, because retail AI output is regulated",
         "E": "Sign a business associate agreement before launch"
       },
-      "correct": ["A", "C"],
+      "correct": [
+        "A",
+        "C"
+      ],
       "why": "The brief never mentions residency; the direct API is the default with newest features first. C has \"changes monthly\" behind it. D and E invent regulations."
     },
     {
@@ -128,5 +144,71 @@
       "prompt": "Name the five miss patterns without looking back, and the drill that caught Alex on each.",
       "answer": "Instinct over the key (launch lean); one wrong clause (timestamp in caching); misreading the stem (NOT, first vs most); rule past scope (never retry); imported constraint (residency)."
     }
-  ]
+  ],
+  "segments": {
+    "In this episode": [
+      "Real-world instinct over the answer key",
+      "Accepting an option with one wrong clause",
+      "Misreading what the stem asks",
+      "Stretching a rule past its scope",
+      "Importing a constraint the stem never stated",
+      "A self-check per habit, a 3-word filter, a pacing plan"
+    ],
+    "Pattern one: real-world instinct": [
+      "Foundations: 661 against 720, lost by 4 or 5 answers",
+      "Marks went to habits, not missing knowledge",
+      "Pattern: picking what your team would ship on a Friday afternoon",
+      "Shows up as a defensible option you have shipped before",
+      "Check: would the answer key pick this, or my last team?"
+    ],
+    "Pattern two: one wrong clause": [
+      "Pattern: accepting 1 right clause welded to 1 wrong one",
+      "Shows up when the first half matches and you stop reading",
+      "Choose-two: an option is true only if every clause is true",
+      "Check: is every clause true here, read to the last word?"
+    ],
+    "Pattern three: misreading the stem": [
+      "Pattern: answering the question you expected, not the one asked",
+      "Shows up as NOT or EXCEPT read as true, 'first' read as 'most effective'",
+      "The same scenario can have different answers for 'first' and 'most'",
+      "Check: reread the last line; NOT, first, or most?"
+    ],
+    "Pattern four: rules beyond scope": [
+      "Pattern: applying a learned rule beyond its scope",
+      "Shows up as 'retrying is always wrong' or 'bigger model always loses'",
+      "Retrying unchanged fails for permission, business-rule or malformed errors",
+      "Check: does the reason behind this rule apply to this case?"
+    ],
+    "Pattern five: imported constraints": [
+      "Pattern: importing constraints the stem never stated",
+      "Shows up as residency, compliance or HIPAA the brief never mentions",
+      "On the exam, if a constraint matters, the stem states it",
+      "Check: can I point to the words in the stem that make this matter?"
+    ],
+    "Thesis, interface and pacing": [
+      "Thesis: fix the root cause with the smallest mechanism that guarantees it",
+      "Distractors: probabilistic fix, over-engineering, blaming the wrong layer",
+      "Also: invented features, and scale instead of structure",
+      "Reread the left scenario column whenever it changes",
+      "Right-click strikes options out; answer before you flag",
+      "1:45 an item: 21 by 37 min, 42 by 73, 63 by 110"
+    ],
+    "The five checks": [
+      "Would the answer key pick this, or my last team?",
+      "Is every clause true here, read to the last word?",
+      "Reread the last line: NOT, first, or most?",
+      "Does the reason behind this rule apply to this case?",
+      "Can I point to the words in the stem that make this matter?",
+      "Over all of them: root cause, smallest mechanism, guaranteed outcome"
+    ],
+    "Recap: the exam tells": [
+      "A Friday-afternoon option, like retries after the first incident: what does the course build in?",
+      "First half matches: read to the last word; a timestamp atop a cached prefix kills the option",
+      "Last line says NOT, first or most: answer that; first with no breakdown means instrument",
+      "A rule firing, like 'retrying is the trap': check its reason; a peak rate limit wants backoff",
+      "Option guards against residency, regulation or HIPAA: find the words; no words, no constraint",
+      "Instruction where a guarantee is needed, or an unknown setting: root cause, smallest, guarantees",
+      "Interface: reread a changed left column, strike out eliminations, answer before you flag"
+    ]
+  }
 }

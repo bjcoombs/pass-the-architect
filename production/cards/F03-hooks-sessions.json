@@ -14,7 +14,9 @@
         "C": "Add the limit to the system prompt in capitals with two few-shot examples",
         "D": "Intercept the call before it runs and block over-limit amounts with a generic \"operation not permitted\""
       },
-      "correct": ["B"],
+      "correct": [
+        "B"
+      ],
       "why": "B blocks before execution and redirects to escalation: both verbs. PostToolUse fires after the money moves; a generic error (D) leaves the agent no next step."
     },
     {
@@ -32,7 +34,10 @@
         "D": "The agent should escalate when policy does not cover the customer's request",
         "E": "Replies should stay under 150 words"
       },
-      "correct": ["A", "C"],
+      "correct": [
+        "A",
+        "C"
+      ],
       "why": "A: checkable threshold with a financial consequence, intercepted before the call. C: PostToolUse normalisation of a server you cannot fix. B, D, E are judgement or style."
     },
     {
@@ -49,7 +54,9 @@
         "C": "Try the first strategy in the current session, revert the files, then try the second",
         "D": "Ask the current session to describe both strategies and recommend one without writing tests"
       },
-      "correct": ["B"],
+      "correct": [
+        "B"
+      ],
       "why": "Two approaches from a shared baseline is the fork case. A repeats an hour of work; C carries the first attempt's reasoning; D compares descriptions, not results."
     },
     {
@@ -66,7 +73,9 @@
         "C": "New session seeded with a structured summary of findings that still apply, reading the current code",
         "D": "Fork the old session so the original stays intact while the fork re-analyses"
       },
-      "correct": ["C"],
+      "correct": [
+        "C"
+      ],
       "why": "Targeted re-analysis fits when prior context is mostly valid. Most files changed and the library was replaced, so nearly every tool result is stale."
     },
     {
@@ -83,7 +92,9 @@
         "C": "Proceed with the most likely account and state its email in the reply so the customer can correct it",
         "D": "Have the agent rate its confidence in the match and ask only when it falls below 7"
       },
-      "correct": ["A"],
+      "correct": [
+        "A"
+      ],
       "why": "One extra turn removes the guess. B hides ambiguity in the tool; D is self-reported confidence; C confirms only after acting: one wrong clause."
     },
     {
@@ -101,7 +112,10 @@
         "D": "The agent rates its own confidence in a refund decision as 5 out of 10",
         "E": "Customer annoyed a replacement is late, has not asked for a person, policy covers the case"
       },
-      "correct": ["A", "C"],
+      "correct": [
+        "A",
+        "C"
+      ],
       "why": "A is an explicit request: honour it now. C is a policy gap. Sentiment and self-rated confidence are unreliable; E is frustration within capability."
     },
     {
@@ -111,5 +125,62 @@
       "prompt": "Name the three topics, and the word in a stem that gives each one away.",
       "answer": "Hooks: timing. Sessions: how much changed. Escalation: whether the customer actually asked for a person."
     }
-  ]
+  ],
+  "segments": {
+    "In this episode": [
+      "Where a hook belongs: before the call to block, after to clean up",
+      "Making a block send the agent somewhere useful",
+      "Rules a hook can check vs judgement for the prompt",
+      "Resume, fork, or start fresh with a summary",
+      "Escalation: 3 trusted triggers, 2 unreliable ones, and 3 matching customers"
+    ],
+    "Cold open: the refund limit": [
+      "$500 refund limit; PostToolUse hook alerts finance, refunds still go out",
+      "Task statements 1.5, 1.7 and 5.2",
+      "Before the call: see name and arguments, can stop it",
+      "PostToolUse: sees the result, can transform it before the model reads it",
+      "A block should return a reason and a next step, not just refuse",
+      "Hooks need a condition code can check; tone and judgement go in the prompt"
+    ],
+    "Segment two: sessions": [
+      "Resume: --resume with a session name continues an investigation",
+      "fork_session: independent branches from a shared analysis baseline",
+      "Fresh session seeded with a structured summary of what still holds",
+      "Resume when context is mostly valid; name the changed files",
+      "Start fresh when most prior tool results are stale",
+      "Read the size of the change before picking the move"
+    ],
+    "Segment three: escalation": [
+      "Triggers: explicit request, policy gap or exception, no meaningful progress",
+      "Honour an explicit request for a human immediately",
+      "Frustrated but no request: acknowledge, offer to resolve, escalate if repeated",
+      "Sentiment and self-reported confidence are unreliable proxies",
+      "Criteria in the system prompt with few-shot examples",
+      "Multiple customer matches: ask for another identifier, never guess"
+    ],
+    "Cold open: the verdict": [
+      "Answer: B, block before the call and redirect to escalate_to_human",
+      "Alert plus reversal is a compensating control after money moved",
+      "Prompt guidance cannot guarantee a rule that must hold",
+      "Generic block error leaves the agent with nothing to do next",
+      "Both verbs in the guide: block and redirect"
+    ],
+    "Five to remember": [
+      "Block before the call, transform after it; PostToolUse normalises results, even third-party",
+      "A block needs a next step: return a reason that routes to escalation",
+      "Hooks need a checkable condition; tone and judgement go in the prompt with examples",
+      "Resume and name changed files; fresh with summary when stale; fork for two approaches",
+      "Escalate on explicit request, policy gap, no progress; several matches means ask"
+    ],
+    "Recap: the exam tells": [
+      "If a hook alerts after the refund went through, move the check before the call",
+      "If a block returns a generic error, pick the option that redirects to escalate_to_human",
+      "If formats are mixed and some servers cannot be modified, one PostToolUse hook normalises",
+      "If the requirement is not an if statement, like tone or a policy gap, use the prompt",
+      "If a few files changed, resume and name them; if most were rewritten, fresh with summary",
+      "If the stem says compare two approaches from existing analysis, fork",
+      "If the customer asks for a person, escalate now; if just frustrated, resolve first",
+      "If an option escalates on sentiment or the model's own confidence, strike it"
+    ]
+  }
 }

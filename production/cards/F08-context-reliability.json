@@ -106,5 +106,69 @@
       "prompt": "Name the four task statements covered, with the giveaway word for each.",
       "answer": "Long interactions (\"exact\", \"the customer later disputes\"); codebase exploration (\"typical patterns\"); human review (\"97% overall\"); provenance (\"two credible sources\")."
     }
-  ]
+  ],
+  "segments": {
+    "In this episode": [
+      "Keep exact amounts, dates and order numbers alive in long conversations",
+      "Trim tool output before it floods the context",
+      "Spot context degradation; scratchpad file, subagents or /compact",
+      "When confident extractions can skip human review, and keep checking them",
+      "Carry sources and conflicting figures intact through a multi-agent report"
+    ],
+    "Cold open: the uncited statistic": [
+      "Report states 31% adoption with no citation; another source said 22%",
+      "Task statements 5.1, 5.4, 5.5 and 5.6; 15% domain, primary for 4 scenarios",
+      "Progressive summarisation loses amounts, dates and customer expectations",
+      "Persistent case facts block in every prompt, outside summarised history",
+      "Trim verbose tool output to relevant fields in code, before it lands",
+      "Lost in the middle: key findings summary first, explicit section headers"
+    ],
+    "Segment two: context degradation": [
+      "Symptoms: inconsistent answers, \"typical patterns\" instead of found classes",
+      "Scratchpad file keeps findings across context boundaries",
+      "Subagents explore specific questions and return condensed summaries",
+      "Subagents inherit nothing: inject a phase summary into their prompt",
+      "/compact for verbose discovery output; findings stay on disk",
+      "Crash recovery: agents export state; coordinator loads a manifest"
+    ],
+    "Segment three: aggregate accuracy": [
+      "97% overall can hide 78% on one document type or field",
+      "Verify accuracy by document type and field before automating",
+      "Field-level confidence calibrated on a labelled validation set",
+      "Raw self-reported confidence with a fixed cut-off is the distractor",
+      "Stratified random sample of high-confidence output: error rates, new patterns"
+    ],
+    "Segment four: provenance": [
+      "Attribution is lost when findings are compressed without their source",
+      "Structured claim-source mappings: claim, source, excerpt, date",
+      "Conflicting credible sources: annotate both, coordinator reconciles",
+      "Check dates first: a temporal difference is not a conflict",
+      "Separate established from contested findings; keep methodological context",
+      "Render by content type: tables, prose, structured lists"
+    ],
+    "Cold open: the verdict": [
+      "Answer: B, structured claim-source mappings with dates, preserved",
+      "Fact-checking subagent is detective, after attribution is already lost",
+      "\"Newest wins\" imports a rule and hides the other figure",
+      "Raw documents give synthesis more middle to lose things in",
+      "Tell: \"no citation\" plus \"prose summary\""
+    ],
+    "Five to remember": [
+      "Exact figures, dates, IDs in a persistent case facts block; trim tool results before they pile up",
+      "Lost in the middle: key findings first and section headers; tight budget: structured upstream output",
+      "\"Typical patterns\" means degradation: scratchpad, subagents with summaries, /compact, manifests",
+      "Aggregate accuracy hides weak segments: check by type and field, calibrate, stratified sampling",
+      "Claim-source mappings with dates survive synthesis; conflicts annotated, coordinator reconciles"
+    ],
+    "Recap: the exam tells": [
+      "If a figure, date or order number disappears after summarisation, a case facts block",
+      "If tool results pile up with unused fields, trim them in code before they land",
+      "If middle findings go missing, key findings summary first and section headers",
+      "If downstream context is nearly full, structured upstream output, not bigger max tokens",
+      "If Claude Code cites typical patterns and contradicts itself, scratchpad, subagents, /compact",
+      "If high overall accuracy tempts dropping review, segment accuracy, calibrate, stratified sample",
+      "If an option uses raw self-rated confidence with a fixed cut-off, it loses",
+      "If a number is uncited or sources disagree, claim-source mappings with dates, annotate conflict"
+    ]
+  }
 }

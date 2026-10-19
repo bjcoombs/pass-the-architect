@@ -14,7 +14,9 @@
         "C": "Keep the top tier and truncate the supporting documents to cut input tokens",
         "D": "Fine-tune a smaller model on the top tier's outputs"
       },
-      "correct": ["B"],
+      "correct": [
+        "B"
+      ],
       "why": "Measure before moving: per-step evals with thresholds set first. A downgrades without evidence, C drops evidence the adjuster needs, D jumps to fine-tuning."
     },
     {
@@ -31,7 +33,9 @@
         "C": "Add three worked examples per queue to the prompt",
         "D": "Cache the router's responses for a day"
       },
-      "correct": ["B"],
+      "correct": [
+        "B"
+      ],
       "why": "A router that needs no reasoning gains nothing from a thinking pass but pays its latency and cost every request. Confirm on the eval: config changes are behaviour changes."
     },
     {
@@ -49,7 +53,10 @@
         "D": "Enable extended thinking",
         "E": "Add a dashboard tracking the distribution of priorities each day"
       },
-      "correct": ["A", "B"],
+      "correct": [
+        "A",
+        "B"
+      ],
       "why": "The rubric never says to ignore tone, so B closes that gap; the judgment is easier to show than describe, so A gives the counter-case. E is detective and fixes nothing."
     },
     {
@@ -66,7 +73,9 @@
         "C": "Switch to a smaller model tier",
         "D": "Summarise the manual down to 500 tokens"
       },
-      "correct": ["B"],
+      "correct": [
+        "B"
+      ],
       "why": "The timestamp changes on every call, so the prefix never matches. Reorder, then confirm hits in the usage field. D is the blunt cut that discards safety content."
     },
     {
@@ -74,5 +83,72 @@
       "question_line": "SAM: Before the tease, a test. Pause and name the five task statements we covered",
       "prompt": "Name the five task statements this episode covered, or the giveaway for each."
     }
-  ]
+  ],
+  "segments": {
+    "In this episode": [
+      "Picking a model tier on eval evidence",
+      "When extended thinking and fine-tuning are worth paying for",
+      "System prompts whose guardrails hold",
+      "Zero-shot, few-shot or chain-of-thought",
+      "Budgeting the context window and choosing a strategy",
+      "A prompt cache that hits; Skills for shared procedures"
+    ],
+    "Cold open: the claims pipeline": [
+      "Cold open: a 3-step claims pipeline 5x over budget",
+      "Domain 2: 13%, about 8 items, 5 task statements",
+      "Haiku, Sonnet, Opus: start on Sonnet, move only on eval evidence",
+      "Eval set: real cases, a grader, a threshold set in advance",
+      "Route tiers by step or input class, each choice backed by an eval",
+      "Extended thinking and fine-tuning: only for a measured gap"
+    ],
+    "System prompts and guardrails": [
+      "Role and scope, constraints, and an output contract",
+      "Templates: fixed scaffolding; filling a slot can't remove a constraint",
+      "Underspecification: the model fills silent gaps differently each run",
+      "Guardrails belong in the output contract, not just role text",
+      "\"Must never\" needs a structural answer",
+      "A system prompt is not enforcement: add runtime controls"
+    ],
+    "Choosing a prompting technique": [
+      "Zero-shot: well-specified tasks the model already handles",
+      "Few-shot: format or judgment easier to show than describe",
+      "Chain-of-thought: when the reasoning path decides the answer",
+      "The lightest technique that meets the requirement",
+      "What ships is the prompt and model pairing",
+      "Bias shows in aggregate: neutral phrasing, balanced examples"
+    ],
+    "Context windows and tokens": [
+      "Context window, retrieval, application state, memory: keep them apart",
+      "The window is a ceiling, not a target; measure tokens",
+      "Too large: rejected; output hits the ceiling: truncated",
+      "Progressive is the production default; monolithic for bounded tasks",
+      "Compaction is largely one-way",
+      "Model the token distribution, not the average"
+    ],
+    "Prompt reuse and caching": [
+      "The cache matches a stable prefix: tools, then system, then messages",
+      "Static before dynamic, breakpoint at the boundary",
+      "Explicit cache control: writes cost more, reads a fraction",
+      "5-minute default lifetime; verify hits in the usage field",
+      "Truncation is blind; caching keeps required content",
+      "Skill: a versioned SKILL.md unit for procedures shared across teams"
+    ],
+    "Five to remember": [
+      "Start on Sonnet; move up or down only on eval evidence, threshold set before the run",
+      "Lightest technique: zero-shot by default, few-shot to show, chain-of-thought when the path decides",
+      "Guardrails in the output contract and runtime controls, not just role text",
+      "The window is a ceiling: default progressive, combine strategies by phase, model the token tail",
+      "Static before dynamic: verify cache hits in the usage field; Skills for versioned, shared procedures"
+    ],
+    "Recap: the exam tells": [
+      "Stronger tier with no measurement named → bigger-model distractor",
+      "Accuracy meets the target and thinking is on → turn it off, confirm on the eval",
+      "Fine-tuning, with no failed prompt work in the stem → out of order",
+      "\"Must never\" or \"guarantee\" → structure in the output contract, not a firmer sentence",
+      "Easier to show → few-shot; path decides the answer → chain-of-thought; otherwise zero-shot",
+      "Cost climbs turn after turn, or rests on the average → progressive context and the token tail",
+      "Caching on, cache-read count zero → something volatile before the fixed block",
+      "Required fixed block with a cost or latency complaint → caching, never truncation; drifting copies → Skill"
+    ]
+  }
 }

@@ -14,7 +14,9 @@
         "C": "Run the review only once, when the pull request is opened",
         "D": "Add \"do not repeat earlier feedback\" to the review prompt"
       },
-      "correct": ["A"],
+      "correct": [
+        "A"
+      ],
       "why": "The model rewords findings, so hashes change, and a hash cannot know a problem was fixed. Only a review that sees its prior findings can judge that."
     },
     {
@@ -31,7 +33,9 @@
         "C": "A detailed prompt describing the new logging calls, run once in direct execution across the repo",
         "D": "Start with direct execution and switch to plan mode if the wrappers cause trouble"
       },
-      "correct": ["B"],
+      "correct": [
+        "B"
+      ],
       "why": "60 files and unknown wrappers are plan-mode triggers: plan the migration, then execute it. A means rework; C assumes a design; D waits for known complexity."
     },
     {
@@ -49,7 +53,10 @@
         "D": "Ask for the rounding fix now, then the conversion fix later once rounding is correct",
         "E": "Ask Claude to rewrite the script from scratch from a longer description"
       },
-      "correct": ["A", "B"],
+      "correct": [
+        "A",
+        "B"
+      ],
       "why": "Interacting problems go in one message; one at a time is for independent ones. B names the failing case. C adds vague feedback; E throws away working code."
     },
     {
@@ -66,7 +73,9 @@
         "C": "Use the JSON output format with a schema for the findings",
         "D": "Retry the job when parsing fails"
       },
-      "correct": ["C"],
+      "correct": [
+        "C"
+      ],
       "why": "Structured output enforced through the CLI with a schema. B is probabilistic; A works around the symptom; D repeats the unreliable call."
     },
     {
@@ -84,7 +93,10 @@
         "D": "Run the review three times and post only findings in at least two runs",
         "E": "Switch to a larger model"
       },
-      "correct": ["B", "C"],
+      "correct": [
+        "B",
+        "C"
+      ],
       "why": "Categorical criteria with examples raise precision; switching off the noisy category restores trust now. A is the named confidence-word trap."
     },
     {
@@ -94,5 +106,61 @@
       "prompt": "Name the three segments, and one technique from each.",
       "answer": "Plan mode against direct execution, with the Explore subagent. Iterative refinement, five techniques. Claude Code in CI."
     }
-  ]
+  ],
+  "segments": {
+    "In this episode": [
+      "Plan mode vs direct execution from the wording of a stem",
+      "When to hand discovery to the Explore subagent",
+      "Refinement: examples, tests first, interview, named edge case, batching",
+      "CI that doesn't hang, posts structured comments, reviews with a fresh instance",
+      "Keeping CI false positives down"
+    ],
+    "Cold open: repeating review comments": [
+      "Same 11 review comments reappear after every commit, 2 already fixed",
+      "Task statements 3.4, 3.5 and 3.6 in a 20% domain",
+      "Plan mode: many files, several valid approaches, architectural decisions",
+      "Direct execution: single-file fix with a clear stack trace",
+      "Risky code is not the same as a complex change",
+      "Explore subagent: verbose discovery in its own context, returns a summary"
+    ],
+    "Segment two: iterative refinement": [
+      "Prose read inconsistently: 2 or 3 concrete input-output examples",
+      "Test-driven: write tests first, then share the failing tests",
+      "Interview pattern: Claude asks questions in an unfamiliar domain",
+      "Edge cases: a specific input row and its expected output",
+      "Interacting problems in one detailed message; independent ones one at a time"
+    ],
+    "Segment three: Claude Code in CI": [
+      "-p / --print runs non-interactively so the job never hangs",
+      "JSON output format plus a JSON schema for parseable findings",
+      "CLAUDE.md carries testing standards, fixtures, review criteria to CI",
+      "Independent review instance beats self-review or extended thinking",
+      "\"Only high-confidence\" doesn't raise precision; explicit categories do",
+      "Severity levels with code examples; switch off a noisy category meanwhile"
+    ],
+    "Cold open: the verdict": [
+      "Answer: A, include prior findings, report only new or unaddressed issues",
+      "Hashing fails: the model rewords the same finding each run",
+      "A text hash cannot know a problem was fixed",
+      "Reviewing once skips the commits that need it most",
+      "\"Don't repeat\" fails without prior findings to compare against"
+    ],
+    "Five to remember": [
+      "Plan mode for many files, several approaches, architecture; direct for clear single-file fixes",
+      "Explore subagent does verbose discovery in its own context and returns a summary",
+      "Inconsistent prose: 2-3 examples; tests first; interview in unfamiliar domains; name the case",
+      "Interacting problems in one detailed message; independent problems one at a time",
+      "CI: print mode, JSON with schema, CLAUDE.md, separate reviewer, prior findings, categories"
+    ],
+    "Recap: the exam tells": [
+      "If the stem says choose between approaches or dozens of files, plan mode then execute",
+      "If it says one function and a clear stack trace, direct execution, even in payments code",
+      "If discovery is verbose across several phases, think the Explore subagent",
+      "If prose is read 3 ways, give 2-3 examples; unfamiliar domain, let Claude interview you",
+      "If fixing one problem changes another, one message; independent, one at a time",
+      "If the CI job hangs, the print flag; parser chokes on prose, JSON output with a schema",
+      "If the same session reviews its own code, add an independent instance",
+      "If comments repeat or get dismissed, prior findings in context and explicit categories"
+    ]
+  }
 }

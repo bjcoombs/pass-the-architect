@@ -14,7 +14,9 @@
         "C": "Continue while the stop reason is tool_use; stop when the stop reason is end_turn",
         "D": "Run every conversation for six iterations, then show the latest text"
       },
-      "correct": ["C"],
+      "correct": [
+        "C"
+      ],
       "why": "Text alongside a tool call is legitimate; text as a completion signal is the anti-pattern. A is a probabilistic fix, B parses language, D makes a cap primary."
     },
     {
@@ -31,7 +33,9 @@
         "C": "Model chooses tools badly; replace with a fixed sequence of one search then a summary",
         "D": "Add each search result as a new user message, leaving out the model's own tool call to save tokens"
       },
-      "correct": ["B"],
+      "correct": [
+        "B"
+      ],
       "why": "The Messages API is stateless: the model never saw the result, so it has not searched yet. Your code resends the full history, every call and every result."
     },
     {
@@ -48,7 +52,9 @@
         "C": "Add a system prompt line saying always extract first",
         "D": "Merge all three tools into one"
       },
-      "correct": ["A"],
+      "correct": [
+        "A"
+      ],
       "why": "Forced selection guarantees extraction runs first; auto afterwards lets the lookups use the identifier. Any guarantees a tool call, not which tool."
     },
     {
@@ -65,7 +71,9 @@
         "C": "A one-line note: customer requests refund above limit",
         "D": "Nothing extra; have the human ask the customer to explain again"
       },
-      "correct": ["A"],
+      "correct": [
+        "A"
+      ],
       "why": "Humans lack the transcript and need to act fast: compile a structured summary. A transcript hands over the work, not its result."
     },
     {
@@ -83,7 +91,10 @@
         "D": "Regulator archive as zero results, so the run completes cleanly",
         "E": "A terminal error that stops the run, because one of three sources failed"
       },
-      "correct": ["A", "B"],
+      "correct": [
+        "A",
+        "B"
+      ],
       "why": "A carries failure type, attempt, partial results and an alternative. B keeps a real empty result real. D is silent suppression; E terminates on one failure."
     },
     {
@@ -93,5 +104,78 @@
       "prompt": "Name the five topics covered, with the giveaway for each.",
       "answer": "Stop reason and the loop. The stateless API. Forced tool choice against a prerequisite in code. Multi-concern requests and handoffs. Errors between agents."
     }
-  ]
+  ],
+  "segments": {
+    "In this episode": [
+      "Tell a finished response from a tool request by stop reason alone",
+      "Spot why an agent repeats a call it already made",
+      "Forced tool choice vs a check in code when one step must come first",
+      "Escalations a human can act on without restarting the customer",
+      "What a failing subagent should send back to its coordinator"
+    ],
+    "Cold open: the narrating agent": [
+      "Agent says \"Let me pull up that order\" and then nothing happens",
+      "Task statements 1.1, 1.4 and 5.3; Domain 1 is 27% of the exam",
+      "tool_use: append response, run tools, return each tool_result by ID",
+      "end_turn: finished; max_tokens: truncated, needs its own handling",
+      "A response can hold text and a tool call together",
+      "Anti-patterns: parsing language, iteration cap as primary stop, text check"
+    ],
+    "Segment two: returning tool results": [
+      "Subagent repeats the same search 3 times, then gives up",
+      "Messages API is stateless: the model knows only what is in the request",
+      "Your code holds the history and resends all of it",
+      "Each tool_result points back at the call it answers",
+      "Trim tool output and use prompt caching; never drop needed history",
+      "Tell: \"forgets\", \"asks again\", \"repeats the same call\""
+    ],
+    "Segment three: who decides next": [
+      "Model-driven decisions vs pre-configured decision trees",
+      "Support conversations branch on what tools return",
+      "Model-driven by default, enforced where order must hold",
+      "tool_choice: auto, any (some tool), forced (one named tool)",
+      "Forced tool first, then back to auto for follow-up turns",
+      "Rule across the whole conversation with money or identity: code prerequisite"
+    ],
+    "Segment four: enforced prerequisites": [
+      "Prompt instructions alone have a non-zero failure rate",
+      "Deterministic compliance: block the downstream tool in code",
+      "Refund path checks order's customer ID against the verified ID",
+      "Multi-concern requests: decompose, investigate in parallel, answer once",
+      "Human agents lack the conversation transcript",
+      "Handoff fields: customer ID, root cause, amount, recommended action"
+    ],
+    "Segment five: multi-agent errors": [
+      "Structured error context: failure type, attempt, partial results, alternatives",
+      "Access failure (timeout) vs valid empty result (no matches)",
+      "Subagents retry transient failures locally, then report with context",
+      "\"Search unavailable\" is a generic status that hides context",
+      "Anti-patterns: silent suppression and ending the run on one failure",
+      "Synthesis carries coverage annotations; MCP isError flag at tool level"
+    ],
+    "Cold open: the verdict": [
+      "Answer: C, continue on tool_use, stop on end_turn",
+      "\"No text with tool calls\" is a probabilistic fix and keeps the text check",
+      "Closing phrase parses natural language",
+      "6-iteration run makes an arbitrary cap the primary stop",
+      "Tell: the loop decides \"whenever the response contains any text\""
+    ],
+    "Five to remember": [
+      "Loop while stop reason is tool_use, stop at end_turn; a cap is a backstop only",
+      "Stateless API: append the response and every tool_result, resend full history",
+      "Forced tool choice for one first call, then auto; cross-conversation rules go in code",
+      "Split multi-concern requests, answer once; handoffs carry a structured summary",
+      "Errors carry type, attempt, partial results, alternatives; a timeout is not empty"
+    ],
+    "Recap: the exam tells": [
+      "If the loop decides by text, a closing phrase or a turn count, think stop reason",
+      "If an agent repeats a call or asks again, check the request and append call and result",
+      "If one tool must run first to feed the next, think forced tool choice, then auto",
+      "If the stem says never, with money or identity at stake, think a prerequisite in code",
+      "If a human makes the customer repeat everything, think structured handoff summary",
+      "If a customer has 3 problems, give one reply that answers all 3",
+      "If a subagent sends \"unavailable\" or empty after a timeout, think structured error context",
+      "If one failed source ends the whole run, that is the other anti-pattern"
+    ]
+  }
 }

@@ -104,5 +104,71 @@
       "prompt": "Name the five task statements we covered, and the artefact each one leaves behind.",
       "answer": "Discovery: translation table. Tradeoffs: decision package. Feedback loops and SLAs: governance table. Documentation: decision log and control register. Lifecycle: an artefact gating each transition."
     }
-  ]
+  ],
+  "segments": {
+    "In this episode": [
+      "Turn a vague word into a testable constraint",
+      "Spot the unknowns that block a feasibility verdict",
+      "Present a tradeoff with its reversal cost",
+      "Feedback loops and SLAs that decide, not display",
+      "Documentation a successor can act on",
+      "The artefact that gates each lifecycle phase"
+    ],
+    "Cold open: the go-live date": [
+      "14%, about 9 items; the right answer removes risk at the root",
+      "Discovery: listen, translate, write down",
+      "Experience words like seamless are signals, not requirements",
+      "4 buckets: must do, must not do, must cost, must prove",
+      "Translation table: statement, constraint, decision forced, assumption",
+      "A prototype answers only the capability question"
+    ],
+    "Communicating tradeoffs": [
+      "Every tradeoff: gain, give-up, reversal cost; compliance posture if regulated",
+      "Reversal cost is the one dropped, and dropping it causes false alignment",
+      "Lead with the business outcome; cut technical depth, never cost",
+      "Executives: monthly cost at forecast volume, plus reversal cost",
+      "Security and legal: evidence, not assertions",
+      "Engineers: rejected alternatives and the tradeoff each resolved"
+    ],
+    "Feedback loops and SLAs": [
+      "Loop: signals, triage, decide, act, review",
+      "Governance table: each signal to a trigger, an owner and an action",
+      "Slow drift never fires a hard alert",
+      "SLA: what is measured, what counts as a breach, what happens next",
+      "Thresholds trace to UX expectation, criticality or eval criteria",
+      "Cost breaks first: production runs 1-2 orders of magnitude above pilot"
+    ],
+    "Documentation for handoff": [
+      "3 readers: inheriting engineer, auditor, returning architect",
+      "Fields: dated decision, rejected alternatives, tradeoff, owner, evidence",
+      "Test: can someone not in the room make a safe change?",
+      "Record rejected alternatives when the decision is made",
+      "A diagram feels authoritative but is not proof",
+      "Outcome document: before-and-after on the business metric"
+    ],
+    "Supporting the lifecycle": [
+      "Phases: discovery, design, handoff, monitoring, iteration",
+      "Gates: translation table, feasibility verdict, decision log and control register",
+      "Set regions explicitly on Bedrock or Vertex",
+      "Demo and go-to-market material: partner track, not tested",
+      "Go-live verdict: gather volume, input size and latency first",
+      "Any verdict before the missing constraints, provisional or not, is the trap"
+    ],
+    "Five to remember": [
+      "Seamless or fast signals more questions: translate to a testable constraint, label assumptions",
+      "Tradeoffs carry gain, give-up and reversal cost; dropping reversal cost causes false alignment",
+      "Monitoring is not a feedback loop: signal to trigger, owner, action; slow drift; scheduled checks",
+      "SLA thresholds trace to something real; forecast cost at production volume before the first invoice",
+      "Document decision, rejected alternatives, tradeoff; evidence for reviewers, before-and-after for sponsors"
+    ],
+    "Recap: the exam tells": [
+      "Seamless, fast or intuitive: a signal to ask more questions, not a requirement",
+      "Stem lists unknowns (volume, input size, latency): gather them before any verdict",
+      "Nobody mentioned it: label it an assumption, give it an owner, ask",
+      "Executive surprised by the invoice: missing reversal cost and monthly figure, false alignment",
+      "Score drifts for weeks, no alert: missing decision layer; diagnose, add a drift trigger with an owner",
+      "Successor broke a rule the design avoided: rejected alternatives never written down",
+      "Outcome document wanted too early: name the measurement owner, confirm logging, set the milestone"
+    ]
+  }
 }

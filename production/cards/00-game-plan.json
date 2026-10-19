@@ -14,7 +14,9 @@
         "C": "Keep all the tools but add a confirmation prompt before refunds and deletions",
         "D": "Replace the agent with a larger model that follows instructions more reliably"
       },
-      "correct": ["B"],
+      "correct": [
+        "B"
+      ],
       "why": "Least privilege means the capability is gone, so the attack surface is gone. Logging is detective, confirmation is a speed bump, and model size is not authorization scope."
     },
     {
@@ -31,7 +33,9 @@
         "C": "Put the static system prompt and policy before the dynamic content and enable prompt caching",
         "D": "Move the policy document into a few-shot example block"
       },
-      "correct": ["C"],
+      "correct": [
+        "C"
+      ],
       "why": "Caching keys off a stable prefix: fixed content first, varying content after. A cache hit cuts input cost on the reused part and reduces time to first token."
     },
     {
@@ -48,7 +52,9 @@
         "C": "The temperature setting is too low",
         "D": "The context window has shrunk"
       },
-      "correct": ["B"],
+      "correct": [
+        "B"
+      ],
       "why": "The refresh touched the index. Unchanged model version kills A; nothing about a refresh changes temperature or the context window."
     },
     {
@@ -56,5 +62,65 @@
       "question_line": "SAM: Before the tease, a test. Pause and name the topics this episode covered",
       "prompt": "Name the topics this episode covered, with the giveaway for each if you can."
     }
-  ]
+  ],
+  "segments": {
+    "In this episode": [
+      "What exam day looks like and what the pass mark means",
+      "The 7 domains ranked by weight",
+      "Choose-two items without filling the slot",
+      "Pacing yourself against the clock",
+      "Taking any item apart with 4 questions",
+      "The method tested on the 3 official sample items"
+    ],
+    "Cold open, format and weights": [
+      "Cold open: least privilege for a customer-support agent",
+      "63 items in 120 minutes, just under 2 minutes each",
+      "Proctored, online or at a Pearson VUE test centre",
+      "Pass mark: scaled 720 on 100-1000, criterion-referenced",
+      "Integration 19%, Solution Design 17%, Evaluation 16%: 52% together",
+      "Governance and Stakeholder: 28%, and some of the most predictable items"
+    ],
+    "Choose-two items and pacing": [
+      "Read how many to select before the scenario",
+      "Judge each option true or false against this scenario",
+      "Never pick a merely reasonable option to fill the slot",
+      "Budget 1:45 an item: item 21 by 37 min, 42 by 73, 63 by 110",
+      "Stuck: best answer, flag it, move on",
+      "Never leave a blank: no penalty described for wrong answers"
+    ],
+    "The four-question method": [
+      "1. Constraint words decide the answer",
+      "2. Which component did the trigger touch?",
+      "3. Remove the root over detective or compensating controls",
+      "4. Reject bigger-model and blunt-cut options unless the stem forces them",
+      "Model size has nothing to do with authorization scope",
+      "Trap: importing a requirement the stem never stated"
+    ],
+    "Samples two and three": [
+      "Sample 2: the same 8,000-token prompt on every request",
+      "Sample 3: confident, wrong RAG answers after a document refresh",
+      "Caching keys off a stable prefix: fixed content first, varying after",
+      "Anthropic API caching is explicit; a timestamp up front means no hits",
+      "Confidence is not correctness",
+      "Each sample maps to a question from the method"
+    ],
+    "Using the series": [
+      "Episodes 1-5 today: Solution Design through Evaluation",
+      "Governance, Stakeholders and Developer Productivity this evening",
+      "Final drill the night before and the morning of the exam",
+      "At \"pause here\", say your answer aloud first",
+      "In choose-two drills, call true or false on every option",
+      "Read how many to choose before anything else"
+    ],
+    "Recap: the exam tells": [
+      "Over about 1:45 on an item → best answer, flag it, move on; never leave a blank",
+      "Choosing what to re-listen to → Integration first (19%); keep Governance and Stakeholder (28%)",
+      "\"Choose two\" → read the number first, then judge each option true or false",
+      "An option logs, alerts or adds a confirmation → ask whether another removes the cause",
+      "Change then symptom → the component it touched; RAG wrong after a refresh → retrieval and index",
+      "Fixed block on every request, cost and latency hurt → stable prefix and caching, not truncation",
+      "Bigger model with nothing pointing at capability, or cutting required content → reject",
+      "Tempted by a requirement the stem never stated → answer the scenario on the page"
+    ]
+  }
 }

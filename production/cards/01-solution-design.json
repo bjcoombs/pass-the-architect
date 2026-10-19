@@ -14,7 +14,9 @@
         "C": "Move the agent to Opus with extended thinking so eligibility judgments improve",
         "D": "Index the transaction history in a vector store so the agent needs fewer tool calls"
       },
-      "correct": ["B"],
+      "correct": [
+        "B"
+      ],
       "why": "Three observed paths rule out an agent. The published rule stays in the rules engine, live transactions need a tool call, and a human approves larger credits."
     },
     {
@@ -31,7 +33,9 @@
         "C": "Convert the extraction into an agent that retries until parsing succeeds",
         "D": "Move the extraction to Opus"
       },
-      "correct": ["B"],
+      "correct": [
+        "B"
+      ],
       "why": "Format is a valid fine-tuning trigger only after prompting has failed, and nobody has tried a proper output contract."
     },
     {
@@ -49,7 +53,10 @@
         "D": "Have the orchestrator re-read every document itself",
         "E": "A dashboard of average subagent latency"
       },
-      "correct": ["A", "B"],
+      "correct": [
+        "A",
+        "B"
+      ],
       "why": "A catches the count gap at synthesis; B recovers at the subagent boundary, where recovery is possible. A smarter orchestrator still counts only what came back."
     },
     {
@@ -66,7 +73,9 @@
         "C": "Transformation",
         "D": "Solution cost"
       },
-      "correct": ["C"],
+      "correct": [
+        "C"
+      ],
       "why": "Reading every response was not possible before, so it is transformation. Efficiency is the same sample faster; productivity is more of work the team could already do."
     },
     {
@@ -74,5 +83,69 @@
       "question_line": "SAM: Before the tease, your turn. Pause and name the main segments of this episode",
       "prompt": "Name the main segments of this episode, or the giveaway for each."
     }
-  ]
+  ],
+  "segments": {
+    "In this episode": [
+      "Claude's 4 behaviour properties and their design consequences",
+      "Splitting work between Claude, existing systems and humans",
+      "Spotting a business rule that has drifted into the model",
+      "Augmented call, workflow or agent; when fine-tuning and Skills fit",
+      "A multi-agent fan-out that can't fail silently",
+      "End-to-end architecture, platform layers and the 5 value pillars"
+    ],
+    "Cold open: card disputes": [
+      "Cold open: an agent handling card dispute emails",
+      "Domain 1: 17%, 10-11 items, 6 task statements",
+      "4 decisions in order: what Claude owns, shape, architecture, entry point",
+      "4 properties: next-token prediction, knowledge, working memory, steerability",
+      "5 clean demo runs are not evidence of determinism",
+      "Deterministic drift: a rule folded into the model fails silently"
+    ],
+    "Choosing a pattern": [
+      "Augmented LLM, workflow or agent: predictability vs autonomy",
+      "5 factors in order: predictability, error cost, observability, latency, cost",
+      "Cost tracks context and call count, not the pattern label",
+      "Workflows: chaining, routing, parallelization, evaluator-optimizer",
+      "Agents only when steps can't be enumerated, and always bounded",
+      "Prompt, tools or retrieval, stronger pattern, then fine-tuning"
+    ],
+    "Multi-agent systems": [
+      "Fewest agents that meet the requirement",
+      "Orchestrator delegates and synthesises; subagents own scoped pieces",
+      "Subagent failures recoverable; orchestrator failures usually not",
+      "The silent failure: a fan-out summary that reads complete",
+      "Live state via a tool call to the system of record, not retrieval",
+      "Platform map: entry points, build-time interfaces, delivery routes"
+    ],
+    "Business value": [
+      "Name each capability, sketch the architecture, set boundaries, then scope",
+      "5 pillars: efficiency, transformation, productivity, solution cost, SLAs",
+      "ROI: owner's baseline, minus run cost, payback with sensitivity",
+      "Trap: projecting full automation while humans still review"
+    ],
+    "Cold open: the verdict": [
+      "Answer: B, a routing workflow with human approval on larger credits",
+      "3 observed paths: predictability rules out the agent",
+      "Eligibility stays in the rules engine; the transaction via a tool call",
+      "A: logging records the risk instead of removing it",
+      "C: the bigger-model family; D: an index standing in for live state"
+    ],
+    "Five to remember": [
+      "Decompose first: Claude, systems or humans, and where the 4 properties favour Claude",
+      "A rule that must be right every time stays in code: the model extracts, the rules engine decides",
+      "Predictability, error cost, observability, latency, cost: first to rule out decides; agents bounded",
+      "Subagent failures recoverable, orchestrator failures not: retry at the boundary, check coverage",
+      "Prompt, tools or retrieval, pattern, then fine-tuning; Skills for repeats; map value to a pillar"
+    ],
+    "Recap: the exam tells": [
+      "5 clean demo runs called deterministic → non-determinism, which is why evals exist",
+      "Reads like language but is a lookup, arithmetic or safety call → system, code or human",
+      "A must-be-right rule applied by the model → deterministic code, Claude only extracts",
+      "Pilot traces show a few known paths → workflow; \"agent\" is the trap",
+      "Fine-tuning before an output contract → prompt first; repeated, versioned procedure → Skill",
+      "Fan-out summary reads complete but fewer results came back → coverage check at synthesis",
+      "Live state served from an index → tool call; Claude Code for branch staff → wrong entry point",
+      "Work that wasn't possible before becomes possible → transformation, not productivity"
+    ]
+  }
 }

@@ -14,7 +14,9 @@
         "C": "The judge model grading the extractions is too lenient",
         "D": "The temperature is too high"
       },
-      "correct": ["B"],
+      "correct": [
+        "B"
+      ],
       "why": "The trigger was a prompt change; the suite kept passing because the golden dataset predates it and lacks the failing input class. Pinning rules out A."
     },
     {
@@ -32,7 +34,10 @@
         "D": "The reply correctly captures why the customer is returning the item",
         "E": "Escalation was the right call on an ambiguous, partly damaged item"
       },
-      "correct": ["A", "C"],
+      "correct": [
+        "A",
+        "C"
+      ],
       "why": "A is a known-value comparison and C is an identifier scan, both deterministic. Tone and meaning go to a judge; the ambiguous escalation is judge or human territory."
     },
     {
@@ -49,7 +54,9 @@
         "C": "Move to a more capable model first",
         "D": "Keep the test running and stop as soon as the gap reaches significance"
       },
-      "correct": ["B"],
+      "correct": [
+        "B"
+      ],
       "why": "60 a side is a confirmation check, not a test. A treats noise as signal, C changes a different variable, and D runs until you see what you want."
     },
     {
@@ -66,7 +73,9 @@
         "C": "Require each warranty claim to cite a retrieved passage and verify the term against it before replying",
         "D": "Lower the temperature"
       },
-      "correct": ["C"],
+      "correct": [
+        "C"
+      ],
       "why": "Retrieval worked; the model asserted something not in its context. That is hallucination, and grounding plus verification removes it at the root."
     },
     {
@@ -84,7 +93,10 @@
         "D": "Send the nightly summaries through the Batch API",
         "E": "Cut the system prompt in half"
       },
-      "correct": ["A", "D"],
+      "correct": [
+        "A",
+        "D"
+      ],
       "why": "A attacks the dominant input cost and helps latency; D moves work that can wait onto discounted pricing. E is the blunt cut that loses required content."
     },
     {
@@ -92,5 +104,72 @@
       "question_line": "SAM: Before the tease, a test. Pause and name the main segments, or the giveaway for each.",
       "prompt": "Name the main segments of this episode, or the giveaway for each."
     }
-  ]
+  ],
+  "segments": {
+    "In this episode": [
+      "Evals as acceptance criteria, thresholds from the business",
+      "Choosing code, a judge or a human for each check",
+      "A/B tests that don't overclaim; when only shadow testing will do",
+      "Classifying a failure by the component its trigger touched",
+      "Modelling cost at production volume",
+      "Monitoring for wrong answers that never throw an error"
+    ],
+    "Cold open: the passing suite": [
+      "Cold open: a 99% eval pass and missing incident dates",
+      "Domain 4: 16%, about 10 items, 6 task statements",
+      "Evals are acceptance criteria, written before production code",
+      "Thresholds from the business requirement, not the prototype",
+      "The nature of the check picks the grading method, not the stakes",
+      "Grading ladder: code, then a calibrated judge, then humans"
+    ],
+    "Suite pitfalls and A/B tests": [
+      "Pitfalls: convenient datasets, stale suites, spot checks as substitutes",
+      "Fix the system, never the grader; read the per-category breakdown",
+      "A/B: falsifiable hypothesis, random assignment, 1 primary metric",
+      "Sample size from minimum detectable effect, converted to duration",
+      "Statistically significant doesn't mean worth shipping",
+      "Shadow testing when no user may see a worse version"
+    ],
+    "Diagnosing failures": [
+      "Classify first: prompt failure, hallucination, model mismatch, retrieval",
+      "Investigate the component the trigger touched",
+      "Symptom map: latency spikes, cost rises, quality slides, tool failures",
+      "Disabling caching can't cure stale content",
+      "Bigger model only once other components are cleared, gated by an eval",
+      "One change at a time; follow a shared trace ID"
+    ],
+    "Optimization and cost": [
+      "Demo cost is a capability result, not a cost model",
+      "Model the full token distribution at production volume",
+      "Design to p95 under concurrent load",
+      "Levers: caching, tier routing, Batch API, max tokens ceiling, streaming",
+      "Gate every optimization on an accuracy check",
+      "Cost ceiling and latency target must both hold"
+    ],
+    "Monitoring in production": [
+      "Log request, response, context and outcome",
+      "Subtly wrong answers throw no error",
+      "Model drift needs periodic distribution comparison, not thresholds",
+      "Change attribution: model drift, data drift, model update effect",
+      "Business view: task success and latency mapped to KPIs",
+      "Layered reliability: retries, circuit breakers, tested fallbacks"
+    ],
+    "Five to remember": [
+      "Evals before code, thresholds from the business; a stale golden dataset gives false confidence",
+      "Grading ladder from the bottom: code for known or binary answers, a calibrated judge, humans last",
+      "A/B: hypothesis, consistent random assignment, metric fixed first, calculated sample; shadow testing",
+      "Diagnose the component the trigger touched; a bigger model is almost never the answer",
+      "Cost on the full distribution at volume; caching, tier routing, batch; gate on accuracy; log drift"
+    ],
+    "Recap: the exam tells": [
+      "Evals after the build, or the bar set at the prototype's score → acceptance criteria before code",
+      "Check is \"matches\", \"contains\", \"present\" or \"within a limit\" → code, however high the stakes",
+      "Suite passes, production fails on 1 input class after a prompt change → stale golden dataset",
+      "Small session count next to \"ship today\" → underpowered test",
+      "No user may see a worse version → shadow testing",
+      "Right passage retrieved, model asserted otherwise → hallucination: grounding and verification",
+      "Cost from demo volume or an average token count → full distribution at production volume",
+      "No errors but answers got worse → outcome logging and distribution comparison, not error alerts"
+    ]
+  }
 }
