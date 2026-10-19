@@ -199,6 +199,7 @@ def opml_and_index(site):
         f'    <outline type="rss" text={quoteattr(s["title"])} title={quoteattr(s["title"])}'
         f' xmlUrl="{BASE_URL}/{s["slug"]}.xml" htmlUrl="{BASE_URL}/"/>' for s in SERIES)
     (site / "podcasts.opml").write_text(f"""<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="opml.xsl"?>
 <opml version="2.0">
   <head>
     <title>Pass the Architect</title>
@@ -222,8 +223,9 @@ def opml_and_index(site):
 </ul></body></html>
 """)
     (site / "robots.txt").write_text("User-agent: *\nDisallow: /\n")
-    # Browsers render the feeds through this stylesheet; podcast apps ignore it.
-    shutil.copyfile(pathlib.Path(__file__).with_name("feed.xsl"), site / "feed.xsl")
+    # Browsers render the feeds and the OPML through these stylesheets; podcast apps ignore them.
+    for xsl in ("feed.xsl", "opml.xsl"):
+        shutil.copyfile(pathlib.Path(__file__).with_name(xsl), site / xsl)
 
 
 def main():
