@@ -309,7 +309,7 @@ SAM: You accept a confidentiality agreement. Decline and the session ends with n
 
 ALEX: On the screen?
 
-SAM: Read how many to choose. Reread the left panel whenever the scenario changes. Right-click to strike out half-right options. Past two minutes, flag it and move on. Item twenty by thirty-seven minutes, forty by seventy-three, sixty by a hundred and ten, ten minutes for flags. The Review button finds anything flagged or unanswered. Leave nothing blank.
+SAM: Read how many to choose. Reread the left panel whenever the scenario changes. Right-click to strike out half-right options. Past two minutes, flag it and move on. The clock counts down: item twenty at one twenty-three left, forty at forty-seven minutes left, sixty at ten minutes left, then flags. The Review button finds anything flagged or unanswered. Leave nothing blank.
 
 ALEX: And the last half hour?
 

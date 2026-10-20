@@ -63,7 +63,7 @@ SAM: And it overlaps your gaps: stop reason, tool choice with prerequisite calls
 
 ALEX: Pacing. I felt short of time and used every minute.
 
-SAM: About one minute fifty an item. Three checkpoints: item twenty by thirty-seven minutes, item forty by seventy-three, item sixty by a hundred and ten. That leaves ten minutes for flagged items. If an item runs past two minutes, pick your best answer, flag it, and move on. The Review button, bottom left, lists every item and jumps to flagged or unanswered ones. The clock, top right, can be hidden; look at it only at the checkpoints.
+SAM: About one minute fifty an item. Three checkpoints, read off a clock that counts down in hours and minutes. Item twenty with one hour twenty-three left, item forty with forty-seven minutes left, item sixty with ten minutes left. Those ten minutes are for flagged items. If an item runs past two minutes, pick your best answer, flag it, and move on. The Review button, bottom left, lists every item and jumps to flagged or unanswered ones. The clock, top right, can be hidden; look at it only at the checkpoints.
 
 ALEX: And concentration dipped late.
 

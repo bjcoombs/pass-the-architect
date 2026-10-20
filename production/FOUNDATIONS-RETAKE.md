@@ -42,7 +42,7 @@ Reused unchanged from the CCAR-P series: 10 Your Five Miss Patterns, 11 Closing 
 | F09 | scenarios | The six scenarios | All, per scenario | 22 | 3,100-3,600 |
 | F10 | final-drill | Foundations final drill | All | 20 | 2,700-3,100 |
 
-Listening order: F00, 10, F04, F05, F06, F01, F02, F03, F07, F08, 11, F09, then F10 the night before and the morning of the exam. Published files are numbered 00 to 12 by that position, and the hosts say the position aloud ("This is episode two" for F04); `tools/renumber_retake.py` made the spoken numbers match. File IDs such as F04 stay in the repository only.
+Listening order: F00, 10, F04, F05, F06, F01, F02, F03, F07, F08, 11, F09, then F10 the night before and F11 (exam day) the morning of the exam. Published files are numbered 00 to 12 by that position, and the hosts say the position aloud ("This is episode two" for F04); `tools/renumber_retake.py` made the spoken numbers match. File IDs such as F04 stay in the repository only.
 
 ## Sources (paths relative to `~/dev/github.com/forgd-ai/`, private forgd repositories)
 

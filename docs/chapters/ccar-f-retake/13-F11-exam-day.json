@@ -1,0 +1,36 @@
+{
+  "version": "1.2.0",
+  "title": "Exam day",
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "In this episode",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/13-F11-exam-day/00.jpg"
+    },
+    {
+      "startTime": 44.21,
+      "title": "Before you leave",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/13-F11-exam-day/01.jpg"
+    },
+    {
+      "startTime": 93.77,
+      "title": "The noteboard",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/13-F11-exam-day/02.jpg"
+    },
+    {
+      "startTime": 229.83,
+      "title": "Item formats",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/13-F11-exam-day/03.jpg"
+    },
+    {
+      "startTime": 278.03,
+      "title": "When an item rattles you",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/13-F11-exam-day/04.jpg"
+    },
+    {
+      "startTime": 319.44,
+      "title": "The last ten minutes",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/13-F11-exam-day/05.jpg"
+    }
+  ]
+}
