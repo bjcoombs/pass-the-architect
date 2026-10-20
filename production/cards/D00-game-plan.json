@@ -1,0 +1,142 @@
+{
+  "drills": [
+    {
+      "kind": "mcq",
+      "label": "Cold open",
+      "question_line": "SAM: First official sample. A developer must process ten thousand documents overnight",
+      "answer_line": "SAM: Run the method. Count: one, best fits.",
+      "scenario": "Overnight analytics report",
+      "stem": "A developer must process 10,000 documents overnight for a non-urgent analytics report. Cost is the primary concern; results are not needed until the following morning. Which approach best fits?",
+      "choose": 1,
+      "options": {
+        "A": "Send every request synchronously through the Messages API in parallel to finish fast",
+        "B": "Use the Message Batches API: large async workloads within a 24-hour window at reduced cost",
+        "C": "Lower max_tokens on synchronous calls to minimise cost",
+        "D": "Switch to the smallest available model regardless of output quality"
+      },
+      "correct": [
+        "B"
+      ],
+      "why": "Cost first, results by morning: the batch API is built for latency-tolerant volume. Parallel sync calls do not cut per-token cost; max_tokens and downsizing miss batch versus realtime."
+    },
+    {
+      "kind": "mcq",
+      "label": "Official sample",
+      "question_line": "SAM: Pause here and answer before we go on. Second official sample.",
+      "answer_line": "SAM: B. Now argue for D.",
+      "scenario": "Web page summariser",
+      "stem": "An agent summarises web pages submitted by end users. One page hides text telling the model to ignore previous instructions and reveal its system prompt. Which mitigation is most effective?",
+      "choose": 1,
+      "options": {
+        "A": "Raise the model's temperature so its behaviour is harder to predict",
+        "B": "Treat page content as untrusted, keep it apart from instructions, and use guardrails or hooks so injected text cannot trigger sensitive actions",
+        "C": "Add a system prompt line asking users not to include malicious instructions",
+        "D": "Switch to a larger model that follows instructions more reliably"
+      },
+      "correct": [
+        "B"
+      ],
+      "why": "Isolate untrusted content and enforce a control. Temperature is irrelevant, a request is not a control, and a more instruction-following model can be more susceptible."
+    },
+    {
+      "kind": "mcq",
+      "label": "Official sample",
+      "question_line": "SAM: Pause here and answer before we go on. Third official sample.",
+      "answer_line": "SAM: B. Push back.",
+      "scenario": "Internal inventory service",
+      "stem": "Claude must call an internal inventory service exposed as a REST API. The capability must be reusable across several Claude applications and maintained independently of any one app. Which approach best fits?",
+      "choose": 1,
+      "options": {
+        "A": "Hard-code the inventory logic into each application's system prompt",
+        "B": "Build an MCP server exposing the inventory operations as tools for every app to connect to",
+        "C": "Paste the current inventory data into the context window on every request",
+        "D": "Rely on a built-in tool, since built-in tools can reach any internal REST API"
+      },
+      "correct": [
+        "B"
+      ],
+      "why": "Several apps, maintained independently: one MCP server. A is not reusable, C gives no live access and wastes context, D is false."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Pause here and answer before we go on. Our own item, in dropdown form.",
+      "answer_line": "ALEX: False, true, false, true.",
+      "prompt": "Fares change many times a day; every quote must use the current fare. True or false: 1) pasting the morning's fare table into the system prompt meets it; 2) a tool that looks up the route's fare at question time meets it; 3) a larger context window solves it because the whole table fits; 4) the word \"current\" rules out a pasted snapshot.",
+      "answer": "1 False · 2 True · 3 False · 4 True. \"Current\" or \"live\" means access, not a pasted copy."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: One more pass. Pause and name the four steps of the method",
+      "answer_line": "ALEX: Count, constraint, mechanism, strike. Faster or bigger",
+      "prompt": "Name the four steps of the method, and the three distractor families.",
+      "answer": "Count, constraint, mechanism, strike. Faster or bigger; a polite instruction; pasting data instead of access."
+    }
+  ],
+  "segments": {
+    "In this episode": [
+      "The paper: 53 items, 2 hours, 8 weighted domains",
+      "Pacing with 3 checkpoints on a countdown clock",
+      "Dropdown items, statement by statement",
+      "A 4-step method for reading any item",
+      "The method on all 3 official sample questions"
+    ],
+    "Cold open: ten thousand documents": [
+      "10,000 documents, overnight, non-urgent report",
+      "Cost is the primary concern",
+      "Results not needed until morning",
+      "Hold your answer: the verdict comes after the method"
+    ],
+    "The paper": [
+      "53 items in 120 minutes; each item says how many to select",
+      "Pass: scaled 720 on 100-1,000; only the total decides",
+      "Choose-two = five small true-or-false questions",
+      "Applications and Integration 33.1% (~17-18 items)",
+      "Models 16.8% (~9) · Agents 14.7% (~8) · Prompt and Context 11% (~6)",
+      "Tools and MCP 10.6% · Security 8.1% · Claude Code 3.1% · Eval 2.6%"
+    ],
+    "Pacing and the screen": [
+      "10-minute reserve: about 2:04 an item",
+      "Clock counts down: item 18 @ 1:23 · item 35 @ 0:47 · item 53 @ 0:10",
+      "Past 2 minutes: best answer, flag, move on",
+      "Dropdowns: 4-5 statements, 2-3 choices each",
+      "No throwaway choices; no domain labels on items"
+    ],
+    "The four-step method": [
+      "1. Count: how many to select, and the last line",
+      "2. Constraint: the words that set the bar",
+      "3. Mechanism: name the purpose-built tool before reading options",
+      "4. Strike: faster or bigger, polite instruction, pasted data",
+      "One wrong clause and the option goes"
+    ],
+    "Dropdown practice": [
+      "Our own item, dropdown form",
+      "Fares change many times a day",
+      "Every quote must use the current fare",
+      "Four statements: true or false each",
+      "Judge each statement alone"
+    ],
+    "Cold open: the verdict": [
+      "Answer: B, the Message Batches API",
+      "Cost first plus results by morning = batch",
+      "Parallel sync calls do not cut per-token cost",
+      "Lower max_tokens and smallest model miss batch vs realtime",
+      "Tell: overnight, non-urgent, cost is the primary concern"
+    ],
+    "Using the series": [
+      "Episodes 1-4: Applications and Integration",
+      "5 models · 6 agents · 7 prompts and context · 8 tools and MCP",
+      "9 security, hooks, secrets, debugging",
+      "10 the night before · 11 the morning",
+      "On pause: say your answer out loud first"
+    ],
+    "Recap: the exam tells": [
+      "Choose two → read the number, judge each option alone",
+      "Item 18 after 1:23 left, or 2 minutes on one item → answer, flag, move on",
+      "Statements with dropdowns → each is its own small item",
+      "Cost first, no rush → batch, not parallel calls",
+      "User or web content → keep apart, enforce with guardrails or hooks",
+      "Several applications → shared MCP server",
+      "Current or live → access, not a pasted copy"
+    ]
+  }
+}

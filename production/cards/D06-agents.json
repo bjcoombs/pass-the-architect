@@ -1,0 +1,196 @@
+{
+  "drills": [
+    {
+      "kind": "mcq",
+      "label": "Cold open",
+      "question_line": "SAM: Here is your opening item. An insurer's claims intake runs the same three steps for every claim",
+      "answer_line": "SAM: That is the core of it. The answer is A, a workflow.",
+      "scenario": "Insurance claims intake",
+      "stem": "Every claim runs the same three steps: extract fields, check the policy record, route to an adjuster queue. An autonomous agent sometimes routes before checking the policy, and cost and latency are over budget. What is the best change?",
+      "choose": 1,
+      "options": {
+        "A": "Rebuild as a workflow: three calls in a fixed sequence in code, with a programmatic check between steps",
+        "B": "Add a line in capitals to the system prompt: policy check always before routing",
+        "C": "Move to a larger model that follows instructions more reliably",
+        "D": "Split into a supervisor agent with three subagents, one per step"
+      },
+      "correct": [
+        "A"
+      ],
+      "why": "Same steps every claim means a known path: put the order in code where it cannot be skipped. B is a polite instruction, C makes skips rarer not impossible, D adds 3-10x tokens and leaves order to a model."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. A bank's research team wants an assistant",
+      "answer_line": "SAM: B. \"Nobody can say in advance\" is the agent tell",
+      "scenario": "Bank research assistant",
+      "stem": "Analysts' questions vary: some need one filing, others a dozen filings, news searches and a pricing lookup, and nobody can say in advance which sources a question needs. What is the best architecture?",
+      "choose": 1,
+      "options": {
+        "A": "A fixed three-step chain: search, summarise, answer",
+        "B": "An agent with search and lookup tools in a loop, with stopping conditions such as a turn limit",
+        "C": "A routing workflow sending each question to one of four fixed pipelines",
+        "D": "A single call with every recent filing pasted into the context"
+      },
+      "correct": [
+        "B"
+      ],
+      "why": "Unpredictable steps are the agent tell; stopping conditions bound the loop. A and C fix the path; D pastes data instead of giving access."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Choose two. A support platform team is deciding where subagents",
+      "answer_line": "SAM: A is right. C is the role split we just named",
+      "scenario": "Support platform subagents",
+      "stem": "Choose two. Which two situations justify a subagent?",
+      "choose": 2,
+      "options": {
+        "A": "A diagnosis step reads thousands of log lines, but the main agent needs only the probable cause",
+        "B": "Three independent account-history questions that can be investigated at the same time",
+        "C": "Writing a code fix and its unit tests, split into a coder agent and a tester agent",
+        "D": "A simple FAQ assistant with four tools and short answers",
+        "E": "Outlining, drafting and polishing one reply, each by its own agent"
+      },
+      "correct": [
+        "A",
+        "B"
+      ],
+      "why": "A is context protection, B is parallel independent work. C and E split one context by role or phase (telephone game); D has nothing to solve."
+    },
+    {
+      "kind": "recall",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. For each statement, say custom loop, Agent S D K, or Managed Agents.",
+      "answer_line": "SAM: Three out of four. Four is Managed Agents with a self-hosted sandbox.",
+      "prompt": "Custom loop, Agent SDK, or Managed Agents? 1) Own tool dispatch, own retries, control of every step. 2) Claude Code's file and shell tools, compaction and subagents, on your own Kubernetes. 3) Three-person team, long-running sessions, no hosting or sandboxes to run. 4) Anthropic runs the loop, but generated code executes in your cloud.",
+      "answer": "1) Custom loop. 2) Agent SDK. 3) Managed Agents. 4) Managed Agents with a self-hosted sandbox."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. A field-service company's operations agent",
+      "answer_line": "SAM: A. It stops the call before it executes, deterministically.",
+      "scenario": "Field-service operations agent",
+      "stem": "An Agent SDK operations agent must never run a destructive command against the production database, whatever a ticket says. What should the developer implement?",
+      "choose": 1,
+      "options": {
+        "A": "A PreToolUse hook on the shell tool that inspects each command and denies destructive ones against production",
+        "B": "A system prompt section, in capitals, listing forbidden commands",
+        "C": "A PostToolUse hook that pages on-call whenever a destructive command has run",
+        "D": "A larger model less likely to follow malicious ticket text"
+      },
+      "correct": [
+        "A"
+      ],
+      "why": "\"Must never\" needs a deterministic control before the call. B is guidance, C is detective, D is a bigger model."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Choose two. A healthcare provider's documentation agent",
+      "answer_line": "SAM: Both. A answers the rule lost in compaction",
+      "scenario": "Long-running documentation agent",
+      "stem": "Choose two. After hours, an Agent SDK agent stops following a formatting rule from the first prompt, and each morning's session spends an hour re-reading records to see what yesterday finished. Which two changes address the causes?",
+      "choose": 2,
+      "options": {
+        "A": "Move the rule into the project CLAUDE.md the SDK loads, re-injected on every request",
+        "B": "Give the agent the memory tool and a progress log read at session start and updated before the end",
+        "C": "Turn compaction off so nothing is summarised",
+        "D": "Raise the maximum number of turns",
+        "E": "Use the largest context window and paste yesterday's full transcript each morning"
+      },
+      "correct": [
+        "A",
+        "B"
+      ],
+      "why": "A survives compaction; B carries state between sessions. C lets the window fill, D fixes a cap neither symptom touches, E is context rot on purpose."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Recall first. Pause and name the five segments, and the giveaway that points to each.",
+      "answer_line": "ALEX: Workflow or agent; subagents; building the agent",
+      "prompt": "Name the five segments, and the giveaway that points to each.",
+      "answer": "Workflow or agent; subagents; building the agent; hooks; memory and context. Same or unpredictable steps; verbose or independent work; who runs the loop; must never; forgets or drifts."
+    }
+  ],
+  "segments": {
+    "In this episode": [
+      "Workflow or agent, from the stem's wording",
+      "When a supervisor with subagents pays for itself",
+      "Own loop, Claude Agent SDK, or Managed Agents",
+      "Hooks for actions that must or must never happen",
+      "Keeping a long-running agent's context clean"
+    ],
+    "Cold open: the claims pipeline": [
+      "Domain 1: Agents and Workflows, 14.7%, about 8 items",
+      "Agent architecture 4.5%",
+      "Agent construction with Claude 5.3%",
+      "Agent patterns and frameworks 4.9%",
+      "Answer style: purpose-built mechanism for the stated constraint"
+    ],
+    "Segment one: workflow or agent": [
+      "Workflow: model and tools on predefined code paths",
+      "Agent: the model directs its own process and tool use",
+      "Simplest first: single call, then workflow, then agent",
+      "Agents cost more and their errors compound",
+      "Chaining, routing, parallel, orchestrator-workers, evaluator-optimizer",
+      "Overnight, cost-first bulk job: the Batch API"
+    ],
+    "Segment two: supervisors and subagents": [
+      "Supervisor decomposes, delegates with scoped tools, combines",
+      "Default: start with a single agent",
+      "Multi-agent: about 3-10x the tokens of one agent",
+      "Split by context, not by role",
+      "Good boundaries: independent paths, clean contracts, blackbox checks"
+    ],
+    "Segment three: building the agent": [
+      "Own loop: tool_use block, run tool, tool_result, repeat",
+      "Agent SDK: Claude Code's harness as a library, in your process",
+      "Built-in tools, compaction, subagents, sessions, hooks",
+      "Managed Agents: Anthropic runs the harness and sessions",
+      "Axis: who runs the loop, and where tools execute",
+      "Loop controls: max turns, max budget"
+    ],
+    "Segment four: hooks for deterministic actions": [
+      "Hooks: your code at fixed points in the agent loop",
+      "Run in your process, cost no context",
+      "PreToolUse: allow, deny, ask, or rewrite input",
+      "PostToolUse: audit, add context, side effects",
+      "Matchers match tool names; check paths inside the hook"
+    ],
+    "Segment five: loops, memory, context and frameworks": [
+      "Context accumulates across turns; context rot",
+      "A bigger window postpones the limit, not the rot",
+      "Subagents isolate; context editing clears old tool results",
+      "Compaction summarises older history near the limit",
+      "Frameworks: Strands, LangGraph, PydanticAI",
+      "Start with the API; understand what a framework sends"
+    ],
+    "Cold open: the verdict": [
+      "Answer: A, a workflow with the order in code",
+      "Supervisor plus subagents: more tokens, order still model-chosen",
+      "Capitals in the prompt: guidance, not a guarantee",
+      "Bigger model: rarer skips, not none",
+      "Tell: \"every claim\", \"the same three steps\""
+    ],
+    "Five to remember": [
+      "Workflow: predefined paths; agent: self-directed, with stopping conditions",
+      "One agent first; subagents for context, parallel work, specialisation",
+      "Own loop for control; Agent SDK on your infra; Managed Agents hosted",
+      "Must always or never: a hook; matchers match tool names",
+      "Manage context: isolate, clear, compact, CLAUDE.md, memory tool"
+    ],
+    "Recap: the exam tells": [
+      "Same steps every case → workflow",
+      "Sources unknown in advance → agent with turn limit or budget",
+      "Session flooded or paths independent → subagent",
+      "Planner, coder, tester on one job → telephone game, keep one agent",
+      "Full loop control → own loop; your servers → Agent SDK; no infra → Managed Agents",
+      "Must never → PreToolUse hook; after-the-fact alert is detective",
+      "Early rule forgotten → CLAUDE.md; fresh start each session → memory tool",
+      "Framework hides prompts → look underneath it"
+    ]
+  }
+}

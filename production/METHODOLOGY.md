@@ -25,7 +25,7 @@ Each series is built for one listener sitting one exam on a fixed date. Every ep
    - sources and the transcript format.
 
    Airtime follows domain weight.
-2. **Fan out the writing.** One agent writes each episode. It gets the bible, its row in the episode list, and the sources for its domain. Episode 00 (game plan) and the final drill each get their own brief.
+2. **Fan out the writing.** `briefs/new-series-writer-brief.md` is the brief for a new series: each agent writes the transcript and its cards file in one pass, with the pushback and three-pass rules applied from the start, and checks both with `render.py --dry-run`, which validates the cards for free. One agent writes each episode. It gets the bible, its row in the episode list, and the sources for its domain. Episode 00 (game plan) and the final drill each get their own brief.
 3. **Review pass.** A second set of agents checks every drill's answer key against the guide, removes claims the sources do not support, and checks the format rules. Fix problems before any audio is made, because audio changes cost credits and text changes do not.
 4. **Pushback pass** (`briefs/pushback-brief.md`). Add five to seven exchanges per episode. In each, the candidate host argues a strong practitioner case for a distractor, and the expert ends on the tell: the word in the question that points to the exam's answer.
 5. **Three passes over each topic** (`briefs/intro-outro-brief.md`). Each topic is covered three times:
@@ -84,5 +84,5 @@ Then commit `docs/` and push.
 ## Adapting to another exam
 
 1. Copy `production/` with an empty `transcripts/`. Write a new bible from the new guide, and a listener profile.
-2. Add the series to `SERIES` in `tools/publish.py`: slug, title, iCloud folder, colour, label and listening order.
+2. Add the series to `SERIES` in `tools/publish.py`: slug, title, iCloud folder, colour, label and listening order. Mark it `"draft": True` until it is rendered: publish then writes only its cover. Add its episode ID prefix to `FOLDERS`.
 3. Follow steps 2 to 7 above. Before writing anything, estimate the credits from the word targets: total characters times 0.2.

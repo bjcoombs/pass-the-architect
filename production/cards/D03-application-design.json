@@ -1,0 +1,182 @@
+{
+  "drills": [
+    {
+      "kind": "mcq",
+      "label": "Cold open",
+      "question_line": "SAM: A developer prototypes a support-reply assistant inside a claude dot ai project",
+      "answer_line": "SAM: Which makes the answer B.",
+      "scenario": "Claude application design",
+      "stem": "A support-reply assistant prototyped in a claude.ai project (project instructions on tone and format, style guide as project knowledge) gives excellent replies. The production version on the Messages API sends each ticket as the user message, and replies are now generic, wrong on format and off on tone. Most likely cause and best fix?",
+      "choose": 1,
+      "options": {
+        "A": "The API runs with a lower temperature; raise it until replies sound less mechanical",
+        "B": "The API call carries none of the project's instructions or knowledge; move them into the system prompt and test through the API",
+        "C": "claude.ai runs a stronger model than the API; switch production to the largest tier",
+        "D": "Add \"use our house style\" to the start of every user message"
+      },
+      "correct": [
+        "B"
+      ],
+      "why": "The API sees only what you send. The project's instructions and style guide, and claude.ai's own system prompt, never reached the production call."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. A platform team ran its issue-triage job",
+      "answer_line": "SAM: A. The rewrite fell from the Claude Code prompt",
+      "scenario": "Agent SDK migration",
+      "stem": "An issue-triage job ran well in CI with claude -p. Rewritten on the Agent SDK with no system prompt option set, it ignores tool guidance it used to follow and is looser with risky commands. Best fix?",
+      "choose": 1,
+      "options": {
+        "A": "Set the claude_code preset and append the team's triage rules",
+        "B": "Copy the triage rules into the repository's CLAUDE.md",
+        "C": "Move the job to the largest model tier",
+        "D": "Pass a custom system prompt string containing only the triage rules"
+      },
+      "correct": [
+        "A"
+      ],
+      "why": "The SDK's minimal default drops the preset's tool and safety guidance. Preset restores it; append adds the rules. B, C, D leave it missing."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Choose two. An insurer's claims app",
+      "answer_line": "SAM: Both. A removes parse failures by construction.",
+      "scenario": "Structured extraction",
+      "stem": "Choose two. A claims app extracts fields from adjusters' notes into JSON. About 1 in 200 responses fails to parse, and some records carry a policy number when the note contains none. Which two changes fix the causes?",
+      "choose": 2,
+      "options": {
+        "A": "Use structured outputs with a JSON schema for the response",
+        "B": "Let the policy number field be null when the note does not state one",
+        "C": "Add \"return only valid JSON\" to the system prompt in capitals",
+        "D": "Retry every failed parse up to five times",
+        "E": "Add a minimum and maximum to the policy number field to reject invented values"
+      },
+      "correct": [
+        "A",
+        "B"
+      ],
+      "why": "A removes parse failures by construction; B gives absent data an honest place to go. C is louder guidance, D catches not fixes, E is unsupported."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Pause here and answer before we go on. For each statement, say true or false.",
+      "answer_line": "SAM: All four. Tags clarify structure",
+      "prompt": "True or false? 1. XML tags around a retrieved web page make its instructions safe to follow. 2. Long documents belong near the top, above the question. 3. Structured outputs guarantee extracted values are factually correct. 4. With a refusal or max_tokens stop reason, output may not match the schema.",
+      "answer": "1 False: tags clarify structure, not trust. 2 True. 3 False: shape, not truth. 4 True: check stop_reason before parsing."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. A developer has spent an afternoon",
+      "answer_line": "SAM: That is the compensating fix that keeps the cause.",
+      "scenario": "Claude Code session hygiene",
+      "stem": "One Claude Code session: a database migration, then a CSS question, then back to the migration. Claude has been corrected three times on the same migration error and keeps bringing it back. Best next step?",
+      "choose": 1,
+      "options": {
+        "A": "/clear and start again with a more specific prompt that includes what the corrections taught",
+        "B": "Add the correction to CLAUDE.md in capitals",
+        "C": "/compact so the session has room to keep going",
+        "D": "Switch the session to a larger model"
+      },
+      "correct": [
+        "A"
+      ],
+      "why": "Compaction condenses failed attempts and an unrelated thread. After two failed corrections: clear and write a better prompt."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Choose two. A hospital group's business requirement",
+      "answer_line": "SAM: Both. B comes from the architecture",
+      "scenario": "Understanding requirements",
+      "stem": "Choose two. Business requirement: discharge summaries drafted within two minutes of a clinician signing the final note. Architecture: all patient data stays inside the group's AWS environment. Which two are infrastructure requirements?",
+      "choose": 2,
+      "options": {
+        "A": "Each summary lists medications, follow-up appointments and pending results",
+        "B": "Claude is reached through Amazon Bedrock in the group's AWS environment",
+        "C": "A clinician approves every summary before it reaches the record",
+        "D": "The draft is ready within two minutes of signing, at peak volume",
+        "E": "Summaries are written in plain language for the patient"
+      },
+      "correct": [
+        "B",
+        "D"
+      ],
+      "why": "B: platform and data location from the architecture. D: latency at stated load. A, E are content and C is workflow: all functional."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Recall first. Pause and name the four segments",
+      "answer_line": "ALEX: One model across five surfaces",
+      "prompt": "Name the four segments, and the question that ran under the first half.",
+      "answer": "Surfaces, content boundaries and schemas, sessions and plugins, requirements and life cycle. What else is in the context besides what I wrote?"
+    }
+  ],
+  "segments": {
+    "In this episode": [
+      "Read one instruction across API, Agent SDK, Claude Code, claude.ai, Desktop",
+      "Keep instructions and data apart; schemas that parse and don't force invention",
+      "Clean sessions and the right plugin scope",
+      "Business requirements into functional and infrastructure requirements",
+      "Place a problem in the systems life cycle"
+    ],
+    "Cold open: it worked in the chat": [
+      "Skills: application design 8.6%, requirements 3.4%, life cycle 2.8%",
+      "Ask: what else is in the context besides what you wrote?",
+      "Claude Code: CLAUDE.md is context, not enforced configuration",
+      "\"Must never\" or \"every time\": a PreToolUse hook or a deny rule",
+      "Agent SDK: three system prompt starting points",
+      "Current models follow instructions precisely: ask explicitly, say why"
+    ],
+    "Content boundaries and schemas": [
+      "XML tags separate instructions, context, examples and input",
+      "Several documents: a documents tag, each with source and content",
+      "Anything you did not write is data, never trusted instruction",
+      "Schemas: what constrained decoding guarantees, and what it cannot",
+      "Enums with \"other\"; descriptions on every field",
+      "No numeric min/max or string lengths: range-check in code"
+    ],
+    "Sessions and plugins": [
+      "Context fills fast and performance degrades as it fills",
+      "/compact with instructions; subagents for investigation",
+      "Checkpoints track only Claude's file edits: an undo, not git",
+      "API is stateless: your code owns and separates each user's history",
+      "Plugins bundle skills, agents, hooks and MCP servers",
+      "Scopes: user, project (.claude/settings.json), local (settings.local.json)"
+    ],
+    "Requirements and the life cycle": [
+      "Business requirements say why; solution architecture says where",
+      "Functional: what the system does",
+      "Infrastructure: what the system runs on and within",
+      "Every requirement traces to the statement that produced it",
+      "Life cycle: develop, implement, operate, maintain; agile loops the same activities",
+      "Operate monitors; maintain handles model deprecation with eval reruns"
+    ],
+    "Cold open: the verdict": [
+      "Answer: B, the API call never saw the project's instructions or style guide",
+      "claude.ai's system prompt does not apply to the API",
+      "A changes randomness, not missing instructions",
+      "C blames the model for missing context; D is one line for a style guide",
+      "Tell: two surfaces in one stem: what did the first add?"
+    ],
+    "Five to remember": [
+      "API sees only your system prompt, messages and tools",
+      "CLAUDE.md is context; SDK default is minimal, preset + append keeps Claude Code's",
+      "Tag instructions apart; untrusted text is data; schemas guarantee shape, allow null",
+      "/clear between tasks and after two failed corrections; local plugin scope wins",
+      "Functional vs infrastructure requirements; deprecation is maintenance, rerun evals"
+    ],
+    "Recap: the exam tells": [
+      "Worked in claude.ai, fails via API → what the chat added",
+      "\"Must never\" in Claude Code → hook or permission rule",
+      "SDK rewrite lost CLI behaviour → claude_code preset with append",
+      "Parse failures → structured outputs",
+      "Invented values → required field with no null",
+      "Mixed tasks or repeated mistake → /clear and a better prompt",
+      "One person wants a team plugin off → local scope",
+      "Platform, latency, data location, cost → infrastructure; deprecation → maintenance"
+    ]
+  }
+}

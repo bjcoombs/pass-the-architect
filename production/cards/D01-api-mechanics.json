@@ -1,0 +1,175 @@
+{
+  "drills": [
+    {
+      "kind": "mcq",
+      "label": "Cold open",
+      "question_line": "SAM: A retail chain's support assistant sends the same eight thousand tokens",
+      "answer_line": "SAM: So the answer is B: move the breakpoint",
+      "scenario": "Prompt caching",
+      "stem": "A support assistant sends the same 8,000-token returns policy in its system prompt on every request. The developer put a cache_control breakpoint on the final user message, which begins with the current timestamp. Every response shows cache_creation_input_tokens; cache_read_input_tokens is always 0. What should the developer change?",
+      "choose": 1,
+      "options": {
+        "A": "Switch the breakpoint to the 1-hour cache lifetime",
+        "B": "Move the breakpoint to the last block of the system prompt, the end of the identical content",
+        "C": "Call the token counting endpoint first to confirm the prompt meets the minimum cacheable length",
+        "D": "Shorten the policy text until the cost is acceptable"
+      },
+      "correct": [
+        "B"
+      ],
+      "why": "The timestamp changes the hash at the breakpoint, so it never matches. A treats hashing as expiry at 2x write cost; C is already answered by the creation tokens; D cuts required content."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. A field-service company's agent",
+      "answer_line": "SAM: That's the blunt cut.",
+      "scenario": "Thinking with tool use",
+      "stem": "An agent uses thinking and tools. To cut input tokens, the code deletes thinking blocks from each assistant message before sending tool results back. The agent's multi-step reasoning has degraded. What is the best fix?",
+      "choose": 1,
+      "options": {
+        "A": "Pass the thinking blocks back complete and unmodified, alongside their tool_use blocks",
+        "B": "Raise the effort level so Claude rebuilds its reasoning from the tool results",
+        "C": "Copy the thinking text into a text block so the reasoning stays in context",
+        "D": "Turn thinking off for every request that carries tool results"
+      },
+      "correct": [
+        "A"
+      ],
+      "why": "A tool result continues the same response, so its reasoning must be present. C edits it (the API rebuilds from the signature); B pays to replace what was thrown away; D is a blunt cut."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Choose two. A healthcare company moves",
+      "answer_line": "SAM: Both. A matches how Bedrock authenticates.",
+      "scenario": "Third-party platforms",
+      "stem": "Choose two. A document-intake service moves from the first-party Claude API to Amazon Bedrock so patient data stays in the AWS account. Requests that reference scanned forms by URL now fail, and the Anthropic API key is rejected. Which two changes fit?",
+      "choose": 2,
+      "options": {
+        "A": "Authenticate with AWS credentials through IAM instead of the Anthropic API key",
+        "B": "Send the scanned forms as base64 image data instead of URL sources",
+        "C": "Route the image requests back through the first-party API and keep the rest on Bedrock",
+        "D": "Rewrite the prompts, because Bedrock needs a different prompt format",
+        "E": "Raise max_tokens so the image tokens fit"
+      },
+      "correct": [
+        "A",
+        "B"
+      ],
+      "why": "Bedrock uses AWS identity and accepts base64 image sources only. C breaks the data-in-AWS constraint; D invents a problem; E answers a ceiling nothing hit."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. A public-sector team batch-processes",
+      "answer_line": "SAM: A. Results come back in any order",
+      "scenario": "Message Batches API",
+      "stem": "A team batch-processes 20,000 benefit applications nightly. Its code writes results in download order, assuming it matches submission order. Auditors find summaries attached to the wrong applications. What fixes it?",
+      "choose": 1,
+      "options": {
+        "A": "Set each request's custom_id to the application ID and match every result on it",
+        "B": "Submit smaller batches so that order is preserved",
+        "C": "Sort the results by completion time before writing them",
+        "D": "Switch to synchronous calls so each response returns to the code that sent it"
+      },
+      "correct": [
+        "A"
+      ],
+      "why": "Batch results arrive in any order; custom_id is the join key. B and C rely on an order nobody promised; D gives up the 50% batch discount."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Pause here and answer before we go on. For each statement, say true or false.",
+      "answer_line": "ALEX: False, false, true, true.",
+      "prompt": "True or false? 1: On a cache hit, input_tokens counts everything Claude read. 2: A cached prefix below the model's minimum returns an error. 3: Editing one tool's description also invalidates the cached system prompt and messages. 4: On most models, cache reads don't count toward the ITPM rate limit.",
+      "answer": "1 false (only tokens after the last breakpoint). 2 false (silently uncached, both cache fields 0). 3 true (tools lead the prefix). 4 true (caching raises throughput)."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Recall first. Pause and name the five segments.",
+      "answer_line": "ALEX: Messages and tools; streaming, vision and thinking",
+      "prompt": "Name the five segments.",
+      "answer": "Messages and tools; streaming, vision and thinking; data access and cloud platforms; realtime or batch; tokens and caching."
+    }
+  ],
+  "segments": {
+    "In this episode": [
+      "Read a response by its stop reason; close a tool call",
+      "When to stream, how to send an image, what to do with thinking",
+      "How data reaches Claude, and calling it through a cloud platform",
+      "Realtime or batch",
+      "Track tokens, model cost, place cache breakpoints that hit"
+    ],
+    "Cold open: the cache that never hits": [
+      "Same 8,000-token policy on every request",
+      "Breakpoint on a user message that starts with a timestamp",
+      "Writes every request, reads always zero",
+      "API mechanics 6.8% + cost and token management 2.8%: about five items"
+    ],
+    "Segment one: messages and tools": [
+      "Stateless: every request carries the full history",
+      "Required: model, max_tokens, messages; system is a top-level field",
+      "stop_reason: end_turn, max_tokens, stop_sequence, tool_use, pause_turn, refusal",
+      "tool_result with matching tool_use_id, first in the next user message; is_error for failures",
+      "tool_choice: auto (default), any, tool, none; client vs server tools",
+      "Tool definitions are input tokens on every request"
+    ],
+    "Segment two: streaming, vision and thinking": [
+      "SSE: message_start, content_block start/delta/stop, message_delta, message_stop",
+      "Tool input streams as partial JSON: parse at content_block_stop",
+      "Streaming fixes perceived latency and long-request timeouts, not cost",
+      "Images: base64, URL or Files API file_id; JPEG, PNG, GIF, WebP; image first",
+      "Thinking tokens billed as output and count toward max_tokens",
+      "Adaptive thinking + effort; manual budget_tokens ≥ 1,024 and < max_tokens"
+    ],
+    "Segment three: data in, and where you call from": [
+      "Inline, by reference (URL, file_id), on demand (tools, MCP connector), history",
+      "Files API: upload once, reference many times; 32 MB request limit",
+      "Uploaded files are visible to the whole workspace",
+      "Live data: a tool. Same big document: context plus caching",
+      "Bedrock, Vertex AI, Foundry: data stays inside your cloud's boundary",
+      "Model IDs and features differ by platform: check the feature list"
+    ],
+    "Segment four: realtime or batch": [
+      "Up to 100,000 requests or 256 MB per batch",
+      "Most finish within an hour; expire at 24 hours; results kept 29 days",
+      "50% off input and output; no streaming",
+      "succeeded, errored, canceled, expired: only succeeded is billed",
+      "Validation is async: test one request shape on the Messages API first",
+      "Customer waiting: realtime. Overnight, cost first: batch"
+    ],
+    "Segment five: counting tokens and caching": [
+      "usage: input, output, cache creation and cache read tokens",
+      "Token counting endpoint: free estimate, same inputs as a Messages call",
+      "Output about 5x input; cache write 1.25x (5 min) or 2x (1 hour); read about 0.1x",
+      "Up to 4 breakpoints; writes only at a breakpoint; 20-block lookback",
+      "Checkpoints: separate breakpoints for parts that change at different rates",
+      "5-minute entries refresh free on each hit; 1 hour for longer gaps"
+    ],
+    "Cold open: the verdict": [
+      "Answer: B, breakpoint on the last block that stays identical",
+      "The timestamp changes the hash, so nothing ever matches",
+      "One-hour lifetime: twice the write cost, still no hits",
+      "Creation tokens already prove the prefix was long enough",
+      "Shortening the policy cuts content the assistant needs"
+    ],
+    "Five to remember": [
+      "Stateless: send history; read stop_reason first; max_tokens means raise the ceiling",
+      "tool_result with the same ID, first, is_error for failures; thinking blocks back unmodified",
+      "Stream for perceived latency and timeouts, not cost; parse tool JSON at block stop",
+      "Live data: tool. Same document: cache. Same file: Files API. Cloud boundary: that cloud's platform",
+      "Batch: half price, up to 24 hours, custom_id. Breakpoint on the last stable block"
+    ],
+    "Recap: the exam tells": [
+      "Answers end mid-sentence → check for a max_tokens stop reason",
+      "Tool failed → tool_result with is_error: true",
+      "Blank screen → stream",
+      "Reasoning degraded after token trimming → stripped thinking blocks",
+      "Data changes during the day → a tool; same file every turn → Files API",
+      "Data must stay in the cloud → that platform, cloud credentials, base64 images",
+      "Overnight and cost first → batch on custom_id; customer waiting → realtime",
+      "Cache reads at zero → breakpoint on changing content; tiny input_tokens → add cache fields"
+    ]
+  }
+}

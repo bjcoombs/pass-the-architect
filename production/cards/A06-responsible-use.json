@@ -1,0 +1,161 @@
+{
+  "drills": [
+    {
+      "kind": "mcq",
+      "label": "Cold open",
+      "question_line": "SAM: Here is your opening item. A recruiter has two hundred applications",
+      "answer_line": "SAM: It cannot guarantee the outcome",
+      "scenario": "Recruiter, two hundred applicants",
+      "stem": "A recruiter wants Claude to rank 200 applications and automatically reject the bottom half. Hiring policy requires decisions against the published criteria. What is the most appropriate approach?",
+      "choose": 1,
+      "options": {
+        "A": "Go ahead: Claude ranks well and it saves days",
+        "B": "Go ahead, but instruct Claude to be fair and ignore gender, age and ethnicity",
+        "C": "Claude summarises against published criteria; recruiter makes every decision; check the shortlist for bias patterns",
+        "D": "Do not use Claude anywhere in hiring"
+      },
+      "correct": [
+        "C"
+      ],
+      "why": "An instruction cannot guarantee the outcome and nobody would know if it failed. A person owns each decision, and checking the set catches bias no single summary shows."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Pause here and answer before we go on. Four statements, each with a dropdown",
+      "answer_line": "SAM: Three out of four.",
+      "prompt": "For each, choose: appropriate; appropriate with human review before it goes out; or not appropriate. 1. Brainstorming names for an internal newsletter. 2. Summarising a patient's history for a clinician. 3. Writing five-star customer reviews for the product page. 4. Drafting a reply to a customer charged twice.",
+      "answer": "1. Appropriate. 2. With review, by the clinician. 3. Not appropriate: deceptive. 4. With review: it goes to a customer and admits or disputes a billing error."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Choose two. A logistics analyst wants Claude to find patterns",
+      "answer_line": "SAM: C is right. D is a comfort control",
+      "scenario": "Late deliveries with personal data",
+      "stem": "A logistics analyst wants patterns in late deliveries by region and time slot. The export holds customer names, mobile numbers and addresses, plus region, time slot and minutes late. Policy restricts sharing customer personal data. Which two steps are most appropriate?",
+      "choose": 2,
+      "options": {
+        "A": "Replace customer names with reference codes, so a pattern can be traced back internally",
+        "B": "Upload to a personal account to skip a week-long approval",
+        "C": "Remove mobile numbers, addresses and other columns the analysis does not need",
+        "D": "Use an incognito chat so the data is not kept",
+        "E": "Upload as is and ask Claude to delete it afterwards"
+      },
+      "correct": [
+        "A",
+        "C"
+      ],
+      "why": "Only the data the task needs. Incognito governs memory and history, not what policy allows; an instruction to delete is not a control."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. A marketing coordinator realises she pasted",
+      "answer_line": "SAM: C. Deleting the chat takes it off her list",
+      "scenario": "Customer list pasted against policy",
+      "stem": "A marketing coordinator realises she pasted a customer list with names and emails into a chat in the company workspace, against the policy for that data. What is the best next action?",
+      "choose": 1,
+      "options": {
+        "A": "Delete the chat and carry on",
+        "B": "Ask Claude to forget the list",
+        "C": "Stop using the data and report it through the policy's incident process",
+        "D": "Do nothing, since the workspace is approved"
+      },
+      "correct": [
+        "C"
+      ],
+      "why": "Deleting the chat does not settle what happened; data-protection owners decide what follows. An approved tool is not an approved use."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. A company's I T team has built a customer chat assistant",
+      "answer_line": "SAM: C. Presenting an A I as a named human",
+      "scenario": "Chat assistant posing as Sarah",
+      "stem": "IT has built a customer chat assistant on Claude. Marketing wants it to introduce itself as Sarah from the support team, because customers seem to prefer people. What is the most appropriate response?",
+      "choose": 1,
+      "options": {
+        "A": "Agree, since customer satisfaction is the goal",
+        "B": "Agree, and mention AI use in the terms of service",
+        "C": "It says clearly it is an AI and offers a route to a person; raise the request through governance",
+        "D": "Advise switching the assistant off"
+      },
+      "correct": [
+        "C"
+      ],
+      "why": "Presenting an AI as a named human misleads the customer; disclosure is the control. B hides it; D abandons a working assistant."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Your turn first. Pause and name the four tasks we covered, and the distractor each one invites. [pause]",
+      "answer_line": "ALEX: Use cases: abandoning the task.",
+      "prompt": "Name the four tasks we covered, and the distractor each one invites.",
+      "answer": "Use cases: abandoning the task. Data: uploading as is, or trusting a setting. Policy: treating silence as permission. Ethics: an instruction standing in for a check, or hiding the AI."
+    }
+  ],
+  "segments": {
+    "In this episode": [
+      "Sort a use case by its risk",
+      "Strip data to what the task needs",
+      "What policy decides, and what to do when it is silent",
+      "Bias, deception, and decisions nobody owns"
+    ],
+    "Cold open: two hundred applicants": [
+      "15%, about 9 of 60 items",
+      "4 tasks: use cases, data, policy, ethics",
+      "The diligent, proportionate step",
+      "3 distractor families: as if nothing were sensitive, abandon, model promise"
+    ],
+    "Appropriate and inappropriate use": [
+      "Ask: what if it's wrong, and to whom?",
+      "Higher stakes: decisions about people, public output",
+      "Qualified means able to catch that field's errors",
+      "Deceptive or harmful uses are out whatever the case",
+      "\"Do not use\" is a distractor family"
+    ],
+    "Data sensitivity, regulation and privacy": [
+      "Classes: public, internal, confidential, regulated personal",
+      "Minimum necessary: drop, code or aggregate",
+      "The approved workspace, not a personal account",
+      "Instructions to the model are not policy controls",
+      "Incognito: out of memory and history, not out of governance"
+    ],
+    "Organisational AI policy": [
+      "Policy decides tools, data, review, disclosure, reporting",
+      "Admins configure; you work inside it",
+      "Silence is not permission",
+      "Low-stakes internal work vs restricted data, customers, people",
+      "Something went wrong: the policy's reporting route"
+    ],
+    "Ethics": [
+      "4 ideas: bias, transparency, accountability, honesty",
+      "Performance-review summaries: the bias was in the input",
+      "Not every draft needs a bias check",
+      "Disclose when the reader would act differently",
+      "\"Claude wrote it\" is no defence"
+    ],
+    "Cold open: the verdict": [
+      "Answer: C, summaries against criteria, the recruiter decides, check the pattern",
+      "An instruction to be fair cannot guarantee the outcome",
+      "Nobody would know if the instruction failed",
+      "A: an automatic cut that nobody owns; D: abandons the task",
+      "Tell: \"automatically reject\""
+    ],
+    "Five to remember": [
+      "Judge by what happens if it's wrong; deceptive uses are out",
+      "Don't abandon a task a control can make safe",
+      "Minimum data in the approved workspace; instructions and incognito aren't controls",
+      "Silence is not permission; report incidents by the policy's route",
+      "Bias across the set, disclose AI, a person owns every output"
+    ],
+    "Recap: the exam tells": [
+      "Automatic decision about a person → human back in, check the pattern",
+      "\"Skip it\" or \"stop using Claude\" → distractor unless prohibited",
+      "\"Policy restricts\" → strip or code fields before upload",
+      "\"Tell Claude not to keep it\" or incognito → comfort control",
+      "Policy silent → ask the owner; gone wrong → report it",
+      "Reader would believe a human did it → disclose",
+      "Each output fine alone → compare the set"
+    ]
+  }
+}

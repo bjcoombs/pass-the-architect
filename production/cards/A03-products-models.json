@@ -1,0 +1,148 @@
+{
+  "drills": [
+    {
+      "kind": "mcq",
+      "label": "Cold open",
+      "question_line": "SAM: An operations lead is preparing a quarterly review of five logistics vendors.",
+      "answer_line": "SAM: That is the miss: a model answer to a feature question. The answer is B.",
+      "scenario": "Operations: vendor review",
+      "stem": "An operations lead needs a one-page comparison of five vendors' public announcements from the last three months, drawn from many current web sources. Her director will edit it before it goes to leadership. Which approach fits best?",
+      "choose": 1,
+      "options": {
+        "A": "A standard chat on Opus, asking it to list everything it knows about each vendor",
+        "B": "Turn on research with web search, then produce the comparison as an artifact to edit and share",
+        "C": "Use Haiku for speed, pasting each vendor's home page into one long chat",
+        "D": "Create a Project with last year's vendor review as knowledge and ask for this year's"
+      },
+      "correct": ["B"],
+      "why": "\"Many current sources\" is research; \"will edit and share\" is an artifact. A bigger model cannot see recent news; last year's review is the wrong year."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. A recruitment partner screens candidates every week",
+      "answer_line": "SAM: That is the distractor that looks efficient.",
+      "scenario": "HR: weekly screening",
+      "stem": "A recruitment partner screens candidates weekly for the same three roles, pasting the job descriptions and interview guidelines into each new chat, and sometimes forgets one. What should she do?",
+      "choose": 1,
+      "options": {
+        "A": "Keep one very long chat for all screening so the files stay in it",
+        "B": "Create a Project with the files as knowledge and instructions for the screening notes",
+        "C": "Turn on research so Claude finds the job descriptions itself",
+        "D": "Switch to Opus so Claude remembers the requirements better"
+      },
+      "correct": ["B"],
+      "why": "Repeated work with the same files is a Project. A long chat drifts; research searches the web, not internal files; no model remembers files it was not given."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Choose two. Which two pairings of model and task",
+      "answer_line": "SAM: Both right. A is high-volume, simple work",
+      "scenario": "Model selection",
+      "stem": "Choose two. Which two pairings of model and task fit the guidance?",
+      "choose": 2,
+      "options": {
+        "A": "Haiku to tag 2,000 survey comments by theme for a weekly dashboard",
+        "B": "Opus to reformat a list of dates into a single style",
+        "C": "Sonnet as the starting point for a client proposal when unsure which model to use",
+        "D": "Haiku for a multi-step analysis of conflicting obligations across three contracts",
+        "E": "Opus for every reply in a shared customer inbox, to maximise quality"
+      },
+      "correct": ["A", "C"],
+      "why": "High-volume simple work suits Haiku; Sonnet is the start point when unsure. B and E overspend; D is a false economy on multi-step reasoning."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. A finance analyst has spent three hours",
+      "answer_line": "SAM: C. The chat is anchored on stale numbers",
+      "scenario": "Finance: long chat",
+      "stem": "After three hours reworking a budget variance analysis in one chat, with figures changed twice, Claude keeps quoting the first, superseded numbers. What is the best next step?",
+      "choose": 1,
+      "options": {
+        "A": "Switch to Opus in the same chat",
+        "B": "Keep going and restate the correct figures at the top of every message",
+        "C": "Ask for a summary of the current figures and decisions, check it, and start a new chat with it",
+        "D": "Turn on research so Claude can find the right figures"
+      },
+      "correct": ["C"],
+      "why": "Stale context, work continuing: summarise, verify, carry over. A keeps the stale context; B fights it every turn; D searches the web for internal figures."
+    },
+    {
+      "kind": "recall",
+      "label": "Dropdown",
+      "question_line": "SAM: One more, in the dropdown style. Pause here and answer before we go on.",
+      "answer_line": "SAM: Four is summarise and carry over.",
+      "prompt": "For each, choose restart, summarise and carry over, or persist. 1: long pay-review chat done; next, an unrelated offsite agenda. 2: proposal chat near its limit; pricing section still to do. 3: same client glossary needed in every chat for six months. 4: unfinished policy draft keeps returning to an assumption corrected an hour ago.",
+      "answer": "1 restart. 2 summarise and carry over. 3 persist in Project knowledge. 4 summarise and carry over, stating the correction."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Recall first. Pause and name the three things this episode taught you to choose between.",
+      "answer_line": "ALEX: Chat, Projects, research and artifacts. Haiku, Sonnet and Opus.",
+      "prompt": "Name the three things this episode taught you to choose between.",
+      "answer": "Chat, Projects, research or artifacts; Haiku, Sonnet or Opus; restart, summarise or persist."
+    }
+  ],
+  "segments": {
+    "In this episode": [
+      "Pick a feature: chat, Project, research or artifact",
+      "Match Haiku, Sonnet or Opus to cost, speed and quality",
+      "Long or stale chat: restart, summarise or persist",
+      "Domain 3: 12%, about seven items"
+    ],
+    "Cold open: the vendor review": [
+      "Five vendors, last three months, many current sources",
+      "Director edits the page before leadership sees it",
+      "Four objectives: features, model families, model fit, context and memory",
+      "Underneath: what does the task need, and the smallest tool that meets it?"
+    ],
+    "Segment one: chat, Projects, research and artifacts": [
+      "Chat: one-off work, nothing carries over",
+      "Project: own chats and knowledge base, instructions set once",
+      "Research: several linked searches; needs web search; uses limits faster",
+      "Artifact: substantial, self-contained, typically over 15 lines, edited or reused",
+      "Tell: \"in depth\", \"many sources\" vs \"quick\", \"one fact\""
+    ],
+    "Segment two: Haiku, Sonnet and Opus": [
+      "Haiku: fastest, lightest on usage; simple, high-volume work",
+      "Sonnet: the daily driver; start here when unsure",
+      "Opus: deep, sustained reasoning; uses more of your limits",
+      "Highest thinking setting only for the hardest problems",
+      "Budget is one constraint of three: cost, speed, quality",
+      "Wrong output: diagnose before switching model"
+    ],
+    "Segment three: restart, summarise or persist": [
+      "Context window: large but finite",
+      "Paid plans with code execution: earlier messages summarised near the limit",
+      "Longer chats that trigger this use more of your limit",
+      "Memory: view and edit it in settings; each project has its own",
+      "Incognito chats are not saved to memory",
+      "Context is not shared across chats in a project unless in knowledge"
+    ],
+    "Cold open: the verdict": [
+      "Training knowledge cannot see the last three months",
+      "A model answer to a feature question is the miss",
+      "Haiku plus manual pasting is not an investigation",
+      "Tell: \"many current web sources\" and \"will edit\""
+    ],
+    "Five to remember": [
+      "Chat one-off, Project repeated, research in depth, artifact to edit or share",
+      "Haiku fast and light, Sonnet default, Opus deep reasoning",
+      "Match, not maximise: overspend and false economy both lose",
+      "Restart for a new task; summarise and carry over to continue",
+      "Needed in every chat: Project knowledge or instructions"
+    ],
+    "Recap: the exam tells": [
+      "\"Every week\", same files → Project",
+      "\"In depth\", \"many sources\", \"current\" → research",
+      "Edited, reused or shared → artifact",
+      "\"High volume\", \"short\", \"speed matters\" → faster, lower-cost model",
+      "\"Multi-step\", \"conflicting\", \"nuanced\" → Opus; \"not sure\" → Sonnet",
+      "\"Most capable\" on a simple task → overspend",
+      "Anchored on old figures, work goes on → summarise, check, carry over",
+      "Everyone needs it every time → persist in the Project"
+    ]
+  }
+}
