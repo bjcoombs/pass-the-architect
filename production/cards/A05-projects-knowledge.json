@@ -1,0 +1,157 @@
+{
+  "drills": [
+    {
+      "kind": "mcq",
+      "label": "Cold open",
+      "question_line": "SAM: A marketing coordinator at a company on a Team plan",
+      "answer_line": "SAM: Right. The answer is B.",
+      "scenario": "Marketing: missing connector",
+      "stem": "On a Team plan, a marketing coordinator wants her campaign Project to use brand guidelines and briefs kept in the company's Google Drive. The Google Drive connector is not available to her. What is the most appropriate action?",
+      "choose": 1,
+      "options": {
+        "A": "Download the files each week and upload them to the Project by hand",
+        "B": "Ask the Owner or Primary Owner to enable the Google Workspace connectors for the organisation",
+        "C": "Connect her Drive through a personal Claude account instead",
+        "D": "Paste the Drive folder's link into the chat and ask Claude to open it"
+      },
+      "correct": ["B"],
+      "why": "On Team and Enterprise, an Owner or Primary Owner enables the connectors at org level. A is a weekly chore with stale snapshots; C leaves the org's controls; D has no connection."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. A sales lead sets up a shared Project",
+      "answer_line": "SAM: B. It is a rule for how Claude behaves in every chat in this Project",
+      "scenario": "Sales: proposal Project",
+      "stem": "A sales lead sets up a shared Project for her team's proposals. Every proposal must follow a five-section structure and use British spelling. Where should that requirement go?",
+      "choose": 1,
+      "options": {
+        "A": "In her own profile settings, so Claude always writes that way for her",
+        "B": "In the Project's instructions, so it applies to every chat in the Project",
+        "C": "In a note at the top of each proposal chat",
+        "D": "In an uploaded \"style notes\" document, with no instructions pointing to it"
+      },
+      "correct": ["B"],
+      "why": "A behaviour rule for every chat and every user of the Project is a project instruction. Profile settings reach only her; notes rely on memory; D is reference, not a rule."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Choose two. An HR partner's policy Project",
+      "answer_line": "SAM: Half right. A is in.",
+      "scenario": "HR: stale policy",
+      "stem": "Choose two. An HR policy Project keeps quoting old parental leave terms. The handbook was updated in Google Drive two weeks ago; the knowledge holds a PDF exported last spring. Which two actions fix this?",
+      "choose": 2,
+      "options": {
+        "A": "Add the handbook from Google Drive, so the linked Google Doc keeps syncing",
+        "B": "Remove the old PDF from the Project's knowledge",
+        "C": "Switch the Project to Opus",
+        "D": "Add an instruction saying \"always use the latest policy\"",
+        "E": "Turn on research for policy questions"
+      },
+      "correct": ["A", "B"],
+      "why": "One current, syncing source and nothing stale beside it. D is a polite instruction with the old copy still retrievable; C is the bigger-model reflex; E searches the web."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. A consultant's Project instructions read",
+      "answer_line": "SAM: Good instinct to check, but here the length is doing work.",
+      "scenario": "Consulting: weak instructions",
+      "stem": "A consultant's Project instructions read \"You are helpful. Be accurate.\" Outputs vary in format and sometimes cite an old engagement letter still in the knowledge. What is the best fix?",
+      "choose": 1,
+      "options": {
+        "A": "Rewrite \"be accurate\" in capitals and add \"never make mistakes\"",
+        "B": "State role, audience, format and authoritative sources, add a fallback rule, and remove the old letter",
+        "C": "Paste the text of every knowledge file into the instructions",
+        "D": "Start each chat in research mode"
+      },
+      "correct": ["B"],
+      "why": "A stated format fixes the drift; naming the authority and removing the stale letter fixes the citation. A is louder guidance; C bloats and keeps the stale file; D searches the web."
+    },
+    {
+      "kind": "recall",
+      "label": "Dropdown",
+      "question_line": "SAM: One more, in the dropdown style. Pause here and answer before we go on.",
+      "answer_line": "SAM: All four. One never changes",
+      "prompt": "For each, choose upload, connect, or hold and check policy. 1: a signed master services agreement that will not change. 2: a weekly pricing sheet in Google Drive. 3: this week's client emails, to summarise actions. 4: an HR export with home addresses and salaries, where policy restricts personal data.",
+      "answer": "1 upload. 2 connect via Google Drive. 3 connect Gmail. 4 hold and check policy; remove or anonymise personal details first."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Recall first. Pause and name the four segments, and the question that ran under all of them.",
+      "answer_line": "ALEX: Instructions and knowledge, uploads and connectors",
+      "prompt": "Name the four segments, and the question that ran under all of them.",
+      "answer": "Instructions and knowledge; uploads and connectors; instructions that work; keeping it current. Where does each piece belong, and who keeps it current?"
+    }
+  ],
+  "segments": {
+    "In this episode": [
+      "Split a Project into instructions and knowledge",
+      "Choose upload or connector: Google Drive, Gmail",
+      "Rewrite weak project instructions",
+      "Keep a shared Project current",
+      "Domain 5: 12%, about seven items"
+    ],
+    "Cold open: the missing connector": [
+      "Team plan, brand files in Google Drive",
+      "Connector not available to her; launch is Friday",
+      "Four objectives: configure, manage sources, instructions, maintain",
+      "Underneath: where does each piece belong, and who keeps it current?"
+    ],
+    "Segment one: instructions and knowledge": [
+      "Instructions: how Claude behaves in every chat in the Project",
+      "Knowledge: documents, text and code used across the Project's chats",
+      "Profile settings apply to all your conversations; project instructions to one Project",
+      "Paid plans: retrieval near the context limit, up to 10x capacity",
+      "Curate: one current version, nothing superseded",
+      "Keep instructions concise; limit active tools and connectors"
+    ],
+    "Segment two: uploads and connectors": [
+      "Upload holds the version you uploaded",
+      "Linked Google Doc keeps syncing with Drive",
+      "Drive: Sheets, Slides, PDFs, Office; embedded images not processed",
+      "Claude opens only what your Google account can access",
+      "Gmail: search, read, draft; attachment details, not content",
+      "Scope connectors to the Project's job"
+    ],
+    "Segment three: instructions that work": [
+      "\"Be helpful, be accurate\" gives Claude nothing to act on",
+      "Role and audience; task and format",
+      "Which knowledge is authoritative, and for what",
+      "Fallback: say so when knowledge does not cover it",
+      "Behaviour rules in instructions; reference material in knowledge"
+    ],
+    "Segment four: keeping it current": [
+      "Name an owner",
+      "Update knowledge and instructions when a source changes",
+      "Retest with standard questions after a change",
+      "Shared Projects: \"can view\" and \"can edit\"",
+      "Users report; the owner updates"
+    ],
+    "Cold open: the verdict": [
+      "Weekly manual uploads: snapshots that go stale",
+      "Org-level connectors are enabled by the Owner or Primary Owner",
+      "A personal account sits outside the organisation's controls",
+      "A pasted link is not a connection",
+      "Tell: \"not available to her\" on Team or Enterprise"
+    ],
+    "Five to remember": [
+      "Instructions = behaviour; knowledge = what it knows; profile = only you",
+      "Retrieval expands capacity; curate to one current version",
+      "Upload what never changes; connect what does",
+      "Role, audience, format, authority, fallback; manuals in knowledge",
+      "Owner, update on change, retest, edit access for maintainers"
+    ],
+    "Recap: the exam tells": [
+      "Rule for every chat in a shared Project → project instructions",
+      "One person's preference everywhere → profile settings",
+      "Quotes an old version → link the live source, remove the stale file",
+      "Changes weekly → connect; never changes → upload",
+      "Connector missing on a Team plan → Owner or Primary Owner",
+      "\"Be helpful, be accurate\" → role, format, authority, fallback",
+      "Manual pasted into instructions → move it to knowledge",
+      "Shared Project keeps drifting → owner, edit access, retest"
+    ]
+  }
+}

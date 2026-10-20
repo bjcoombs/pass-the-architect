@@ -1,0 +1,161 @@
+{
+  "drills": [
+    {
+      "kind": "mcq",
+      "label": "Cold open",
+      "question_line": "SAM: A retail team's service writes product descriptions with Claude.",
+      "answer_line": "SAM: That is the constraint that rules batch out.",
+      "scenario": "Async fan-out and rate limits",
+      "stem": "On each catalogue import, a service uses the async client to fire 5,000 requests at once. Descriptions must be ready within the hour. About half fail with 429. What is the best fix?",
+      "choose": 1,
+      "options": {
+        "A": "Cap requests in flight, sized to the rate limits, and let the SDK's retries honour retry-after",
+        "B": "Wrap every call in a loop that retries immediately until it succeeds",
+        "C": "Move the job to the Message Batches API",
+        "D": "Switch to the largest model so each request does more"
+      },
+      "correct": [
+        "A"
+      ],
+      "why": "\"Within the hour\" rules out batch, whose results can take up to 24 hours. Bursts drain the token bucket; cap concurrency and let retries honour retry-after."
+    },
+    {
+      "kind": "recall",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. For each statement, say true or false.",
+      "answer_line": "ALEX: False, true, true, false.",
+      "prompt": "True or false: (1) retry a 400 invalid_request with backoff; (2) retry a 429 after its retry-after seconds; (3) retry a 529 overloaded with backoff; (4) a 401 usually clears after a few retries.",
+      "answer": "False, true, true, false. 400 and 401 fail the same way every time: fix the request or the key. 429 and 529 are transient: back off and retry."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Choose two. A field service company's dispatch assistant",
+      "answer_line": "SAM: Both. A removes the dependency on wording",
+      "scenario": "SDKs that wrap REST",
+      "stem": "Choose two. A dispatch assistant uses a hand-written HTTP client. Its rate-limit handling broke when an error message's wording changed, and support asked for a failing request's identifier that was never stored. Which two changes fix these at the root?",
+      "choose": 2,
+      "options": {
+        "A": "Move to the official SDK and catch its typed rate limit exception instead of matching message text",
+        "B": "Record the request ID from each failed response in the application logs",
+        "C": "Add more phrases to the message-matching code to catch new wordings",
+        "D": "Set the SDK's retries to zero and retry forever in application code",
+        "E": "Switch to a larger model so fewer requests fail"
+      },
+      "correct": [
+        "A",
+        "B"
+      ],
+      "why": "Typed exceptions follow the status, not the prose; the request ID is what support needs. C patches the symptom, D loses backoff, E is \"bigger\"."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. A healthcare provider's patient-portal assistant",
+      "answer_line": "SAM: B leaks the key outright",
+      "scenario": "Streaming and websockets",
+      "stem": "A patient-portal assistant in a single-page web app must show Claude's reply as it is written and let the patient press stop mid-answer. What is the best design?",
+      "choose": 1,
+      "options": {
+        "A": "Browser websocket to the backend; backend keeps the key, streams from the Messages API, relays events, closes on stop",
+        "B": "Ship the API key in the front-end code so the browser calls the Messages API directly",
+        "C": "Make a non-streaming call and have the browser poll every second",
+        "D": "Open a websocket from the browser straight to the Messages API"
+      },
+      "correct": [
+        "A"
+      ],
+      "why": "The Messages API streams over server-sent events; two-way websockets belong between browser and backend, and the key stays on the server."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. A bank must move four hundred services",
+      "answer_line": "SAM: B. It plans before editing",
+      "scenario": "Large-scale refactoring",
+      "stem": "A bank must move 400 services from a deprecated internal logging client to its replacement. Behaviour must not change, and every change must be reviewable. What is the best approach?",
+      "choose": 1,
+      "options": {
+        "A": "One interactive session: \"migrate every service\", relying on checkpoints to undo mistakes",
+        "B": "Plan mode, confirm test coverage, scripted claude -p loop with pre-approved tools on 2-3 services first, then the rest",
+        "C": "Switch to the model with the largest context window so all 400 fit in one session",
+        "D": "Have each owner paste code into a chat and apply suggestions by hand"
+      },
+      "correct": [
+        "B"
+      ],
+      "why": "Plan, make behaviour checkable, pilot, then fan out in reviewable changes. Checkpoints miss shell commands and do not replace git; context size is \"bigger\"."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Recall first. Pause and name the four segments, and the giveaway for each.",
+      "answer_line": "ALEX: REST and JSON, where the giveaway is the status code.",
+      "prompt": "Name the four segments, and the giveaway for each.",
+      "answer": "REST and JSON: the status code. SDKs: a hand-written client. Async and streaming: a 429 burst or a key in the browser. Version control to refactoring: a committed secret or a one-shot migration."
+    }
+  ],
+  "segments": {
+    "In this episode": [
+      "Read a Claude call as REST and JSON; retry or fix an error",
+      "What the official SDK does, so you stop rebuilding it",
+      "Async concurrency inside rate limits",
+      "Server-sent events and websockets in a streaming app",
+      "Version control, CI, code review and refactoring with Claude Code"
+    ],
+    "Cold open: the catalogue import": [
+      "Two skills: 7.4% and 6.1%, about seven items",
+      "POST /v1/messages: API key, anthropic-version, content-type JSON",
+      "content is a list of typed blocks: text, tool_use, thinking",
+      "Check block type and stop_reason before parsing",
+      "Errors are JSON: type, message, request ID",
+      "The status code decides between fixing and retrying"
+    ],
+    "Segment two: SDKs that wrap REST": [
+      "SDK sets headers and types requests and responses",
+      "Retries connection, rate limit and server errors: 2 by default, backoff",
+      "Honours retry-after; Python default timeout 10 minutes",
+      "Streaming helpers assemble the final message",
+      "Don't stack your own retry loop on the SDK's: 3 x 3 = 9 calls"
+    ],
+    "Segment three: async, streaming and websockets": [
+      "Async client: many calls in flight; no sync client in an async server",
+      "Rate limits: RPM, input and output tokens per minute, token bucket",
+      "Short bursts can exceed the limit; cost-first and tomorrow: batch",
+      "Messages API streams via server-sent events: one-way over HTTP",
+      "Websocket: persistent, two-way; errors can arrive after a 200",
+      "Tool input streams as partial JSON: parse at content_block_stop"
+    ],
+    "Segment four: version control, CI, review and refactoring": [
+      "Commit prompts, CLAUDE.md, .claude/settings.json, .mcp.json",
+      "Keys: env var, gitignored .env, CI repository secret",
+      "Checkpoints don't replace git; worktrees for parallel sessions",
+      "CI: claude -p with JSON output, or the Claude Code GitHub Action",
+      "Review in a fresh context: writer and reviewer",
+      "One-sentence diff: skip plan mode and run the tests"
+    ],
+    "Cold open: the verdict": [
+      "Answer: A, cap requests in flight and honour retry-after",
+      "\"Within the hour\" rules out batch: up to 24 hours",
+      "B hammers the limit and ignores retry-after",
+      "D changes nothing about the request rate",
+      "Tell: a deadline in minutes plus a 429 burst"
+    ],
+    "Five to remember": [
+      "REST and JSON: check block type and stop_reason before parsing",
+      "Invalid request, auth, permission: fix. 429, 529, 5xx: back off and retry",
+      "Official SDK: 2 retries, timeouts, typed exceptions, request ID",
+      "Async, capped to rate limits; SSE from the API, websockets client to backend",
+      "Commit config not keys; claude -p in CI; fresh reviewer; plan, test, pilot"
+    ],
+    "Recap: the exam tells": [
+      "Parses only sometimes → max_tokens stop or non-text first block",
+      "Invalid request or authentication → fix, don't retry",
+      "Matches error text or own retry loop → official SDK, typed exceptions",
+      "Support wants to trace a call → the request ID",
+      "All at once, half 429 → capped concurrency; overnight and cost → batch",
+      "Websocket to the Messages API → it streams over SSE",
+      "Key in a browser or workflow file → server side or secret store",
+      "Self-review → fresh reviewer; 400 services → plan, test, pilot, fan out"
+    ]
+  }
+}

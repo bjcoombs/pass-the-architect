@@ -1,0 +1,157 @@
+{
+  "drills": [
+    {
+      "kind": "mcq",
+      "label": "Cold open",
+      "question_line": "SAM: Here is your opening item. A consultant asks Claude to \"write a project update\"",
+      "answer_line": "ALEX: So B.",
+      "scenario": "Consultant's steering committee update",
+      "stem": "A consultant asks Claude to \"write a project update\" for a client's steering committee. The draft is long, generic and leads with activity rather than decisions. What is the most effective next prompt?",
+      "choose": 1,
+      "options": {
+        "A": "Repeat the request and add \"make it excellent, concise and professional\"",
+        "B": "Name the readers and their 10 minutes, the phase two budget decision, the 3 things to cover, 1 page, and attach this month's notes",
+        "C": "Switch to the most capable model and repeat the request",
+        "D": "Attach every project document from the last six months"
+      },
+      "correct": [
+        "B"
+      ],
+      "why": "Generic output means missing audience and purpose. A adds adjectives, not information; C pays to guess at the same gaps; D is volume in place of specificity."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Choose two. A finance analyst asks Claude to explain",
+      "answer_line": "ALEX: A and B.",
+      "scenario": "Finance analyst, cost variance",
+      "stem": "Choose two. A finance analyst's variance explanation for regional managers runs to 3 pages of accounting terms, and the managers don't read past page one. Which two prompt changes most directly fix it?",
+      "choose": 2,
+      "options": {
+        "A": "State the readers have no finance training and will use it to decide where to cut spend",
+        "B": "Ask for 1 page, the 3 biggest drivers first, each with a plain line on what the manager can do",
+        "C": "Add \"be very careful and accurate\"",
+        "D": "Ask Claude to rate its confidence at the end",
+        "E": "Switch on research mode"
+      },
+      "correct": [
+        "A",
+        "B"
+      ],
+      "why": "A fixes the level, B the length and shape. C names no gap; D trusts self-reported confidence; E: the data is in the file, not on the web."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Pause here and answer before we go on. For each request, choose one prompt or a chain of stages.",
+      "answer_line": "ALEX: One prompt, chain, one prompt, chain.",
+      "prompt": "One prompt or a chain? 1. Rewrite a 2-paragraph supplier email in a warmer tone. 2. 40 interview transcripts to themes, then a recommendations memo; the director approves themes first. 3. Translate a short internal notice into Spanish. 4. Tender response: extract requirements, match capabilities, flag gaps, draft.",
+      "answer": "1 one prompt. 2 chain. 3 one prompt. 4 chain."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. A sales lead uses the same prompt every Monday",
+      "answer_line": "ALEX: Then it's B.",
+      "scenario": "Sales lead, missing renewal dates",
+      "stem": "A sales lead's weekly account summaries keep leaving out contract renewal dates. Adding \"please be thorough\" changed nothing. What is the best next step?",
+      "choose": 1,
+      "options": {
+        "A": "Regenerate each summary until one includes the renewal date",
+        "B": "Make renewal date a required output field, add one finished example, test on last week's accounts",
+        "C": "Move to the most capable model, since it will be more thorough",
+        "D": "Stop using Claude and write the summaries by hand"
+      },
+      "correct": [
+        "B"
+      ],
+      "why": "The instruction never asked for the field. A repeats the gamble weekly, C is the bigger-model distractor, D abandons a task a small change fixes."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. A communications lead wants ideas for an internal campaign",
+      "answer_line": "ALEX: B.",
+      "scenario": "Communications lead, campaign ideas",
+      "stem": "A communications lead wants ideas for an internal campaign to raise uptake of a new expenses tool. Which approach fits the task best?",
+      "choose": 1,
+      "options": {
+        "A": "Ask for the single best campaign with a full rollout plan",
+        "B": "Ask for 20 distinct ideas across channels and tones, then shortlist 3 against budget and audience",
+        "C": "Run research mode on other companies' campaigns and adopt the top result",
+        "D": "Write a detailed template for tone, length and channel, and ask for one idea that fits"
+      },
+      "correct": [
+        "B"
+      ],
+      "why": "Brainstorming: go wide, then converge against criteria. A and D collapse to one idea; C copies instead of generating for this audience."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Your turn. Pause and name the four objectives we covered",
+      "answer_line": "ALEX: Effective prompts, with audience, purpose and format.",
+      "prompt": "Name the four objectives we covered, and the habit that goes with each.",
+      "answer": "Effective prompts: audience, purpose, format. Decomposition: chain when stages need checking. Iteration: one change at a time. Task type: a different approach for analysis, research, drafting, brainstorming."
+    }
+  ],
+  "segments": {
+    "In this episode": [
+      "Give Claude the audience, purpose and shape of the answer",
+      "Decide when a big request becomes a chain",
+      "Improve a prompt one change at a time",
+      "Switch approach for analysis, research, drafting, brainstorming"
+    ],
+    "Cold open: the steering committee update": [
+      "Domain 1: 14%, about 8 items",
+      "Treat Claude as a brilliant new employee who lacks your context",
+      "Golden rule: would a colleague with minimal context follow it?",
+      "Give the reason behind a constraint; Claude generalises from it",
+      "Say what to do, not what not to do",
+      "Examples steer format and tone; start with one"
+    ],
+    "Breaking a task into stages": [
+      "One prompt asking too much drops parts or does them thinly",
+      "A chain: each prompt does one stage, output feeds the next",
+      "Check each stage before building on it",
+      "Numbered steps when order or completeness matters",
+      "Self-correction: draft, review against criteria, revise"
+    ],
+    "Iterating a prompt": [
+      "The first prompt rarely works perfectly",
+      "Decide what good looks like before you start",
+      "Name the specific gap; change one thing at a time",
+      "Specific feedback beats \"make it better\"",
+      "Ask for the change, not for suggestions"
+    ],
+    "Matching the approach to the task": [
+      "Analysis: long material first, question after; quotes before conclusions",
+      "Research: success criteria, check claims across sources",
+      "Web search: 1-2 lookups. Research mode: 5+ lookups, 1-3 minutes, cited report",
+      "Extended thinking: complex reasoning without recent web information",
+      "Drafting: audience, purpose, tone, length, house-style example, supplied facts",
+      "Brainstorming wants range; heavy constraints up front narrow it"
+    ],
+    "Cold open: the verdict": [
+      "Answer: B, reader, decision, contents, length and the right notes",
+      "Six months of documents buries this month's status",
+      "Some of it may be data policy says not to share",
+      "Adjectives add no information; a bigger model guesses the same gaps",
+      "Tell: \"generic\", \"activity rather than decisions\""
+    ],
+    "Five to remember": [
+      "Write for a brilliant newcomer: task, audience, purpose, reasons, shape, labelled material",
+      "Say what to do; one example first; permit \"data is insufficient\"",
+      "Chain distinct stages or checkpoints; escalate cross-system automation",
+      "Name the gap, change one thing, test on real cases",
+      "Match the approach: analysis, research, drafting, brainstorming"
+    ],
+    "Recap: the exam tells": [
+      "Generic or wrong reader → audience, purpose and format",
+      "Every document, all the history → volume dressed up as context",
+      "Parts dropped or a stage to approve → chain",
+      "Must run automatically across systems → escalate",
+      "Same gap every week → change the prompt and test it",
+      "One current fact → web search; cited comparison → research mode",
+      "Ideas or options → wide first, narrow second"
+    ]
+  }
+}

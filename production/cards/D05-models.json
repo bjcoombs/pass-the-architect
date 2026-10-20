@@ -1,0 +1,181 @@
+{
+  "drills": [
+    {
+      "kind": "mcq",
+      "label": "Cold open",
+      "question_line": "SAM: Here is your opening item. A retailer routes about two million customer emails a day",
+      "answer_line": "SAM: The answer is B: test the smallest, fastest tier",
+      "scenario": "Two million emails a day",
+      "stem": "A retailer routes about two million emails a day into twelve queues. Each decision must return in under a second, the budget is tight, and an eval set defines acceptable accuracy. The prototype's largest model at high effort is too slow and too expensive. What is the best approach?",
+      "choose": 1,
+      "options": {
+        "A": "Keep the largest model and turn on fast mode",
+        "B": "Test the smallest, fastest tier on the eval set; adopt it if it meets the bar",
+        "C": "Keep the largest model at maximum effort for accuracy headroom",
+        "D": "Move to the middle tier and lengthen the prompt with every edge case"
+      },
+      "correct": [
+        "B"
+      ],
+      "why": "High-volume, latency-sensitive classification is the documented Haiku use case, gated by the eval. Fast mode adds premium price to a cost-constrained job."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. A team's regression test sends a fixed prompt",
+      "answer_line": "SAM: But the documentation does not promise determinism at any setting",
+      "scenario": "Exact-match test fails at random",
+      "stem": "A regression test asserts that the reply to a fixed prompt equals a stored string exactly. Temperature is zero. The test fails on about one run in ten with no code change. What is the best fix?",
+      "choose": 1,
+      "options": {
+        "A": "Also set top_k to 1 so only the most likely token is chosen",
+        "B": "Assert on properties that matter, such as schema validity and required fields, over several runs",
+        "C": "Switch to a larger model, which is more consistent",
+        "D": "Retry the call until the output matches the stored string"
+      },
+      "correct": [
+        "B"
+      ],
+      "why": "Even at temperature 0, output is not fully deterministic. Design for variation: check structure and meaning, not bytes."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Choose two. A chat assistant runs a large model",
+      "answer_line": "ALEX: So A and B.",
+      "scenario": "Long wait before the first word",
+      "stem": "Choose two. A chat assistant runs a large model at high effort with adaptive thinking. Users complain about a long wait before the first word appears on simple questions. Which two changes most directly shorten the time to the first visible text?",
+      "choose": 2,
+      "options": {
+        "A": "Lower effort for this route so simple questions skip most thinking",
+        "B": "Stream the response so text appears as it is generated",
+        "C": "Turn on fast mode",
+        "D": "Raise max_tokens",
+        "E": "Add five worked examples to the system prompt"
+      },
+      "correct": [
+        "A",
+        "B"
+      ],
+      "why": "Fast mode raises output tokens per second, not time to first token. Less thinking and streaming shorten the wait before the first word."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Pause here and answer before we go on. For each statement, say true or false.",
+      "answer_line": "ALEX: False, true, true, false.",
+      "prompt": "True or false: (1) effort affects only thinking, not text or tool calls; (2) max_tokens caps thinking and response together; (3) thinking tokens bill as output tokens; (4) fast mode runs a smaller model.",
+      "answer": "1 false (effort affects every output token); 2 true; 3 true; 4 false (same model, faster inference configuration)."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. An invoice extraction prompt includes one worked example",
+      "answer_line": "ALEX: A. B is louder guidance",
+      "scenario": "Output copies the example's currency",
+      "stem": "An invoice extraction prompt has one worked example, an invoice in euros. On invoices in other currencies, the output sometimes reports euros anyway. What is the best fix?",
+      "choose": 1,
+      "options": {
+        "A": "Add 3-5 diverse examples in <example> tags covering several currencies and layouts",
+        "B": "Add \"IMPORTANT: use the invoice's own currency\" in capitals",
+        "C": "Remove the example and go zero-shot",
+        "D": "Raise the temperature so the model explores other currencies"
+      },
+      "correct": [
+        "A"
+      ],
+      "why": "One example is a template the model copies. Diverse examples show which features vary."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. A team moves its service to a newer model I D.",
+      "answer_line": "ALEX: C. A four hundred is a request",
+      "scenario": "Prefill breaks on a newer model",
+      "stem": "After moving to a newer model ID, every request that starts the assistant's reply with an opening brace, to force JSON, returns a 400 error. What is the best fix?",
+      "choose": 1,
+      "options": {
+        "A": "Return to the old model permanently",
+        "B": "Retry the failing requests with backoff",
+        "C": "Remove the prefill and request the JSON shape through structured outputs",
+        "D": "Raise max_tokens"
+      },
+      "correct": [
+        "C"
+      ],
+      "why": "Prefill is rejected on newer models. A 400 is not transient, so retrying changes nothing; the old model will retire."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Recall first. Pause and name the four segments, and the giveaway for each.",
+      "answer_line": "ALEX: How a model writes: exact-match tests fail.",
+      "prompt": "Name the four segments, and the giveaway for each.",
+      "answer": "How a model writes: exact-match tests fail. Thinking, effort and speed: which wait the user means. Shots: outputs copy the example. Choosing a model: the quality bar, latency and volume."
+    }
+  ],
+  "segments": {
+    "In this episode": [
+      "What a token is, and why exact-match tests fail",
+      "Thinking, effort and fast mode by what each changes",
+      "When one example is too few",
+      "Opus, Sonnet or Haiku against bar, latency and budget",
+      "What to check when a release breaks your code"
+    ],
+    "Cold open: two million emails": [
+      "LLM fundamentals 5.2%, model selection 2.7%",
+      "About four items on a 53-item paper",
+      "Answer by the constraint in the stem, not instinct"
+    ],
+    "How a model writes": [
+      "Pretrained to predict the next token, one at a time",
+      "Tokens: words, subword pieces, characters or bytes",
+      "Count tokens for the model you plan to use",
+      "Context window: prompt, history, tool results and reply",
+      "Temperature trades variety against the most probable wording"
+    ],
+    "Thinking, effort and speed": [
+      "Extended thinking: manual mode with a token budget",
+      "Adaptive thinking: the model decides whether and how much",
+      "Effort: low, medium, high, xhigh, max",
+      "Max may overthink; changing effort breaks the prompt cache",
+      "Fast mode: up to 2.5x output tokens per second, premium price",
+      "Fast mode: supported Opus models, not on the Batch API"
+    ],
+    "Zero, one and many shots": [
+      "Zero-shot: instructions only",
+      "Single-shot: one example; multi-shot: several",
+      "Start zero-shot when the format is loose",
+      "Examples steer format, tone and structure",
+      "One example acts as a template the model copies"
+    ],
+    "Choosing a model, and when it changes": [
+      "Opus: hardest reasoning, long-running agentic work",
+      "Sonnet: best balance of speed and intelligence",
+      "Haiku: high-volume, latency-sensitive classification, extraction, routing",
+      "Check capabilities in the Models API",
+      "Cost in the stem does not cancel a quality bar",
+      "Releases change prefill, thinking settings, sampling, tokenizer, defaults"
+    ],
+    "Cold open: the verdict": [
+      "Answer B: smallest tier that clears the eval bar",
+      "Fast mode adds premium price to a cost-constrained job",
+      "Max effort adds latency and cost nobody asked for",
+      "Tell: volume, under a second, tight budget, accuracy bar"
+    ],
+    "Five to remember": [
+      "Next-token loop; count tokens per model; the window holds everything",
+      "Not fully deterministic even at temperature 0: assert on structure",
+      "Adaptive thinking, effort on every output token, max_tokens caps both",
+      "Fast mode: faster output, same model, not faster first token; 3-5 diverse examples",
+      "Cheapest tier that clears the bar; check breaking changes before moving the pin"
+    ],
+    "Recap: the exam tells": [
+      "Exact-match test fails at random → non-determinism; assert on properties",
+      "Wait before the first word → less thinking, streaming",
+      "Slow once output starts → fast mode",
+      "Simple or high-volume → lower effort; max \"just in case\" → distractor",
+      "Outputs copy one example → 3-5 diverse examples in tags",
+      "Quality bar, latency, volume → smallest tier that clears the bar",
+      "New model returns 400s on old requests → breaking change"
+    ]
+  }
+}

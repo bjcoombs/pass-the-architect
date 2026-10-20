@@ -1,0 +1,194 @@
+{
+  "drills": [
+    {
+      "kind": "mcq",
+      "label": "Cold open",
+      "question_line": "SAM: An operations lead asks Claude to compare three vendor proposals",
+      "answer_line": "SAM: The answer is B.",
+      "scenario": "Vendor comparison, ten of twelve rows",
+      "stem": "Claude compares three vendor proposals against a 12-point requirements list and recommends Vendor B for the procurement committee. The table has 10 rows. What is the best next action?",
+      "choose": 1,
+      "options": {
+        "A": "Send it, since Claude most likely dropped the two requirements that did not separate the vendors",
+        "B": "Ask Claude to score the two missing requirements, quoting each proposal, then check those rows and whether the recommendation holds",
+        "C": "Rerun the whole comparison on the most capable model",
+        "D": "Send it with a note telling the committee the comparison may be incomplete"
+      },
+      "correct": [
+        "B"
+      ],
+      "why": "Check the output against the brief and fill the gap. D is a disclosure dressed as a fix; A trusts the model; C overspends and still needs checking."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. A sales lead asks Claude to turn her call notes",
+      "answer_line": "SAM: C. Neither detail traces to the source",
+      "scenario": "Case study with an untraceable quote",
+      "stem": "A draft customer case study for the website includes a quote from the customer's finance director and a 40% cut in onboarding time. The call notes contain neither. What should the sales lead do?",
+      "choose": 1,
+      "options": {
+        "A": "Keep both, since Claude probably inferred them from the context of the call",
+        "B": "Ask Claude whether the quote is accurate, and keep it if Claude says yes",
+        "C": "Remove the quote and figure unless the customer confirms them, and check every other specific against the notes",
+        "D": "Soften the figure to \"around 40%\" and keep the quote"
+      },
+      "correct": [
+        "C"
+      ],
+      "why": "Neither detail traces to the source, so both are invented until confirmed. One invented specific is a reason to check the rest."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Choose two. A consultant is using Claude to summarise",
+      "answer_line": "SAM: A and B. A limits Claude to the source",
+      "scenario": "Summarising a regulatory consultation",
+      "stem": "Choose two. A consultant summarises a 60-page regulatory consultation for a client deck and wants to reduce the risk of invented details. Which two steps help most?",
+      "choose": 2,
+      "options": {
+        "A": "Tell Claude to use only the uploaded document and say plainly when it does not cover a point",
+        "B": "Ask Claude to quote the passage supporting each key claim, then check those quotes against the document",
+        "C": "Ask Claude for a confidence percentage per claim and drop any under 80",
+        "D": "Ask for a more authoritative tone so the client trusts it",
+        "E": "Add \"be accurate\" in capitals to the prompt"
+      },
+      "correct": [
+        "A",
+        "B"
+      ],
+      "why": "A limits Claude to the source and exposes gaps; B makes every claim checkable. Self-rated confidence is more generated text, not a check."
+    },
+    {
+      "kind": "recall",
+      "label": "Dropdown",
+      "question_line": "SAM: Pause here and answer before we go on. This is a dropdown item",
+      "answer_line": "SAM: Three out of four.",
+      "prompt": "For each, human review before use, or self-check is enough? 1. Ten name ideas for a team offsite. 2. Plain-language summary of a patient's discharge instructions, for the patient. 3. Internal analysis that will set next year's list prices. 4. Claude's rewording of a paragraph in your own internal newsletter.",
+      "answer": "1 Self-check. 2 Human review (clinician). 3 Human review: internal, but it sets prices for every customer. 4 Self-check that the meaning is unchanged."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: The other half is comparing drafts.",
+      "answer_line": "SAM: But tone is the cheap part to fix",
+      "scenario": "Two drafts of an office-move announcement",
+      "stem": "Staff raised four questions about an office move: date, parking, desk booking, who to contact. Draft one is warm and polished and answers two. Draft two is plainer and answers all four. What should the communications manager do?",
+      "choose": 1,
+      "options": {
+        "A": "Send draft one, because tone matters most for staff news",
+        "B": "Ask Claude which draft is better and send that one",
+        "C": "Take draft two, since it meets the brief, and edit its tone for the audience",
+        "D": "Send both and let staff use whichever they prefer"
+      },
+      "correct": [
+        "C"
+      ],
+      "why": "Tone is cheap to fix; completeness is expensive. Start from the draft that meets the brief. B hands the judgement back with no criteria."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. An H R partner needs a two-page onboarding guide",
+      "answer_line": "SAM: B. Two pages, self-contained",
+      "scenario": "Onboarding guide, revised then shared",
+      "stem": "An HR partner needs a two-page onboarding guide. She will revise it with Claude over several rounds this week, then share it with hiring managers. Which output suits the task best?",
+      "choose": 1,
+      "options": {
+        "A": "An inline reply, copied into a document after each round",
+        "B": "An artifact, so the guide stands on its own beside the conversation and can be revised and shared",
+        "C": "The guide as structured data with one field per section",
+        "D": "A series of short messages, one per section"
+      },
+      "correct": [
+        "B"
+      ],
+      "why": "Substantial, self-contained, revised over rounds, then shared: the artifact test. Structured data suits data that feeds a tool, not prose."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Recall first. Pause and name the five segments",
+      "answer_line": "ALEX: Accuracy, hallucinations and bias: check the specifics.",
+      "prompt": "Name the five segments, and the check that goes with each.",
+      "answer": "Accuracy, hallucinations and bias: check the specifics. Fact-checking: the source, with quotes. Human review: stakes and audience. Editing: meet the brief, keep the facts. Formats: inline, artifact, structured data."
+    }
+  ],
+  "segments": {
+    "In this episode": [
+      "Judge accuracy, and what the draft left out",
+      "Spot invented figures, contradictions and slanted framing",
+      "Pick the checking technique that catches the error",
+      "Decide when a person must review",
+      "Adapt and compare drafts for the reader",
+      "Choose inline, artifact or structured data"
+    ],
+    "Cold open: the vendor comparison": [
+      "Domain 2 is 21%: about 13 of 60 items",
+      "Six objectives: accuracy and completeness, hallucinations and bias, fact-checking",
+      "...human review, editing for the audience, output formats",
+      "Right answer: the diligent, proportionate step",
+      "Distractors: trust confidence, overspend, ask the model to promise, give up, polish"
+    ],
+    "Accuracy, hallucinations and bias": [
+      "Accuracy: is it true? Completeness: is it all there?",
+      "A missing item leaves no trace on the page",
+      "Hallucination: plausible content grounded in nothing",
+      "Fluency and confidence say nothing about accuracy",
+      "Inconsistency: the draft contradicts itself or its source",
+      "Bias: one-sided framing, or a prompt that leaks the answer"
+    ],
+    "Fact-checking techniques": [
+      "Strongest check: the authoritative source",
+      "Other techniques make that check faster or narrower",
+      "Anthropic's prompting guidance lists several",
+      "Same request twice: disagreement marks a fact to check",
+      "A citation is a place to check, not a check"
+    ],
+    "When a human must review": [
+      "Raise the bar for stakes, audience, reversibility, specialist content",
+      "Reviewing everything is disproportionate too",
+      "Stem words: customer, patient, regulator, board, contract, published",
+      "Brainstorm, first pass, draft for myself: self-check",
+      "The reviewer must be able to tell if it is wrong"
+    ],
+    "Editing for the audience": [
+      "Executive: decision and risk first",
+      "Customer: plain words, no internal jargon",
+      "Specialists: detail and method",
+      "A rewrite can change facts while it changes tone",
+      "\"May\" becomes \"will\"; caveats vanish first"
+    ],
+    "Formats: inline, artifact, structured data": [
+      "Three formats: inline, artifact, structured data",
+      "Inline: quick answers, explanations, back-and-forth",
+      "Artifact for everything? A two-line answer gains nothing",
+      "Structured data: rows to compare, sort or feed a tool",
+      "Name the columns and keep them the same each time",
+      "Curate: reader's need first, group, drop duplicates"
+    ],
+    "Cold open: the verdict": [
+      "Answer: B, cover the two missing rows with quoted evidence and recheck",
+      "D: a disclosure dressed as a fix",
+      "A: trusts the model's reasons for dropping rows",
+      "C: a bigger model, and the table still needs checking",
+      "Tell: \"twelve-point list\" against \"ten rows\""
+    ],
+    "Five to remember": [
+      "Confidence is not accuracy: check specifics against the source",
+      "Completeness: check against the brief, never by rereading",
+      "Source first; limit to documents, allow \"I don't know\", quote per claim",
+      "Review scales with stakes, audience, reversibility, specialism",
+      "Inline, artifact or structured data; adapting keeps facts and caveats"
+    ],
+    "Recap: the exam tells": [
+      "Precise figure or quote not in the source → invented until confirmed",
+      "Output covers less than asked → check against the brief, fill the gap",
+      "Option asks Claude how confident it is → distractor",
+      "Output includes citations, important reader → still open the sources",
+      "Customer, patient, regulator, board → review by someone qualified",
+      "Polish versus completeness → complete draft, then edit tone",
+      "Rewrite softens a caveat → the rewrite is wrong",
+      "Quick → inline; stand-alone and shared → artifact; rows → structured data"
+    ]
+  }
+}

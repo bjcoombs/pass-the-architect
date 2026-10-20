@@ -1,0 +1,375 @@
+{
+  "drills": [
+    {
+      "kind": "recall",
+      "question_line": "SAM: An inventory tool times out inside your agent loop. Your code catches the e",
+      "answer_line": "ALEX: A tool result with the same tool use I D, first in the next user message,",
+      "prompt": "An inventory tool times out inside your agent loop; your code catches the exception and sends nothing back. What should go to Claude?",
+      "answer": "A tool_result with the same tool_use ID, first in the next user message, with the error text and is_error: true."
+    },
+    {
+      "kind": "mcq",
+      "label": "Rapid fire",
+      "question_line": "SAM: A nightly batch of thirty thousand requests comes back entirely errored, be",
+      "answer_line": "ALEX: B. Batch parameters are validated asynchronously, so the error only shows",
+      "scenario": "Nightly batch",
+      "stem": "A nightly batch of 30,000 requests comes back entirely errored because of one malformed parameter. How do you catch it before the next run?",
+      "choose": 1,
+      "options": {
+        "A": "Split it into smaller batches",
+        "B": "Send one request of that shape through the Messages API first",
+        "C": "Move the job to synchronous calls",
+        "D": "Retry every errored result"
+      },
+      "correct": [
+        "B"
+      ],
+      "why": "Batch parameters are validated asynchronously, so the error only shows when the whole batch ends."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: A tax assistant caches a long system prompt. Users reply about every twenty",
+      "answer_line": "SAM: Per write, yes. But a five-minute entry expires before each reply, so you p",
+      "prompt": "A tax assistant caches a long system prompt. Users reply about every 20 minutes, and almost every reply shows a fresh cache write. Which cache lifetime?",
+      "answer": "One hour. A 5-minute entry expires before each reply, so every turn pays a write. Gaps over 5 minutes and under an hour are the one-hour tell."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: For each statement, say true or false. A service attaches a two-hundred-pag",
+      "answer_line": "ALEX: True, true, false, true.",
+      "prompt": "True or false? A 200-page scanned manual is attached as base64 in turn 1 of every conversation. 1. The payload rides along in every later request. 2. Uploading once to the Files API and sending the file ID keeps requests under the size limit. 3. A file ID restricts the file to the user who uploaded it. 4. Resending history is the application's job; the Messages API keeps no session.",
+      "answer": "1 True. 2 True. 3 False: uploaded files are visible to the whole workspace, so a file ID is not access control. 4 True."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: A team wraps every S D K call in its own three-attempt retry loop. One rate",
+      "answer_line": "ALEX: Drop the outer loop and configure the S D K's retries. It already retries",
+      "prompt": "A team wraps every SDK call in its own 3-attempt retry loop; one rate-limit failure becomes up to 9 calls. Fix?",
+      "answer": "Drop the outer loop and configure the SDK's retries. It already retries twice with backoff and honours retry-after."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: A Python web service calls the synchronous client inside an async framework",
+      "answer_line": "ALEX: The async client, Async Anthropic, so the worker keeps serving while the c",
+      "prompt": "A Python web service calls the synchronous client inside an async framework; one long generation stalls every other user on that worker.",
+      "answer": "Use the async client (AsyncAnthropic), so the worker keeps serving while the call waits on the network."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: A Claude Code session has just written a payment-retry module. Who reviews",
+      "answer_line": "ALEX: A fresh context: a second session or a subagent, against stated criteria.",
+      "prompt": "A Claude Code session has just written a payment-retry module. Who reviews the diff?",
+      "answer": "A fresh context: a second session or a subagent, against stated criteria. The writer fixes what comes back; a human approves the merge."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: A ticket classifier's schema has an enum of eight categories. New kinds of",
+      "answer_line": "ALEX: Add an \"other\" value with a detail field, so what doesn't fit has an hones",
+      "prompt": "A ticket classifier's schema has an enum of 8 categories; new kinds of ticket land in the nearest category.",
+      "answer": "Add an \"other\" value with a detail field, so what doesn't fit has an honest place to go."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: A support app built on the Messages A P I quotes one customer's order back",
+      "answer_line": "ALEX: Keep each user's history separate. The A P I is stateless, so whatever lea",
+      "prompt": "A support app on the Messages API quotes one customer's order back to a different customer.",
+      "answer": "Keep each user's history separate. The API is stateless, so whatever leaked, the application sent."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: You want a formatting plugin in every project on your machine, and nobody e",
+      "answer_line": "ALEX: User scope, in your home directory's settings. Project reaches the whole r",
+      "prompt": "You want a formatting plugin in every project on your machine, and nobody else should get it. Which scope?",
+      "answer": "User scope, in your home directory's settings. Project reaches the whole repo; local is you in this repo only."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: An auditor asks which prompt and which model produced last month's credit s",
+      "answer_line": "ALEX: The system prompt in version control beside the pinned model I D it was te",
+      "prompt": "An auditor asks which prompt and which model produced last month's credit summaries, and nobody can say. What was missing?",
+      "answer": "The system prompt in version control beside the pinned model ID it was tested on, with an eval run gating each change."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: A requirements list includes a ninety-nine point nine nine percent availabi",
+      "answer_line": "ALEX: Trace it or challenge it. A requirement nobody can trace is an assumption",
+      "prompt": "A requirements list includes a 99.99% availability target, and nobody can find the business statement it came from.",
+      "answer": "Trace it or challenge it. A requirement nobody can trace is an assumption someone liked."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Three months after launch, a claims summariser's quality is slowly drifting",
+      "answer_line": "SAM: Operate: monitor output quality, cost and errors in production. Maintenance",
+      "prompt": "Three months after launch, a claims summariser's quality is slowly drifting. Which life-cycle activity owns it?",
+      "answer": "Operate: monitor output quality, cost and errors in production. Maintenance is planned change, such as a model deprecation."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: A team budgets a new model by dividing character counts by three and a half",
+      "answer_line": "ALEX: A newer tokenizer produces roughly thirty percent more tokens for the same",
+      "prompt": "A team budgets a new model by dividing character counts by 3.5, and the bill comes in well over.",
+      "answer": "A newer tokenizer produces roughly 30% more tokens for the same text. Count with the token counting endpoint, for the model you will use."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Code that sets a manual thinking budget starts failing after a move to a ne",
+      "answer_line": "ALEX: On newer models the manual budget is deprecated or rejected. Use adaptive",
+      "prompt": "Code that sets a manual thinking budget starts failing after a move to a newer model.",
+      "answer": "On newer models the manual budget is deprecated or rejected. Use adaptive thinking and steer depth with effort."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: A report generator sets a very large max tokens on a non-streaming call, an",
+      "answer_line": "ALEX: Stream it. The S D Ks reject a non-streaming request expected to run past",
+      "prompt": "A report generator sets a very large max_tokens on a non-streaming call, and the SDK rejects the request.",
+      "answer": "Stream it. The SDKs reject a non-streaming request expected to run past 10 minutes."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: An Opus orchestrator hands hundreds of simple lookup-and-extract jobs to su",
+      "answer_line": "ALEX: Haiku, checked against the eval. Fastest and cheapest, and sub-agents are",
+      "prompt": "An Opus orchestrator hands hundreds of simple lookup-and-extract jobs to subagents, which are most of the bill. Which tier for them?",
+      "answer": "Haiku, checked against the eval: fastest and cheapest, with sub-agents among its documented uses. Opus keeps the orchestration."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: A cost dashboard adds up input tokens and output tokens, and cached request",
+      "answer_line": "ALEX: Input tokens is only what follows the last breakpoint. Total input adds ca",
+      "prompt": "A cost dashboard adds input_tokens and output_tokens, and cached requests look almost free. What's missing?",
+      "answer": "input_tokens is only what follows the last breakpoint. Total input adds cache_creation_input_tokens and cache_read_input_tokens."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: A job fires fifty parallel requests that share one long cached prefix, and",
+      "answer_line": "ALEX: An entry exists only once the first response begins. Send one request firs",
+      "prompt": "A job fires 50 parallel requests sharing one long cached prefix, and every one writes the cache.",
+      "answer": "A cache entry exists only once the first response begins. Send one request first, then the rest."
+    },
+    {
+      "kind": "mcq",
+      "label": "Rapid fire",
+      "question_line": "SAM: A telecom's inbound messages fall cleanly into four kinds: billing, outage,",
+      "answer_line": "SAM: B. Clean categories with fixed handling is the routing tell; the path is kn",
+      "scenario": "Telecom inbound messages",
+      "stem": "Inbound messages fall cleanly into four kinds (billing, outage, cancellation, sales), each with its own fixed handling. Which architecture?",
+      "choose": 1,
+      "options": {
+        "A": "An autonomous agent holding every team's tools",
+        "B": "A routing workflow: classify, then send each message down its fixed path",
+        "C": "A supervisor with four subagents that agree who owns each message",
+        "D": "One call with every team's procedures in the prompt"
+      },
+      "correct": [
+        "B"
+      ],
+      "why": "Clean categories with fixed handling is the routing tell: the path is known, so it lives in code. A buys variance, C 3-10x the tokens, D pastes every procedure into every call."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: An Agent S D K agent loops all night on one stubborn ticket and runs up the",
+      "answer_line": "ALEX: A maximum number of turns, and a maximum budget that stops the loop at a s",
+      "prompt": "An Agent SDK agent loops all night on one stubborn ticket and runs up the bill. Which two loop controls?",
+      "answer": "A maximum number of turns, and a maximum budget that stops the loop at a spend threshold."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: A Pre Tool Use hook must block writes to the infrastructure folder. The dev",
+      "answer_line": "ALEX: Matchers match tool names, not paths. Match the write tools, then check th",
+      "prompt": "A PreToolUse hook must block writes to the infrastructure folder. Its matcher is set to that folder's path, and nothing is ever blocked.",
+      "answer": "Matchers match tool names, not paths. Match the write tools, then check the path inside the hook."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: With the memory tool, who actually reads and writes the memory files? [paus",
+      "answer_line": "ALEX: Your application. It runs client-side: Claude requests the operation, and",
+      "prompt": "With the memory tool, who actually reads and writes the memory files?",
+      "answer": "Your application. It runs client-side: Claude requests the operation, your code executes it against storage you control."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: A team on an agent framework can't explain a bad answer, because nobody has",
+      "answer_line": "ALEX: Look underneath it at the actual prompts and responses. Anthropic's advice",
+      "prompt": "A team on an agent framework can't explain a bad answer, because nobody has seen the prompt that reached the model.",
+      "answer": "Look underneath at the actual prompts and responses. Start with the API directly, and know what any framework does underneath."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: After compaction, a mortgage agent still has the case, but the applicant's",
+      "answer_line": "ALEX: Persist the facts that must survive outside the window, in a notes file or",
+      "prompt": "After compaction, a mortgage agent's exact loan reference has become \"a reference number\".",
+      "answer": "Persist facts that must survive outside the window, in a notes file or the memory tool, and read them back after the summary."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: A pipeline fishes JSON out of free text with a regular expression for th",
+      "answer_line": "ALEX: Parse against a schema with a library such as Pydantic or Zod. On failure,",
+      "prompt": "A pipeline pulls JSON out of free text with a regex for the first brace, and crashes on bad records.",
+      "answer": "Parse against a schema with a library such as Pydantic or Zod; on failure retry once or twice with the validation error, then route to a human queue."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: After a model upgrade, an assistant refuses harmless requests. Its prompt c",
+      "answer_line": "ALEX: Reread the old patches and change one thing at a time against the eval set",
+      "prompt": "After a model upgrade, an assistant refuses harmless requests; its prompt carries three defensive lines written for the old model.",
+      "answer": "Reread the old patches and change one thing at a time against the eval set. Old-model patches can make a newer model over-cautious."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: A due-diligence assistant answers fluently from a hundred-page agreement, a",
+      "answer_line": "ALEX: Have it extract exact quotes first and answer from them, withdraw any clai",
+      "prompt": "A due-diligence assistant answers fluently from a 100-page agreement, and some answers cite clauses that don't exist.",
+      "answer": "Extract exact quotes first and answer from them, withdraw any claim it can't support, and let it say it doesn't know."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: For each tool, say who executes it: your code, or Anthropic. One, web searc",
+      "answer_line": "ALEX: Anthropic, your code, your code, Anthropic.",
+      "prompt": "Who executes each tool, your code or Anthropic? 1. Web search. 2. The bash tool. 3. The memory tool. 4. Code execution.",
+      "answer": "1 Anthropic (server tool). 2 Your code. 3 Your code. 4 Anthropic (server tool). Bash and memory have Anthropic-defined schemas your code runs."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: A Python M C P server's search tool keeps getting called for the wrong jobs",
+      "answer_line": "ALEX: The Python S D K builds the tool description from the docstring, so rewrit",
+      "prompt": "A Python MCP server's search tool keeps getting called for the wrong jobs. Its docstring says \"helper\".",
+      "answer": "The Python SDK builds the tool description from the docstring. Rewrite it: what it does, when and when not to use it, parameters, what it returns."
+    },
+    {
+      "kind": "mcq",
+      "label": "Rapid fire",
+      "question_line": "SAM: Choose two. A knowledge-base M C P server must serve forty engineers' Claud",
+      "answer_line": "SAM: A and C. D is the right file with the wrong contents: credentials go in as",
+      "scenario": "Shared knowledge-base MCP server",
+      "stem": "Choose two. One MCP server deployment must serve 40 engineers' Claude Code sessions and a customer-facing API application. Which two fit?",
+      "choose": 2,
+      "options": {
+        "A": "Streamable HTTP, with OAuth for authentication",
+        "B": "stdio, launched on each engineer's machine",
+        "C": "The API application reaches it through the MCP connector, with no MCP client code of its own",
+        "D": "The server's token written into the project's .mcp.json",
+        "E": "A copy of the server's logic as a custom tool inside the API application"
+      },
+      "correct": [
+        "A",
+        "C"
+      ],
+      "why": "D is the right file with the wrong contents: credentials go in as environment-variable placeholders. B is local, one client per server. E copies the logic the server exists to share."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: A team plans to write its own web search tool for an A P I agent that needs",
+      "answer_line": "ALEX: Don't. Web search is a built-in server tool. Build only what built-ins can",
+      "prompt": "A team plans to write its own web search tool for an API agent that needs public web results.",
+      "answer": "Don't. Web search is a built-in server tool. Build only what built-ins can't reach, such as internal systems."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: A pricing assistant's system prompt holds the company's proprietary discoun",
+      "answer_line": "SAM: That guards a secret with words, and leak-proofing can degrade the main tas",
+      "prompt": "A pricing assistant's system prompt holds a proprietary discount formula, and a user has coaxed part of it out.",
+      "answer": "Take the formula out of the prompt and compute it on the server. Guarding a secret with words is the polite instruction, and leak-proofing can degrade the main task."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: A reporting agent only ever reads sales data, and it connects with the admi",
+      "answer_line": "ALEX: Least privilege, decided at design time: a read-only database role.",
+      "prompt": "A reporting agent only ever reads sales data, and it connects with the admin connection string.",
+      "answer": "Least privilege, decided at design time: a read-only database role."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Claude Code must never read the project's dot env file. [pause]",
+      "answer_line": "ALEX: A Read deny rule for that file in settings. Deny is checked first and hold",
+      "prompt": "Claude Code must never read the project's .env file.",
+      "answer": "A Read deny rule for that file in settings. Deny is checked first and holds in every permission mode, bypass included."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Claude Code, three point one percent, one item. You want to reopen a specif",
+      "answer_line": "ALEX: Resume, with that session's I D. Continue picks up the most recent.",
+      "prompt": "You want to reopen a specific session from last Tuesday, not the most recent. Continue or resume?",
+      "answer": "Resume, with that session's ID. Continue picks up the most recent."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Debugging, two point six percent, one item. After a team attaches forty sca",
+      "answer_line": "ALEX: Four thirteen means the request is too large: fix it, don't retry. Fewer p",
+      "prompt": "After attaching 40 scanned pages inline, calls fail with a 413, and the team adds retries.",
+      "answer": "413 means the request is too large: fix it, don't retry. Fewer pages per request, or upload once and reference the file ID."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: One last pass. Pause and name the eight domains in weight order, and the do",
+      "answer_line": "ALEX: Applications and Integration, Model Selection and Optimization, Agents and",
+      "prompt": "Name the eight domains in weight order, and the domain you missed most tonight.",
+      "answer": "Applications and Integration 33.1%, Model Selection and Optimization 16.8%, Agents and Workflows 14.7%, Prompt and Context Engineering 11.0%, Tools and MCPs 10.6%, Security and Safety 8.1%, Claude Code 3.1%, Eval, Testing, and Debugging 2.6%."
+    }
+  ],
+  "segments": {
+    "In this episode": [
+      "37 quick items across all 8 domains, in exam proportions",
+      "Applications and Integration first and most",
+      "Tally misses by domain: one replay tomorrow",
+      "The distractor families, named and rejected",
+      "Exam day in brief, then a tell for every domain"
+    ],
+    "Drill: applications and integration": [
+      "33.1% of the paper, 13 items",
+      "A failed tool call; a batch that errors end to end",
+      "Cache writes on every reply; a manual resent every turn",
+      "Stacked retries; a sync client in an async service; reviewing a diff",
+      "Unlisted ticket types; one customer's order shown to another",
+      "Plugin scope; which prompt made this; an untraced target; drifting quality"
+    ],
+    "Drill: models, tokens and cost": [
+      "16.8% of the paper, 6 items",
+      "A token budget built on character counts",
+      "A thinking budget that fails on a newer model",
+      "A huge max tokens on a non-streaming call",
+      "The tier for high-volume subagents",
+      "Cached requests that look free; a fan-out that writes the cache 50 times"
+    ],
+    "Drill: agents, prompts and context": [
+      "Agents 14.7%, 5 items; prompts and context 11%, 4 items",
+      "Four clean message types with fixed handling",
+      "An all-night loop; a hook matcher that never fires",
+      "Who runs the memory tool; a framework that hides the prompt",
+      "A loan reference lost to compaction; regex JSON parsing",
+      "Over-cautious after an upgrade; clauses that don't exist"
+    ],
+    "Drill: tools, security, Claude Code and debugging": [
+      "Tools 10.6%, 4 items; security 8.1%, 3 items",
+      "Who executes each tool; a docstring that says \"helper\"",
+      "One MCP server for 40 engineers and an API app; a home-made web search",
+      "A leaked pricing formula; an admin connection string; the .env file",
+      "Claude Code 3.1%: reopening last Tuesday's session",
+      "Debugging 2.6%: a 413 met with retries"
+    ],
+    "The distractor families": [
+      "Faster or bigger; the polite instruction; pasted data instead of access",
+      "A retry where the status code says fix",
+      "Detective or compensating controls; a good rule past its scope",
+      "Oversized: more machinery than the trigger needs",
+      "Self-report as evidence; one wrong clause in a good option",
+      "Unknown flags or features: strike them"
+    ],
+    "Exam day logistics": [
+      "Government photo ID, unexpired, exact registration name",
+      "Clear desk; no phone, watch or headphones; stay in webcam view",
+      "Arrive early; accept the confidentiality agreement",
+      "Noteboard: count, constraint, mechanism, strike",
+      "Time left: Q18 @ 1:23 · Q35 @ 0:47 · Q53 @ 0:10",
+      "Past 2 minutes: answer, flag, move on; leave nothing blank"
+    ],
+    "Final retrieval": [
+      "Cache written every turn → changing content before the breakpoint, or gaps over 5 minutes",
+      "Quality bar, latency and volume → smallest tier that clears the bar",
+      "Same steps every time → workflow; must never → PreToolUse hook, path checked inside",
+      "Quality falls as the session grows → prune, compact, persist what must survive",
+      "Wrong tool picked → descriptions; several apps → one MCP server",
+      "Injected text near a real action → a check at the action",
+      "Unattended Claude Code → claude -p",
+      "400 → fix; 429 → back off; wrong answers → check what reached the model"
+    ]
+  }
+}

@@ -233,7 +233,8 @@ def render(path, out_dir, cache, key, limit, album, dry_run=False):
         billed = [synth(session, None, t, turns[i - 1]["text"] if i else "",
                         turns[i + 1]["text"] if i + 1 < len(turns) else "", cache) for i, t in enumerate(turns)]
         billed = [b for b in billed if isinstance(b, int)]
-        print(f"{path.name}  turns to synthesize={len(billed)} chars={sum(billed)}")
+        marks = chapter_marks(path, meta, turns) if not limit else {}  # validates cards/<stem>.json for free
+        print(f"{path.name}  turns to synthesize={len(billed)} chars={sum(billed)} chapters={len(marks)}")
         return sum(billed)
     with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
         futures = [

@@ -1,0 +1,158 @@
+{
+  "drills": [
+    {
+      "kind": "mcq",
+      "label": "Cold open",
+      "question_line": "SAM: A retailer's support agent has thirty-one tools",
+      "answer_line": "SAM: So the answer is A.",
+      "scenario": "Tool set construction",
+      "stem": "A support agent has 31 tools from five teams. Three overlap (search_orders, find_order, lookup_customer_orders), each with a one-line description. The agent often calls the wrong one and returns another customer's orders. What is the best fix?",
+      "choose": 1,
+      "options": {
+        "A": "Consolidate the overlapping tools into one, with a service prefix and a detailed description of what it does, when to use it and what it returns",
+        "B": "Add a system-prompt section listing which tool to use for which kind of question",
+        "C": "Move the agent to the largest model",
+        "D": "Force the agent to call the same order tool on every turn"
+      },
+      "correct": [
+        "A"
+      ],
+      "why": "Overlap means consolidate; thin descriptions mean rewrite them. B works around the root cause, C is scale, D forces a tool on turns that need none."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Choose two. A finance operations agent",
+      "answer_line": "SAM: Both. A puts the gate in code",
+      "scenario": "Approval patterns",
+      "stem": "Choose two. An agent reads invoices and issues payments through an internal payments API. No payment may go out without human sign-off, and invoice lookups must not interrupt the user. Which two design choices meet the policy?",
+      "choose": 2,
+      "options": {
+        "A": "Payment as a client tool the harness executes only after a human approves the specific call",
+        "B": "Let the invoice-reading tools run without an approval step",
+        "C": "Tell Claude in the system prompt to ask before paying",
+        "D": "Implement payment as a server tool so Anthropic executes it securely",
+        "E": "Require human approval for every tool call, reads included"
+      },
+      "correct": [
+        "A",
+        "B"
+      ],
+      "why": "Gate the irreversible action in code; leave reads alone. C is a polite instruction, D is impossible (server tools are Anthropic's), E breaks \"must not interrupt\"."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Pause here and answer before we go on. For each item, say tool, resource or prompt.",
+      "answer_line": "SAM: All four. Four is a tool",
+      "prompt": "Tool, resource or prompt? (1) A database schema the app attaches as read-only context. (2) A create-incident action Claude decides to call. (3) A \"triage this incident\" template a user picks from the slash menu. (4) A run-query operation that takes SQL and returns rows.",
+      "answer": "(1) Resource. (2) Tool. (3) Prompt. (4) Tool: Claude invokes it with arguments and it executes, even though it only reads."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. A developer's local stdio M C P server",
+      "answer_line": "SAM: A. Send logs to standard error",
+      "scenario": "MCP server development",
+      "stem": "A local stdio MCP server worked in testing. After the developer added print statements to debug a tool, Claude Code reports it cannot talk to the server. What is the most likely cause?",
+      "choose": 1,
+      "options": {
+        "A": "Print writes to stdout, corrupting the JSON-RPC messages; log to stderr instead",
+        "B": "stdio is unreliable, so the server must move to Streamable HTTP",
+        "C": "The tool descriptions became too long for the client",
+        "D": "The model in use does not support MCP"
+      },
+      "correct": [
+        "A"
+      ],
+      "why": "In a stdio server, stdout carries the protocol. \"Worked until\" names the cause; B rebuilds the deployment around a one-line bug."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. An insurer's claims assistant",
+      "answer_line": "SAM: A. Know-how, needed only sometimes",
+      "scenario": "Agentic customization",
+      "stem": "A claims assistant should follow a ten-step fraud-referral procedure, with a scoring table and a small calculation script, only on claims that hit a red flag. Nothing external needs connecting. Which approach fits best?",
+      "choose": 1,
+      "options": {
+        "A": "Package the procedure, table and script as a Skill that loads when a claim matches",
+        "B": "Build an MCP server that exposes the procedure as a tool",
+        "C": "Paste the procedure and table into the system prompt",
+        "D": "Write one custom tool for each of the ten steps"
+      },
+      "correct": [
+        "A"
+      ],
+      "why": "Know-how needed only sometimes, with a bundled script: a Skill. B is connectivity nobody needs, C pays on every claim, D crowds the tool set."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Recall first. Pause and name the three skills from today",
+      "answer_line": "ALEX: Tool implementation: who runs the call",
+      "prompt": "Name the three skills from today, and the question that sorts each one.",
+      "answer": "Tool implementation (who runs the call, what it says on failure); MCP development (tool, resource or prompt; local or remote); customization (does it exist, who needs it, access or know-how)."
+    }
+  ],
+  "segments": {
+    "In this episode": [
+      "Trace the tool-use loop and who executes each tool",
+      "Descriptions and error results that keep an agent on track",
+      "Where an approval gate belongs",
+      "Build an MCP server: transport, tools, resources, prompts",
+      "Choose built-in, custom tool, Skill or MCP"
+    ],
+    "Cold open: the wrong lookup": [
+      "31 tools from five teams",
+      "Three overlapping order tools, one-line descriptions each",
+      "Wrong tool called: another customer's order history",
+      "Consolidate, route in the prompt, scale up, or force one tool?"
+    ],
+    "Tool implementation": [
+      "stop_reason tool_use → harness dispatches by name → tool_result with the same ID",
+      "Tool runner in the SDK runs the loop for you",
+      "Client tools run in your app; server tools run on Anthropic's side",
+      "Tool set construction: size, naming, what each tool returns",
+      "Errors: is_error true with what failed and what to try next",
+      "The model proposes a call; the harness decides whether it runs"
+    ],
+    "MCP server development": [
+      "Host creates one MCP client per server; messages are JSON-RPC",
+      "Tools model-controlled, resources app-controlled, prompts user-controlled",
+      "stdio: local process launched by the client",
+      "Streamable HTTP: remote service, many clients, OAuth recommended",
+      "Python SDK builds tool definitions from type hints and docstrings",
+      "Claude Code .mcp.json, Claude Desktop, and the API's MCP connector"
+    ],
+    "Agentic customization": [
+      "Q1: does a built-in tool already do it?",
+      "Q2: an action for one application → custom tool in its code",
+      "Q3: shared access across apps, maintained independently → MCP",
+      "Q4: know-how rather than access → consider progressive loading",
+      "MCP gives access; know-how says how to use it"
+    ],
+    "Cold open: the verdict": [
+      "Answer: A, consolidate with a detailed, prefixed description",
+      "B: a routing table works around thin descriptions",
+      "C: scale instead of a fix",
+      "D: forces a tool on turns that need none",
+      "Tell: \"three of them overlap\" and \"a one-line description\""
+    ],
+    "Five to remember": [
+      "Loop: tool_use → dispatch → tool_result; client vs server tools",
+      "Descriptions are the top factor; fewer tools, prefixes, lean returns",
+      "Instructive is_error results; approval gates on irreversible actions",
+      "MCP: tools/resources/prompts by controller; stdio local, HTTP remote",
+      "Built-in if it exists; custom for one app; MCP shared; Skill for know-how"
+    ],
+    "Recap: the exam tells": [
+      "Wrong one of several similar tools → consolidate and rewrite descriptions",
+      "Agent invents an answer when a tool fails → instructive is_error result",
+      "Payment, delete or send → approval gate in the harness on that tool",
+      "Read-only context the app attaches → resource; menu template → prompt",
+      "stdio server broke after prints → stdout; log to stderr",
+      "Many clients over a network → Streamable HTTP",
+      "Several apps need the same access → MCP; one app → custom tool",
+      "Procedure needed only sometimes → Skill"
+    ]
+  }
+}

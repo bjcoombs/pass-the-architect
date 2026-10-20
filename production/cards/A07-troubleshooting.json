@@ -1,0 +1,151 @@
+{
+  "drills": [
+    {
+      "kind": "mcq",
+      "label": "Cold open",
+      "question_line": "SAM: Here is your opening item. An account manager uses a Claude Project to draft client proposals.",
+      "answer_line": "ALEX: So B.",
+      "scenario": "Account manager, proposals miss a new tier",
+      "stem": "An account manager's Project drafts client proposals. Its instructions are unchanged and the service catalogue was uploaded to its knowledge in January. In March the company launched a premium support tier, announced on the intranet. Since then, proposals never mention it. What should she do?",
+      "choose": 1,
+      "options": {
+        "A": "Switch the Project to a more capable model",
+        "B": "Replace the catalogue in the Project's knowledge with the current version, then test a proposal",
+        "C": "Add \"always include our newest services\" to the Project instructions",
+        "D": "Stop using the Project and write proposals by hand"
+      },
+      "correct": [
+        "B"
+      ],
+      "why": "The trigger was the launch, so fix the part it touched. C asks for a document Claude was never given; A reads the same old file; D abandons a working setup."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Pause here and answer before we go on. For each symptom, choose the fix",
+      "answer_line": "ALEX: Examples, restrict, audience, examples.",
+      "prompt": "Fix: examples, restrict to supplied documents and allow \"I don't know\", or audience and purpose? 1. Status report layout changes weekly. 2. Contract summary cites a clause not in the contract. 3. Board briefing reads like an engineering note. 4. Reply drafts structured 3 ways across the team.",
+      "answer": "1 examples. 2 restrict and allow \"I don't know\". 3 audience and purpose. 4 examples."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Choose two. A customer service team lead keeps a saved prompt",
+      "answer_line": "SAM: A and B. A removes the cause",
+      "scenario": "Customer service, evasive complaint replies",
+      "stem": "Choose two. Two months ago someone added \"never mention refunds unless the customer insists\" to a saved complaint-reply prompt. Reviewers now say replies are evasive and never offer refunds that policy allows. Which two actions?",
+      "choose": 2,
+      "options": {
+        "A": "Rewrite the instruction with both sides: offer the refund when policy allows, explain why when not",
+        "B": "Test the revised prompt on past complaints, including ones it handled well",
+        "C": "Add \"be less evasive\" in capitals",
+        "D": "Move to a larger model",
+        "E": "Have reviewers rewrite every reply by hand from now on"
+      },
+      "correct": [
+        "A",
+        "B"
+      ],
+      "why": "A removes the one-sided rule, B proves the fix without breaking anything. E is a compensating control dressed as a fix; C patches the patch; D is a bigger model for an instruction problem."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Every Monday an operations lead spends forty minutes",
+      "answer_line": "ALEX: A.",
+      "scenario": "Operations lead, weekly supplier report",
+      "stem": "Every Monday an operations lead spends 40 minutes pasting the same long prompt and 3 reference files into a new chat for a supplier report. Colleagues who cover get different results. What is the best optimisation?",
+      "choose": 1,
+      "options": {
+        "A": "A Project with her tested prompt as instructions and the 3 files as knowledge, shared with cover colleagues",
+        "B": "Keep one long chat running for every week's report",
+        "C": "Move to the most capable model",
+        "D": "Go back to writing the report by hand"
+      },
+      "correct": [
+        "A"
+      ],
+      "why": "A removes the retyping and gives everyone the same setup. B piles up history; C doesn't explain why colleagues differ; D discards a working process."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: One more, quickly. Pause here and answer before we go on. A marketing team produces",
+      "answer_line": "ALEX: B.",
+      "scenario": "Marketing team, descriptions and strategy",
+      "stem": "A marketing team writes 200 short product descriptions a week from spec sheets, and one strategy analysis a quarter. Which setup balances quality, speed and cost?",
+      "choose": 1,
+      "options": {
+        "A": "The most capable model for both",
+        "B": "A faster, lower-cost model for descriptions; the most capable for the strategy analysis",
+        "C": "The lowest-cost model for both",
+        "D": "Research mode for the descriptions"
+      },
+      "correct": [
+        "B"
+      ],
+      "why": "Match each task to its needs. A overspends on routine work, C underpowers the reasoning, D adds web lookups the spec sheets don't need."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Your turn. Pause and name the three objectives",
+      "answer_line": "ALEX: Diagnosis: what changed?",
+      "prompt": "Name the three objectives, and the first question each one asks.",
+      "answer": "Diagnosis: what changed? Feedback: what exactly is wrong, and did the fix break anything? Optimisation: where is time or money going on work that doesn't need it?"
+    }
+  ],
+  "segments": {
+    "In this episode": [
+      "Find the cause of a poor output by asking what changed",
+      "Match common symptoms to their fixes",
+      "Turn vague feedback into a tested change",
+      "Streamline a weekly workflow without overspending"
+    ],
+    "Cold open: the missing tier": [
+      "Domain 7: 10%, about 6 items",
+      "First question: what changed, or what is missing?",
+      "Check: request, material, setup, conversation, the task itself",
+      "Instructions can't add capability: calculations need something that computes",
+      "Generic: specifics. Off-topic: the real goal. Format drift: examples",
+      "Invented details: allow \"I don't know\", restrict to supplied documents"
+    ],
+    "Adjusting to feedback": [
+      "Turn vague feedback into a specific instruction with a reason",
+      "Ask the reviewer for one example of good",
+      "A patch for every complaint makes rules fight",
+      "Old defensive rules cause deflection; note why each was added",
+      "State both sides of any cost you ask Claude to weigh",
+      "Test changes on past cases, including ones that worked"
+    ],
+    "Optimising the workflow": [
+      "Efficiency and effectiveness: fewer minutes, less rework",
+      "Stop retyping tested prompts",
+      "Match the model to the work",
+      "Long chat drifted: summarise the decisions, start fresh",
+      "Measure before and after on the same measure",
+      "Human review where the stakes need it"
+    ],
+    "Cold open: the verdict": [
+      "Answer: B, replace the catalogue, then test",
+      "Claude only sees the January catalogue",
+      "An instruction can't supply a missing document",
+      "A bigger model reads the same old file",
+      "Tell: \"since then\""
+    ],
+    "Five to remember": [
+      "Diagnose first: what changed? Request, material, setup, conversation, task",
+      "Symptom to fix: format, examples; invented, restrict; register, audience",
+      "Instructions can't add knowledge or capability",
+      "Specific feedback with a reason; remove old or one-sided rules; regression-test",
+      "Projects for tested prompts, model matched to work, restart long chats"
+    ],
+    "Recap: the exam tells": [
+      "A named change and a start date → the part that change touched",
+      "Told to use information it doesn't have → instructions can't add knowledge",
+      "Vague feedback → a specific, checkable instruction with a reason",
+      "Evasive or over-cautious → an old or one-sided rule",
+      "Same prompt retyped, colleagues differ → a shared Project",
+      "High volume, routine → a faster, lower-cost model",
+      "Long chat drifted → summarise and restart"
+    ]
+  }
+}

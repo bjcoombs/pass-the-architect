@@ -50,7 +50,33 @@ SERIES = [
                        "the thirty task statements, the six scenarios, and the miss patterns that cost marks.",
         "episodes": ["F00", "10", "F04", "F05", "F06", "F01", "F02", "F03", "F07", "F08", "11", "F09", "F10", "F11"],
     },
+    # Drafts are written but not yet rendered: publish skips them except for the cover.
+    {
+        "slug": "ccdv-f",
+        "title": "Pass the Architect: CCDV-F",
+        "folder": "Pass the Architect CCDV-F",
+        "colour": "#1f5a4a",
+        "label": "CCDV-F",
+        "description": "A two-host study series for the Claude Certified Developer - Foundations exam: "
+                       "the API, application design, agents, tools and MCP, models, prompts, security and debugging.",
+        "episodes": [f"D{n:02d}" for n in range(12)],
+        "draft": True,
+    },
+    {
+        "slug": "ccao-f",
+        "title": "Pass the Architect: CCAO-F",
+        "folder": "Pass the Architect CCAO-F",
+        "colour": "#5a2f6e",
+        "label": "CCAO-F",
+        "description": "A two-host study series for the Claude Certified Associate - Foundations exam: "
+                       "prompting, checking outputs, products and models, workflows, Projects, responsible use and troubleshooting.",
+        "episodes": [f"A{n:02d}" for n in range(10)],
+        "draft": True,
+    },
 ]
+LIVE = [s for s in SERIES if not s.get("draft")]
+# Episode ID prefix to transcript folder; IDs without a prefix are CCAR-P episodes.
+FOLDERS = {"F": "foundations", "D": "developer", "A": "associate"}
 
 
 def front_matter(path):
@@ -63,7 +89,7 @@ def front_matter(path):
 
 
 def transcript(ep):
-    folder = ROOT / ("foundations/transcripts" if ep.startswith("F") else "transcripts")
+    folder = ROOT / FOLDERS[ep[0]] / "transcripts" if ep[0] in FOLDERS else ROOT / "transcripts"
     return next(folder.glob(f"{ep}-*.md"))
 
 
@@ -197,7 +223,7 @@ def feed(series, staged, site):
 def opml_and_index(site):
     outlines = "\n".join(
         f'    <outline type="rss" text={quoteattr(s["title"])} title={quoteattr(s["title"])}'
-        f' xmlUrl="{BASE_URL}/{s["slug"]}.xml" htmlUrl="{BASE_URL}/"/>' for s in SERIES)
+        f' xmlUrl="{BASE_URL}/{s["slug"]}.xml" htmlUrl="{BASE_URL}/"/>' for s in LIVE)
     (site / "podcasts.opml").write_text(f"""<?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="opml.xsl"?>
 <opml version="2.0">
@@ -211,7 +237,7 @@ def opml_and_index(site):
 """)
     rows = "\n".join(
         f'<li><strong>{escape(s["title"])}</strong><br><a href="{s["slug"]}.xml">{BASE_URL}/{s["slug"]}.xml</a></li>'
-        for s in SERIES)
+        for s in LIVE)
     (site / "index.html").write_text(f"""<!doctype html>
 <html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex"><title>Pass the Architect</title>
@@ -236,7 +262,7 @@ def main():
     args = ap.parse_args()
     if args.github and not args.site:
         ap.error("--github needs --site")
-    for series in SERIES:
+    for series in LIVE:
         staged = stage(series)
         if args.icloud:
             to_icloud(series, staged)
@@ -246,6 +272,9 @@ def main():
             feed(series, staged, args.site)
     if args.site:
         opml_and_index(args.site)
+        for series in SERIES:
+            if series.get("draft"):
+                cover(series, args.site)
 
 
 if __name__ == "__main__":

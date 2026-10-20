@@ -1,0 +1,376 @@
+{
+  "drills": [
+    {
+      "kind": "recall",
+      "question_line": "SAM: A project status report from Claude gives the launch date as the fourteenth",
+      "answer_line": "ALEX: An inconsistency. I check the date in the project plan",
+      "prompt": "A status report gives the launch date as the 14th on page 1 and the 21st on page 3. What is this, and what do you do?",
+      "answer": "An inconsistency. Check the date in the project plan, not by asking Claude, and correct the report from the plan."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: The same market-size question, asked three times",
+      "answer_line": "SAM: Disagreement between runs flags the fact.",
+      "prompt": "The same market-size question, asked 3 times, gives 3 different figures; 2 match. What now?",
+      "answer": "Disagreement between runs flags the fact for checking. Take it to the source; two matching runs are not evidence."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: A procurement manager asks Claude, \"why is Supplier C the strongest choice?\"",
+      "answer_line": "ALEX: The prompt leaked the answer.",
+      "prompt": "Asked \"why is Supplier C the strongest choice?\", Claude agrees. What went wrong?",
+      "answer": "The prompt leaked the answer. Ask neutrally, apply the same criteria to every supplier, or ask for the strongest case against C."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: An H R partner wonders whether Claude's draft feedback wording shifts",
+      "answer_line": "ALEX: Swap the name or the group",
+      "prompt": "Does Claude's draft feedback wording shift with the employee's gender? Quick test?",
+      "answer": "Swap the name or the group, run it again, and see whether the wording changes."
+    },
+    {
+      "kind": "mcq",
+      "label": "Rapid fire",
+      "question_line": "SAM: Claude has summarised the termination terms of a new supplier contract",
+      "answer_line": "ALEX: B. A decision rides on legal content",
+      "scenario": "Contract summary, early-exit decision",
+      "stem": "Claude summarised a new supplier contract's termination terms for an operations director, who will decide from it whether to exit early. What review fits?",
+      "choose": 1,
+      "options": {
+        "A": "A colleague checks spelling and layout",
+        "B": "Someone from legal checks the summary against the contract",
+        "C": "Claude reviews its own summary",
+        "D": "None, since it stays internal"
+      },
+      "correct": [
+        "B"
+      ],
+      "why": "A decision rides on legal content, so a qualified reviewer checks it. A is a typo check; C asks the model to vouch for itself; D judges the reader, not the decision."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: An investor relations note was rewritten to sound friendlier",
+      "answer_line": "ALEX: The rewrite is wrong.",
+      "prompt": "A friendlier rewrite of an investor relations note has dropped \"subject to board approval\". Verdict?",
+      "answer": "The rewrite is wrong. Compare with the original for figures, commitments and caveats, and restore the caveat."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: A dropdown. For each, choose inline, artifact or structured data.",
+      "answer_line": "SAM: Four is inline.",
+      "prompt": "Inline, artifact or structured data? 1. \"Which of these two dates is later?\" 2. 40 training sessions with date, trainer, room, capacity, to import into the booking tool. 3. A 3-page client proposal revised all week, then sent. 4. A quick explanation of one contract term.",
+      "answer": "1 inline. 2 structured data. 3 artifact. 4 inline."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: A finance team asks whether Claude should give the final sign-off",
+      "answer_line": "ALEX: No. High stakes, and the accountability is a person's.",
+      "prompt": "Should Claude give final sign-off on the weekly supplier payment run?",
+      "answer": "No. High stakes, and accountability is a person's. Claude can prepare the run and flag anything unusual; a person signs off."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: An office manager asks Claude, \"how can we make expense approvals faster?\"",
+      "answer_line": "ALEX: Give it the real process",
+      "prompt": "\"How can we make expense approvals faster?\" gets generic good practice. Next move?",
+      "answer": "Give Claude the real process: steps, who, how long, how often it bounces back, the handoffs. Input is the ceiling on the advice."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Purchase orders are retyped into three systems",
+      "answer_line": "SAM: Speeding one step just moves the queue.",
+      "prompt": "Purchase orders are retyped into 3 systems and half bounce back for rework. Speed up the drafting step?",
+      "answer": "No: the pain is structural, so redesign, with a baseline, a checkpoint and a pilot. Connecting the systems goes to an Architect or Developer."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: An events coordinator built an artifact that works out event budgets",
+      "answer_line": "ALEX: The prototype was right",
+      "prompt": "An events-budget artifact works; finance wants it pulling live figures from the accounting system for every event. What now?",
+      "answer": "The prototype was right and is the best brief. Integration with a company system goes to an Architect or Developer."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: A sponsor asks how the pilot went.",
+      "answer_line": "ALEX: The value, measured against the baseline",
+      "prompt": "A sponsor asks how the pilot went. What goes in your answer?",
+      "answer": "Value measured against the baseline, then the limits, each paired with the control that handles it."
+    },
+    {
+      "kind": "mcq",
+      "label": "Rapid fire",
+      "question_line": "SAM: Choose two. After a two-week pilot, a claims manager wants Claude drafting claim letters",
+      "answer_line": "ALEX: A and B. C drops the checkpoint",
+      "scenario": "Claims letters, team rollout",
+      "stem": "Choose two. After a two-week pilot, a claims manager wants Claude drafting claim letters across the whole team. Which two belong in the rollout plan?",
+      "choose": 2,
+      "options": {
+        "A": "The baseline measured before the pilot, and the same measure after rollout",
+        "B": "A human checkpoint before any letter that decides a claim goes out",
+        "C": "Remove review to keep the full saving",
+        "D": "Promise the team there will be no errors",
+        "E": "Redesign every claims process at the same time"
+      },
+      "correct": [
+        "A",
+        "B"
+      ],
+      "why": "Measure against the baseline and keep the checkpoint where accountability sits. C drops it, D overpromises, E is a redesign nobody asked for."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Your company's A I policy says nothing about using Claude to draft performance improvement plans",
+      "answer_line": "SAM: For low-stakes internal work, the policy",
+      "prompt": "The AI policy says nothing about drafting performance improvement plans with Claude. Go ahead?",
+      "answer": "Silence is not permission. It's a decision about a person, so ask the policy owner first; keep clearly allowed work moving."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: The company workspace is waiting on an approval, so a consultant drafts",
+      "answer_line": "ALEX: Shadow A I.",
+      "prompt": "Waiting on approval for the company workspace, a consultant drafts a client report in her personal Claude account. Verdict?",
+      "answer": "Shadow AI. A personal account sits under different terms; policy decides which data goes where. Use the approved workspace."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: A dropdown. For each, choose disclose A I involvement",
+      "answer_line": "ALEX: No label, disclose, disclose.",
+      "prompt": "Disclose AI involvement, or no label needed? 1. A routine internal email you drafted with Claude, reviewed and own. 2. A support chat where customers believe they talk to a person. 3. A regulator submission, drafted largely by Claude, where the regulator asks firms to declare AI use.",
+      "answer": "1 no label. 2 disclose. 3 disclose. Disclose where the reader would act differently if they knew."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Claude drafts first-round ratings for sixty grant applications",
+      "answer_line": "ALEX: Compare the ratings across the set",
+      "prompt": "Claude drafts first-round ratings for 60 grant applications; each looks reasonable alone. What check?",
+      "answer": "Compare ratings across the set by applicant group: bias shows in the pattern. A person makes each decision."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: A sales lead wants Claude to write a post in the voice of a well-known industry figure",
+      "answer_line": "ALEX: Not appropriate. It impersonates a real person",
+      "prompt": "A post in a well-known industry figure's voice endorsing the product, published as if they wrote it. Appropriate?",
+      "answer": "Not appropriate: it impersonates a real person and is designed to mislead. No review fixes deception."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Which works better: \"under two hundred words\"",
+      "answer_line": "ALEX: The second. Claude generalises from the reason",
+      "prompt": "\"Under 200 words\" or \"under 200 words, because it goes out as a text message to field engineers\"?",
+      "answer": "The second. Claude generalises from the reason, so it makes sensible choices about things you didn't list."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: A policy analyst pastes an eighty-page tender",
+      "answer_line": "ALEX: Long material first, the question after it.",
+      "prompt": "An 80-page tender pasted with the question typed above it. How should the prompt be ordered?",
+      "answer": "Long material first, the question after it, and ask Claude to quote the relevant passages before answering."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: A team lead asks, \"how could this summary be improved?\"",
+      "answer_line": "ALEX: Ask for the change itself.",
+      "prompt": "\"How could this summary be improved?\" returns suggestions, not a better summary. Fix?",
+      "answer": "Ask for the change itself, e.g. \"Revise it to one page, with the risks first.\""
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: One prompt asks for the market research, the pricing, the risk section",
+      "answer_line": "ALEX: Break it into a chain.",
+      "prompt": "One prompt asks for research, pricing, risks and cover letter at once; the risk section keeps coming back thin. Fix?",
+      "answer": "A chain: one stage per prompt, each checked before the next builds on it."
+    },
+    {
+      "kind": "mcq",
+      "label": "Rapid fire",
+      "question_line": "SAM: Choose two. A trainer wants quiz questions in the company's exact format",
+      "answer_line": "SAM: A and B. Claude copies examples closely",
+      "scenario": "Trainer, drifting quiz format",
+      "stem": "Choose two. A trainer wants quiz questions in the company's exact format, and the format keeps drifting. Which two steps?",
+      "choose": 2,
+      "options": {
+        "A": "Include one finished question in the exact format",
+        "B": "If it still drifts, add a few varied examples showing only the wanted format",
+        "C": "Add \"make it perfect\" to the prompt",
+        "D": "Switch to the most capable model",
+        "E": "Add ten examples, including bad ones marked \"don't do this\""
+      },
+      "correct": [
+        "A",
+        "B"
+      ],
+      "why": "Claude copies examples closely, so show only what you want: one first, a few more if it drifts. C is a polite adjective, D the bigger-model reflex."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: A sales lead needs to confirm the date of a client's next public results announcement",
+      "answer_line": "ALEX: An ordinary chat with web search.",
+      "prompt": "Confirm the date of a client's next public results announcement before a call in 10 minutes. Which feature?",
+      "answer": "An ordinary chat with web search: one current fact. Research mode is for many sources, compared and cited, and uses limits faster."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: An analyst tried Sonnet on a tangled, multi-step analysis",
+      "answer_line": "ALEX: Opus. Deep, sustained reasoning",
+      "prompt": "Sonnet struggled with a tangled, multi-step analysis of a merger's knock-on effects. Which model?",
+      "answer": "Opus: deep, sustained reasoning, and work Sonnet struggled with."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: A planner turns extended thinking up to its highest setting",
+      "answer_line": "ALEX: Save the highest setting for the hardest problems.",
+      "prompt": "Extended thinking at its highest setting for every quick question. Good habit?",
+      "answer": "No. Save the highest setting for the hardest problems; deeper thinking takes longer and uses more of your limit."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: A consultant counts on Claude's memory to quote the client's rate card",
+      "answer_line": "SAM: Memory holds what came up, in Claude",
+      "prompt": "A consultant relies on memory to quote the client's rate card exactly in every chat of her Project. Sound?",
+      "answer": "No. Memory holds what came up, in Claude's words. A rate card quoted exactly belongs in Project knowledge as the document."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: A finance analyst wants every answer she gets, in every conversation",
+      "answer_line": "ALEX: Her profile settings.",
+      "prompt": "She wants every answer, in every conversation, to lead with the number. Where does that go?",
+      "answer": "Her profile settings: her preference everywhere, not a rule for one Project."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: A buyer asks Claude, through the Gmail connector",
+      "answer_line": "ALEX: Gmail shows the attachment's details",
+      "prompt": "Through the Gmail connector, analyse the spreadsheet attached to a supplier's email?",
+      "answer": "Gmail sees attachment details, not content. Upload the spreadsheet, or work from it in Drive."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: A new analyst connects Google Drive, but Claude can't open",
+      "answer_line": "ALEX: Claude sees only what her own Google account can.",
+      "prompt": "Drive is connected, but Claude can't open the finance team's forecast folder. Why, and what now?",
+      "answer": "Claude sees only what her Google account can. Ask the folder's owner for access; don't copy files around the permission."
+    },
+    {
+      "kind": "mcq",
+      "label": "Rapid fire",
+      "question_line": "SAM: Choose two. A policy Project serves a whole department",
+      "answer_line": "SAM: A and B. C is how the retired rule crept back",
+      "scenario": "Shared policy Project, untracked edit",
+      "stem": "Choose two. A policy Project serves a whole department, and someone's untracked edit brought back a retired rule. Which two steps?",
+      "choose": 2,
+      "options": {
+        "A": "Name an owner who makes the updates",
+        "B": "Give maintainers \"can edit\" and everyone else \"can view\"",
+        "C": "Let anyone edit, so errors get fixed faster",
+        "D": "Add \"ignore retired rules\" to the instructions",
+        "E": "Switch the Project to Opus"
+      },
+      "correct": [
+        "A",
+        "B"
+      ],
+      "why": "Users report, the owner updates. C is how the rule crept back; D asks Claude to know what's retired; E reads the same instructions."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: The commission totals in a monthly summary are off by small amounts",
+      "answer_line": "SAM: Capability is the right diagnosis",
+      "prompt": "Commission totals are slightly off, and the prompt already says \"double-check your arithmetic\". Fix?",
+      "answer": "A mechanism that computes: the spreadsheet itself, or Claude's code execution feature. No instruction fixes capability."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: After a year of patches, a team's prompt runs to three pages",
+      "answer_line": "ALEX: Simplify; longer is not always better.",
+      "prompt": "After a year of patches the prompt is 3 pages of rules, and outputs hedge and contradict themselves. Fix?",
+      "answer": "Simplify: remove rules whose problem has gone, note why each remaining rule exists, and test on past cases, including ones that worked."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: A client says the weekly briefings",
+      "answer_line": "ALEX: Ask for one briefing they'd call good",
+      "prompt": "A client says the weekly briefings \"don't sound like us\". Next step?",
+      "answer": "Ask for one briefing they'd call good and what exactly is off; turn it into an example or a specific instruction with a reason."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Customer quote drafts started using an old discount table",
+      "answer_line": "ALEX: Diagnose what that change touched.",
+      "prompt": "Quote drafts started using an old discount table the week a folder of archived quotes was uploaded to the Project. First move?",
+      "answer": "Diagnose what the change touched: remove the superseded material, keep one current version, and retest."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: One last retrieval before you sleep.",
+      "answer_line": "ALEX: Output Evaluation twenty-one, Workflow Integration sixteen",
+      "prompt": "Name the seven domains in weight order, with one tell for each.",
+      "answer": "Output Evaluation 21, Workflow Integration 16, Governance 15, Prompting 14, Product and Model Selection 12, Configuration 12, Troubleshooting 10."
+    }
+  ],
+  "segments": {
+    "In this episode": [
+      "35 quick items across all 7 domains, in exam proportions",
+      "The 1 domain to replay in the morning",
+      "Wrong-answer families named on sight",
+      "Exam-day essentials in 2 minutes"
+    ],
+    "Drill: checking outputs": [
+      "No new material; tally misses by domain",
+      "Output Evaluation: 21%, 7 items",
+      "Two dates for one launch; three runs, three figures",
+      "A leading question; testing wording for gender",
+      "Who reviews a contract summary; a caveat lost in a rewrite",
+      "Dropdown: inline, artifact or structured data"
+    ],
+    "Drill: workflows and governance": [
+      "Workflows 16%: final sign-off on a payment run",
+      "Generic process advice; retyped purchase orders",
+      "A budget artifact meets the accounting system; reporting a pilot",
+      "Rolling out claim letters after a pilot",
+      "Governance 15%: a silent policy; a personal account",
+      "Dropdown: disclose or not; grant ratings; an impersonated endorsement"
+    ],
+    "Drill: prompting and models": [
+      "Prompting 14%: a constraint with and without its reason",
+      "An 80-page tender; suggestions instead of a revision",
+      "A thin risk section; a drifting quiz format",
+      "Products and models 12%: a date before a call",
+      "Sonnet struggled; extended thinking for everything",
+      "A rate card quoted from memory"
+    ],
+    "Drill: Projects and troubleshooting": [
+      "Configuration 12%: a preference for every conversation",
+      "A Gmail attachment; a Drive folder Claude can't open",
+      "A retired rule back in a shared Project",
+      "Troubleshooting 10%: commission totals slightly off",
+      "A 3-page prompt; \"doesn't sound like us\"; an old discount table",
+      "2+ misses on checking outputs: replay episode 2"
+    ],
+    "The distractor families": [
+      "Trusting confidence; overspending; the bigger-model reflex",
+      "Asking the model to promise; comfort controls",
+      "Polite adjectives; volume as context",
+      "Abandoning a task with a safe route",
+      "A caveat or permanent review dressed as a fix; polish",
+      "Workarounds; rushing to automate or settle the argument"
+    ],
+    "Exam day in brief": [
+      "Government photo ID, name exactly as registered",
+      "Clear desk; no phones, watches, headphones or recorders",
+      "Accept the confidentiality agreement or the session ends",
+      "Item 20 at 1:23 left, 40 at 47 min, 60 at 10 min",
+      "Reread 3 times, or behind past 2 minutes: best answer, flag; no blanks",
+      "Morning: episode 9, then your worst domain"
+    ],
+    "Final retrieval": [
+      "Weights: Output 21, Workflow 16, Governance 15, Prompting 14, Products 12 = Configuration 12, Troubleshooting 10",
+      "Runs disagree on a fact → check that fact; caveat dropped → rewrite is wrong",
+      "One slow step → augment; retyping and rework → redesign; company system → escalate",
+      "Silent policy touching people → ask the owner; reader thinks a human did it → disclose",
+      "Constraint → give the reason; long material → before the question; thin part → chain",
+      "One current fact → web search; Sonnet struggled → Opus; exact wording → Project knowledge",
+      "Everywhere preference → profile settings; shared Project → owner and view access",
+      "Arithmetic → something that computes; trouble after a change → what it touched"
+    ]
+  }
+}

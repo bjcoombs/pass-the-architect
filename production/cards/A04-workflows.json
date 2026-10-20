@@ -1,0 +1,189 @@
+{
+  "drills": [
+    {
+      "kind": "mcq",
+      "label": "Cold open",
+      "question_line": "SAM: Here is your opening item. An operations lead at a logistics firm",
+      "answer_line": "SAM: Because nobody has measured.",
+      "scenario": "Logistics firm, weekly supplier report",
+      "stem": "An operations lead wants Claude to speed up a weekly supplier-performance report: an analyst pulls figures from three spreadsheets, writes commentary, a manager checks it, and it goes to the procurement director. What should the operations lead do first?",
+      "choose": 1,
+      "options": {
+        "A": "Have Claude draft the commentary every week from now on",
+        "B": "Ask Claude to design a new report format and switch next week",
+        "C": "Map steps, times and error points; pick the step, keep the manager's check, pilot against the current report",
+        "D": "Hand it to IT to build an automated pipeline across the three sources"
+      },
+      "correct": [
+        "C"
+      ],
+      "why": "Nobody has measured where the hours or errors are. Mapping the current process gives a baseline and points Claude at the right step, with the manager's check kept."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. An H R partner has interview notes from five managers",
+      "answer_line": "SAM: B. Claude does the reading and sorting",
+      "scenario": "HR partner, conflicting onboarding notes",
+      "stem": "An HR partner has notes from five managers about a new onboarding process. Two want laptops ready on day one, two say the first week is fine, one never mentions equipment. What is the best use of Claude?",
+      "choose": 1,
+      "options": {
+        "A": "Have Claude write the final requirements, resolving the disagreements",
+        "B": "Extract each manager's needs, flag conflicts and gaps, draft follow-up questions, confirm with the managers",
+        "C": "Use only the most senior manager's notes",
+        "D": "Ask Claude which managers are right"
+      },
+      "correct": [
+        "B"
+      ],
+      "why": "Claude does the reading and sorting; the people who own the process settle the conflict. The silent manager is a gap to ask about."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Choose two. A consultant is preparing a client deck",
+      "answer_line": "SAM: A is right. C is the trusting-the-model's-confidence distractor",
+      "scenario": "Consultant's market-entry deck",
+      "stem": "A consultant preparing a client deck on entering a new regional market needs current competitor and regulation information. Which two steps are most appropriate?",
+      "choose": 2,
+      "options": {
+        "A": "Use research mode for a multi-source, cited report",
+        "B": "Check key figures and regulatory claims against the cited sources",
+        "C": "Ask Claude to rate its confidence and keep only high-confidence claims",
+        "D": "Paste the client's confidential pricing model into a personal account",
+        "E": "Use a fast model with web search off to save time"
+      },
+      "correct": [
+        "A",
+        "B"
+      ],
+      "why": "Research mode fits a many-source, cited question, and citations make checking possible, not unnecessary. A model's rating of its own answer is not evidence."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Pause here and answer before we go on. On the exam this comes as four statements",
+      "answer_line": "ALEX: One, yourself. Two, reviewer. Three, escalate. Four, yourself.",
+      "prompt": "For each, choose: do it yourself with Claude; do it with a named reviewer before it goes out; or escalate to an Architect or Developer. 1. Summarise your own notes from yesterday's internal workshop. 2. Draft a customer notice about a price change. 3. Have Claude's replies post automatically into the customer system with nobody in between. 4. Build an artifact mock-up of a new expense form for feedback.",
+      "answer": "1. Yourself: internal, low stakes. 2. Named reviewer: customer-facing commercial commitment. 3. Escalate: integration with a company system, human removed. 4. Yourself: a prototype meant to be critiqued."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. A sales lead's team spends about three hours",
+      "answer_line": "SAM: Right. A redesigns what the stem says works.",
+      "scenario": "Sales team, pre-review account summaries",
+      "stem": "A sales team spends about three hours per account writing summaries before each quarterly business review. The rest of the review process works well. What is the best way to bring Claude in?",
+      "choose": 1,
+      "options": {
+        "A": "Redesign the whole review process around Claude first",
+        "B": "Project with the template; Claude drafts from account notes, rep reviews; compare time against three hours",
+        "C": "Stop writing summaries; Claude answers questions live in the meeting",
+        "D": "Wait for a full sales-system integration"
+      },
+      "correct": [
+        "B"
+      ],
+      "why": "One slow step in a working process: augment that step, keep the rep's review, and measure against the baseline."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. A finance director asks whether Claude can prepare",
+      "answer_line": "SAM: C. It sells the real value",
+      "scenario": "Finance director wants no more checking",
+      "stem": "A finance director asks whether Claude can prepare month-end variance commentary automatically, so the team can stop checking it. What is the best response?",
+      "choose": 1,
+      "options": {
+        "A": "Yes, Claude is accurate enough that checking is no longer needed",
+        "B": "No, AI should not be used near financial reporting",
+        "C": "Claude drafts and flags unusual movements; the team still checks and signs off; pilot measuring time saved",
+        "D": "Tell the director to raise it with IT"
+      },
+      "correct": [
+        "C"
+      ],
+      "why": "Sell the real value and keep the control where the accountability sits. A overpromises; B abandons the task; D passes on a business question."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Your turn first. Pause and name the five tasks we covered, and the habit that wins each one. [pause]",
+      "answer_line": "ALEX: Requirements: surface conflicts, don't settle them.",
+      "prompt": "Name the five tasks we covered, and the habit that wins each one.",
+      "answer": "Requirements: surface conflicts, don't settle them. Research and process: real detail, check sources. Design: prototype, then escalate. Augment or redesign: match change to pain, with a baseline. Stakeholders: value, limits and controls together."
+    }
+  ],
+  "segments": {
+    "In this episode": [
+      "Pull requirements from messy notes",
+      "Research mode and real process detail",
+      "Prototype yourself, or escalate",
+      "Augment one step, or redesign the process",
+      "Explain value and limits to a sponsor"
+    ],
+    "Cold open: the weekly report": [
+      "16%, about 10 of 60 items",
+      "5 tasks: requirements, research and planning, design, workflows, stakeholders",
+      "Understand the work before changing it",
+      "Keep a human where accountability sits",
+      "Distractors rush to automate or refuse to start"
+    ],
+    "Requirements and use cases": [
+      "Claude extracts needs, who raised them, conflicts and gaps",
+      "A finished-looking document reads as settled",
+      "A strawman draft is real, but not when inputs conflict",
+      "Use-case fit: language work, repeats, checkable, has what it needs",
+      "Final sign-off on a payment run is a person's"
+    ],
+    "Research, planning and process optimisation": [
+      "Quick fact: chat with web search",
+      "Many sources, compared and cited: research mode",
+      "Citations make checking possible, not unnecessary",
+      "Plans need the real deadline, team and constraints",
+      "The detail you give is the ceiling on the advice"
+    ],
+    "Supporting design and iteration": [
+      "Several options, critique against criteria, artifacts to react to",
+      "Small tested steps, one change at a time",
+      "Associates escalate complex or technical work",
+      "Company systems, autonomy, every customer, the API: Architects and Developers",
+      "A working prototype is the best brief"
+    ],
+    "Augment or redesign": [
+      "Augment: Claude takes one step in a process that stays",
+      "Redesign: the process changes shape",
+      "Pain in one step vs pain in handoffs and rework",
+      "Baseline, checkpoint, pilot",
+      "Over-reviewing kills adoption; over-redesigning is overspend"
+    ],
+    "Communicating value and limits": [
+      "Value in their terms, measured against the baseline",
+      "Limits: confidently wrong, knowledge boundaries, drafts people own",
+      "Some decisions stay with a person",
+      "A sponsor who finds limits later feels misled",
+      "Pair each limit with its control"
+    ],
+    "Cold open: the verdict": [
+      "Answer: C, map steps, times and error points, then pilot",
+      "Nobody has measured where the hours or errors are",
+      "A jumps to a fix with no before and after",
+      "B redesigns the output; D escalates what needs no integration",
+      "Tell: \"first\" → understand the current process"
+    ],
+    "Five to remember": [
+      "Claude surfaces conflicts; process owners settle them",
+      "Research mode for cited multi-source questions; check the sources; feed real process detail",
+      "Prototype yourself; escalate systems, autonomy and production",
+      "Augment a slow step, redesign broken handoffs; baseline, checkpoint, pilot",
+      "Measured value, every limit paired with a control; never promise no checking"
+    ],
+    "Recap: the exam tells": [
+      "Notes disagree → flag the conflict, take it to the owners",
+      "\"Specific to our process\" → give Claude steps, times, handoffs",
+      "Filter by Claude's confidence → distractor; check the cited source",
+      "\"Integrate\", \"automatically\", \"production\" → prototype, then escalate",
+      "One slow step → augment; handoffs and rework → redesign",
+      "Sponsor wants \"no errors\" → value, limit and control together",
+      "\"First\" → map and measure the current process"
+    ]
+  }
+}

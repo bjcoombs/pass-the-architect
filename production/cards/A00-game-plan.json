@@ -1,0 +1,135 @@
+{
+  "drills": [
+    {
+      "kind": "mcq",
+      "label": "Cold open",
+      "question_line": "SAM: An item before anything else, and it is the first official sample from the exam guide.",
+      "answer_line": "ALEX: Open the regulation and read the subsection. Which is B.",
+      "scenario": "Confident regulation summary",
+      "stem": "An associate asks Claude to summarize a new regulation, and Claude produces a confident summary citing a specific subsection number. Before sending the summary to the compliance team, what is the most appropriate action?",
+      "choose": 1,
+      "options": {
+        "A": "Send it as-is, since Claude expressed high confidence",
+        "B": "Verify the cited subsection against the official regulation text before sharing",
+        "C": "Ask Claude to rate its own confidence and send it if the rating is high",
+        "D": "Reword the summary to sound more formal, then send it"
+      },
+      "correct": [
+        "B"
+      ],
+      "why": "A specific-looking citation is the detail a model can invent, and compliance will act on it. Self-rated confidence is not evidence; rewording is polish."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Pause here and answer before we go on. A dropdown item. A marketing lead has a customer newsletter",
+      "answer_line": "SAM: All four right.",
+      "prompt": "A Claude-drafted customer newsletter. For each, choose \"check against a source\" or \"a read-through is enough\": 1. A competitor's market-share percentage. 2. Tone and length of the opening paragraph. 3. A quote attributed to a named industry analyst. 4. Three subject lines to choose from.",
+      "answer": "1. Check against a source. 2. Read-through. 3. Check against a source. 4. Read-through. Specific, checkable claims get checked; style gets read."
+    },
+    {
+      "kind": "mcq",
+      "label": "Sample item",
+      "question_line": "SAM: Pause here and answer before we go on. The second official sample.",
+      "answer_line": "SAM: It has. B: a faster, lower-cost model",
+      "scenario": "High-volume reply drafts",
+      "stem": "An associate needs to generate a high volume of short customer-reply drafts where speed and cost matter more than deep reasoning. Which choice best fits the task?",
+      "choose": 1,
+      "options": {
+        "A": "Use the most capable, highest-cost model for every reply to maximize quality",
+        "B": "Use a faster, lower-cost model suited to straightforward, high-volume tasks",
+        "C": "Disable all product features to reduce cost",
+        "D": "Switch to a different AI platform"
+      },
+      "correct": [
+        "B"
+      ],
+      "why": "The stem ranks speed and cost above deep reasoning. Keep the most capable model for complex work; C and D never touch the trade-off."
+    },
+    {
+      "kind": "mcq",
+      "label": "Sample item",
+      "question_line": "SAM: Pause here and answer before we go on. The third official sample.",
+      "answer_line": "SAM: So B. The trends survive without names and account numbers",
+      "scenario": "Spreadsheet with personal data",
+      "stem": "A project manager wants to upload a spreadsheet containing customer names and account numbers so Claude can analyze trends. Organizational policy restricts sharing regulated personal data. What is the most appropriate action?",
+      "choose": 1,
+      "options": {
+        "A": "Upload the file as-is, since the analysis is internal",
+        "B": "Remove or anonymize the personal identifiers before uploading, consistent with policy",
+        "C": "Upload the file but instruct Claude not to retain it",
+        "D": "Skip the analysis entirely"
+      },
+      "correct": [
+        "B"
+      ],
+      "why": "The policy controls what is shared, so the fix is in the data before upload. A request not to retain is not the control; skipping abandons a task with a safe route."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: One more pass. Pause and name the four parts of the game plan",
+      "answer_line": "ALEX: Sixty items in a hundred and twenty minutes, pass at seven hundred and twenty",
+      "prompt": "Name the four parts of the game plan: the paper, the clock, the formats and the method.",
+      "answer": "60 items, 120 minutes, pass at 720, Output Evaluation biggest at 21%. 1:23, 0:47 and 0:10 left at items 20, 40, 60. Multiple choice, multiple response, dropdown statements. Ask, stakes, step, strike."
+    }
+  ],
+  "segments": {
+    "In this episode": [
+      "Describe the paper and where its marks sit",
+      "Pace against a countdown clock",
+      "Handle statements with a dropdown each",
+      "A 4-step method in plain business language",
+      "Test it on the 3 official sample questions"
+    ],
+    "Cold open: the confident citation": [
+      "Official sample 1: a confident regulation summary",
+      "60 items in 120 minutes, proctored by Pearson VUE",
+      "Pass: scaled 720 on 100-1,000; only the total decides",
+      "Candidate: business user who knows limits and escalates",
+      "Output Evaluation 21% · Workflow 16% · Governance 15% · Prompting 14%",
+      "Products & Models 12% · Configuration 12% · Troubleshooting 10%"
+    ],
+    "The clock and the dropdowns": [
+      "About 1:50 an item, 10 minutes kept for flags",
+      "Time left: Q20 @ 1:23 · Q40 @ 0:47 · Q60 @ 0:10",
+      "Reread three times → best answer, flag, move on",
+      "Multiple response: read how many to pick first",
+      "Dropdowns: each statement is its own judgement",
+      "No domain labels on items"
+    ],
+    "The four-step method": [
+      "Ask: the last line, and how many to pick",
+      "Stakes: who receives it, what rule applies",
+      "Step: the proportionate one that lets work go ahead",
+      "Strike: confidence, overspending, a promise for a control, giving up, polish",
+      "Ask · Stakes · Step · Strike"
+    ],
+    "Samples two and three": [
+      "Sample 2: high-volume short reply drafts",
+      "Sample 3: a spreadsheet with customer identifiers",
+      "Walk ask, stakes, step, strike on each",
+      "Escalating is not the same as giving up"
+    ],
+    "Cold open: the verdict": [
+      "Answer: B, verify the subsection in the official text",
+      "Specific-looking citations are what a model can invent",
+      "A self-rating is the model's own view, not evidence",
+      "Rewording is polish, not correctness",
+      "Tell: \"confident\" + citation, figure or name → check the source"
+    ],
+    "Using the series": [
+      "Listen A00 to A09 in order",
+      "Episode 2 is the biggest domain and longest episode",
+      "Final drill the night before; exam day the morning of",
+      "At \"pause here\", answer aloud first",
+      "Call every option and every dropdown statement"
+    ],
+    "Recap: the exam tells": [
+      "Reread a stem three times → best answer, flag, move on",
+      "Confident citation, figure or name → check it at the source",
+      "Only tone or style in question → a read-through is enough",
+      "Speed and cost ranked above reasoning → faster, lower-cost model",
+      "Policy restricts the data → fix the data before upload",
+      "An option abandons the task → find the one that makes it safe"
+    ]
+  }
+}

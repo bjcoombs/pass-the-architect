@@ -1,0 +1,185 @@
+{
+  "drills": [
+    {
+      "kind": "mcq",
+      "label": "Cold open",
+      "question_line": "SAM: Here is your opening item. A platform team runs Claude Code in a nightly job.",
+      "answer_line": "SAM: The answer is B. The alias moved to a newer model",
+      "scenario": "Nightly job changes overnight",
+      "stem": "A nightly Claude Code job uses the sonnet alias in project settings. One morning its summaries change structure, though nobody changed code, prompts or settings. The team wants model upgrades only when they choose. What should they do?",
+      "choose": 1,
+      "options": {
+        "A": "Add a CLAUDE.md line telling Claude to keep the old structure",
+        "B": "Set a full model name in project settings; move to a newer model only after evals pass",
+        "C": "Switch the alias to opus so the job always runs the most capable model",
+        "D": "Run each night's job with --continue so it sees the previous night's output"
+      },
+      "correct": [
+        "B"
+      ],
+      "why": "Aliases move to newer versions. A full model name stops the drift, and evals decide when to move. A is guidance aimed at a version problem."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. A developer wants Claude to use their own sandbox U R L",
+      "answer_line": "ALEX: C. A reaches every teammate.",
+      "scenario": "Personal sandbox instructions",
+      "stem": "A developer wants Claude to use their own sandbox URL and test account in one repository. Teammates must not get these instructions, and they should not apply in other projects. Where should they go?",
+      "choose": 1,
+      "options": {
+        "A": "The project's CLAUDE.md",
+        "B": "~/.claude/CLAUDE.md in their home directory",
+        "C": "CLAUDE.local.md at the project root, kept out of git",
+        "D": "A .claude/rules file with a paths field"
+      },
+      "correct": [
+        "C"
+      ],
+      "why": "CLAUDE.local.md is personal, one project, never committed. A reaches teammates, B reaches every project, D is committed and scopes by file."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Pause here and answer before we go on. For each statement, say true or false.",
+      "answer_line": "ALEX: False, true, true, false.",
+      "prompt": "True or false: (1) an @ import lowers context cost because the file loads only when needed; (2) a rules file with a paths field loads only for matching files; (3) a deny rule still blocks in bypass permissions mode; (4) home-directory settings override the project's committed settings.json.",
+      "answer": "1 false (imports load at launch); 2 true; 3 true; 4 false (user settings sit below project settings)."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. A team's review subagent should build up knowledge",
+      "answer_line": "ALEX: A. B is mine alone",
+      "scenario": "Review subagent that learns",
+      "stem": "A review subagent should build up knowledge of this repository's recurring defects across sessions, and teammates should benefit through version control. What should the team configure?",
+      "choose": 1,
+      "options": {
+        "A": "The subagent's memory field set to project",
+        "B": "The subagent's memory field set to user",
+        "C": "A CLAUDE.md line telling the subagent to remember what it finds",
+        "D": "Rely on the main session's auto memory"
+      },
+      "correct": [
+        "A"
+      ],
+      "why": "Project-scope agent memory lives in the repo's .claude folder and can be version-controlled. User scope is personal; auto memory is machine-local."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Choose two. A nightly pipeline must run Claude Code",
+      "answer_line": "SAM: A and B. C needs a person",
+      "scenario": "Unattended pipeline run",
+      "stem": "Choose two. A nightly pipeline must run Claude Code with no one watching, and a script must read the final result and the session ID so a later step can resume it. Which two?",
+      "choose": 2,
+      "options": {
+        "A": "Run with the -p flag",
+        "B": "Set --output-format json",
+        "C": "Start an interactive session and copy the result into a file",
+        "D": "Add a CLAUDE.md line asking Claude to print its answer as JSON",
+        "E": "Run /compact before the job exits"
+      },
+      "correct": [
+        "A",
+        "B"
+      ],
+      "why": "-p runs non-interactively; json output carries the result and session ID. D is a request for what the flag already gives; E returns nothing."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. A developer on their own laptop is running a long refactor",
+      "answer_line": "SAM: That is a classic distractor",
+      "scenario": "Long refactor, fewer prompts",
+      "stem": "On their own laptop, a developer running a long refactor is tired of approving every shell command. They want Claude to keep working while something still blocks risky actions like force pushes and production deploys. Which permission mode fits?",
+      "choose": 1,
+      "options": {
+        "A": "bypassPermissions",
+        "B": "acceptEdits",
+        "C": "auto",
+        "D": "dontAsk"
+      },
+      "correct": [
+        "C"
+      ],
+      "why": "Auto mode puts a classifier in front of risky actions. Bypass removes safety checks and belongs in isolated containers; acceptEdits still prompts; dontAsk denies."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Recall first. Pause and name the four segments, and the two questions under all of them.",
+      "answer_line": "ALEX: The CLAUDE dot md hierarchy and rules, settings and pinning",
+      "prompt": "Name the four segments, and the two questions under all of them.",
+      "answer": "CLAUDE.md hierarchy and rules; settings, pinning and plugins; skills, commands and agents; sessions, headless and auto mode. Who does it reach, and when does it load?"
+    }
+  ],
+  "segments": {
+    "In this episode": [
+      "Place an instruction at the right CLAUDE.md level",
+      "Read the settings precedence",
+      "Pin a model so upgrades happen when you choose",
+      "Skill, command or subagent, and memory that lasts",
+      "Run unattended: headless, streaming, permission modes"
+    ],
+    "Cold open: the overnight change": [
+      "Config management 4.1%, Claude Code operation 3.1%",
+      "About four items on a 53-item paper",
+      "Question 1: who does this reach?",
+      "Question 2: when does it load?"
+    ],
+    "The CLAUDE.md hierarchy and rules": [
+      "Levels: managed, user (~/.claude), project, local",
+      "Files concatenate; subdirectory files load on first use",
+      "CLAUDE.md is context, not enforced configuration",
+      "@ imports organise, up to 4 hops, load at launch",
+      ".claude/rules/ with a paths glob loads only for matching files",
+      "/init writes a starter CLAUDE.md; /memory opens memory files"
+    ],
+    "Settings, pinning and plugins": [
+      "Order: managed, command line, local, project, user",
+      "Permission rules: allow, ask, deny; lists merge across scopes",
+      "Aliases opus, sonnet, haiku resolve to newer versions over time",
+      "On the API, a model ID is a pinned snapshot",
+      "Version prompts beside the model they were tested on",
+      "Plugins: namespaced, version field, dependencies list"
+    ],
+    "Skills, commands and agents": [
+      ".claude/commands/ files and .claude/skills/<name>/SKILL.md both make /name",
+      "A skill's description lets Claude load it when relevant",
+      "disable-model-invocation: only a person starts it",
+      "Subagents: fresh context, own prompt and tools, only the result returns",
+      "Auto memory: per repo, machine-local, MEMORY.md index",
+      "Subagent memory field: user, project or local scope"
+    ],
+    "Sessions, headless and auto mode": [
+      "/clear empties; /compact summarises; /rewind goes back",
+      "--continue for the latest session; --resume with a session ID",
+      "Headless runs for scripts and pipelines",
+      "Output formats for final results and live events",
+      "Permission modes, from ask-first to skip-all",
+      "bypassPermissions: isolated containers only"
+    ],
+    "Cold open: the verdict": [
+      "The alias moved to a newer model",
+      "Pin a full model name; evals decide when to move",
+      "A CLAUDE.md line gives no control over the next release",
+      "Tell: \"only when they choose\" and \"nobody changed anything\""
+    ],
+    "Five to remember": [
+      "CLAUDE.md levels concatenate; CLAUDE.local.md is personal and uncommitted",
+      "Imports load at launch; a paths glob loads only on matching files",
+      "Settings order managed to user; deny holds; \"must never\" needs settings or a hook",
+      "Aliases move: pin, version prompts with the model, gate with evals",
+      "Side-effect skills: disable-model-invocation; unattended: -p; fewer prompts, safety checks: auto"
+    ],
+    "Recap: the exam tells": [
+      "\"Must never\", \"every time\" → deny rule or hook",
+      "Personal, one project → CLAUDE.local.md",
+      "One file type across the tree → rules file with a paths glob",
+      "Changed with no change of yours → moving alias; pin",
+      "Settings disagree → higher level wins; deny always holds",
+      "Side-effect skill → disable-model-invocation",
+      "Agent should learn and share → memory: project",
+      "Unattended → -p with json; fewer prompts, risks blocked → auto"
+    ]
+  }
+}
