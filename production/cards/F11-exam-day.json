@@ -1,0 +1,46 @@
+{
+  "drills": [],
+  "segments": {
+    "In this episode": [
+      "What to check before you leave",
+      "What to write on the noteboard",
+      "How to read the countdown clock",
+      "The item formats to expect",
+      "What to do when an item rattles you"
+    ],
+    "Before you leave": [
+      "Photo ID: government-issued, unexpired, exact registration name",
+      "A proper breakfast, and water",
+      "No new material; replay the anti-patterns if anything",
+      "Arrive early: late past the window forfeits the fee",
+      "Phone, watch, headphones in the locker; accept the NDA"
+    ],
+    "The noteboard": [
+      "Ask if you may write before the clock starts",
+      "ROOT · SMALLEST · GUARANTEES",
+      "Clock = time left: Q20 @ 1:23 · Q40 @ 0:47 · Q60 @ 0:10",
+      "Constraint words → component → remove the root → would the guide pick it?",
+      "Strike these → use these: stop_reason, hook, error category, escalation triggers",
+      "Left panel changes → read it again · unknown flag → strike it"
+    ],
+    "Item formats": [
+      "Multiple choice: one answer",
+      "Multiple response: read how many to pick first",
+      "Dropdown statements: each one is its own item",
+      "No throwaway options: judge each statement alone",
+      "No domain labels: the left-column scenario is your context"
+    ],
+    "When an item rattles you": [
+      "Best answer, flag it, move on",
+      "A blank never scores",
+      "Three hard in a row: one breath, then read the last line first",
+      "Behind at a checkpoint: past 2 minutes, answer and flag"
+    ],
+    "The last ten minutes": [
+      "Review: flagged first, then unanswered",
+      "Fill every blank",
+      "Change an answer only for a reason in the stem",
+      "Submit, then eat something good"
+    ]
+  }
+}

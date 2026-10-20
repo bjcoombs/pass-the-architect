@@ -48,7 +48,7 @@ SERIES = [
         "label": "CCAR-F",
         "description": "A two-host study series for resitting the Claude Certified Architect - Foundations exam: "
                        "the thirty task statements, the six scenarios, and the miss patterns that cost marks.",
-        "episodes": ["F00", "10", "F04", "F05", "F06", "F01", "F02", "F03", "F07", "F08", "11", "F09", "F10"],
+        "episodes": ["F00", "10", "F04", "F05", "F06", "F01", "F02", "F03", "F07", "F08", "11", "F09", "F10", "F11"],
     },
 ]
 

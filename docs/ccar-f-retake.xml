@@ -16,12 +16,22 @@
     <itunes:explicit>false</itunes:explicit>
     <itunes:category text="Education"/>
     <item>
+      <title>13. Exam day</title>
+      <description>A short episode for the morning of the Foundations exam: what to bring, what to write on the noteboard and how to read the countdown clock, the item formats to expect, how to recover from a hard item, and what to do in the last ten minutes.</description>
+      <enclosure url="https://github.com/bjcoombs/pass-the-architect/releases/download/ccar-f-retake/13-F11-exam-day.mp3" length="6552314" type="audio/mpeg"/>
+      <guid isPermaLink="false">pass-the-architect-ccar-f-retake-F11-exam-day-5c3f858c</guid>
+      <pubDate>Sun, 18 Oct 2026 06:13:00 +0000</pubDate>
+      <itunes:duration>0:06:05</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <podcast:chapters url="https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/13-F11-exam-day.json" type="application/json+chapters"/>
+    </item>
+    <item>
       <title>12. Foundations final drill</title>
       <description>About forty rapid-fire items across the five Foundations domains, weighted by the blueprint and by the last attempt's gaps, each set in one of the six scenarios, then the guide's named anti-patterns and a calm walk through exam day.</description>
-      <enclosure url="https://github.com/bjcoombs/pass-the-architect/releases/download/ccar-f-retake/12-F10-final-drill.mp3" length="35550165" type="audio/mpeg"/>
-      <guid isPermaLink="false">pass-the-architect-ccar-f-retake-F10-final-drill-6269a903</guid>
+      <enclosure url="https://github.com/bjcoombs/pass-the-architect/releases/download/ccar-f-retake/12-F10-final-drill.mp3" length="35558114" type="audio/mpeg"/>
+      <guid isPermaLink="false">pass-the-architect-ccar-f-retake-F10-final-drill-59327255</guid>
       <pubDate>Sun, 18 Oct 2026 06:12:00 +0000</pubDate>
-      <itunes:duration>0:25:49</itunes:duration>
+      <itunes:duration>0:25:50</itunes:duration>
       <itunes:episodeType>full</itunes:episodeType>
       <podcast:chapters url="https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/12-F10-final-drill.json" type="application/json+chapters"/>
     </item>
@@ -138,10 +148,10 @@
     <item>
       <title>00. Foundations game plan</title>
       <description>How the Foundations exam is built: sixty items across four of six scenarios, the domain weights, a pacing plan for the Pearson VUE screen, and a four-step method worked through three official sample questions.</description>
-      <enclosure url="https://github.com/bjcoombs/pass-the-architect/releases/download/ccar-f-retake/00-F00-game-plan.mp3" length="18607354" type="audio/mpeg"/>
-      <guid isPermaLink="false">pass-the-architect-ccar-f-retake-F00-game-plan-c7dde6e8</guid>
+      <enclosure url="https://github.com/bjcoombs/pass-the-architect/releases/download/ccar-f-retake/00-F00-game-plan.mp3" length="18671784" type="audio/mpeg"/>
+      <guid isPermaLink="false">pass-the-architect-ccar-f-retake-F00-game-plan-4255a165</guid>
       <pubDate>Sun, 18 Oct 2026 06:00:00 +0000</pubDate>
-      <itunes:duration>0:16:57</itunes:duration>
+      <itunes:duration>0:17:01</itunes:duration>
       <itunes:episodeType>full</itunes:episodeType>
       <podcast:chapters url="https://bjcoombs.github.io/pass-the-architect/chapters/ccar-f-retake/00-F00-game-plan.json" type="application/json+chapters"/>
     </item>
