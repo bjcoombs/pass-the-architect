@@ -6,7 +6,7 @@ title: "Associate game plan"
 description: "How the Associate Foundations exam is built: sixty items, seven domain weights, countdown-clock pacing and dropdown items, and a four-step method for reading any item in plain business language, worked through the three official sample questions."
 domain: "All domains"
 weight: "100%"
-target_minutes: 14
+target_minutes: 12
 ---
 
 ## In this episode
@@ -15,7 +15,7 @@ SAM: Welcome to Pass the Architect, Associate Foundations. This is episode zero,
 
 ALEX: No Claude features today?
 
-SAM: Not one. By the end you'll be able to describe the paper and where its marks sit, pace it against a clock that counts down, and handle items that list statements with a dropdown each. You'll have a four-step method for reading any item in plain business language, tested on the three official sample questions.
+SAM: Not one. By the end you'll know the paper and where its marks sit, how to pace a countdown clock, how to handle dropdown items, and a four-step method for reading any item in plain business language, tested on the three official samples.
 
 ALEX: Because marks go for reasons that have nothing to do with Claude. Picking one answer when the item wanted two, or trusting an answer because it sounded sure.
 
@@ -27,9 +27,9 @@ SAM: An item before anything else, and it is the first official sample from the 
 
 SAM: Option A, send it as is, since Claude expressed high confidence. Option B, verify the cited subsection against the official regulation text before sharing. Option C, ask Claude to rate its own confidence, and send it if the rating is high. Option D, reword the summary to sound more formal, then send it.
 
-ALEX: C. It's quick, it's a real check, and if Claude says it's unsure I know to dig in. That's what I'd do on a busy afternoon.
+ALEX: C. It's quick, it's a real check, and if Claude says it's unsure I know to dig in.
 
-SAM: Hold that. By the end of the method you should be able to say exactly why it loses.
+SAM: Hold that. By the end of the method you'll know why it loses.
 
 ALEX: Then the shape of the thing. What am I walking into?
 
@@ -41,13 +41,13 @@ SAM: A scaled seven hundred and twenty, on a range of one hundred to one thousan
 
 ALEX: Who is it written for?
 
-SAM: Someone like you. A professional who uses Claude as a working tool, builds Projects, and finishes tasks with little guidance. Someone who balances quality, efficiency and cost, knows the limits, and hands technical work to Architects and Developers. No code, and no A P I.
+SAM: Someone like you: a professional who uses Claude as a working tool, builds Projects, finishes tasks with little guidance, balances quality, efficiency and cost, knows the limits, and hands technical work to Architects and Developers. No code, no A P I.
 
 ALEX: So "escalate" can be a right answer.
 
-SAM: When the work really is beyond your role, yes. Escalating is not the same as giving up, and sample three shows the difference.
+SAM: When the work is beyond your role, yes. Escalating is not giving up; sample three shows the difference.
 
-SAM: Now the weights. Output Evaluation and Validation, twenty-one percent, about thirteen items. Workflow Integration and Solution Design, sixteen, about ten. Governance, Risk and Responsible Use, fifteen, about nine. Prompting and Task Execution, fourteen, about eight. Product and Model Selection, and Configuration and Knowledge Management, twelve each, about seven apiece. Troubleshooting and Optimization, ten, about six. The guide calls the weights approximate, so treat the counts as a guide.
+SAM: Now the weights. Output Evaluation and Validation, twenty-one percent, about thirteen items. Workflow Integration and Solution Design, sixteen, about ten. Governance, Risk and Responsible Use, fifteen, about nine. Prompting and Task Execution, fourteen, about eight. Product and Model Selection, and Configuration and Knowledge Management, twelve each, about seven apiece. Troubleshooting and Optimization, ten, about six. The guide calls the weights approximate.
 
 ALEX: Checking Claude's work outweighs prompting by half again.
 
@@ -59,11 +59,11 @@ ALEX: Pacing.
 
 SAM: About one minute fifty an item, which leaves ten minutes at the end for flagged items. The clock counts down in hours and minutes, so the checkpoints are time left. Item twenty at one hour twenty-three left. Item forty at forty-seven minutes left. Item sixty at ten minutes left.
 
-ALEX: One minute fifty feels generous. Most of these are a short paragraph. I'd rather spend time where I need it and ignore the clock.
+ALEX: One minute fifty feels generous for a short paragraph. I'd rather ignore the clock.
 
-SAM: Plenty of items will take under a minute; bank that. The checkpoints aren't a speed limit. They are three glances that tell you whether a slow item early on is eating time a later item needs.
+SAM: Many items take under a minute; bank that. The checkpoints aren't a speed limit; they're three glances that show whether an early slow item is eating time a later one needs.
 
-SAM: And the tell is your own behaviour: if you've reread a stem three times, pick your best answer, flag it, and move on. A blank never scores, and the guide describes no penalty for a wrong answer.
+SAM: The tell is your own behaviour: if you've reread a stem three times, pick your best answer, flag it, and move on. A blank never scores, and the guide describes no penalty for a wrong answer.
 
 ALEX: And the item formats?
 
@@ -99,11 +99,11 @@ SAM: The stakes. Who receives this, and what rule is in play? A compliance team,
 
 ALEX: Three?
 
-SAM: The proportionate step. What would a careful colleague do that lets the work go ahead safely? Not the maximum, and not nothing. The step sized to the stakes.
+SAM: The proportionate step. What would a careful colleague do to let the work go ahead safely? Not the maximum, not nothing: the step sized to the stakes.
 
 ALEX: And four?
 
-SAM: Strike the families. Five kinds of wrong answer come back again and again. Trusting the model's confidence. Overspending: the biggest model, or a full review for a low-stakes draft. Asking the model to promise what a control should do. Abandoning a task that has a safe route. And polish: rewording or reformatting, which changes nothing about whether it's right.
+SAM: Strike the families. Five kinds of wrong answer recur. Trusting the model's confidence. Overspending: the biggest model, or a full review for a low-stakes draft. Asking the model to promise what a control should do. Abandoning a task that has a safe route. And polish: rewording or reformatting, which changes nothing about whether it's right.
 
 ALEX: Ask, stakes, step, strike.
 
@@ -131,9 +131,9 @@ SAM: Which family is that?
 
 ALEX: Asking the model to promise. But my company's account has its own data settings. It's not as if I'm pasting it into a stranger's website.
 
-SAM: Your organisation's settings matter. But the stem names the control: the policy restricts sharing the data. An instruction typed into the chat arrives after the data has been shared. The guide's rationale says it outright: an instruction not to retain does not satisfy the policy control.
+SAM: Your organisation's settings matter, but the stem names the control: policy restricts sharing the data. An instruction in the chat arrives after the data is shared, and the guide's rationale says it outright: an instruction not to retain does not satisfy the policy control.
 
-SAM: So B. The trends survive without names and account numbers, so anonymising lets the analysis go ahead without exposing protected data. A breaks the policy. D abandons a task that has a safe route, and that is the difference from escalating: you escalate work beyond your role, not work with a safe route.
+SAM: So B. The trends survive without names and account numbers, so anonymising lets the analysis go ahead without exposing protected data. A breaks the policy. D abandons a task with a safe route; you escalate work beyond your role, not work with a safe route.
 
 ALEX: And the tell?
 
@@ -149,7 +149,7 @@ SAM: And the step?
 
 ALEX: Open the regulation and read the subsection. Which is B.
 
-SAM: B. A specific-looking citation is exactly what a model can invent, and a compliance team will act on it. Checking the official text is the diligence step. A trusts the confidence. C trusts it twice: a self-rating is still the model's own view, not evidence. D is polish.
+SAM: B. A specific-looking citation is what a model can invent, and a compliance team will act on it. Checking the official text is the diligence step. A trusts the confidence. C trusts it twice: a self-rating is still the model's own view, not evidence. D is polish.
 
 ALEX: One more go for C. If Claude says it's only sixty percent sure, I've learned something.
 
