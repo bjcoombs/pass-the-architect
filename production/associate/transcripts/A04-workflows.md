@@ -31,9 +31,9 @@ ALEX: A. The commentary is obviously the slow part. Why study it?
 
 SAM: Hold that. We come back to it at the end.
 
-ALEX: So this is domain four. What does the guide actually list?
+ALEX: What does the guide list for domain four?
 
-SAM: Five tasks. Use Claude to analyse requirements and use cases. Use it for research, planning and process optimisation. Use it to support solution design, development and iteration. Integrate it into existing workflows to augment or redesign them. And communicate Claude's value and limitations to stakeholders.
+SAM: Five tasks. Analyse requirements and use cases. Research, planning and process optimisation. Support solution design, development and iteration. Integrate Claude into existing workflows to augment or redesign them. And communicate its value and limitations to stakeholders.
 
 ALEX: Ten items, five tasks. About two each.
 
@@ -47,7 +47,7 @@ SAM: It reads faster than you. Give it interview notes or a meeting transcript, 
 
 ALEX: Why not just ask it to write the requirements document?
 
-SAM: Because a finished document reads as settled. If two managers disagree about who approves new suppliers, Claude can lay out both positions, but deciding belongs to the people who own the process. Claude surfaces the conflict; they resolve it.
+SAM: Because a finished document reads as settled. If two managers disagree about who approves new suppliers, Claude can lay out both positions, but deciding belongs to the people who own the process.
 
 ALEX: In my job a draft spec gets people talking faster than a list of questions. Put something on the table and they argue with it.
 
@@ -101,7 +101,7 @@ SAM: Pause here and answer before we go on. Choose two. A consultant is preparin
 
 ALEX: A and C. Research mode, then filter by confidence. That's efficient.
 
-SAM: A is right. C is the trusting-the-model's-confidence distractor: a model's rating of its own answer is not evidence. The second answer is B, checking the claims against the cited sources.
+SAM: A is right. C is the trusting-the-model's-confidence distractor: a model's rating of its own answer is not evidence. The second is B, checking claims against the cited sources.
 
 ALEX: So I picked a shortcut that looks like diligence.
 
@@ -145,7 +145,7 @@ SAM: Augment means Claude takes on a step inside a process that otherwise stays 
 
 ALEX: How do I choose?
 
-SAM: Look at where the pain is. If the process works and one step is slow, augment that step. If the pain is structural, with handoffs, rework loops, or the same data retyped three times, speeding one step just moves the queue. That calls for a redesign.
+SAM: Look at where the pain is. If the process works and one step is slow, augment that step. If the pain is structural, with handoffs, rework loops, or the same data retyped three times, speeding one step just moves the queue; redesign.
 
 ALEX: Either way, what has to be true?
 
@@ -199,9 +199,9 @@ SAM: C. It sells the real value and keeps the control where the accountability s
 
 ## Cold open: the verdict
 
-ALEX: Back to the cold open, then. I said A, draft the commentary every week. Let me defend it. Everyone on that team knows where the hours go.
+ALEX: Back to the cold open. I said A, draft the commentary every week. Everyone on that team knows where the hours go.
 
-SAM: Everyone thinks they know, and they are often right. That's why A is tempting.
+SAM: They often do. That's why A is tempting.
 
 ALEX: So why isn't it the answer?
 
