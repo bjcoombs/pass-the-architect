@@ -16,10 +16,50 @@
     <itunes:explicit>false</itunes:explicit>
     <itunes:category text="Education"/>
     <item>
+      <title>08. State of play, November 2026</title>
+      <description>The perishable numbers, dated 14 November 2026: each lab's line-up and list prices, the price changes already scheduled, who leads which benchmark and what it measures, how to read the market-share reports, and the shutdowns on the calendar.</description>
+      <enclosure url="https://github.com/bjcoombs/pass-the-architect/releases/download/know-the-field/08-K08-state-of-play-2026-11.mp3" length="21962988" type="audio/mpeg"/>
+      <guid isPermaLink="false">pass-the-architect-know-the-field-K08-state-of-play-2026-11-c2d2de50</guid>
+      <pubDate>Sun, 18 Oct 2026 06:08:00 +0000</pubDate>
+      <itunes:duration>0:19:48</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <podcast:chapters url="https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/08-K08-state-of-play-2026-11.json" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>07. The objections drill</title>
+      <description>Ten things customers say when Claude comes up, from \"we are a Microsoft shop\" to \"we need FedRAMP\", each argued out with a question to ask back. Plus model gateways, multi-model routing, and when to recommend a competitor.</description>
+      <enclosure url="https://github.com/bjcoombs/pass-the-architect/releases/download/know-the-field/07-K07-objections.mp3" length="28340109" type="audio/mpeg"/>
+      <guid isPermaLink="false">pass-the-architect-know-the-field-K07-objections-83a407c6</guid>
+      <pubDate>Sun, 18 Oct 2026 06:07:00 +0000</pubDate>
+      <itunes:duration>0:25:07</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <podcast:chapters url="https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/07-K07-objections.json" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>06. Coding agents: Claude Code and the field</title>
+      <description>Codex, GitHub Copilot, Antigravity, Kiro, Cursor and the open-source agents against Claude Code: what has converged on shared standards like AGENTS dot md, skills and M C P, what still differs, and how to read the adoption numbers.</description>
+      <enclosure url="https://github.com/bjcoombs/pass-the-architect/releases/download/know-the-field/06-K06-coding-agents.mp3" length="24608591" type="audio/mpeg"/>
+      <guid isPermaLink="false">pass-the-architect-know-the-field-K06-coding-agents-a1a12233</guid>
+      <pubDate>Sun, 18 Oct 2026 06:06:00 +0000</pubDate>
+      <itunes:duration>0:22:11</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <podcast:chapters url="https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/06-K06-coding-agents.json" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>05. Open weights, xAI and sovereignty</title>
+      <description>What open-weight models from Kimi, DeepSeek, Qwen, G L M, Mistral, Gemma and G P T oss do better than Claude, what self-hosting really costs, residency versus sovereignty, tracing Chinese-origin weights through procurement, and the factual risk questions to put to a customer weighing xAI's Grok.</description>
+      <enclosure url="https://github.com/bjcoombs/pass-the-architect/releases/download/know-the-field/05-K05-open-weights.mp3" length="26050842" type="audio/mpeg"/>
+      <guid isPermaLink="false">pass-the-architect-know-the-field-K05-open-weights-5c86ab13</guid>
+      <pubDate>Sun, 18 Oct 2026 06:05:00 +0000</pubDate>
+      <itunes:duration>0:23:46</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <podcast:chapters url="https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/05-K05-open-weights.json" type="application/json+chapters"/>
+    </item>
+    <item>
       <title>04. Same Claude, different cloud</title>
       <description>Buying Claude through Amazon Bedrock, Claude Platform on AWS, Google Cloud or Microsoft Foundry instead of direct: who operates each, which features it carries, where the data goes, and which commitment it draws down. Plus AWS's own stack: Nova, AgentCore, Strands and Kiro.</description>
-      <enclosure url="https://github.com/bjcoombs/pass-the-architect/releases/download/know-the-field/04-K04-same-claude-other-clouds.mp3" length="27312734" type="audio/mpeg"/>
-      <guid isPermaLink="false">pass-the-architect-know-the-field-K04-same-claude-other-clouds-f3e5690f</guid>
+      <enclosure url="https://github.com/bjcoombs/pass-the-architect/releases/download/know-the-field/04-K04-same-claude-other-clouds.mp3" length="27145090" type="audio/mpeg"/>
+      <guid isPermaLink="false">pass-the-architect-know-the-field-K04-same-claude-other-clouds-d2e773e6</guid>
       <pubDate>Sun, 18 Oct 2026 06:04:00 +0000</pubDate>
       <itunes:duration>0:24:39</itunes:duration>
       <itunes:episodeType>full</itunes:episodeType>
@@ -28,8 +68,8 @@
     <item>
       <title>03. Microsoft: competitor and channel</title>
       <description>Microsoft sells against Claude and sells Claude: the two ways to host Claude in Foundry, Microsoft Agent Framework, Claude inside Microsoft 365 Copilot and Copilot Cowork, and GitHub Copilot against Claude Code.</description>
-      <enclosure url="https://github.com/bjcoombs/pass-the-architect/releases/download/know-the-field/03-K03-microsoft.mp3" length="26773322" type="audio/mpeg"/>
-      <guid isPermaLink="false">pass-the-architect-know-the-field-K03-microsoft-58b12904</guid>
+      <enclosure url="https://github.com/bjcoombs/pass-the-architect/releases/download/know-the-field/03-K03-microsoft.mp3" length="26605238" type="audio/mpeg"/>
+      <guid isPermaLink="false">pass-the-architect-know-the-field-K03-microsoft-0ed8df4f</guid>
       <pubDate>Sun, 18 Oct 2026 06:03:00 +0000</pubDate>
       <itunes:duration>0:24:22</itunes:duration>
       <itunes:episodeType>full</itunes:episodeType>
@@ -38,8 +78,8 @@
     <item>
       <title>02. Google</title>
       <description>Gemini on six layers: the widest multimodal range in the field, two developer front doors, an open agent kit and the A to A protocol, Antigravity in place of Gemini CLI and Jules, and Gemini Enterprise with Claude switched on inside it.</description>
-      <enclosure url="https://github.com/bjcoombs/pass-the-architect/releases/download/know-the-field/02-K02-google.mp3" length="26837852" type="audio/mpeg"/>
-      <guid isPermaLink="false">pass-the-architect-know-the-field-K02-google-d0d2faf0</guid>
+      <enclosure url="https://github.com/bjcoombs/pass-the-architect/releases/download/know-the-field/02-K02-google.mp3" length="26724730" type="audio/mpeg"/>
+      <guid isPermaLink="false">pass-the-architect-know-the-field-K02-google-5bccb5cb</guid>
       <pubDate>Sun, 18 Oct 2026 06:02:00 +0000</pubDate>
       <itunes:duration>0:24:18</itunes:duration>
       <itunes:episodeType>full</itunes:episodeType>
@@ -48,8 +88,8 @@
     <item>
       <title>01. OpenAI</title>
       <description>OpenAI on all six layers: the Astra-to-Luna model tiers, the Responses API and agent stack, Codex and ChatGPT Work, ChatGPT Enterprise, and its models on Azure and Bedrock. Where OpenAI is stronger than Claude, where Claude leads, and the questions to ask a customer.</description>
-      <enclosure url="https://github.com/bjcoombs/pass-the-architect/releases/download/know-the-field/01-K01-openai.mp3" length="27311022" type="audio/mpeg"/>
-      <guid isPermaLink="false">pass-the-architect-know-the-field-K01-openai-df16b831</guid>
+      <enclosure url="https://github.com/bjcoombs/pass-the-architect/releases/download/know-the-field/01-K01-openai.mp3" length="27183650" type="audio/mpeg"/>
+      <guid isPermaLink="false">pass-the-architect-know-the-field-K01-openai-5516e228</guid>
       <pubDate>Sun, 18 Oct 2026 06:01:00 +0000</pubDate>
       <itunes:duration>0:24:54</itunes:duration>
       <itunes:episodeType>full</itunes:episodeType>
@@ -58,8 +98,8 @@
     <item>
       <title>00. The map: six layers for comparing AI vendors</title>
       <description>Six layers for comparing any AI vendor with Claude, how to read a benchmark and a market report without being fooled, which facts are safe to quote and which to check first, and the route through the series.</description>
-      <enclosure url="https://github.com/bjcoombs/pass-the-architect/releases/download/know-the-field/00-K00-the-map.mp3" length="18211721" type="audio/mpeg"/>
-      <guid isPermaLink="false">pass-the-architect-know-the-field-K00-the-map-1d11ba72</guid>
+      <enclosure url="https://github.com/bjcoombs/pass-the-architect/releases/download/know-the-field/00-K00-the-map.mp3" length="17986733" type="audio/mpeg"/>
+      <guid isPermaLink="false">pass-the-architect-know-the-field-K00-the-map-3a5ea28a</guid>
       <pubDate>Sun, 18 Oct 2026 06:00:00 +0000</pubDate>
       <itunes:duration>0:15:30</itunes:duration>
       <itunes:episodeType>full</itunes:episodeType>

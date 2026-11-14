@@ -4,6 +4,7 @@ Used by render.py. A question card shows the stem and options so a listener who 
 can answer from the screen; the answer card that replaces it marks the correct options.
 """
 import io
+import re
 
 from PIL import Image, ImageDraw, ImageFont
 
@@ -18,6 +19,7 @@ MUTED = (140, 150, 168)
 ACCENT = {"segment": (88, 150, 230), "question": (240, 176, 64), "answer": (72, 190, 120), "recall": (170, 120, 230)}
 RIGHT_FILL = (40, 110, 70)
 WRONG_TEXT = (110, 118, 134)
+FALSE_TEXT = (235, 110, 100)
 
 
 def font(size, bold=False):
@@ -135,7 +137,20 @@ def answer(drill, episode, number):
     return _qa(drill, episode, number, reveal=True)
 
 
+def numbered(text):
+    """Split "Lead? 1) one. 2) two." into ("Lead?", ["one.", "two."]); without numbering, (text, [])."""
+    parts = re.split(r"(?:^|\s)(\d+)\)\s+", text)
+    if len(parts) < 5 or [int(n) for n in parts[1::2]] != list(range(1, len(parts) // 2 + 1)):
+        return text, []
+    return parts[0].strip(), [p.strip() for p in parts[2::2]]
+
+
 def recall(drill, episode, number, reveal):
+    """A numbered prompt gets one row per item; any other prompt stays a single block."""
+    lead, items = numbered(drill["prompt"])
+    _, verdicts = numbered(drill.get("answer", ""))
+    if items and (not reveal or len(verdicts) == len(items)):
+        return _recall_items(lead, items, verdicts if reveal else [], episode, number)
     img = Image.new("RGB", (SIZE, SIZE), BG)
     d = ImageDraw.Draw(img)
     y = header(d, "answer" if reveal else "recall", f"{'ANSWER' if reveal else 'PAUSE AND ANSWER'} {number}", episode)
@@ -153,4 +168,42 @@ def recall(drill, episode, number, reveal):
     for line in extra:
         d.text((MARGIN, y), line, font=font(size - 6), fill=ACCENT["answer"])
         y += int((size - 6) * 1.2)
+    return encode(img)
+
+
+def _recall_items(lead, items, verdicts, episode, number):
+    """Revealed, true items sit on the green fill; false ones grey out with the correction in red."""
+    kind = "answer" if verdicts else "recall"
+    kicker = f"{'ANSWER' if verdicts else 'PAUSE AND ANSWER'} {number}"
+    width = SIZE - 2 * MARGIN
+    for size in range(50, 21, -2):
+        img = Image.new("RGB", (SIZE, SIZE), BG)
+        d = ImageDraw.Draw(img)
+        y = header(d, kind, kicker, episode)
+        lead_font, item_font, note_font = font(size, True), font(size - 4), font(size - 6, True)
+        for line in wrap(lead, lead_font, width):
+            d.text((MARGIN, y), line, font=lead_font, fill=TEXT)
+            y += int(size * 1.22)
+        y += size // 2
+        for i, text in enumerate(items):
+            verdict = verdicts[i] if verdicts else ""
+            false = verdict.lower().startswith("false")
+            # A bare "True." adds nothing to a green row; anything longer is the correction or the answer itself.
+            note = re.sub(r"^(true|false)\b[.:,]?\s*", "", verdict, flags=re.I)
+            note = note[:1].upper() + note[1:]
+            lines = wrap(text, item_font, width - 110)
+            notes = wrap(("False. " if false else "") + note, note_font, width - 110) if note or false else []
+            h = len(lines) * int(size * 1.18) + len(notes) * int((size - 6) * 1.2) + 24
+            if verdicts and not false:
+                d.rounded_rectangle([MARGIN - 16, y - 10, SIZE - MARGIN + 16, y + h - 14], 14, fill=RIGHT_FILL)
+            d.text((MARGIN, y), str(i + 1), font=font(size, True), fill=WRONG_TEXT if false else ACCENT[kind])
+            for j, line in enumerate(lines):
+                d.text((MARGIN + 80, y + j * int(size * 1.18)), line, font=item_font, fill=WRONG_TEXT if false else TEXT)
+            ny = y + len(lines) * int(size * 1.18)
+            for line in notes:
+                d.text((MARGIN + 80, ny), line, font=note_font, fill=FALSE_TEXT if false else TEXT)
+                ny += int((size - 6) * 1.2)
+            y += h + 10
+        if y <= SIZE - 60:
+            return encode(img)
     return encode(img)

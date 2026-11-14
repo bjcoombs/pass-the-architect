@@ -84,8 +84,7 @@ SERIES = [
         "description": "A two-host series on the companies Claude competes with: OpenAI, Google, Microsoft, AWS, "
                        "xAI and the open-weight labs. Where each is stronger, where Claude is, and how to answer "
                        "a customer who asks why Claude.",
-        # Rendered so far; the rest follow as credits allow.
-        "episodes": [f"K{n:02d}" for n in range(5)],
+        "episodes": [f"K{n:02d}" for n in range(9)],
     },
 ]
 LIVE = [s for s in SERIES if not s.get("draft")]
