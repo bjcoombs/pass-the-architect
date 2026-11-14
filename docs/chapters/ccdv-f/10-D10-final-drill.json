@@ -1,0 +1,421 @@
+{
+  "version": "1.2.0",
+  "title": "Developer final drill",
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "In this episode",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/00.jpg"
+    },
+    {
+      "startTime": 54.34,
+      "title": "Drill: applications and integration",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/01.jpg"
+    },
+    {
+      "startTime": 77.59,
+      "title": "Pause and answer 1",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/02.jpg"
+    },
+    {
+      "startTime": 87.41,
+      "title": "Answer 1",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/03.jpg"
+    },
+    {
+      "startTime": 96.4,
+      "title": "Question 2: Nightly batch",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/04.jpg"
+    },
+    {
+      "startTime": 118.11,
+      "title": "Answer 2",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/05.jpg"
+    },
+    {
+      "startTime": 125.47,
+      "title": "Pause and answer 3",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/06.jpg"
+    },
+    {
+      "startTime": 145.96,
+      "title": "Answer 3",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/07.jpg"
+    },
+    {
+      "startTime": 158.15,
+      "title": "Pause and answer 4",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/08.jpg"
+    },
+    {
+      "startTime": 193.79,
+      "title": "Answer 4",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/09.jpg"
+    },
+    {
+      "startTime": 204.94,
+      "title": "Pause and answer 5",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/10.jpg"
+    },
+    {
+      "startTime": 215.28,
+      "title": "Answer 5",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/11.jpg"
+    },
+    {
+      "startTime": 224.03,
+      "title": "Pause and answer 6",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/12.jpg"
+    },
+    {
+      "startTime": 234.64,
+      "title": "Answer 6",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/13.jpg"
+    },
+    {
+      "startTime": 242.29,
+      "title": "Pause and answer 7",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/14.jpg"
+    },
+    {
+      "startTime": 248.81,
+      "title": "Answer 7",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/15.jpg"
+    },
+    {
+      "startTime": 258.91,
+      "title": "Pause and answer 8",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/16.jpg"
+    },
+    {
+      "startTime": 268.09,
+      "title": "Answer 8",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/17.jpg"
+    },
+    {
+      "startTime": 274.1,
+      "title": "Pause and answer 9",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/18.jpg"
+    },
+    {
+      "startTime": 281.65,
+      "title": "Answer 9",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/19.jpg"
+    },
+    {
+      "startTime": 289.15,
+      "title": "Pause and answer 10",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/20.jpg"
+    },
+    {
+      "startTime": 296.24,
+      "title": "Answer 10",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/21.jpg"
+    },
+    {
+      "startTime": 304.95,
+      "title": "Pause and answer 11",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/22.jpg"
+    },
+    {
+      "startTime": 313.93,
+      "title": "Answer 11",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/23.jpg"
+    },
+    {
+      "startTime": 323.06,
+      "title": "Pause and answer 12",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/24.jpg"
+    },
+    {
+      "startTime": 332.88,
+      "title": "Answer 12",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/25.jpg"
+    },
+    {
+      "startTime": 339.64,
+      "title": "Pause and answer 13",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/26.jpg"
+    },
+    {
+      "startTime": 351.81,
+      "title": "Answer 13",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/27.jpg"
+    },
+    {
+      "startTime": 369.55,
+      "title": "Drill: models, tokens and cost",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/28.jpg"
+    },
+    {
+      "startTime": 375.89,
+      "title": "Pause and answer 14",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/29.jpg"
+    },
+    {
+      "startTime": 383.25,
+      "title": "Answer 14",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/30.jpg"
+    },
+    {
+      "startTime": 393.49,
+      "title": "Pause and answer 15",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/31.jpg"
+    },
+    {
+      "startTime": 400.02,
+      "title": "Answer 15",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/32.jpg"
+    },
+    {
+      "startTime": 408.08,
+      "title": "Pause and answer 16",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/33.jpg"
+    },
+    {
+      "startTime": 416.88,
+      "title": "Answer 16",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/34.jpg"
+    },
+    {
+      "startTime": 424.2,
+      "title": "Pause and answer 17",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/35.jpg"
+    },
+    {
+      "startTime": 434.76,
+      "title": "Answer 17",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/36.jpg"
+    },
+    {
+      "startTime": 444.35,
+      "title": "Pause and answer 18",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/37.jpg"
+    },
+    {
+      "startTime": 452.55,
+      "title": "Answer 18",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/38.jpg"
+    },
+    {
+      "startTime": 461.35,
+      "title": "Pause and answer 19",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/39.jpg"
+    },
+    {
+      "startTime": 470.02,
+      "title": "Answer 19",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/40.jpg"
+    },
+    {
+      "startTime": 483.71,
+      "title": "Drill: agents, prompts and context",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/41.jpg"
+    },
+    {
+      "startTime": 489.08,
+      "title": "Question 20: Telecom inbound messages",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/42.jpg"
+    },
+    {
+      "startTime": 527.35,
+      "title": "Answer 20",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/43.jpg"
+    },
+    {
+      "startTime": 546.64,
+      "title": "Pause and answer 21",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/44.jpg"
+    },
+    {
+      "startTime": 554.8,
+      "title": "Answer 21",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/45.jpg"
+    },
+    {
+      "startTime": 560.67,
+      "title": "Pause and answer 22",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/46.jpg"
+    },
+    {
+      "startTime": 571.05,
+      "title": "Answer 22",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/47.jpg"
+    },
+    {
+      "startTime": 578.28,
+      "title": "Pause and answer 23",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/48.jpg"
+    },
+    {
+      "startTime": 583.5,
+      "title": "Answer 23",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/49.jpg"
+    },
+    {
+      "startTime": 592.44,
+      "title": "Pause and answer 24",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/50.jpg"
+    },
+    {
+      "startTime": 599.62,
+      "title": "Answer 24",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/51.jpg"
+    },
+    {
+      "startTime": 615.78,
+      "title": "Pause and answer 25",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/52.jpg"
+    },
+    {
+      "startTime": 624.22,
+      "title": "Answer 25",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/53.jpg"
+    },
+    {
+      "startTime": 633.06,
+      "title": "Pause and answer 26",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/54.jpg"
+    },
+    {
+      "startTime": 641.96,
+      "title": "Answer 26",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/55.jpg"
+    },
+    {
+      "startTime": 652.9,
+      "title": "Pause and answer 27",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/56.jpg"
+    },
+    {
+      "startTime": 661.98,
+      "title": "Answer 27",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/57.jpg"
+    },
+    {
+      "startTime": 671.94,
+      "title": "Pause and answer 28",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/58.jpg"
+    },
+    {
+      "startTime": 680.65,
+      "title": "Answer 28",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/59.jpg"
+    },
+    {
+      "startTime": 697.29,
+      "title": "Drill: tools, security, Claude Code and debugging",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/60.jpg"
+    },
+    {
+      "startTime": 702.1,
+      "title": "Pause and answer 29",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/61.jpg"
+    },
+    {
+      "startTime": 717.36,
+      "title": "Answer 29",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/62.jpg"
+    },
+    {
+      "startTime": 731.43,
+      "title": "Pause and answer 30",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/63.jpg"
+    },
+    {
+      "startTime": 739.86,
+      "title": "Answer 30",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/64.jpg"
+    },
+    {
+      "startTime": 750.9,
+      "title": "Question 31: Shared knowledge-base MCP server",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/65.jpg"
+    },
+    {
+      "startTime": 798.31,
+      "title": "Answer 31",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/66.jpg"
+    },
+    {
+      "startTime": 817.19,
+      "title": "Pause and answer 32",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/67.jpg"
+    },
+    {
+      "startTime": 823.81,
+      "title": "Answer 32",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/68.jpg"
+    },
+    {
+      "startTime": 837.14,
+      "title": "Pause and answer 33",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/69.jpg"
+    },
+    {
+      "startTime": 850.85,
+      "title": "Answer 33",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/70.jpg"
+    },
+    {
+      "startTime": 862.9,
+      "title": "Pause and answer 34",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/71.jpg"
+    },
+    {
+      "startTime": 869.52,
+      "title": "Answer 34",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/72.jpg"
+    },
+    {
+      "startTime": 874.93,
+      "title": "Pause and answer 35",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/73.jpg"
+    },
+    {
+      "startTime": 879.14,
+      "title": "Answer 35",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/74.jpg"
+    },
+    {
+      "startTime": 887.66,
+      "title": "Pause and answer 36",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/75.jpg"
+    },
+    {
+      "startTime": 897.3,
+      "title": "Answer 36",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/76.jpg"
+    },
+    {
+      "startTime": 902.25,
+      "title": "Pause and answer 37",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/77.jpg"
+    },
+    {
+      "startTime": 913.83,
+      "title": "Answer 37",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/78.jpg"
+    },
+    {
+      "startTime": 934.75,
+      "title": "The distractor families",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/79.jpg"
+    },
+    {
+      "startTime": 1106.05,
+      "title": "Exam day logistics",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/80.jpg"
+    },
+    {
+      "startTime": 1160.41,
+      "title": "Final retrieval - Pause and answer 38",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/81.jpg"
+    },
+    {
+      "startTime": 1168.47,
+      "title": "Answer 38",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill/82.jpg"
+    }
+  ]
+}

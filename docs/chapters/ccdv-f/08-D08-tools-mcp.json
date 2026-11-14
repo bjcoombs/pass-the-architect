@@ -1,0 +1,96 @@
+{
+  "version": "1.2.0",
+  "title": "Tools, MCP servers and choosing a customization",
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "In this episode",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/08-D08-tools-mcp/00.jpg"
+    },
+    {
+      "startTime": 61.63,
+      "title": "Cold open: the wrong lookup - Question 1: Tool set construction",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/08-D08-tools-mcp/01.jpg"
+    },
+    {
+      "startTime": 124.04,
+      "title": "Tool implementation",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/08-D08-tools-mcp/02.jpg"
+    },
+    {
+      "startTime": 410.26,
+      "title": "Question 2: Approval patterns",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/08-D08-tools-mcp/03.jpg"
+    },
+    {
+      "startTime": 462.46,
+      "title": "Answer 2",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/08-D08-tools-mcp/04.jpg"
+    },
+    {
+      "startTime": 488.64,
+      "title": "MCP server development",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/08-D08-tools-mcp/05.jpg"
+    },
+    {
+      "startTime": 588.41,
+      "title": "Pause and answer 3",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/08-D08-tools-mcp/06.jpg"
+    },
+    {
+      "startTime": 621.06,
+      "title": "Answer 3",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/08-D08-tools-mcp/07.jpg"
+    },
+    {
+      "startTime": 706.88,
+      "title": "Question 4: MCP server development",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/08-D08-tools-mcp/08.jpg"
+    },
+    {
+      "startTime": 787.14,
+      "title": "Answer 4",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/08-D08-tools-mcp/09.jpg"
+    },
+    {
+      "startTime": 805.01,
+      "title": "Agentic customization",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/08-D08-tools-mcp/10.jpg"
+    },
+    {
+      "startTime": 957.66,
+      "title": "Question 5: Agentic customization",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/08-D08-tools-mcp/11.jpg"
+    },
+    {
+      "startTime": 999.55,
+      "title": "Answer 5",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/08-D08-tools-mcp/12.jpg"
+    },
+    {
+      "startTime": 1017.19,
+      "title": "Cold open: the verdict",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/08-D08-tools-mcp/13.jpg"
+    },
+    {
+      "startTime": 1029.41,
+      "title": "Answer 1",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/08-D08-tools-mcp/14.jpg"
+    },
+    {
+      "startTime": 1068.18,
+      "title": "Five to remember",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/08-D08-tools-mcp/15.jpg"
+    },
+    {
+      "startTime": 1137.96,
+      "title": "Recap: the exam tells - Pause and answer 6",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/08-D08-tools-mcp/16.jpg"
+    },
+    {
+      "startTime": 1145.42,
+      "title": "Answer 6",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/08-D08-tools-mcp/17.jpg"
+    }
+  ]
+}

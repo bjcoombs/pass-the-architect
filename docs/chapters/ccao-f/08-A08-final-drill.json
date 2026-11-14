@@ -1,0 +1,401 @@
+{
+  "version": "1.2.0",
+  "title": "Associate final drill",
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "In this episode",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/00.jpg"
+    },
+    {
+      "startTime": 50.71,
+      "title": "Drill: checking outputs",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/01.jpg"
+    },
+    {
+      "startTime": 89.66,
+      "title": "Pause and answer 1",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/02.jpg"
+    },
+    {
+      "startTime": 100.6,
+      "title": "Answer 1",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/03.jpg"
+    },
+    {
+      "startTime": 107.96,
+      "title": "Pause and answer 2",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/04.jpg"
+    },
+    {
+      "startTime": 117.39,
+      "title": "Answer 2",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/05.jpg"
+    },
+    {
+      "startTime": 125.13,
+      "title": "Pause and answer 3",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/06.jpg"
+    },
+    {
+      "startTime": 133.47,
+      "title": "Answer 3",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/07.jpg"
+    },
+    {
+      "startTime": 141.85,
+      "title": "Pause and answer 4",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/08.jpg"
+    },
+    {
+      "startTime": 149.91,
+      "title": "Answer 4",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/09.jpg"
+    },
+    {
+      "startTime": 155.32,
+      "title": "Question 5: Contract summary, early-exit decision",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/10.jpg"
+    },
+    {
+      "startTime": 177.41,
+      "title": "Answer 5",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/11.jpg"
+    },
+    {
+      "startTime": 192.97,
+      "title": "Pause and answer 6",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/12.jpg"
+    },
+    {
+      "startTime": 200.37,
+      "title": "Answer 6",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/13.jpg"
+    },
+    {
+      "startTime": 206.3,
+      "title": "Pause and answer 7",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/14.jpg"
+    },
+    {
+      "startTime": 236.58,
+      "title": "Answer 7",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/15.jpg"
+    },
+    {
+      "startTime": 249.53,
+      "title": "Drill: workflows and governance",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/16.jpg"
+    },
+    {
+      "startTime": 255.64,
+      "title": "Pause and answer 8",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/17.jpg"
+    },
+    {
+      "startTime": 261.84,
+      "title": "Answer 8",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/18.jpg"
+    },
+    {
+      "startTime": 269.34,
+      "title": "Pause and answer 9",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/19.jpg"
+    },
+    {
+      "startTime": 278.38,
+      "title": "Answer 9",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/20.jpg"
+    },
+    {
+      "startTime": 287.64,
+      "title": "Pause and answer 10",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/21.jpg"
+    },
+    {
+      "startTime": 299.95,
+      "title": "Answer 10",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/22.jpg"
+    },
+    {
+      "startTime": 314.05,
+      "title": "Pause and answer 11",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/23.jpg"
+    },
+    {
+      "startTime": 324.85,
+      "title": "Answer 11",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/24.jpg"
+    },
+    {
+      "startTime": 334.53,
+      "title": "Pause and answer 12",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/25.jpg"
+    },
+    {
+      "startTime": 339.15,
+      "title": "Answer 12",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/26.jpg"
+    },
+    {
+      "startTime": 345.87,
+      "title": "Question 13: Claims letters, team rollout",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/27.jpg"
+    },
+    {
+      "startTime": 377.52,
+      "title": "Answer 13",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/28.jpg"
+    },
+    {
+      "startTime": 392.47,
+      "title": "Pause and answer 14",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/29.jpg"
+    },
+    {
+      "startTime": 406.92,
+      "title": "Answer 14",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/30.jpg"
+    },
+    {
+      "startTime": 421.62,
+      "title": "Pause and answer 15",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/31.jpg"
+    },
+    {
+      "startTime": 429.96,
+      "title": "Answer 15",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/32.jpg"
+    },
+    {
+      "startTime": 439.92,
+      "title": "Pause and answer 16",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/33.jpg"
+    },
+    {
+      "startTime": 464.75,
+      "title": "Answer 16",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/34.jpg"
+    },
+    {
+      "startTime": 475.1,
+      "title": "Pause and answer 17",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/35.jpg"
+    },
+    {
+      "startTime": 484.09,
+      "title": "Answer 17",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/36.jpg"
+    },
+    {
+      "startTime": 492.2,
+      "title": "Pause and answer 18",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/37.jpg"
+    },
+    {
+      "startTime": 502.16,
+      "title": "Answer 18",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/38.jpg"
+    },
+    {
+      "startTime": 512.97,
+      "title": "Drill: prompting and models",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/39.jpg"
+    },
+    {
+      "startTime": 518.15,
+      "title": "Pause and answer 19",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/40.jpg"
+    },
+    {
+      "startTime": 527.47,
+      "title": "Answer 19",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/41.jpg"
+    },
+    {
+      "startTime": 533.07,
+      "title": "Pause and answer 20",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/42.jpg"
+    },
+    {
+      "startTime": 541.03,
+      "title": "Answer 20",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/43.jpg"
+    },
+    {
+      "startTime": 548.12,
+      "title": "Pause and answer 21",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/44.jpg"
+    },
+    {
+      "startTime": 555.99,
+      "title": "Answer 21",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/45.jpg"
+    },
+    {
+      "startTime": 562.33,
+      "title": "Pause and answer 22",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/46.jpg"
+    },
+    {
+      "startTime": 572.48,
+      "title": "Answer 22",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/47.jpg"
+    },
+    {
+      "startTime": 579.75,
+      "title": "Question 23: Trainer, drifting quiz format",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/48.jpg"
+    },
+    {
+      "startTime": 615.7,
+      "title": "Answer 23",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/49.jpg"
+    },
+    {
+      "startTime": 630.42,
+      "title": "Pause and answer 24",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/50.jpg"
+    },
+    {
+      "startTime": 638.15,
+      "title": "Answer 24",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/51.jpg"
+    },
+    {
+      "startTime": 646.86,
+      "title": "Pause and answer 25",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/52.jpg"
+    },
+    {
+      "startTime": 654.27,
+      "title": "Answer 25",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/53.jpg"
+    },
+    {
+      "startTime": 659.73,
+      "title": "Pause and answer 26",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/54.jpg"
+    },
+    {
+      "startTime": 665.24,
+      "title": "Answer 26",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/55.jpg"
+    },
+    {
+      "startTime": 672.69,
+      "title": "Pause and answer 27",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/56.jpg"
+    },
+    {
+      "startTime": 684.44,
+      "title": "Answer 27",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/57.jpg"
+    },
+    {
+      "startTime": 697.12,
+      "title": "Drill: Projects and troubleshooting",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/58.jpg"
+    },
+    {
+      "startTime": 702.39,
+      "title": "Pause and answer 28",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/59.jpg"
+    },
+    {
+      "startTime": 710.59,
+      "title": "Answer 28",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/60.jpg"
+    },
+    {
+      "startTime": 716.23,
+      "title": "Pause and answer 29",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/61.jpg"
+    },
+    {
+      "startTime": 723.87,
+      "title": "Answer 29",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/62.jpg"
+    },
+    {
+      "startTime": 731.84,
+      "title": "Pause and answer 30",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/63.jpg"
+    },
+    {
+      "startTime": 738.87,
+      "title": "Answer 30",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/64.jpg"
+    },
+    {
+      "startTime": 745.91,
+      "title": "Question 31: Shared policy Project, untracked edit",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/65.jpg"
+    },
+    {
+      "startTime": 781.58,
+      "title": "Answer 31",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/66.jpg"
+    },
+    {
+      "startTime": 799.46,
+      "title": "Pause and answer 32",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/67.jpg"
+    },
+    {
+      "startTime": 812.01,
+      "title": "Answer 32",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/68.jpg"
+    },
+    {
+      "startTime": 825.45,
+      "title": "Pause and answer 33",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/69.jpg"
+    },
+    {
+      "startTime": 833.7,
+      "title": "Answer 33",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/70.jpg"
+    },
+    {
+      "startTime": 845.38,
+      "title": "Pause and answer 34",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/71.jpg"
+    },
+    {
+      "startTime": 849.72,
+      "title": "Answer 34",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/72.jpg"
+    },
+    {
+      "startTime": 858.2,
+      "title": "Pause and answer 35",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/73.jpg"
+    },
+    {
+      "startTime": 867.56,
+      "title": "Answer 35",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/74.jpg"
+    },
+    {
+      "startTime": 889.31,
+      "title": "The distractor families",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/75.jpg"
+    },
+    {
+      "startTime": 1029.17,
+      "title": "Exam day in brief",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/76.jpg"
+    },
+    {
+      "startTime": 1093.93,
+      "title": "Final retrieval - Pause and answer 36",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/77.jpg"
+    },
+    {
+      "startTime": 1103.11,
+      "title": "Answer 36",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill/78.jpg"
+    }
+  ]
+}

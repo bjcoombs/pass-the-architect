@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="feed.xsl"?>
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:podcast="https://podcastindex.org/namespace/1.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pass the Architect: CCDV-F</title>
+    <link>https://bjcoombs.github.io/pass-the-architect/</link>
+    <atom:link href="https://bjcoombs.github.io/pass-the-architect/ccdv-f.xml" rel="self" type="application/rss+xml"/>
+    <language>en-gb</language>
+    <description>A two-host study series for the Claude Certified Developer - Foundations exam: the API, application design, agents, tools and MCP, models, prompts, security and debugging. Follows the v1.0 exam guide (July 2026), for exams sat before 7 December 2026.</description>
+    <itunes:summary>A two-host study series for the Claude Certified Developer - Foundations exam: the API, application design, agents, tools and MCP, models, prompts, security and debugging. Follows the v1.0 exam guide (July 2026), for exams sat before 7 December 2026.</itunes:summary>
+    <itunes:author>Pass the Architect</itunes:author>
+    <itunes:image href="https://bjcoombs.github.io/pass-the-architect/cover-ccdv-f.png"/>
+    <image><url>https://bjcoombs.github.io/pass-the-architect/cover-ccdv-f.png</url><title>Pass the Architect: CCDV-F</title><link>https://bjcoombs.github.io/pass-the-architect/</link></image>
+    <itunes:type>serial</itunes:type>
+    <itunes:block>Yes</itunes:block>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:category text="Education"/>
+    <item>
+      <title>11. Exam day</title>
+      <description>A short episode for the morning of the Developer Foundations exam: what to check before you leave, a noteboard to write in the first minutes, the countdown checkpoints, the item formats to expect, and what to do in the last ten minutes.</description>
+      <enclosure url="https://github.com/bjcoombs/pass-the-architect/releases/download/ccdv-f/11-D11-exam-day.mp3" length="6793055" type="audio/mpeg"/>
+      <guid isPermaLink="false">pass-the-architect-ccdv-f-D11-exam-day-dd427982</guid>
+      <pubDate>Sun, 18 Oct 2026 06:11:00 +0000</pubDate>
+      <itunes:duration>0:06:21</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <podcast:chapters url="https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/11-D11-exam-day.json" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>10. Developer final drill</title>
+      <description>Thirty-seven quick items across all eight Developer Foundations domains in blueprint proportion, Applications and Integration first and most, then the distractor families this series keeps meeting, exam day in brief, and one last retrieval pass.</description>
+      <enclosure url="https://github.com/bjcoombs/pass-the-architect/releases/download/ccdv-f/10-D10-final-drill.mp3" length="30538820" type="audio/mpeg"/>
+      <guid isPermaLink="false">pass-the-architect-ccdv-f-D10-final-drill-14599ede</guid>
+      <pubDate>Sun, 18 Oct 2026 06:10:00 +0000</pubDate>
+      <itunes:duration>0:21:41</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <podcast:chapters url="https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/10-D10-final-drill.json" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>09. Security, hooks, secrets and debugging</title>
+      <description>Prompt injection, jailbreaks and data leakage, guardrail layers and least privilege, hooks that stop destructive actions, API keys across environments, and how to tell an integration fault from a model fault.</description>
+      <enclosure url="https://github.com/bjcoombs/pass-the-architect/releases/download/ccdv-f/09-D09-security-debugging.mp3" length="23980833" type="audio/mpeg"/>
+      <guid isPermaLink="false">pass-the-architect-ccdv-f-D09-security-debugging-81bbcf38</guid>
+      <pubDate>Sun, 18 Oct 2026 06:09:00 +0000</pubDate>
+      <itunes:duration>0:21:26</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <podcast:chapters url="https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/09-D09-security-debugging.json" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>08. Tools, MCP servers and choosing a customization</title>
+      <description>How the tool-use loop works and who runs each tool, descriptions and errors that keep an agent on track, approval gates, building and deploying M C P servers with tools, resources and prompts over stdio or H T T P, and choosing between a built-in tool, a custom tool, a skill and M C P.</description>
+      <enclosure url="https://github.com/bjcoombs/pass-the-architect/releases/download/ccdv-f/08-D08-tools-mcp.mp3" length="23299170" type="audio/mpeg"/>
+      <guid isPermaLink="false">pass-the-architect-ccdv-f-D08-tools-mcp-aac43d18</guid>
+      <pubDate>Sun, 18 Oct 2026 06:08:00 +0000</pubDate>
+      <itunes:duration>0:20:50</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <podcast:chapters url="https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/08-D08-tools-mcp.json" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>07. Prompts, context and output handling</title>
+      <description>Keeping a long session sharp by pruning tool output, compacting and isolating work in subagents; writing prompts with clear reasons, examples, the right placement and sanitised input; and treating Claude's output as data to validate, not a verdict to trust.</description>
+      <enclosure url="https://github.com/bjcoombs/pass-the-architect/releases/download/ccdv-f/07-D07-prompt-context.mp3" length="23585823" type="audio/mpeg"/>
+      <guid isPermaLink="false">pass-the-architect-ccdv-f-D07-prompt-context-7f25b45c</guid>
+      <pubDate>Sun, 18 Oct 2026 06:07:00 +0000</pubDate>
+      <itunes:duration>0:21:06</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <podcast:chapters url="https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/07-D07-prompt-context.json" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>06. Agents and workflows</title>
+      <description>When a fixed workflow beats an agent, when supervisors and subagents earn their token cost, choosing between your own loop, the Claude Agent S D K and Managed Agents, hooks that make an action certain, and keeping a long-running agent's context under control.</description>
+      <enclosure url="https://github.com/bjcoombs/pass-the-architect/releases/download/ccdv-f/06-D06-agents.mp3" length="27038441" type="audio/mpeg"/>
+      <guid isPermaLink="false">pass-the-architect-ccdv-f-D06-agents-f4a15fa4</guid>
+      <pubDate>Sun, 18 Oct 2026 06:06:00 +0000</pubDate>
+      <itunes:duration>0:23:58</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <podcast:chapters url="https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/06-D06-agents.json" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>05. LLM fundamentals and choosing a model</title>
+      <description>Tokens, context windows, sampling and why the same prompt can answer differently; extended and adaptive thinking, effort levels and fast mode; zero, single and multi-shot prompting; and choosing between Opus, Sonnet and Haiku when a release changes behaviour.</description>
+      <enclosure url="https://github.com/bjcoombs/pass-the-architect/releases/download/ccdv-f/05-D05-models.mp3" length="22070130" type="audio/mpeg"/>
+      <guid isPermaLink="false">pass-the-architect-ccdv-f-D05-models-22d30f6a</guid>
+      <pubDate>Sun, 18 Oct 2026 06:05:00 +0000</pubDate>
+      <itunes:duration>0:19:19</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <podcast:chapters url="https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/05-D05-models.json" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>04. Configuration and Claude Code</title>
+      <description>Where Claude Code configuration lives and who it reaches: the CLAUDE dot md hierarchy, rules, settings precedence, model pinning, prompt versioning, plugins, skills, subagents and their memory, sessions, headless runs and auto mode.</description>
+      <enclosure url="https://github.com/bjcoombs/pass-the-architect/releases/download/ccdv-f/04-D04-configuration-claude-code.mp3" length="22334979" type="audio/mpeg"/>
+      <guid isPermaLink="false">pass-the-architect-ccdv-f-D04-configuration-claude-code-d2763629</guid>
+      <pubDate>Sun, 18 Oct 2026 06:04:00 +0000</pubDate>
+      <itunes:duration>0:19:32</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <podcast:chapters url="https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/04-D04-configuration-claude-code.json" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>03. Designing Claude applications</title>
+      <description>How Claude reads the same instruction in the A P I, the Agent S D K, Claude Code, claude.ai and Desktop; keeping instructions apart from data; schemas that always parse and never force invented values; clean sessions and plugin scopes; and turning business requirements into functional and infrastructure requirements across the systems life cycle.</description>
+      <enclosure url="https://github.com/bjcoombs/pass-the-architect/releases/download/ccdv-f/03-D03-application-design.mp3" length="28502664" type="audio/mpeg"/>
+      <guid isPermaLink="false">pass-the-architect-ccdv-f-D03-application-design-a785a151</guid>
+      <pubDate>Sun, 18 Oct 2026 06:03:00 +0000</pubDate>
+      <itunes:duration>0:25:42</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <podcast:chapters url="https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/03-D03-application-design.json" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>02. Software engineering for Claude applications</title>
+      <description>REST, JSON and status codes under every Claude call, what the official S D K does for you, async concurrency inside rate limits, server-sent events versus websockets, and version control, C I, code review and refactoring with Claude Code.</description>
+      <enclosure url="https://github.com/bjcoombs/pass-the-architect/releases/download/ccdv-f/02-D02-engineering-foundations.mp3" length="27250582" type="audio/mpeg"/>
+      <guid isPermaLink="false">pass-the-architect-ccdv-f-D02-engineering-foundations-b34b6109</guid>
+      <pubDate>Sun, 18 Oct 2026 06:02:00 +0000</pubDate>
+      <itunes:duration>0:24:59</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <podcast:chapters url="https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/02-D02-engineering-foundations.json" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>01. The Claude API: messages, streaming, thinking, caching and batch</title>
+      <description>How a Messages A P I call really works: stop reasons, tool results, streaming events, images, thinking blocks, how data reaches Claude, cloud platforms, realtime versus batch, and how to track tokens and place cache breakpoints that actually hit.</description>
+      <enclosure url="https://github.com/bjcoombs/pass-the-architect/releases/download/ccdv-f/01-D01-api-mechanics.mp3" length="28690007" type="audio/mpeg"/>
+      <guid isPermaLink="false">pass-the-architect-ccdv-f-D01-api-mechanics-d71578d3</guid>
+      <pubDate>Sun, 18 Oct 2026 06:01:00 +0000</pubDate>
+      <itunes:duration>0:25:42</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <podcast:chapters url="https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/01-D01-api-mechanics.json" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>00. Developer game plan</title>
+      <description>How the Developer Foundations exam is built: fifty-three items in two hours, eight weighted domains, a countdown pacing plan, per-statement dropdown items, and a four-step method worked through the three official sample questions.</description>
+      <enclosure url="https://github.com/bjcoombs/pass-the-architect/releases/download/ccdv-f/00-D00-game-plan.mp3" length="16770763" type="audio/mpeg"/>
+      <guid isPermaLink="false">pass-the-architect-ccdv-f-D00-game-plan-af92eeb9</guid>
+      <pubDate>Sun, 18 Oct 2026 06:00:00 +0000</pubDate>
+      <itunes:duration>0:14:44</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <podcast:chapters url="https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/00-D00-game-plan.json" type="application/json+chapters"/>
+    </item>
+  </channel>
+</rss>

@@ -58,9 +58,9 @@ SERIES = [
         "colour": "#1f5a4a",
         "label": "CCDV-F",
         "description": "A two-host study series for the Claude Certified Developer - Foundations exam: "
-                       "the API, application design, agents, tools and MCP, models, prompts, security and debugging.",
+                       "the API, application design, agents, tools and MCP, models, prompts, security and debugging. "
+                       "Follows the v1.0 exam guide (July 2026), for exams sat before 7 December 2026.",
         "episodes": [f"D{n:02d}" for n in range(12)],
-        "draft": True,
     },
     {
         "slug": "ccao-f",
@@ -69,9 +69,9 @@ SERIES = [
         "colour": "#5a2f6e",
         "label": "CCAO-F",
         "description": "A two-host study series for the Claude Certified Associate - Foundations exam: "
-                       "prompting, checking outputs, products and models, workflows, Projects, responsible use and troubleshooting.",
+                       "prompting, checking outputs, products and models, workflows, Projects, responsible use and troubleshooting. "
+                       "Follows the v1.0 exam guide (July 2026), for exams sat before 7 December 2026.",
         "episodes": [f"A{n:02d}" for n in range(10)],
-        "draft": True,
     },
 ]
 LIVE = [s for s in SERIES if not s.get("draft")]
@@ -246,7 +246,8 @@ def opml_and_index(site):
 <p>Private study podcasts. Add a feed URL to a podcast app (Apple Podcasts: Library, then Follow a Show by URL), or import <a href="podcasts.opml">podcasts.opml</a> for both.</p>
 <ul>
 {rows}
-</ul></body></html>
+</ul>
+<p>Scripts, artwork and tools: <a href="https://github.com/{REPO}">github.com/{REPO}</a></p></body></html>
 """)
     (site / "robots.txt").write_text("User-agent: *\nDisallow: /\n")
     # Browsers render the feeds and the OPML through these stylesheets; podcast apps ignore them.

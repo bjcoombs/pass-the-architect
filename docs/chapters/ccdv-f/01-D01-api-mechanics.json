@@ -1,0 +1,106 @@
+{
+  "version": "1.2.0",
+  "title": "The Claude API: messages, streaming, thinking, caching and batch",
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "In this episode",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/01-D01-api-mechanics/00.jpg"
+    },
+    {
+      "startTime": 55.45,
+      "title": "Cold open: the cache that never hits - Question 1: Prompt caching",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/01-D01-api-mechanics/01.jpg"
+    },
+    {
+      "startTime": 149.7,
+      "title": "Segment one: messages and tools",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/01-D01-api-mechanics/02.jpg"
+    },
+    {
+      "startTime": 350.11,
+      "title": "Segment two: streaming, vision and thinking",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/01-D01-api-mechanics/03.jpg"
+    },
+    {
+      "startTime": 512.48,
+      "title": "Question 2: Thinking with tool use",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/01-D01-api-mechanics/04.jpg"
+    },
+    {
+      "startTime": 568.59,
+      "title": "Answer 2",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/01-D01-api-mechanics/05.jpg"
+    },
+    {
+      "startTime": 615.95,
+      "title": "Segment three: data in, and where you call from",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/01-D01-api-mechanics/06.jpg"
+    },
+    {
+      "startTime": 778.12,
+      "title": "Question 3: Third-party platforms",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/01-D01-api-mechanics/07.jpg"
+    },
+    {
+      "startTime": 836.82,
+      "title": "Answer 3",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/01-D01-api-mechanics/08.jpg"
+    },
+    {
+      "startTime": 859.29,
+      "title": "Segment four: realtime or batch",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/01-D01-api-mechanics/09.jpg"
+    },
+    {
+      "startTime": 990.9,
+      "title": "Question 4: Message Batches API",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/01-D01-api-mechanics/10.jpg"
+    },
+    {
+      "startTime": 1036.73,
+      "title": "Answer 4",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/01-D01-api-mechanics/11.jpg"
+    },
+    {
+      "startTime": 1053.63,
+      "title": "Segment five: counting tokens and caching",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/01-D01-api-mechanics/12.jpg"
+    },
+    {
+      "startTime": 1259.08,
+      "title": "Pause and answer 5",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/01-D01-api-mechanics/13.jpg"
+    },
+    {
+      "startTime": 1295.38,
+      "title": "Answer 5",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/01-D01-api-mechanics/14.jpg"
+    },
+    {
+      "startTime": 1325.31,
+      "title": "Cold open: the verdict",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/01-D01-api-mechanics/15.jpg"
+    },
+    {
+      "startTime": 1337.52,
+      "title": "Answer 1",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/01-D01-api-mechanics/16.jpg"
+    },
+    {
+      "startTime": 1380.94,
+      "title": "Five to remember",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/01-D01-api-mechanics/17.jpg"
+    },
+    {
+      "startTime": 1450.03,
+      "title": "Recap: the exam tells - Pause and answer 6",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/01-D01-api-mechanics/18.jpg"
+    },
+    {
+      "startTime": 1454.51,
+      "title": "Answer 6",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/01-D01-api-mechanics/19.jpg"
+    }
+  ]
+}

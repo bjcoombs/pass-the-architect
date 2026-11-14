@@ -1,0 +1,116 @@
+{
+  "version": "1.2.0",
+  "title": "Checking what Claude gives you",
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "In this episode",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/02-A02-output-validation/00.jpg"
+    },
+    {
+      "startTime": 63.67,
+      "title": "Cold open: the vendor comparison - Question 1: Vendor comparison, ten of twelve rows",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/02-A02-output-validation/01.jpg"
+    },
+    {
+      "startTime": 182.47,
+      "title": "Accuracy, hallucinations and bias",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/02-A02-output-validation/02.jpg"
+    },
+    {
+      "startTime": 363.05,
+      "title": "Question 2: Case study with an untraceable quote",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/02-A02-output-validation/03.jpg"
+    },
+    {
+      "startTime": 409.58,
+      "title": "Answer 2",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/02-A02-output-validation/04.jpg"
+    },
+    {
+      "startTime": 439.16,
+      "title": "Fact-checking techniques",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/02-A02-output-validation/05.jpg"
+    },
+    {
+      "startTime": 534.51,
+      "title": "Question 3: Summarising a regulatory consultation",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/02-A02-output-validation/06.jpg"
+    },
+    {
+      "startTime": 609.8,
+      "title": "Answer 3",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/02-A02-output-validation/07.jpg"
+    },
+    {
+      "startTime": 628.74,
+      "title": "When a human must review",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/02-A02-output-validation/08.jpg"
+    },
+    {
+      "startTime": 731.2,
+      "title": "Pause and answer 4",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/02-A02-output-validation/09.jpg"
+    },
+    {
+      "startTime": 771.84,
+      "title": "Answer 4",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/02-A02-output-validation/10.jpg"
+    },
+    {
+      "startTime": 799.6,
+      "title": "Editing for the audience",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/02-A02-output-validation/11.jpg"
+    },
+    {
+      "startTime": 869.11,
+      "title": "Question 5: Two drafts of an office-move announcement",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/02-A02-output-validation/12.jpg"
+    },
+    {
+      "startTime": 930.48,
+      "title": "Answer 5",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/02-A02-output-validation/13.jpg"
+    },
+    {
+      "startTime": 965.96,
+      "title": "Formats: inline, artifact, structured data",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/02-A02-output-validation/14.jpg"
+    },
+    {
+      "startTime": 1075.25,
+      "title": "Question 6: Onboarding guide, revised then shared",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/02-A02-output-validation/15.jpg"
+    },
+    {
+      "startTime": 1115.09,
+      "title": "Answer 6",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/02-A02-output-validation/16.jpg"
+    },
+    {
+      "startTime": 1139.93,
+      "title": "Cold open: the verdict",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/02-A02-output-validation/17.jpg"
+    },
+    {
+      "startTime": 1154.38,
+      "title": "Answer 1",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/02-A02-output-validation/18.jpg"
+    },
+    {
+      "startTime": 1199.47,
+      "title": "Five to remember",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/02-A02-output-validation/19.jpg"
+    },
+    {
+      "startTime": 1274.97,
+      "title": "Recap: the exam tells - Pause and answer 7",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/02-A02-output-validation/20.jpg"
+    },
+    {
+      "startTime": 1281.45,
+      "title": "Answer 7",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/02-A02-output-validation/21.jpg"
+    }
+  ]
+}

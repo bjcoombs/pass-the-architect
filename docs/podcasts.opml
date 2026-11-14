@@ -7,5 +7,7 @@
   <body>
     <outline type="rss" text="Pass the Architect: CCAR-P" title="Pass the Architect: CCAR-P" xmlUrl="https://bjcoombs.github.io/pass-the-architect/ccar-p.xml" htmlUrl="https://bjcoombs.github.io/pass-the-architect/"/>
     <outline type="rss" text="Pass the Architect: CCAR-F retake" title="Pass the Architect: CCAR-F retake" xmlUrl="https://bjcoombs.github.io/pass-the-architect/ccar-f-retake.xml" htmlUrl="https://bjcoombs.github.io/pass-the-architect/"/>
+    <outline type="rss" text="Pass the Architect: CCDV-F" title="Pass the Architect: CCDV-F" xmlUrl="https://bjcoombs.github.io/pass-the-architect/ccdv-f.xml" htmlUrl="https://bjcoombs.github.io/pass-the-architect/"/>
+    <outline type="rss" text="Pass the Architect: CCAO-F" title="Pass the Architect: CCAO-F" xmlUrl="https://bjcoombs.github.io/pass-the-architect/ccao-f.xml" htmlUrl="https://bjcoombs.github.io/pass-the-architect/"/>
   </body>
 </opml>

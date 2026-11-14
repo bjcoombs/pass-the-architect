@@ -1,0 +1,116 @@
+{
+  "version": "1.2.0",
+  "title": "Agents and workflows",
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "In this episode",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/06-D06-agents/00.jpg"
+    },
+    {
+      "startTime": 60.51,
+      "title": "Cold open: the claims pipeline - Question 1: Insurance claims intake",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/06-D06-agents/01.jpg"
+    },
+    {
+      "startTime": 168.0,
+      "title": "Segment one: workflow or agent",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/06-D06-agents/02.jpg"
+    },
+    {
+      "startTime": 267.82,
+      "title": "Question 2: Bank research assistant",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/06-D06-agents/03.jpg"
+    },
+    {
+      "startTime": 313.1,
+      "title": "Answer 2",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/06-D06-agents/04.jpg"
+    },
+    {
+      "startTime": 336.73,
+      "title": "Segment two: supervisors and subagents",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/06-D06-agents/05.jpg"
+    },
+    {
+      "startTime": 452.57,
+      "title": "Question 3: Support platform subagents",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/06-D06-agents/06.jpg"
+    },
+    {
+      "startTime": 501.15,
+      "title": "Answer 3",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/06-D06-agents/07.jpg"
+    },
+    {
+      "startTime": 572.6,
+      "title": "Segment three: building the agent",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/06-D06-agents/08.jpg"
+    },
+    {
+      "startTime": 730.17,
+      "title": "Pause and answer 4",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/06-D06-agents/09.jpg"
+    },
+    {
+      "startTime": 785.2,
+      "title": "Answer 4",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/06-D06-agents/10.jpg"
+    },
+    {
+      "startTime": 805.68,
+      "title": "Segment four: hooks for deterministic actions",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/06-D06-agents/11.jpg"
+    },
+    {
+      "startTime": 909.58,
+      "title": "Question 5: Field-service operations agent",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/06-D06-agents/12.jpg"
+    },
+    {
+      "startTime": 955.09,
+      "title": "Answer 5",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/06-D06-agents/13.jpg"
+    },
+    {
+      "startTime": 982.02,
+      "title": "Segment five: loops, memory, context and frameworks",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/06-D06-agents/14.jpg"
+    },
+    {
+      "startTime": 1121.69,
+      "title": "Question 6: Long-running documentation agent",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/06-D06-agents/15.jpg"
+    },
+    {
+      "startTime": 1180.44,
+      "title": "Answer 6",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/06-D06-agents/16.jpg"
+    },
+    {
+      "startTime": 1201.61,
+      "title": "Cold open: the verdict",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/06-D06-agents/17.jpg"
+    },
+    {
+      "startTime": 1218.0,
+      "title": "Answer 1",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/06-D06-agents/18.jpg"
+    },
+    {
+      "startTime": 1259.05,
+      "title": "Five to remember",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/06-D06-agents/19.jpg"
+    },
+    {
+      "startTime": 1338.31,
+      "title": "Recap: the exam tells - Pause and answer 7",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/06-D06-agents/20.jpg"
+    },
+    {
+      "startTime": 1344.75,
+      "title": "Answer 7",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/06-D06-agents/21.jpg"
+    }
+  ]
+}

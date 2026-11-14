@@ -1,0 +1,106 @@
+{
+  "version": "1.2.0",
+  "title": "Designing Claude applications",
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "In this episode",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/03-D03-application-design/00.jpg"
+    },
+    {
+      "startTime": 63.49,
+      "title": "Cold open: it worked in the chat - Question 1: Claude application design",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/03-D03-application-design/01.jpg"
+    },
+    {
+      "startTime": 387.7,
+      "title": "Question 2: Agent SDK migration",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/03-D03-application-design/02.jpg"
+    },
+    {
+      "startTime": 430.47,
+      "title": "Answer 2",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/03-D03-application-design/03.jpg"
+    },
+    {
+      "startTime": 457.44,
+      "title": "Content boundaries and schemas",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/03-D03-application-design/04.jpg"
+    },
+    {
+      "startTime": 665.54,
+      "title": "Question 3: Structured extraction",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/03-D03-application-design/05.jpg"
+    },
+    {
+      "startTime": 714.59,
+      "title": "Answer 3",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/03-D03-application-design/06.jpg"
+    },
+    {
+      "startTime": 739.69,
+      "title": "Pause and answer 4",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/03-D03-application-design/07.jpg"
+    },
+    {
+      "startTime": 774.43,
+      "title": "Answer 4",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/03-D03-application-design/08.jpg"
+    },
+    {
+      "startTime": 790.49,
+      "title": "Sessions and plugins",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/03-D03-application-design/09.jpg"
+    },
+    {
+      "startTime": 993.02,
+      "title": "Question 5: Claude Code session hygiene",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/03-D03-application-design/10.jpg"
+    },
+    {
+      "startTime": 1043.18,
+      "title": "Answer 5",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/03-D03-application-design/11.jpg"
+    },
+    {
+      "startTime": 1075.73,
+      "title": "Requirements and the life cycle",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/03-D03-application-design/12.jpg"
+    },
+    {
+      "startTime": 1151.55,
+      "title": "Question 6: Understanding requirements",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/03-D03-application-design/13.jpg"
+    },
+    {
+      "startTime": 1201.52,
+      "title": "Answer 6",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/03-D03-application-design/14.jpg"
+    },
+    {
+      "startTime": 1301.74,
+      "title": "Cold open: the verdict",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/03-D03-application-design/15.jpg"
+    },
+    {
+      "startTime": 1318.33,
+      "title": "Answer 1",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/03-D03-application-design/16.jpg"
+    },
+    {
+      "startTime": 1360.45,
+      "title": "Five to remember",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/03-D03-application-design/17.jpg"
+    },
+    {
+      "startTime": 1438.73,
+      "title": "Recap: the exam tells - Pause and answer 7",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/03-D03-application-design/18.jpg"
+    },
+    {
+      "startTime": 1445.67,
+      "title": "Answer 7",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/03-D03-application-design/19.jpg"
+    }
+  ]
+}
