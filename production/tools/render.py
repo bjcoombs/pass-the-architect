@@ -185,8 +185,11 @@ def chapter_marks(path, meta, turns):
             title = f"Pause and answer {n}"
             marks[q] = (f"{seg} - {title}" if seg else title, cards.recall(d, episode, n, reveal=False))
             if d.get("answer_line"):
-                # A recall prompt that opens a bulleted chapter (the recap) is answered by those bullets.
-                card = (cards.segment(seg, episode, bullets[seg]) if seg in bullets
+                # A recall prompt that opens a bulleted chapter (the recap) is answered by those bullets,
+                # unless it carries a numbered answer for each numbered item.
+                itemised = cards.numbered(d["prompt"])[1] and \
+                    len(cards.numbered(d.get("answer", ""))[1]) == len(cards.numbered(d["prompt"])[1])
+                card = (cards.segment(seg, episode, bullets[seg]) if seg in bullets and not itemised
                         else cards.recall(d, episode, n, reveal=True))
                 marks[find(d["answer_line"])] = (f"Answer {n}", card)
             elif seg in bullets:

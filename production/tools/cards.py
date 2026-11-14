@@ -142,7 +142,9 @@ def numbered(text):
     parts = re.split(r"(?:^|\s)(\d+)\)\s+", text)
     if len(parts) < 5 or [int(n) for n in parts[1::2]] != list(range(1, len(parts) // 2 + 1)):
         return text, []
-    return parts[0].strip(), [p.strip() for p in parts[2::2]]
+    # Items written as one running sentence ("1) pasting ...; 2) a tool ...") read better as their own lines.
+    items = [re.sub(r"[;,]$", ".", p.strip()) for p in parts[2::2]]
+    return parts[0].strip(), [i[:1].upper() + i[1:] for i in items]
 
 
 def recall(drill, episode, number, reveal):
