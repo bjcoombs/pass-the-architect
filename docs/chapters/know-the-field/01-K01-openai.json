@@ -1,0 +1,106 @@
+{
+  "version": "1.2.0",
+  "title": "OpenAI",
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "In this episode",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/01-K01-openai/00.jpg"
+    },
+    {
+      "startTime": 60.84,
+      "title": "Cold open: the phone line - Question 1: Utility phone assistant",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/01-K01-openai/01.jpg"
+    },
+    {
+      "startTime": 131.19,
+      "title": "The model",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/01-K01-openai/02.jpg"
+    },
+    {
+      "startTime": 296.11,
+      "title": "Platform and agent stack",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/01-K01-openai/03.jpg"
+    },
+    {
+      "startTime": 528.55,
+      "title": "Question 2: EU insurer, zero data retention",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/01-K01-openai/04.jpg"
+    },
+    {
+      "startTime": 593.24,
+      "title": "Answer 2",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/01-K01-openai/05.jpg"
+    },
+    {
+      "startTime": 627.65,
+      "title": "Codex and ChatGPT Work",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/01-K01-openai/06.jpg"
+    },
+    {
+      "startTime": 794.97,
+      "title": "Pause and answer 3",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/01-K01-openai/07.jpg"
+    },
+    {
+      "startTime": 829.38,
+      "title": "Answer 3",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/01-K01-openai/08.jpg"
+    },
+    {
+      "startTime": 845.72,
+      "title": "Enterprise and the clouds",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/01-K01-openai/09.jpg"
+    },
+    {
+      "startTime": 1022.31,
+      "title": "Question 4: AWS-committed retailer wants Codex",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/01-K01-openai/10.jpg"
+    },
+    {
+      "startTime": 1065.96,
+      "title": "Answer 4",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/01-K01-openai/11.jpg"
+    },
+    {
+      "startTime": 1091.5,
+      "title": "Pushback",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/01-K01-openai/12.jpg"
+    },
+    {
+      "startTime": 1198.77,
+      "title": "Question 5: Where OpenAI is stronger",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/01-K01-openai/13.jpg"
+    },
+    {
+      "startTime": 1238.29,
+      "title": "Answer 5",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/01-K01-openai/14.jpg"
+    },
+    {
+      "startTime": 1257.19,
+      "title": "Cold open: the verdict",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/01-K01-openai/15.jpg"
+    },
+    {
+      "startTime": 1287.82,
+      "title": "Answer 1",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/01-K01-openai/16.jpg"
+    },
+    {
+      "startTime": 1324.74,
+      "title": "Five to remember",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/01-K01-openai/17.jpg"
+    },
+    {
+      "startTime": 1396.94,
+      "title": "Recap: the conversation tells - Pause and answer 6",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/01-K01-openai/18.jpg"
+    },
+    {
+      "startTime": 1404.07,
+      "title": "Answer 6",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/01-K01-openai/19.jpg"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="feed.xsl"?>
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:podcast="https://podcastindex.org/namespace/1.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pass the Architect: Know the Field</title>
+    <link>https://bjcoombs.github.io/pass-the-architect/</link>
+    <atom:link href="https://bjcoombs.github.io/pass-the-architect/know-the-field.xml" rel="self" type="application/rss+xml"/>
+    <language>en-gb</language>
+    <description>A two-host series on the companies Claude competes with: OpenAI, Google, Microsoft, AWS, xAI and the open-weight labs. Where each is stronger, where Claude is, and how to answer a customer who asks why Claude.</description>
+    <itunes:summary>A two-host series on the companies Claude competes with: OpenAI, Google, Microsoft, AWS, xAI and the open-weight labs. Where each is stronger, where Claude is, and how to answer a customer who asks why Claude.</itunes:summary>
+    <itunes:author>Pass the Architect</itunes:author>
+    <itunes:image href="https://bjcoombs.github.io/pass-the-architect/cover-know-the-field.png"/>
+    <image><url>https://bjcoombs.github.io/pass-the-architect/cover-know-the-field.png</url><title>Pass the Architect: Know the Field</title><link>https://bjcoombs.github.io/pass-the-architect/</link></image>
+    <itunes:type>serial</itunes:type>
+    <itunes:block>Yes</itunes:block>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:category text="Education"/>
+    <item>
+      <title>04. Same Claude, different cloud</title>
+      <description>Buying Claude through Amazon Bedrock, Claude Platform on AWS, Google Cloud or Microsoft Foundry instead of direct: who operates each, which features it carries, where the data goes, and which commitment it draws down. Plus AWS's own stack: Nova, AgentCore, Strands and Kiro.</description>
+      <enclosure url="https://github.com/bjcoombs/pass-the-architect/releases/download/know-the-field/04-K04-same-claude-other-clouds.mp3" length="27312734" type="audio/mpeg"/>
+      <guid isPermaLink="false">pass-the-architect-know-the-field-K04-same-claude-other-clouds-f3e5690f</guid>
+      <pubDate>Sun, 18 Oct 2026 06:04:00 +0000</pubDate>
+      <itunes:duration>0:24:39</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <podcast:chapters url="https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/04-K04-same-claude-other-clouds.json" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>03. Microsoft: competitor and channel</title>
+      <description>Microsoft sells against Claude and sells Claude: the two ways to host Claude in Foundry, Microsoft Agent Framework, Claude inside Microsoft 365 Copilot and Copilot Cowork, and GitHub Copilot against Claude Code.</description>
+      <enclosure url="https://github.com/bjcoombs/pass-the-architect/releases/download/know-the-field/03-K03-microsoft.mp3" length="26773322" type="audio/mpeg"/>
+      <guid isPermaLink="false">pass-the-architect-know-the-field-K03-microsoft-58b12904</guid>
+      <pubDate>Sun, 18 Oct 2026 06:03:00 +0000</pubDate>
+      <itunes:duration>0:24:22</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <podcast:chapters url="https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/03-K03-microsoft.json" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>02. Google</title>
+      <description>Gemini on six layers: the widest multimodal range in the field, two developer front doors, an open agent kit and the A to A protocol, Antigravity in place of Gemini CLI and Jules, and Gemini Enterprise with Claude switched on inside it.</description>
+      <enclosure url="https://github.com/bjcoombs/pass-the-architect/releases/download/know-the-field/02-K02-google.mp3" length="26837852" type="audio/mpeg"/>
+      <guid isPermaLink="false">pass-the-architect-know-the-field-K02-google-d0d2faf0</guid>
+      <pubDate>Sun, 18 Oct 2026 06:02:00 +0000</pubDate>
+      <itunes:duration>0:24:18</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <podcast:chapters url="https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/02-K02-google.json" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>01. OpenAI</title>
+      <description>OpenAI on all six layers: the Astra-to-Luna model tiers, the Responses API and agent stack, Codex and ChatGPT Work, ChatGPT Enterprise, and its models on Azure and Bedrock. Where OpenAI is stronger than Claude, where Claude leads, and the questions to ask a customer.</description>
+      <enclosure url="https://github.com/bjcoombs/pass-the-architect/releases/download/know-the-field/01-K01-openai.mp3" length="27311022" type="audio/mpeg"/>
+      <guid isPermaLink="false">pass-the-architect-know-the-field-K01-openai-df16b831</guid>
+      <pubDate>Sun, 18 Oct 2026 06:01:00 +0000</pubDate>
+      <itunes:duration>0:24:54</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <podcast:chapters url="https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/01-K01-openai.json" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>00. The map: six layers for comparing AI vendors</title>
+      <description>Six layers for comparing any AI vendor with Claude, how to read a benchmark and a market report without being fooled, which facts are safe to quote and which to check first, and the route through the series.</description>
+      <enclosure url="https://github.com/bjcoombs/pass-the-architect/releases/download/know-the-field/00-K00-the-map.mp3" length="18211721" type="audio/mpeg"/>
+      <guid isPermaLink="false">pass-the-architect-know-the-field-K00-the-map-1d11ba72</guid>
+      <pubDate>Sun, 18 Oct 2026 06:00:00 +0000</pubDate>
+      <itunes:duration>0:15:30</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <podcast:chapters url="https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/00-K00-the-map.json" type="application/json+chapters"/>
+    </item>
+  </channel>
+</rss>

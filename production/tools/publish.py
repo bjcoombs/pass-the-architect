@@ -8,6 +8,8 @@ Usage (from production/): uv run --with mutagen tools/publish.py [--icloud] [--g
 --site    writes the feeds, feed stylesheet, chapter JSON, OPML, covers and index page
           into this directory, the GitHub Pages folder. Without --github it rewrites
           them without uploading. Commit and push afterwards.
+--series  limits staging, upload and feeds to the named series slugs, so the others need
+          no local audio; the OPML and index still list every live series.
 """
 import argparse
 import datetime
@@ -82,8 +84,8 @@ SERIES = [
         "description": "A two-host series on the companies Claude competes with: OpenAI, Google, Microsoft, AWS, "
                        "xAI and the open-weight labs. Where each is stronger, where Claude is, and how to answer "
                        "a customer who asks why Claude.",
-        "episodes": [f"K{n:02d}" for n in range(9)],
-        "draft": True,
+        # Rendered so far; the rest follow as credits allow.
+        "episodes": [f"K{n:02d}" for n in range(5)],
     },
 ]
 LIVE = [s for s in SERIES if not s.get("draft")]
@@ -255,7 +257,7 @@ def opml_and_index(site):
 <meta name="robots" content="noindex"><title>Pass the Architect</title>
 <style>body{{font-family:system-ui,sans-serif;max-width:40rem;margin:2rem auto;padding:0 1rem;line-height:1.5}}li{{margin:1rem 0}}</style>
 </head><body><h1>Pass the Architect</h1>
-<p>Private study podcasts. Add a feed URL to a podcast app (Apple Podcasts: Library, then Follow a Show by URL), or import <a href="podcasts.opml">podcasts.opml</a> for both.</p>
+<p>Private study podcasts. Add a feed URL to a podcast app (Apple Podcasts: Library, then Follow a Show by URL), or import <a href="podcasts.opml">podcasts.opml</a> for all of them.</p>
 <ul>
 {rows}
 </ul>
@@ -272,10 +274,11 @@ def main():
     ap.add_argument("--icloud", action="store_true")
     ap.add_argument("--github", action="store_true")
     ap.add_argument("--site", type=pathlib.Path)
+    ap.add_argument("--series", nargs="+", choices=[s["slug"] for s in LIVE], help="default: every live series")
     args = ap.parse_args()
     if args.github and not args.site:
         ap.error("--github needs --site")
-    for series in LIVE:
+    for series in [s for s in LIVE if not args.series or s["slug"] in args.series]:
         staged = stage(series)
         if args.icloud:
             to_icloud(series, staged)
