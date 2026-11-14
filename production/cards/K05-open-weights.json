@@ -1,0 +1,168 @@
+{
+  "drills": [
+    {
+      "kind": "mcq",
+      "label": "Cold open",
+      "question_line": "SAM: Here is the scenario. A retail group spends heavily on Claude.",
+      "answer_line": "SAM: The answer is B. A gateway with aliases",
+      "scenario": "Retail self-hosting proposal",
+      "stem": "The finance director wants to buy a GPU cluster, self-host Kimi K3.1 Pro and move all traffic off Claude. Traffic is bursty, there is no sovereignty requirement, and nobody runs model inference today. What should the architect recommend?",
+      "choose": 1,
+      "options": {
+        "A": "Self-host Kimi on a new cluster and move all traffic",
+        "B": "Gateway with model aliases: simple high-volume tasks to a hosted open-weight model, frontier model for hard steps, each route settled by an eval",
+        "C": "Stay entirely on Claude, because open models are not at frontier quality",
+        "D": "Run one small Apache-licensed model on a single server for all traffic"
+      },
+      "correct": [
+        "B"
+      ],
+      "why": "No sovereignty need and bursty traffic: route, do not self-host. A buys a multi-server cluster nobody can run, C ignores the cost lever asked about, D trades quality for licence neatness."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Choose two. An inference platform resells model access",
+      "answer_line": "SAM: A is right. D is modified M I T",
+      "scenario": "Inference reseller licences",
+      "stem": "Choose two. An inference platform resells model access by the token, revenue well above $20M a year, and wants open models it can serve without a separate agreement with the maker. Going by the licences as reported, which two qualify?",
+      "choose": 2,
+      "options": {
+        "A": "Gemma 4",
+        "B": "Kimi K3",
+        "C": "gpt-oss",
+        "D": "Mistral Large 4",
+        "E": "Muse Spark Open"
+      },
+      "correct": [
+        "A",
+        "C"
+      ],
+      "why": "Gemma 4 and gpt-oss are Apache 2.0. Kimi needs an agreement for cloud resale above the threshold, Mistral Large 4's modified MIT needs a reseller deal, Muse Spark Open has a separate deal for large MaaS providers."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. A utilities company's inspectors",
+      "answer_line": "SAM: The queue covers the gaps by not summarising during them",
+      "scenario": "Offline inspection tablets",
+      "stem": "Inspectors work in tunnels with no signal for hours and want notes summarised on the tablet as they type; notes may not leave the device until it docks. Which approach fits?",
+      "choose": 1,
+      "options": {
+        "A": "Claude Haiku through the API, queuing requests until the tablet reconnects",
+        "B": "A small Gemma 4 model running on the tablet",
+        "C": "Claude through Bedrock in the nearest region",
+        "D": "Kimi K3.1 Pro self-hosted at the depot"
+      },
+      "correct": [
+        "B"
+      ],
+      "why": "No network is the constraint and Claude has no offline option. A summarises only after reconnecting, C is still a cloud, D needs a cluster."
+    },
+    {
+      "kind": "recall",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. For each statement, say true or false.",
+      "answer_line": "SAM: All four. One: federal civilian agencies only",
+      "prompt": "True or false? 1) The DHS order bars all US companies from using DeepSeek. 2) The order reaches third-party products built on DeepSeek technology. 3) A federal contractor ban on Kimi is law today. 4) A coding tool's own model can be built on Chinese open weights without the base model appearing in its name.",
+      "answer": "1) False: federal civilian agencies only, exceptions on request. 2) True. 3) False: proposed, not enacted. 4) True: Cursor's Composer 2 on Kimi K2.5 (per Menlo)."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Choose two. A media company is trialling the Grok A P I",
+      "answer_line": "SAM: A and B. A stops a silent model change",
+      "scenario": "Grok API risk controls",
+      "stem": "Choose two. A media company is trialling the Grok API for an internal research assistant. Which two controls address the documented risks?",
+      "choose": 2,
+      "options": {
+        "A": "Pin a dated model ID in production instead of the latest alias",
+        "B": "Require evidence of xAI's change management for model and system-prompt changes, plus audit reports under NDA",
+        "C": "Block the trial until Ofcom and the European Commission publish findings",
+        "D": "Accept the vendor's statement that business data is not used for training",
+        "E": "Use only the image-generation product, since the investigations covered text"
+      },
+      "correct": [
+        "A",
+        "B"
+      ],
+      "why": "A stops silent model changes; B tests the control that failed at least twice in 2025. C waits on probes into a different product, D is unverified, E has it backwards."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Recall first. Pause and name the four segments",
+      "answer_line": "ALEX: What open weights buy, with the licence.",
+      "prompt": "Name the four segments, and the question you would ask the customer in each.",
+      "answer": "What open weights buy and the licence; self-hosting and sovereignty; provenance; xAI. Behind for which task; cost or control; what are your vendors' models built on; who approves changes."
+    }
+  ],
+  "segments": {
+    "In this episode": [
+      "What open weights give that Claude cannot",
+      "Licence drift: what open still allows",
+      "Self-hosting cost, residency and sovereignty",
+      "Provenance and US procurement rules",
+      "Factual risk questions on xAI's Grok"
+    ],
+    "Cold open: the self-hosting proposal": [
+      "Retail group, heavy Claude spend",
+      "Proposal: self-host the strongest open model",
+      "Bursty traffic, no inference team",
+      "No stated sovereignty requirement"
+    ],
+    "Segment one: what open weights buy": [
+      "Open weights: the model layer only",
+      "Chinese models 89% of open-model spend (Menlo, an Anthropic investor)",
+      "Best open model ~20 points behind the leader on the AA index",
+      "Open: 19% of enterprise tokens, 4% of spend",
+      "Strengths: runs anywhere, post-trainable, cheap per token",
+      "Flagships drifted to custom licences; resale often restricted"
+    ],
+    "Segment two: self-hosting cost and sovereignty": [
+      "Inference options: lab API, hosted provider, cloud marketplace, own GPUs",
+      "Frontier open models need several servers",
+      "Hidden costs: idle GPUs, ops staff, evals, migrations",
+      "91% of post-training companies use outside partners",
+      "Self-host pays: sustained volume or hard control rule",
+      "Residency is where data is processed; sovereignty is who operates it"
+    ],
+    "Segment three: provenance and procurement": [
+      "Where inference runs differs from where weights came from",
+      "DHS order: DeepSeek out of federal civilian agencies",
+      "Order covers third-party products built on DeepSeek",
+      "Kimi, Qwen, GLM: proposals, not law",
+      "Weights hide inside products; keep a model bill of materials"
+    ],
+    "Segment four: xAI and Grok": [
+      "SpaceX reportedly owns xAI; closed its Cursor purchase in August",
+      "Strengths: lower token price, wide distribution, federal deal",
+      "AA index: Grok 4.7 below the best open-weight model",
+      "2025 output incidents; 2026 image probes, no findings yet",
+      "Probes target the consumer product, not the API",
+      "Ask: change management, pinned versions, audit reports"
+    ],
+    "Cold open: the verdict": [
+      "Answer: B, route through a gateway with evals",
+      "A: cluster for bursty traffic, nobody to run it",
+      "C: ignores the cost lever asked about",
+      "D: quality traded for licence neatness",
+      "Tell: \"no sovereignty requirement\", \"bursty\""
+    ],
+    "Five to remember": [
+      "Open weights: offline, post-training, price; trail the frontier",
+      "\"Open\" is not a licence; permissive tier is small and mid models",
+      "Self-host for sustained volume or a hard control rule",
+      "Residency, sovereignty, provenance; model bill of materials",
+      "Grok: pin a version, demand change evidence, verify claims"
+    ],
+    "Recap: the conversation tells": [
+      "\"Open models are behind\" → behind for which task?",
+      "\"It's open source\" → use inside or resell? Read the licence",
+      "\"Self-host to save money\" → utilisation and who runs it",
+      "\"No outside party may touch the data\" → self-host or on-device",
+      "\"Sovereign\" → where data sits, or who operates it?",
+      "\"No DeepSeek\" → what are your vendors' models built on?",
+      "\"Is Grok safe?\" → which product, which pinned version, who approves changes"
+    ]
+  }
+}

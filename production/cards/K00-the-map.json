@@ -1,0 +1,151 @@
+{
+  "drills": [
+    {
+      "kind": "mcq",
+      "label": "Cold open",
+      "question_line": "SAM: A manufacturing customer's C T O forwards you a rival lab's launch post.",
+      "answer_line": "SAM: That's the core of it. The answer is C.",
+      "scenario": "Rival lab's launch post",
+      "stem": "A rival lab's launch post says its new model beats Claude on a coding benchmark, from runs the lab did itself. The CTO asks whether to switch the team's coding agent. What do you do first?",
+      "choose": 1,
+      "options": {
+        "A": "Ask the lab for its harness and settings, and accept the result once disclosed",
+        "B": "Point to an independent leaderboard where Claude ranks higher",
+        "C": "Run both models on a small private eval built from the team's own repositories and tickets, comparing cost per task as well as score",
+        "D": "Tell the CTO vendor-reported numbers are marketing and can be ignored"
+      },
+      "correct": [
+        "C"
+      ],
+      "why": "A decision about the team's work needs a test on their work, with cost per task. A still trusts the vendor's frame, B answers a general question a public board cannot see their code for, D dismisses evidence the CTO will keep hearing."
+    },
+    {
+      "kind": "recall",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. For each item, name the layer.",
+      "answer_line": "SAM: All four.",
+      "prompt": "Name the layer. 1) An admin setting that turns a model off for EU staff. 2) Buying Claude in Microsoft Foundry to draw down an Azure commitment. 3) An open-source framework for multi-agent workflows. 4) Web search built into the API.",
+      "answer": "1) Enterprise wrapper. 2) Route to market. 3) Agent stack. 4) Developer platform."
+    },
+    {
+      "kind": "recall",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. For each statement, say true or false.",
+      "answer_line": "SAM: Right. One is preference.",
+      "prompt": "True or false? 1) Arena's text leaderboard measures which model completes tasks best. 2) SWE-bench Verified is still the best public test of coding agents. 3) On an agent benchmark, one model can score differently under different harnesses. 4) A score a vendor publishes for its own model is independent evidence.",
+      "answer": "1) False: human preference, not task success. 2) False: OpenAI stopped reporting it, citing contamination and flawed tests. 3) True. 4) False: vendor-reported."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Choose two. A bank's board member",
+      "answer_line": "SAM: Yes. A is disclosure, B is scope.",
+      "scenario": "Board member quotes a market report",
+      "stem": "Choose two. A bank's board member quotes a market report showing Anthropic far ahead of Google in enterprise AI. Which two caveats should you raise?",
+      "choose": 2,
+      "options": {
+        "A": "The publisher is an Anthropic investor",
+        "B": "It counts API spend, not spend bundled into productivity suites",
+        "C": "Survey-based reports are made up and should never be cited",
+        "D": "The lead proves Claude is the right model for the bank's use case",
+        "E": "The report is unreliable because it is recent"
+      },
+      "correct": [
+        "A",
+        "B"
+      ],
+      "why": "A is disclosure, B is scope. C overcorrects: a survey with a stated method is evidence with limits. D confuses market share with fit. E is backwards."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. A logistics company runs on A W S",
+      "answer_line": "SAM: It fits the constraint.",
+      "scenario": "AWS-committed logistics company",
+      "stem": "The company has a large AWS commitment and procurement will not sign with a new vendor this year. The team wants Claude for document agents and wants to trial an OpenAI model against it. What do you recommend?",
+      "choose": 1,
+      "options": {
+        "A": "Sign a direct contract with Anthropic and another with OpenAI",
+        "B": "Buy both through Amazon Bedrock on the existing commitment",
+        "C": "Self-host an open-weight model instead",
+        "D": "Wait for next year's procurement cycle"
+      },
+      "correct": [
+        "B"
+      ],
+      "why": "Bedrock carries both Claude and OpenAI models on the existing commitment, no new vendor. A needs the contracts procurement ruled out, C swaps in a model nobody asked for, D loses a year. Bedrock lacks some Claude features such as Managed Agents (episode four)."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Recall first. Pause and name the four skills from this episode",
+      "answer_line": "ALEX: Six layers: better at which layer?",
+      "prompt": "Name the four skills from this episode, and the question each one makes you ask.",
+      "answer": "Six layers: better at which layer? Benchmarks: who ran it, and what does it measure? Market reports: who published it, and what does it count? Slow and fast facts: true next month?"
+    }
+  ],
+  "segments": {
+    "In this episode": [
+      "Place any vendor on six layers",
+      "Read a benchmark: who ran it, what it measures",
+      "Read a market report and name its source",
+      "Slow facts to quote, fast facts to check",
+      "The route through episodes one to eight"
+    ],
+    "Cold open: the launch post": [
+      "A rival lab claims a coding win from its own runs",
+      "The CTO asks whether to switch the team's coding agent",
+      "Four responses: ask, point, test, dismiss"
+    ],
+    "The six layers": [
+      "Model, developer platform, agent stack, coding agent, enterprise wrapper, route to market",
+      "Model: DeepSeek open weights; provenance travels with the model",
+      "Developer platform: OpenAI Responses API built-in tools",
+      "Agent stack: Google ADK, Apache 2.0, five languages, model-agnostic",
+      "Coding agent: Cursor builds own models; SpaceX now owns it",
+      "Wrapper: Claude inside Microsoft 365 Copilot; route: Bedrock sells OpenAI too"
+    ],
+    "Reading a benchmark": [
+      "Four questions: who ran it, what it measures, contaminated, saturated",
+      "Vendor-reported: own harness, own settings, chosen frame",
+      "Artificial Analysis: independent composite with cost per task",
+      "Arena: human preference; Terminal-Bench: harness matters",
+      "SWE-bench Verified and Pro lost OpenAI's backing in 2026",
+      "Nobody leads every board"
+    ],
+    "Reading a market report": [
+      "Menlo Ventures 2026 enterprise AI report",
+      "Menlo is an Anthropic investor, and says so",
+      "Survey of about 400 US decision-makers: estimates, not audited revenue",
+      "API spend only: Google's figure excludes Workspace and Gemini app bundles",
+      "Read the method before the headline"
+    ],
+    "Slow facts and fast facts": [
+      "Slow: architecture, licences, protocols, governance, business models, channels",
+      "Fast: prices, ranks, context windows, versions, cloud line-ups",
+      "MCP, AGENTS.md and A2A in the Linux Foundation's Agentic AI Foundation",
+      "A fact that names a version or a list is fast",
+      "Route: OpenAI, Google, Microsoft, other clouds, open weights, coding agents, objections, numbers"
+    ],
+    "Cold open: the verdict": [
+      "Answer: C, a private eval on the team's own repos and tickets",
+      "Cost per task alongside score",
+      "A trusts the vendor's frame; B misses the question; D dismisses evidence",
+      "Tell: a decision about their work needs a test on their work"
+    ],
+    "Five to remember": [
+      "Six layers: compare like with like",
+      "Benchmark: who ran it, what it measures, contaminated or saturated",
+      "Nobody leads everywhere: name the board and the source type",
+      "Menlo: investor, survey, API spend only",
+      "Quote slow facts; check prices, ranks, versions, cloud line-ups"
+    ],
+    "Recap: conversation tells": [
+      "\"Their model is better\" → better at which layer, for which job?",
+      "Launch post → whose harness, which version, what cost per task?",
+      "Leaderboard → preference or task success? crowded near the ceiling?",
+      "Menlo, either way → investor link and API-only scope",
+      "\"Our cloud decides\" → what's on the commitment?",
+      "Version number in a fact → check before repeating"
+    ]
+  }
+}

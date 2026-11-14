@@ -1,0 +1,143 @@
+{
+  "drills": [
+    {
+      "kind": "mcq",
+      "label": "Cold open",
+      "question_line": "SAM: A media company's procurement team shows you a slide prepared this week.",
+      "answer_line": "SAM: So A collapses: in January there is no list-price gap.",
+      "scenario": "Media company price slide",
+      "stem": "A slide prepared this week compares Gemini 4 Carbon at $2/$10 per M tokens with Claude Opus 5.5 at $4/$20 and recommends a three-year Carbon commitment from January, on price. What is the best advice?",
+      "choose": 1,
+      "options": {
+        "A": "Agree: Carbon is half the price",
+        "B": "Redo the comparison at January's prices, then on cost per task from an eval on their own work",
+        "C": "Set price aside and pick Claude Fable 5.2, because it leads the independent index",
+        "D": "Sign before the introductory price ends, to lock it in"
+      },
+      "correct": [
+        "B"
+      ],
+      "why": "Carbon's $2/$10 is introductory and ends 30 Nov 2026; from 1 Dec it is $4/$20, the same as Opus 5.5. Then compare cost per task: on Artificial Analysis (14 Nov 2026) Carbon scored 60 vs Opus 59 at about half the cost per task, so the eval may pick Carbon. C ignores the price question; D bets three years on a promotion."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Choose two. An insurer choosing a coding agent",
+      "answer_line": "SAM: Both. B is independent, dated and priced",
+      "scenario": "Insurer weighing coding-agent evidence",
+      "stem": "Choose two. An insurer choosing a coding agent has five pieces of evidence. Which two should carry the most weight?",
+      "choose": 2,
+      "options": {
+        "A": "A vendor-reported Terminal-Bench score comparing the vendor's new model with a rival's previous one",
+        "B": "The Artificial Analysis index read this week, with cost per task beside each score",
+        "C": "A 96% score on SWE-bench Verified",
+        "D": "A two-week pilot on the insurer's own repositories and tickets",
+        "E": "First place on Arena's text board"
+      },
+      "correct": [
+        "B",
+        "D"
+      ],
+      "why": "B is independent, dated and priced; D measures the customer's own work. A is vendor-reported against an older rival, C is a retired benchmark with flawed tests, E measures chat preference."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. A retailer classifies millions of product listings a month.",
+      "answer_line": "SAM: That is the take-the-biggest-model reflex.",
+      "scenario": "Retail listing classification on AWS",
+      "stem": "Mid-tier quality is enough, cost per task is the constraint, and spend must draw down the AWS commitment. What do you recommend?",
+      "choose": 1,
+      "options": {
+        "A": "Test GPT-6.1 Sol against Claude Sonnet 5.5, both on Amazon Bedrock, on their own listings; choose on cost per correct result",
+        "B": "Claude Fable 5.2, because it leads the independent index",
+        "C": "Gemini 3.8 Flash at its promotional price, for two years",
+        "D": "Opus 5.5, because Menlo shows most enterprise spend goes to Anthropic"
+      },
+      "correct": [
+        "A"
+      ],
+      "why": "Both are on Bedrock, so both draw down the AWS commit. On Artificial Analysis (14 Nov 2026) Sol matched Sonnet's score of 55 at about one-eighth the cost per task. B has the highest cost per task of the index leaders; C is off their cloud and its promo ends 31 Dec 2026; D picks from a survey, not the workload."
+    },
+    {
+      "kind": "recall",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. For each statement, say true or false, as of November fourteenth.",
+      "answer_line": "SAM: All five. Astra is ten and fifty to Fable's eight and forty.",
+      "prompt": "True or false, as of 14 Nov 2026? 1) GPT-6 Astra's list price is below Claude Fable 5.2's. 2) Google's 9% in the Menlo report includes Workspace bundles. 3) A team can still build a new agent in OpenAI's Agent Builder canvas in December. 4) Gemini 4 Carbon is first on Arena's text board, on a preliminary score. 5) Claude Code was the most-used coding agent in Stack Overflow's 2026 survey.",
+      "answer": "1) False: $10/$50 vs $8/$40. 2) False: API spend only. 3) False: Agent Builder goes 30 Nov 2026. 4) True (11 Nov 2026). 5) True: 66% vs Copilot 59%."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Recall first. Pause and name the four segments",
+      "answer_line": "ALEX: Prices: Carbon's introductory rate.",
+      "prompt": "Name the four segments, and one number from each you would recheck before quoting.",
+      "answer": "Line-ups and prices: Carbon's introductory rate. Benchmarks: the Artificial Analysis index. Market share: Menlo's 55%. Shutdowns: Agent Builder, 30 November."
+    }
+  ],
+  "segments": {
+    "In this episode": [
+      "Every figure dated 14 November 2026",
+      "Line-ups, list prices and scheduled price changes",
+      "Benchmark leaders, and what each board measures",
+      "Market-share reports: who wrote them, what they counted",
+      "Shutdowns on the calendar"
+    ],
+    "Cold open: the price slide": [
+      "A procurement slide prepared this week",
+      "Gemini 4 Carbon vs Claude Opus 5.5 on price per token",
+      "A three-year commitment starting in January"
+    ],
+    "Segment one: line-ups and list prices": [
+      "Claude: Fable 5.2 $8/$40, Opus 5.5 $4/$20, Sonnet 5.5 $2/$10, Haiku 5.5 from $0.10/$0.50",
+      "OpenAI: GPT-6 Astra $10/$50, GPT-6.1 Sol $2/$10, GPT-6 Luna $0.10/$0.50",
+      "Gemini 4 Carbon and Argon: $2/$10 intro to 30 Nov, then $4/$20",
+      "Grok 4.7 $2/$6; whole request at double past 200k tokens",
+      "Open-weight average $0.13/M vs closed $0.70/M (Menlo, an Anthropic investor)",
+      "Gemini 3.8 Flash doubles on 1 Jan 2027"
+    ],
+    "Segment two: benchmark leaders": [
+      "Artificial Analysis: Fable 5.2 65, Carbon 60, Opus 5.5 59, Astra 57",
+      "Arena text (11 Nov): Gemini 4 Carbon first, preliminary",
+      "Arena agent board: Fable 5.2 first, Anthropic 5 of top 10",
+      "ARC-AGI-2 near saturated; ARC-AGI-3 Fable 81.2; results 4 Dec",
+      "SWE-bench Verified retired; SWE-bench Pro board stale",
+      "Terminal-Bench 4.1 board empty; circulating scores vendor-reported"
+    ],
+    "Segment three: market share": [
+      "Menlo (Anthropic investor), 3 Nov: Anthropic 55%, OpenAI 31%, Google 9%",
+      "Google's 9% is API spend only, no Workspace bundles",
+      "Stack Overflow 2026: Claude Code 66%, Copilot 59%",
+      "OpenRouter: DeepSeek top by requests, Anthropic fifth",
+      "Ask what was counted, and who counted it"
+    ],
+    "Segment four: shutdowns and the calendar": [
+      "OpenAI: Assistants off 26 Aug; Agent Builder, Evals, prompt objects 30 Nov; o3 11 Dec",
+      "Google: Gemini CLI to Antigravity CLI; Jules off 31 Dec; 2.5 Pro reroutes 1 Dec",
+      "AWS: Q Developer IDE plugins end 30 Apr 2027; Kiro replaces them",
+      "Microsoft: Claude in Copilot due on by default for EU/EFTA 9 Dec",
+      "Every vendor retires things: pin versions, ask for the policy"
+    ],
+    "Cold open: the verdict": [
+      "Answer: B, January's prices then cost per task",
+      "From 1 Dec, Carbon $4/$20 equals Opus 5.5",
+      "Carbon 60 vs Opus 59 at about half the cost per task",
+      "Tell: a dated price meeting a later start date"
+    ],
+    "Five to remember": [
+      "Fable 5.2 $8/$40, Opus 5.5 $4/$20, Astra $10/$50, Sol and Sonnet $2/$10, Carbon and Argon $4/$20 from 1 Dec",
+      "Cost per task beats price per token",
+      "No one leads everywhere; SWE-bench Verified is retired",
+      "Menlo, an Anthropic investor: Anthropic 55%, OpenAI 31%, Google 9%",
+      "Calendar: 30 Nov, 1 Dec, 9 Dec, 31 Dec"
+    ],
+    "Recap: the conversation tells": [
+      "Compares list prices → ask for cost per task on their work",
+      "Introductory rate → when it ends, when the contract starts",
+      "SWE-bench Verified or vendor score → who ran it; offer a pilot",
+      "Share figure → what was counted, who counted it",
+      "Shutdown date → give the date, pin the version",
+      "Mid-tier, cost decides → test Sol against Sonnet on their cloud"
+    ]
+  }
+}

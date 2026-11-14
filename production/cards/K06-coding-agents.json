@@ -1,0 +1,166 @@
+{
+  "drills": [
+    {
+      "kind": "mcq",
+      "label": "Cold open",
+      "question_line": "SAM: A payments company has four hundred developers on Cursor, and they like it.",
+      "answer_line": "SAM: The answer is B. A change of owner is a reason for due diligence, not a verdict",
+      "scenario": "Cursor under a new owner",
+      "stem": "Four hundred developers use Cursor and like it. The vendor-risk team notices Cursor changed owner in August and asks what to do. What do you advise?",
+      "choose": 1,
+      "options": {
+        "A": "Move everyone to Claude Code now, before the next audit",
+        "B": "Keep Cursor for now, re-run due diligence on data routing, sub-processors and default models, and keep instructions in AGENTS.md so a later switch stays cheap",
+        "C": "Do nothing: a change of owner does not change the product",
+        "D": "Move everyone to Roo Code, because an open-source tool has no owner to change"
+      },
+      "correct": [
+        "B"
+      ],
+      "why": "SpaceX closed its purchase of Cursor in August 2026. A new owner is a due-diligence trigger, not a verdict. A spends developer goodwill before there is an answer; C skips a fair risk question; D fails because Roo Code reportedly shut down and an open-source client still sends code to its model. If the review fails, AGENTS.md carries the instructions to the next tool."
+    },
+    {
+      "kind": "recall",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. For each statement, say true or false.",
+      "answer_line": "SAM: Three out of four. Four is false.",
+      "prompt": "True or false? 1) Claude Code reads AGENTS.md when a repo has no CLAUDE.md. 2) MCP is still governed by Anthropic alone. 3) SKILL.md is supported by Codex, Copilot and Antigravity, though folder locations can differ. 4) Hooks written for Claude Code run unchanged in Codex.",
+      "answer": "1) True. 2) False: it sits in the Agentic AI Foundation. 3) True. 4) False: similar event names, different config files, and Codex runs only command and MCP tool handlers."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. A defence contractor's security team",
+      "answer_line": "SAM: That answers the question you prefer, not the one asked.",
+      "scenario": "Auditable client on AWS",
+      "stem": "Security will approve a coding agent only if they can audit and build the client from source. Spend must draw down the AWS commitment; developers are content with OpenAI models. What fits?",
+      "choose": 1,
+      "options": {
+        "A": "Claude Code through Amazon Bedrock",
+        "B": "Codex pointed at Amazon Bedrock",
+        "C": "Gemini CLI, which is also open source",
+        "D": "Claude Code with a locked-down managed settings file"
+      },
+      "correct": [
+        "B"
+      ],
+      "why": "The Codex CLI is Apache 2.0 and Codex is GA on Bedrock. Claude Code is not open source (A, D); managed settings constrain behaviour, not auditability. Gemini CLI now serves Google paid tiers, not an AWS bill."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Choose two. A logistics company has six hundred developers",
+      "answer_line": "SAM: A and C. And notice the right answer is A W S's own tool.",
+      "scenario": "Leaving Amazon Q Developer",
+      "stem": "Choose two. Six hundred developers on Amazon Q Developer Pro in their IDEs want newer Claude models than Q Developer offers. Which two pieces of advice are right?",
+      "choose": 2,
+      "options": {
+        "A": "Plan the move now: Q Developer IDE plugins reach end of support on 30 April 2027",
+        "B": "Buy more Q Developer seats for a team joining next quarter",
+        "C": "Evaluate Kiro, the AWS successor, which carries the newer Claude models",
+        "D": "Stay on Q Developer and wait for the newer Claude models to arrive there",
+        "E": "Move the developers to personal Gemini CLI accounts"
+      },
+      "correct": [
+        "A",
+        "C"
+      ],
+      "why": "Q Developer is retiring, and Claude models from Opus 4.7 onward are Kiro-only. New sign-ups closed in May 2026 (B); D waits for models that will not come; the personal Gemini CLI tier was cut off (E)."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. A C I O cites the Menlo figure",
+      "answer_line": "SAM: B. A leans on a number that cannot choose between the two products.",
+      "scenario": "Reading the Menlo figure",
+      "stem": "A CIO cites Menlo's figure, Claude Code and Codex at about 70% of coding spend, and wants to standardise on Claude Code on that basis alone. Best response?",
+      "choose": 1,
+      "options": {
+        "A": "Agree: the report settles it",
+        "B": "Note the figure does not split Claude Code from Codex, Menlo is an Anthropic investor, and a pilot on their own repos is the better basis",
+        "C": "Dismiss the report as investor marketing",
+        "D": "Use OpenRouter token rankings instead, since they are measured, not surveyed"
+      },
+      "correct": [
+        "B"
+      ],
+      "why": "The combined figure cannot pick between the two products and comes from an Anthropic investor's survey of about 400 US enterprises. C discards real evidence; OpenRouter skews to cost-sensitive developers, not enterprise spend."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Recall first. Pause and name the four segments, and the customer question each one hands you.",
+      "answer_line": "ALEX: The convergence, Codex, the platform vendors' agents",
+      "prompt": "Name the four segments, and the customer question each one hands you.",
+      "answer": "Convergence: where do your instructions live? Codex: sandbox on by default, or the source? Platform vendors: which vendor do you already pay, and is your tool retiring? Independents and data: what does this number measure?"
+    }
+  ],
+  "segments": {
+    "In this episode": [
+      "What every coding agent now shares, and the standards behind it",
+      "Where Codex beats Claude Code, and where it does not",
+      "GitHub Copilot, Antigravity and Kiro placed",
+      "Reading the adoption numbers",
+      "When the honest advice is someone else's tool"
+    ],
+    "Cold open: the new owner": [
+      "Layer four: the coding agent",
+      "Pulls in the model and the route to market",
+      "Several agents now bill through the customer's cloud"
+    ],
+    "Segment one: the convergence": [
+      "Common shape: instruction file, skills, hooks, subagents, plugins, MCP",
+      "Agentic AI Foundation: MCP, AGENTS.md, goose",
+      "Claude Code reads AGENTS.md when no CLAUDE.md exists",
+      "SKILL.md: Anthropic's format, reportedly donated to the foundation",
+      "Hook events compared across tools",
+      "Ask: how many agents, and where do instructions live?"
+    ],
+    "Segment two: Codex": [
+      "ChatGPT app mode, CLI, IDE, cloud, SDK, GitHub Action",
+      "Reach down to ChatGPT's free tier",
+      "Open-source Apache 2.0 client, Rust core",
+      "OS sandbox by default; subagents cannot loosen it",
+      "GA on Amazon Bedrock since June 2026",
+      "Claude Code: deeper hook handlers, independent agentic ranks"
+    ],
+    "Segment three: the platform vendors' agents": [
+      "Copilot: hosts Claude and Codex agents; Claude, GPT, Grok models",
+      "Copilot sells governance, seats and choice; usage-based billing",
+      "Check data terms for Fable models in Copilot",
+      "Google: Gemini CLI to Antigravity; Jules closing",
+      "Antigravity offers Claude beside Gemini; CLI closed source",
+      "AWS: Q Developer to Kiro"
+    ],
+    "Segment four: the independents and the adoption data": [
+      "Cursor: agent-first, own Composer models, now owned by SpaceX",
+      "Ask Cursor customers where data routes after the acquisition",
+      "Cognition: Devin and Windsurf; Cline and Kilo Code continue",
+      "Stack Overflow 2026 measures use, not spend",
+      "Menlo Ventures report: an Anthropic investor's survey",
+      "Vendor counts are the vendor's own"
+    ],
+    "Cold open: the verdict": [
+      "Answer: keep Cursor, re-run due diligence",
+      "A new owner is a reason to check, not a verdict",
+      "Check data routing, sub-processors, model defaults",
+      "Roo Code reportedly shut down; open source still calls a model",
+      "AGENTS.md keeps a later switch cheap"
+    ],
+    "Five to remember": [
+      "Coding agents have converged on one shape",
+      "MCP and AGENTS.md in the foundation; content ports, hooks do not",
+      "Codex: default sandbox, open client, free-tier reach",
+      "Copilot sells governance; Antigravity and Kiro replaced older tools",
+      "Read adoption numbers by what they measure"
+    ],
+    "Recap: conversation tells": [
+      "Instructions drift across agents → one AGENTS.md",
+      "Security needs an auditable client → consider Codex",
+      "All on GitHub → ask what Copilot already governs",
+      "Using Gemini CLI → ask which tier",
+      "On Q Developer → plan for April 2027",
+      "Standardised on Cursor → ask where data routes",
+      "Quoted market share → who measured it, does it split products?"
+    ]
+  }
+}

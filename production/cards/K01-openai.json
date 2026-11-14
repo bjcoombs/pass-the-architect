@@ -1,0 +1,174 @@
+{
+  "drills": [
+    {
+      "kind": "mcq",
+      "label": "Cold open",
+      "question_line": "SAM: Here is your opening scenario. A utility runs Claude for its back office",
+      "answer_line": "SAM: So the answer is A: OpenAI for the phone channel",
+      "scenario": "Utility phone assistant",
+      "stem": "A utility runs Claude for its back office. It wants an assistant that answers customer phone calls, talks naturally and copes when callers interrupt mid-sentence. What should it use for the voice layer?",
+      "choose": 1,
+      "options": {
+        "A": "OpenAI's full-duplex voice model for the phone channel, with Claude kept on the back-office work",
+        "B": "Wrap separate speech-to-text and text-to-speech services around the Claude Messages API, to stay with one model vendor",
+        "C": "Move the whole estate to OpenAI so one vendor covers voice and back office",
+        "D": "Run the phone line on Claude Managed Agents, because it handles long sessions"
+      },
+      "correct": [
+        "A"
+      ],
+      "why": "The constraint is a modality: natural, interruptible conversation. OpenAI ships full-duplex voice first-party; the research found no Anthropic equivalent. B is a voice pipeline the customer must build and own, C discards a working back office, D answers a different question."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. A European insurer has OpenAI's approval",
+      "answer_line": "SAM: That is the trap. A self-hosted sandbox moves tool execution",
+      "scenario": "EU insurer, zero data retention",
+      "stem": "An insurer has OpenAI's approval for zero data retention and must keep it on everything its claims agent touches. Processing must be in the EU, and the team wants to save engineering time. What fits?",
+      "choose": 1,
+      "options": {
+        "A": "The Agents API with OpenAI-hosted sandboxes",
+        "B": "The Agents API with a self-hosted sandbox in the insurer's own EU cloud",
+        "C": "Run the loop with the Agents SDK on its own infrastructure, call an EU data residency project, keep state in its own store, and check zero data retention eligibility per endpoint",
+        "D": "Keep the loop simple and store state in OpenAI's Conversations API"
+      },
+      "correct": [
+        "C"
+      ],
+      "why": "The Agents API beta is US-only and not eligible for zero data retention, with any sandbox. Conversations is on the not-eligible list. Running the loop yourself costs engineering, which is the price of the constraint."
+    },
+    {
+      "kind": "recall",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. For each statement, say true or false.",
+      "answer_line": "SAM: All four. Subagents inherit the parent's sandbox",
+      "prompt": "True or false? 1) The Codex CLI is open source under Apache 2.0. 2) A Codex subagent can be given a looser sandbox than its parent. 3) Claude Code reads AGENTS.md when a repository has no CLAUDE.md. 4) Codex hooks run prompt-based handlers as well as command handlers.",
+      "answer": "1) True. 2) False: subagents inherit the parent sandbox and cannot override it. 3) True. 4) False: prompt handlers are parsed but skipped; only command and MCP tool handlers run."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. A retailer has a large A W S spending commitment.",
+      "answer_line": "SAM: B. It meets both constraints",
+      "scenario": "AWS-committed retailer wants Codex",
+      "stem": "A retailer's developers want Codex and GPT models. Spend must draw down its AWS commitment, and no new vendor contract is allowed this year. What do you recommend?",
+      "choose": 1,
+      "options": {
+        "A": "ChatGPT Enterprise bought direct from OpenAI",
+        "B": "OpenAI's models on Amazon Bedrock, with Codex pointed at Bedrock",
+        "C": "Claude on Bedrock instead, because Claude is the only leading lab's model there",
+        "D": "OpenAI's models through Microsoft Foundry"
+      },
+      "correct": [
+        "B"
+      ],
+      "why": "B meets both constraints with the product asked for. A is a new contract off the commitment, C has been false since June 2026, D draws down the wrong cloud's commitment."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Choose two. A bank's C T O asks",
+      "answer_line": "SAM: A and B. C is Claude's",
+      "scenario": "Where OpenAI is stronger",
+      "stem": "Choose two. A bank's CTO asks where OpenAI is genuinely stronger than Claude today. Which two claims survive a customer who has used both?",
+      "choose": 2,
+      "options": {
+        "A": "Price-performance in the middle tier",
+        "B": "Reach: Codex in the consumer app down to the free tier, and models sold direct, on Azure and on Bedrock",
+        "C": "The top of the independent agentic leaderboards",
+        "D": "A longer context window",
+        "E": "A more stable platform with fewer retirements"
+      },
+      "correct": [
+        "A",
+        "B"
+      ],
+      "why": "C is Claude's on Artificial Analysis and Arena's agent board. D is parity. E runs the other way: Assistants, Agent Builder and Evals retired within about fifteen months."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Recall first. Pause and name the four segments",
+      "answer_line": "ALEX: The model; platform and agent stack",
+      "prompt": "Name the four segments, and the question to ask the customer in each.",
+      "answer": "The model; platform and agent stack; Codex and ChatGPT Work; enterprise and the clouds. Which tier are you comparing; which layer did you build on; who already uses Codex; whose commitment does the spend draw down."
+    }
+  ],
+  "segments": {
+    "In this episode": [
+      "OpenAI on all six layers",
+      "Its agent stack mapped onto Claude's",
+      "Codex and Claude Code, compared fairly",
+      "Data questions answered per endpoint",
+      "Where OpenAI is stronger, and where Claude leads",
+      "Who sells OpenAI's models now"
+    ],
+    "Cold open: the phone line": [
+      "Utility: Claude already runs the back office",
+      "New: a phone assistant that talks naturally",
+      "Callers interrupt mid-sentence",
+      "Question: what powers the voice layer?"
+    ],
+    "The model": [
+      "Tiers: Astra, Sol, Terra, Luna",
+      "All reasoning models with an effort setting",
+      "Claude Fable 5.2 leads AA index and Arena Agent (independent)",
+      "OpenAI benchmarks: vendor-reported, reportedly against Fable 5.1",
+      "SWE-bench Verified dropped by OpenAI: flawed tests",
+      "Context window: parity, no lead to pitch"
+    ],
+    "Platform and agent stack": [
+      "Responses API with built-in tools, incl. MCP and skills",
+      "Caching converged: explicit breakpoints, write premium",
+      "Agents API (they run the loop) vs Agents SDK (you do)",
+      "Agents SDK: MIT, Python and TypeScript, provider-agnostic",
+      "Retired: Assistants, Agent Builder, Evals, prompt objects",
+      "Ask: which layer did you build on?"
+    ],
+    "Codex and ChatGPT Work": [
+      "Codex: ChatGPT app, CLI, IDE extension, cloud",
+      "Converged with Claude Code; never call it a clone",
+      "AGENTS.md: OpenAI's contribution to the Agentic AI Foundation",
+      "Codex reaches the consumer app's free tier",
+      "ChatGPT Work reportedly aimed at Cowork",
+      "Menlo (Anthropic investor): Claude Code + Codex take most coding spend"
+    ],
+    "Enterprise and the clouds": [
+      "Enterprise: provisioning, own keys, RBAC, Compliance API, audit logs",
+      "API residency region fixed at project creation",
+      "HIPAA BAA unconfirmed first-party: get it in writing",
+      "Azure OpenAI now lives in Microsoft Foundry",
+      "Same model on another cloud, features can lag",
+      "Ask: whose cloud commitment draws down?"
+    ],
+    "Pushback": [
+      "No one leads every board; ranks move monthly",
+      "Leaderboard quoted → offer an eval on their tasks",
+      "Data terms: per endpoint, not per logo",
+      "Claude in Foundry: same Azure bill, no Managed Agents or Batches"
+    ],
+    "Cold open: the verdict": [
+      "Answer: A, OpenAI voice for the phone, Claude for the back office",
+      "B: a voice pipeline the customer must build and own",
+      "C: discards a working back office",
+      "D: long agent sessions, not voice",
+      "Tell: \"talks naturally\", \"interrupt mid-sentence\""
+    ],
+    "Five to remember": [
+      "Compare tier to tier: Astra with Fable, Sol with Sonnet",
+      "OpenAI stronger: mid-tier price-performance, voice, reach",
+      "Agents API ↔ Managed Agents, Agents SDK ↔ Claude Agent SDK",
+      "Codex converged with Claude Code; sandbox by default",
+      "Cloud no longer picks the lab; check data terms per endpoint"
+    ],
+    "Recap: the conversation tells": [
+      "\"GPT-6 beats Claude\" → which tier, whose benchmark?",
+      "\"OpenAI is cheaper\" → cost per task on their traffic",
+      "Built on Assistants or Agent Builder → migrating now, use primitives",
+      "Needs zero data retention → check each endpoint",
+      "\"Codex is a clone\" → converged, shared AGENTS.md",
+      "Phone calls, natural interruption → OpenAI voice first",
+      "AWS or Azure commitment → both labs on Bedrock and Foundry"
+    ]
+  }
+}

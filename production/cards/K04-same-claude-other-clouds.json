@@ -1,0 +1,171 @@
+{
+  "drills": [
+    {
+      "kind": "mcq",
+      "label": "Cold open",
+      "question_line": "SAM: A U S health insurer runs everything on A W S",
+      "answer_line": "SAM: So the answer is C, Bedrock.",
+      "scenario": "US health insurer on AWS",
+      "stem": "An AWS-only health insurer with a large AWS commitment wants Claude to summarise claims files with patient data. Compliance says the workload must stay inside the AWS boundary under its HIPAA programme. Which route fits?",
+      "choose": 1,
+      "options": {
+        "A": "The Claude API direct, with US-only inference",
+        "B": "Claude Platform on AWS, billed through AWS Marketplace",
+        "C": "Claude in Amazon Bedrock",
+        "D": "Claude in Microsoft Foundry, Hosted on Azure"
+      },
+      "correct": [
+        "C"
+      ],
+      "why": "Bedrock is AWS-operated with no Anthropic operator access, Anthropic's docs point HIPAA workloads there, and spend lands on the AWS commit. B is Anthropic-operated, processes data outside the AWS boundary and is not HIPAA-ready. A misses boundary and bill. D draws down Azure's commitment."
+    },
+    {
+      "kind": "recall",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. For each statement, say true or false. One: on Bedrock",
+      "answer_line": "SAM: Four out of five. Four is true: the partner sets the lifecycle.",
+      "prompt": "True or false? 1) On Bedrock, Anthropic staff can operate the serving infrastructure. 2) Signing up for Claude Platform on AWS converts your existing Anthropic org in place. 3) A private-offer discount agreed for Bedrock carries over to Claude Platform on AWS. 4) A model retired on the Claude API can still be served on Bedrock. 5) Prompt caching works on Bedrock.",
+      "answer": "1) False: AWS operates it, no Anthropic operator access. 2) False: it creates a new org. 3) False: private offers do not transfer. 4) True: the partner sets the lifecycle. 5) True."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Choose two. A manufacturer runs on Azure",
+      "answer_line": "SAM: A is right. C is the near miss",
+      "scenario": "Azure manufacturer with a MACC",
+      "stem": "Choose two. A manufacturer on Azure with a large MACC requires prompts and completions to stay in Azure. Which two statements are true?",
+      "choose": 2,
+      "options": {
+        "A": "Foundry Hosted on Azure keeps prompts and completions in Azure",
+        "B": "Foundry spend draws down the MACC under either hosting option",
+        "C": "The Message Batches API is available on Hosted on Anthropic",
+        "D": "Claude Platform on AWS spend also counts against the MACC, since both bill in CCU",
+        "E": "Hosted on Azure supports Agent Skills and the Files API"
+      },
+      "correct": [
+        "A",
+        "B"
+      ],
+      "why": "Hosted on Azure keeps prompts in Azure; both Foundry options are MACC-eligible. Batches is on neither Foundry option, CCU billed by another cloud does not decrement the MACC, and Skills and Files return an error on Hosted on Azure."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. A retailer has a large Google Cloud commitment",
+      "answer_line": "SAM: B. Anthropic operates it, so Managed Agents and Skills are there",
+      "scenario": "Retailer on Google Cloud",
+      "stem": "A retailer with a large Google Cloud commitment wants a returns agent on Claude Managed Agents with Agent Skills, with all spend on the Google Cloud bill. Which route?",
+      "choose": 1,
+      "options": {
+        "A": "Claude in Model Garden, Google-managed",
+        "B": "The Anthropic-managed Claude offer on Google Cloud Marketplace",
+        "C": "The Claude API direct, with a separate Anthropic invoice",
+        "D": "Gemini Enterprise with Claude Opus switched on for staff"
+      },
+      "correct": [
+        "B"
+      ],
+      "why": "Anthropic-managed carries Managed Agents and Skills and draws down the Google commit. A lacks both features, C misses the bill, D is an employee product whose seat credits cover Gemini only."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. A logistics company on A W S",
+      "answer_line": "SAM: B. Two frameworks, two labs",
+      "scenario": "Multi-framework agents on AWS",
+      "stem": "A logistics company on AWS runs LangGraph and Strands agents calling Claude and OpenAI models on Bedrock. It wants one managed runtime with agent identity, a gateway exposing Lambda functions as MCP tools, and a policy layer, on the AWS bill. What fits?",
+      "choose": 1,
+      "options": {
+        "A": "Claude Managed Agents",
+        "B": "Amazon Bedrock AgentCore",
+        "C": "Bedrock Agents Classic",
+        "D": "Kiro"
+      },
+      "correct": [
+        "B"
+      ],
+      "why": "AgentCore is framework- and model-agnostic, with Gateway, Identity and Policy. Managed Agents runs Anthropic's harness for Claude; Agents Classic is reportedly closed to new customers; Kiro is a coding agent."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Recall first. Pause and name the five segments",
+      "answer_line": "ALEX: Two questions, the A W S doors, Google and Azure",
+      "prompt": "Name the five segments, and the question you would ask the customer in each.",
+      "answer": "Two questions; the AWS doors; Google and Azure; the table; AWS's own stack. Who operates and who bills; boundary or platform; which commitment; which region; one lab or several."
+    }
+  ],
+  "segments": {
+    "In this episode": [
+      "Clouds both resell Claude and compete with Anthropic's platform",
+      "One table: operator, features, residency, commitment",
+      "Two doors each on AWS, Google Cloud and Azure",
+      "AWS's own stack: Nova, AgentCore, Strands, Kiro"
+    ],
+    "Cold open: the health insurer": [
+      "Seven doors to Claude, counting hosting options",
+      "Read the constraint: boundary, bill or features",
+      "Answer comes at the end"
+    ],
+    "Segment one: two questions": [
+      "Who operates it: decides features and data processor",
+      "Whose bill: decides which commitment it burns",
+      "Cloud-operated: model plus core Messages features",
+      "Anthropic-operated marketplace: most of the platform; Anthropic processes data",
+      "Source: Anthropic's own docs list each door's gaps",
+      "OpenAI on Bedrock, Claude in Foundry: the cloud picks the door, not the lab"
+    ],
+    "Segment two: the A W S doors": [
+      "Bedrock: AWS-operated, two endpoints, check model per endpoint",
+      "Bedrock: FedRAMP High, IL4/5, HIPAA; native IAM and quotas",
+      "Bedrock lacks Files, Skills, server tools, Batches API, Managed Agents",
+      "Claude Platform on AWS: Anthropic-operated, near-full platform, billed in CCU",
+      "Platform gaps: not HIPAA-ready, no fast mode, ZDR opt-in",
+      "Commit drawdown for Platform: get AWS's wording"
+    ],
+    "Segment three: Google Cloud and Azure": [
+      "Google-managed: Model Garden on Agent Platform (ex-Vertex AI)",
+      "Anthropic-managed Google: Skills, batch, Files, Managed Agents",
+      "Foundry: two hosting options, Anthropic operates both",
+      "Neither Foundry option has Managed Agents or Compliance API",
+      "CSP-resold Azure subscriptions cannot buy Claude",
+      "Foundry: Anthropic is data processor; in M365 Copilot, a subprocessor"
+    ],
+    "Segment four: the table in your head": [
+      "Columns: operator, features, residency and compliance, commitment",
+      "Rows: direct, cloud-operated, Anthropic-operated marketplace, Azure",
+      "EU residency differs per door and per model",
+      "Google single-region endpoints: older models only",
+      "Model lag small; feature lag structural"
+    ],
+    "Segment five: A W S's own stack": [
+      "Nova 2: Lite, Pro, Sonic, Omni; Forge; Act priced per agent-hour",
+      "AgentCore: managed services incl. Runtime, Gateway, Identity, Policy",
+      "Managed Agents: Anthropic's harness for Claude",
+      "Strands: Apache 2.0, Python and TypeScript, MCP and A2A",
+      "Kiro: spec-driven, IDE and CLI; Q Developer IDE support ends 30 Apr 2027"
+    ],
+    "Cold open: the verdict": [
+      "Answer: C, Claude in Amazon Bedrock",
+      "Claude Platform on AWS: outside AWS boundary, not HIPAA-ready",
+      "Direct: misses boundary and bill",
+      "Foundry: draws down Azure's commitment",
+      "Tell: \"must stay inside the AWS boundary\""
+    ],
+    "Five to remember": [
+      "Operator decides features and processor; bill decides commitment",
+      "Cloud-run doors: core model inside the cloud boundary, no server-side platform",
+      "Anthropic-run marketplace doors: nearly full platform on the cloud bill",
+      "Foundry: MACC either way, no Managed Agents or Batches",
+      "AWS competes on the agent stack: AgentCore, Strands, Kiro, Nova"
+    ],
+    "Recap: conversation tells": [
+      "\"We're an AWS shop\" → boundary (Bedrock) or Managed Agents (Platform)?",
+      "HIPAA or FedRAMP High → cloud-operated door first",
+      "Accepted the Vertex gap → Anthropic-managed Google carries the platform",
+      "Managed Agents or batch on the MACC → Foundry has neither today",
+      "\"EU\" → which door, which model?",
+      "Several frameworks and labs on AWS → AgentCore before Managed Agents",
+      "Leaving Q Developer → Kiro by default; argue Claude Code on the harness"
+    ]
+  }
+}
