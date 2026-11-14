@@ -62,7 +62,7 @@
       "question_line": "SAM: Pause here and answer before we go on. Our own item, in dropdown form.",
       "answer_line": "ALEX: False, true, false, true.",
       "prompt": "Fares change many times a day; every quote must use the current fare. True or false: 1) pasting the morning's fare table into the system prompt meets it; 2) a tool that looks up the route's fare at question time meets it; 3) a larger context window solves it because the whole table fits; 4) the word \"current\" rules out a pasted snapshot.",
-      "answer": "1 False · 2 True · 3 False · 4 True. \"Current\" or \"live\" means access, not a pasted copy."
+      "answer": "1) False: pasted data is stale within the hour, and paid for on every request. 2) True: access is the mechanism built for live data. 3) False: more room for a stale table is still a stale table. 4) True: \"current\" or \"live\" means access, not a pasted copy."
     },
     {
       "kind": "recall",
