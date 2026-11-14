@@ -1,0 +1,176 @@
+{
+  "drills": [
+    {
+      "kind": "mcq",
+      "label": "Cold open",
+      "question_line": "SAM: Here is your opening scenario. A retailer with eight thousand staff runs on Google Workspace",
+      "answer_line": "SAM: That's the constraint. The answer is B.",
+      "scenario": "Workspace retailer, legal wants Claude",
+      "stem": "8,000 staff on Google Workspace with a Google Cloud commitment. IT wants one assistant across Gmail, Drive and Calendar, run from consoles they already manage, data in the EU. Legal insists on Claude for contract review. What do you recommend?",
+      "choose": 1,
+      "options": {
+        "A": "Claude Enterprise seats for all 8,000",
+        "B": "Gemini Enterprise for all staff, with Claude Opus 5.5 switched on for legal, billed pay as you go",
+        "C": "A custom assistant on the Gemini API with API keys",
+        "D": "Gemini Enterprise for everyone; tell legal Gemini tops the leaderboards"
+      },
+      "correct": [
+        "B"
+      ],
+      "why": "Fit the platform the customer named, and bring Claude in where the team asks. A adds a second console and contract, C is a build on the key-based door, D overrules legal with a text preference board. Confirm where Claude's processing runs for legal, since the EU rule covers it too."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. A telecom on Google Cloud wants a contact-centre agent",
+      "answer_line": "SAM: B. The constraint is real-time speech",
+      "scenario": "Real-time voice contact centre",
+      "stem": "A telecom on Google Cloud wants a contact-centre agent that holds spoken conversations with callers in real time. Its architect wants one managed service to handle the audio end to end, with no separate speech services chained in. Which model does it build on?",
+      "choose": 1,
+      "options": {
+        "A": "Claude Sonnet 5.5 through Model Garden, prompts tuned for short replies",
+        "B": "The Gemini Live API for the spoken conversation",
+        "C": "Claude behind a third-party speech-to-text and text-to-speech chain",
+        "D": "Gemma 4 on servers in each call centre"
+      },
+      "correct": [
+        "B"
+      ],
+      "why": "Real-time speech in one managed service is what the Live API is built for; A has no speech path. C chains in the separate speech services the architect ruled out, and agent boards don't measure speech. D adds hardware nobody asked for."
+    },
+    {
+      "kind": "recall",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. For each statement, say true or false.",
+      "answer_line": "SAM: All four right. Gemini four is implicit caching only.",
+      "prompt": "True or false? 1) Gemini 4 lets you create and manage explicit cache objects. 2) Model Garden on Agent Platform offers Claude alongside Gemini. 3) New paid-tier Gemini API projects store generated content by default. 4) Batch on the main Gemini text models costs half the standard rate.",
+      "answer": "1) False: implicit caching only. 2) True. 3) True, since late October 2026. 4) True."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Choose two. An insurer's platform team on Google Cloud writes Java.",
+      "answer_line": "SAM: C is right. B is a loyal answer",
+      "scenario": "Java agent platform calling a partner",
+      "stem": "Choose two. A Java platform team on Google Cloud wants an agent framework on GKE with Claude for the hardest reasoning step, and its agents must call a partner's claims agent on a different stack. Which two fit?",
+      "choose": 2,
+      "options": {
+        "A": "The ADK in Java, using its Claude adapter",
+        "B": "The Claude Agent SDK in Java",
+        "C": "A2A for the call to the partner's agent",
+        "D": "Ask the partner to rebuild its agent as an MCP tool inside the insurer's process",
+        "E": "Gemini Enterprise seats for the platform team"
+      },
+      "correct": [
+        "A",
+        "C"
+      ],
+      "why": "The ADK is model-agnostic and has Java; the Agent SDK is Python and TypeScript only. A2A connects agents across owners. D takes control from the partner; E is the wrong layer."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. A fintech's forty engineers use Jules",
+      "answer_line": "SAM: C. Jules is read-only and switches off at the end of December",
+      "scenario": "Jules and Gemini CLI users before year end",
+      "stem": "Forty engineers use Jules for background pull requests and Gemini CLI on personal AI Pro accounts. What should they do before year end?",
+      "choose": 1,
+      "options": {
+        "A": "Nothing: paid users are unaffected",
+        "B": "Move to the Gemini Code Assist IDE extensions on personal AI Pro plans",
+        "C": "Export Jules work, trial Antigravity and Claude Code on their own repos and tickets, choose on results",
+        "D": "Fork the Gemini CLI repository and keep running it on personal accounts"
+      },
+      "correct": [
+        "C"
+      ],
+      "why": "Jules shuts down 31 December; personal AI Pro lost Gemini CLI and the Code Assist extensions in June. A fork keeps the code, not the service. Their own code beats any public board."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Recall first. Pause and name the five segments we walked through for Google",
+      "answer_line": "ALEX: Models: does the job need voice or video?",
+      "prompt": "Name the five segments covered for Google, and one question to ask a customer at each.",
+      "answer": "Models: voice or video? Platform: API key or Agent Platform? Agents: which language, whose agent are we calling? Coding: still on Gemini CLI or Jules? Enterprise: do they live in Workspace?"
+    }
+  ],
+  "segments": {
+    "In this episode": [
+      "Where Gemini wins today, and where Claude does",
+      "Gemini API vs Agent Platform",
+      "ADK and A2A next to the Agent SDK and MCP",
+      "What replaced Gemini CLI and Jules",
+      "Gemini for most staff, Claude for one team"
+    ],
+    "Cold open: the Workspace retailer": [
+      "8,000 staff on Workspace, Google Cloud commitment",
+      "One assistant across Gmail, Drive and Calendar",
+      "Consoles they already manage, data in the EU",
+      "Legal insists on Claude for contracts"
+    ],
+    "Segment one: the models": [
+      "Gemini 4: Carbon strongest, Argon default, Hydrogen fast",
+      "Flash point releases every month or two; old names rerouted",
+      "Menlo (an Anthropic investor) counts API spend only",
+      "Text preference and cost per task lean Gemini; agentic coding leans Claude",
+      "Widest first-party multimodal range in the field",
+      "Gemma 4: open weights under Apache 2.0"
+    ],
+    "Segment two: two front doors": [
+      "Gemini API and AI Studio: API key, Gemini only",
+      "Agent Platform: Vertex AI renamed, April 2026",
+      "IAM, published regions, VPC-SC, CMEK, audit logs",
+      "A data-policy default worth checking",
+      "Grounding with Google Search and Maps",
+      "Context caching and batch"
+    ],
+    "Segment three: the agent stack": [
+      "ADK: Apache 2.0, version 2 adds graphs, skills, compaction",
+      "Consumes MCP tools; can serve as an MCP server",
+      "Agent Runtime: hosted agents with a memory bank",
+      "Managed Agents in the Gemini API: AGENTS.md and SKILL.md",
+      "Protocols and the foundation that now governs them",
+      "50+ Google-managed MCP servers; Claude a named client"
+    ],
+    "Segment four: the coding agent": [
+      "Antigravity: Google's single coding harness since May",
+      "Gemini CLI: the repo remains, the service narrowed",
+      "Jules: the background agent is winding down",
+      "Convergence: SKILL.md, AGENTS.md, plugins, hooks",
+      "Antigravity is multi-model and closed source",
+      "Churn: alias models, watch the changelog, rerun evals"
+    ],
+    "Segment five: the enterprise wrapper": [
+      "Gemini Enterprise absorbed Agentspace",
+      "Editions: Business, Standard, Plus, Frontline, pay as you go",
+      "US or EU residency, VPC-SC, CMEK, Access Transparency",
+      "Third-party models inside Gemini Enterprise",
+      "Claude on Google Cloud two ways: episode four"
+    ],
+    "Cold open: the verdict": [
+      "Answer: B, Gemini Enterprise with Claude for legal",
+      "Seat credits cover Gemini only; budget Claude separately",
+      "Confirm Claude's processing region for legal",
+      "A: second console and contract",
+      "C: a build on the key-based door",
+      "D: a text preference board isn't contract review"
+    ],
+    "Five to remember": [
+      "Gemini's lead is multimodal; Anthropic has no media models",
+      "Ask which board: text preference vs agentic coding",
+      "Agent Platform for IAM and regions; Gemini 4 caches implicitly only",
+      "ADK open and model-agnostic; A2A for agents, MCP for tools",
+      "Antigravity replaced Gemini CLI; Jules ends; Claude inside Gemini Enterprise"
+    ],
+    "Recap: conversation tells": [
+      "Real-time voice, video, images → Google's media models",
+      "Offline or fine-tune in house → Gemma 4, Apache 2.0",
+      "\"Gemini tops the leaderboard\" → which board?",
+      "Regions, IAM, private network → Agent Platform, not an API key",
+      "Costly agent loops → who controls the cache?",
+      "Java or Go team wants Claude → ADK with its Claude adapter",
+      "Still on Gemini CLI or Jules → trial on their own code before December",
+      "Workspace shop, one team wants Claude → Gemini Enterprise with Claude on"
+    ]
+  }
+}

@@ -1,0 +1,168 @@
+{
+  "drills": [
+    {
+      "kind": "mcq",
+      "label": "Cold open",
+      "question_line": "SAM: Here is the customer. A logistics company runs on Azure",
+      "answer_line": "SAM: So the answer is A, hosted on Azure.",
+      "scenario": "Logistics company with an Azure commitment",
+      "stem": "Hard rules: prompts and completions stay inside Azure, and the spend counts against the Azure consumption commitment. The team might try Claude Managed Agents next year. Which route?",
+      "choose": 1,
+      "options": {
+        "A": "Claude in Microsoft Foundry, hosted on Azure",
+        "B": "Claude in Microsoft Foundry, hosted on Anthropic",
+        "C": "The Claude API, bought direct from Anthropic",
+        "D": "Buy Claude through the company's cloud solution provider (CSP) partner"
+      },
+      "correct": [
+        "A"
+      ],
+      "why": "Hosted on Azure keeps prompts and completions in Azure and draws down the commitment. B may process data outside the Azure geography and has no Managed Agents either. C misses the commitment. D: CSP subscriptions cannot buy Claude in Foundry."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Choose two. A retailer runs Claude in Foundry, hosted on Azure.",
+      "answer_line": "SAM: B and D. The Files A P I is missing when hosted on Azure",
+      "scenario": "Retailer on Foundry, hosted on Azure",
+      "stem": "Choose two. Which two will fail on the hosted-on-Azure option?",
+      "choose": 2,
+      "options": {
+        "A": "Messages API calls authenticated with Entra ID",
+        "B": "Uploading product catalogues through the Files API",
+        "C": "Counting tokens before a request",
+        "D": "A nightly job through the Message Batches API",
+        "E": "Messages API calls authenticated with an API key"
+      },
+      "correct": [
+        "B",
+        "D"
+      ],
+      "why": "Files API is missing when hosted on Azure; Batches is missing on Foundry under either option. Messages, token counting and both auth methods work."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. An insurer's platform team writes everything in C sharp",
+      "answer_line": "SAM: That is the loyal answer, and it ignores both constraints. The answer is B.",
+      "scenario": "C# insurer with Semantic Kernel code",
+      "stem": "A C#/.NET team with years of Semantic Kernel code wants multi-agent handoff, with Claude as the model for two agents. What do you recommend?",
+      "choose": 1,
+      "options": {
+        "A": "Rewrite the agents in Python on the Claude Agent SDK",
+        "B": "Microsoft Agent Framework in C#, with its Anthropic model provider",
+        "C": "Stay on AutoGen, since the patterns started there",
+        "D": "A custom agent loop in C# from scratch"
+      },
+      "correct": [
+        "B"
+      ],
+      "why": "Agent Framework succeeds Semantic Kernel, runs on .NET, has handoff built in and runs Claude through its Anthropic provider. A discards language and code, C is the predecessor, D rebuilds what ships."
+    },
+    {
+      "kind": "recall",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. For each statement, say true or false. One: in a U K tenant today",
+      "answer_line": "SAM: All four. One: the U K default is no users.",
+      "prompt": "True or false? 1) In a UK tenant today, Claude is on by default in Microsoft 365 Copilot. 2) Under subprocessor terms, Claude in Microsoft 365 Copilot is covered by Microsoft's Product Terms and DPA. 3) Today, Claude in Copilot is inside the EU Data Boundary. 4) If an admin enables a Fable-class model with data retention, Anthropic is an independent processor and may keep inputs and outputs up to 30 days.",
+      "answer": "1) False: UK default is no users. 2) True. 3) False: currently excluded, move announced for December. 4) True."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. A software company with two thousand developers",
+      "answer_line": "SAM: B. A answers a question nobody asked",
+      "scenario": "GitHub Enterprise shop, 2,000 developers",
+      "stem": "Security wants one control plane for every coding agent, one bill, and central control of enabled models. Developers want Claude models and the Claude coding agent. What do you recommend?",
+      "choose": 1,
+      "options": {
+        "A": "Replace GitHub Copilot with Claude Code for all developers",
+        "B": "Keep GitHub Copilot, enable Claude models, use the Claude coding agent through Agent HQ",
+        "C": "Tell them Copilot cannot run Claude, so they need two tools",
+        "D": "Build an in-house coding agent on the Claude Agent SDK"
+      },
+      "correct": [
+        "B"
+      ],
+      "why": "Every stated constraint is consolidation, and Copilot meets it with Claude inside. A breaks one bill, C is false, D builds a product when they asked to govern one."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Recall first. Pause and name the four segments",
+      "answer_line": "ALEX: Foundry: must data stay in Azure",
+      "prompt": "Name the four segments, and the question you would ask the customer in each.",
+      "answer": "Foundry: must data stay in Azure, which features next year. Agent Framework: what language. Microsoft 365 Copilot: which tenant, region, model class. GitHub Copilot: consolidation or the full harness."
+    }
+  ],
+  "segments": {
+    "In this episode": [
+      "Microsoft on the six layers",
+      "Two ways to run Claude in Foundry",
+      "When Agent Framework is the right stack",
+      "Claude in Microsoft 365 Copilot and Copilot Cowork",
+      "GitHub Copilot versus Claude Code"
+    ],
+    "Cold open: the Azure commitment": [
+      "Model layer: mostly OpenAI and Anthropic models",
+      "Platform: Foundry; agent stack: Agent Framework, Agent Service",
+      "Coding agent: GitHub Copilot",
+      "Wrapper: Microsoft 365 Copilot, Copilot Studio, Agent 365",
+      "Route to market: the Azure bill and the M365 bundle",
+      "Ask: which door into Claude, and what it leaves out"
+    ],
+    "Segment one: Foundry, two ways to host Claude": [
+      "Native Messages API; API key or Entra ID",
+      "Hosted on Azure: prompts and completions stay in Azure",
+      "Hosted on Anthropic: more models; data may leave the geography",
+      "Azure-hosted lacks Files, Skills, code execution",
+      "Billed in CCUs, draws down the Azure commitment",
+      "CSP subscriptions cannot buy Claude"
+    ],
+    "Segment two: Agent Framework and Foundry Agent Service": [
+      "Successor to Semantic Kernel and AutoGen; MIT",
+      ".NET, Python, Go (preview); Claude Agent SDK is Python and TS",
+      "Five patterns: sequential, concurrent, handoff, group chat, Magentic",
+      "Anthropic model provider; harness agent converges with Claude Code",
+      "Agent Service: hosted agents, MCP Toolboxes, A2A v1.0 GA",
+      "No Managed Agents on Foundry; Claude prompt agents unconfirmed"
+    ],
+    "Segment three: Claude inside Microsoft 365 Copilot": [
+      "Anthropic as Microsoft subprocessor under Microsoft terms",
+      "On by default except EU, EFTA and UK",
+      "Outside the EU Data Boundary for now; change announced for December",
+      "Fable and Mythos with data retention: Anthropic's own terms, off by default",
+      "Copilot Cowork runs on Anthropic models; Cowork 1 announced",
+      "30-40% cheaper claim: vendor-reported internal test"
+    ],
+    "Segment four: GitHub Copilot and Claude Code": [
+      "Copilot: multi-model, multi-agent marketplace",
+      "Agent HQ hosts the Claude and Codex agents",
+      "Usage-based billing in GitHub AI Credits since June 2026",
+      "Stack Overflow 2026: Claude Code 66%, Copilot 59%",
+      "Menlo Ventures is an Anthropic investor: say so",
+      "Copilot sells consolidation; Claude Code the full harness"
+    ],
+    "Cold open: the verdict": [
+      "Answer: A, hosted on Azure",
+      "Hosted on Anthropic may leave the Azure geography",
+      "Neither Foundry option has Managed Agents",
+      "Direct API misses the commitment; CSP cannot buy",
+      "Tell: \"stay inside Azure\", \"count against the commitment\""
+    ],
+    "Five to remember": [
+      "Competitor and channel: which door, what it leaves out",
+      "Hosted on Azure vs hosted on Anthropic; no Managed Agents or Batches",
+      "Agent Framework: .NET, Python, Go; five patterns; runs Claude",
+      "M365 Copilot: subprocessor terms; EU, EFTA, UK off by default",
+      "Copilot sells consolidation; Claude Code the full harness"
+    ],
+    "Recap: the conversation tells": [
+      "Burn down the Azure commitment → does Foundry cover the features?",
+      "Data never leaves Azure → hosted on Azure",
+      "Buy Azure through a partner → check for CSP",
+      "Dot net shop → Agent Framework with Claude inside",
+      "Already have Claude in Copilot → which region, whose terms?",
+      "One bill for every developer → Copilot with Claude inside"
+    ]
+  }
+}

@@ -1,0 +1,205 @@
+{
+  "drills": [
+    {
+      "kind": "mcq",
+      "label": "Cold open",
+      "question_line": "SAM: Here is your opening scenario. A manufacturer runs on Microsoft",
+      "answer_line": "SAM: That is the core of it. The answer is C.",
+      "scenario": "Azure-committed manufacturer",
+      "stem": "A Microsoft 365 Copilot customer is behind on a large Azure consumption commitment, and procurement will approve new AI spend only through the Azure bill. Engineering wants Claude for an internal agent over maintenance manuals, using the Messages API with tool calls. What do you advise?",
+      "choose": 1,
+      "options": {
+        "A": "Use Azure OpenAI instead: a Microsoft shop should stay on Microsoft's models",
+        "B": "Sign directly with Anthropic for the newest features on day one",
+        "C": "Deploy Claude through Microsoft Foundry, billed against the Azure commitment, after checking the needed features are supported",
+        "D": "Microsoft 365 Copilot already includes Claude, so nothing more is needed"
+      },
+      "correct": [
+        "C"
+      ],
+      "why": "The constraint picks the route: Foundry bills through Azure Marketplace against the Azure commitment, and Messages with tool calls is supported. Check for Managed Agents or batch needs and CSP purchasing. A misreads 'Microsoft shop'; B is a separate contract off the Azure bill; D confuses the enterprise wrapper with the developer platform."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. A law firm rolled out ChatGPT Enterprise",
+      "answer_line": "SAM: B. It fits both stated facts",
+      "scenario": "Law firm already on ChatGPT",
+      "stem": "Partners use ChatGPT Enterprise daily. The forty engineers trialled Codex and Claude Code on their own repositories and prefer Claude Code. What should the CIO do?",
+      "choose": 1,
+      "options": {
+        "A": "Replace ChatGPT Enterprise with Claude across the firm, for consistency",
+        "B": "Keep ChatGPT Enterprise, add Claude Code for engineers, govern both under one AI policy",
+        "C": "Block ChatGPT and mandate Claude for everyone",
+        "D": "Keep everyone on OpenAI, engineers on Codex, because one vendor is simpler"
+      },
+      "correct": [
+        "B"
+      ],
+      "why": "Fits both facts: high chat adoption and the engineers' own trial. A and C spend adoption on tidiness; D overrides the engineers' evidence."
+    },
+    {
+      "kind": "recall",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. For each statement, say true or false.",
+      "answer_line": "SAM: Four out of five.",
+      "prompt": "True or false? 1) Claude in Microsoft Foundry draws down an Azure consumption commitment. 2) Claude billed through AWS also draws down a Microsoft commitment. 3) Claude Managed Agents are available in Foundry. 4) OpenAI's models are GA on Amazon Bedrock. 5) An Azure subscription bought through a CSP partner can buy Claude in Foundry.",
+      "answer": "1) True. 2) False. 3) False. 4) True. 5) False: CSP, free trial and credit-based subscriptions are excluded."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. A media analytics firm on Google Cloud",
+      "answer_line": "SAM: C, and that bet is fair",
+      "scenario": "Gemini is cheaper",
+      "stem": "A Google Cloud customer runs millions of short classification calls a day and a hard multi-step research agent. Finance says Gemini is cheaper, so move everything. What do you advise?",
+      "choose": 1,
+      "options": {
+        "A": "Move everything to Claude: quality on the agent matters most",
+        "B": "Move everything to Gemini: price per token is lower",
+        "C": "Eval each workload on their own data, compare cost per accepted result at post-promotion prices, accept different models per workload",
+        "D": "Pick whichever model leads Arena's text board"
+      },
+      "correct": [
+        "C"
+      ],
+      "why": "Two workloads, two answers possible; cost per accepted result at the price that will apply. A and B apply one workload's logic to both; D uses a human-preference board for jobs it does not measure."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. A federal health contractor",
+      "answer_line": "SAM: That is choosing the richer route over the stated constraint.",
+      "scenario": "FedRAMP High and HIPAA",
+      "stem": "A federal health contractor needs FedRAMP High and HIPAA coverage, runs on AWS, and has a GCC High Microsoft 365 tenant. It wants Claude to summarise case files. What fits?",
+      "choose": 1,
+      "options": {
+        "A": "Claude Platform on AWS, for the native API and same-day features",
+        "B": "Claude on Amazon Bedrock, inside the AWS boundary, building the agent loop themselves",
+        "C": "Claude inside their Microsoft 365 Copilot tenant",
+        "D": "A DeepSeek-based fine-tune hosted in their own account"
+      },
+      "correct": [
+        "B"
+      ],
+      "why": "Compliance belongs to the endpoint: Bedrock is the documented route for FedRAMP High and HIPAA. A is not HIPAA-ready and processes data outside the AWS boundary; C is not offered in GCC High; D is excluded by the DHS order."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. Choose two. A bank wants Claude, G P T and Gemini",
+      "answer_line": "SAM: A and C. B is the reverse problem",
+      "scenario": "Multi-model gateway",
+      "stem": "Choose two. A bank wants Claude, GPT and Gemini behind one gateway so it can switch models without rewriting applications. Which two practices fit?",
+      "choose": 2,
+      "options": {
+        "A": "Logical aliases mapped to pinned model versions per environment, eval before each swap",
+        "B": "Point production at each vendor's 'latest' alias",
+        "C": "Treat the gateway as tier-zero: pin versions, verify hashes, isolate its keys",
+        "D": "Choose an open-source gateway because it cannot be compromised",
+        "E": "Route every request to the cheapest model listed"
+      },
+      "correct": [
+        "A",
+        "C"
+      ],
+      "why": "Aliases plus pinning make a swap a config change and an eval run; the gateway holds every key. B changes models without an eval, D is contradicted by the LiteLLM attack, E ignores the task."
+    },
+    {
+      "kind": "mcq",
+      "label": "Drill",
+      "question_line": "SAM: Pause here and answer before we go on. A consumer brand on Google Cloud",
+      "answer_line": "SAM: B. It fits the platform they have",
+      "scenario": "Video generation",
+      "stem": "A consumer brand on Google Cloud wants an assistant that drafts campaign copy and produces short product videos with sound. What do you advise?",
+      "choose": 1,
+      "options": {
+        "A": "Claude for everything, generating video through code execution",
+        "B": "Google's video model via Google Cloud, Claude or Gemini for copy per their eval, all billed to Google Cloud",
+        "C": "Wait for Anthropic to release a video model",
+        "D": "A self-hosted open-weight pipeline to avoid any vendor"
+      },
+      "correct": [
+        "B"
+      ],
+      "why": "Claude has no first-party video model; Google leads text-to-video. A stretches a tool, C sells an unpublished roadmap, D adds GPU operations with no requirement for them."
+    },
+    {
+      "kind": "recall",
+      "question_line": "SAM: Recall first. Pause and name the ten objections",
+      "answer_line": "ALEX: Microsoft shop: which layer?",
+      "prompt": "Name the ten objections, and the question you ask back for each.",
+      "answer": "Microsoft shop: which layer? Commitment elsewhere: which features? ChatGPT: personal or company plan? Gemini cheaper, Claude expensive: per token or per result? Benchmark: whose, at what cost? Self-host: what must stay where? Lock-in: where is the state? FedRAMP or HIPAA: which endpoint? Image or video: not Claude."
+    }
+  ],
+  "segments": {
+    "In this episode": [
+      "Estate objections: Microsoft, cloud commitment, ChatGPT",
+      "Money objections: Gemini cheaper, Claude expensive, benchmarks",
+      "Control objections: self-hosting, lock-in, FedRAMP and HIPAA",
+      "Model gateways and multi-model routing",
+      "When to recommend a competitor"
+    ],
+    "Cold open: the Azure-committed manufacturer": [
+      "Microsoft 365 with Copilot already in place",
+      "Behind on an Azure consumption commitment",
+      "New AI spend only through the Azure bill",
+      "Agent on the Messages API with tool calls"
+    ],
+    "Segment one: what the customer already owns": [
+      "Claude in Microsoft 365 Copilot: Anthropic is a Microsoft subprocessor",
+      "Copilot Cowork runs on named Anthropic models; GPT in Frontier",
+      "'Cheaper per prompt' claim is Microsoft's own test: vendor-reported",
+      "OpenAI on Bedrock, Claude in Foundry: commitment no longer picks the lab",
+      "Features differ by route: Bedrock, Claude Platform on AWS, Foundry",
+      "Stack Overflow 2026: Claude Code 66%, GitHub Copilot 59% of AI users"
+    ],
+    "Segment two: price and proof": [
+      "Ranks as of November 2026; episode eight holds the numbers",
+      "Gemini: intro prices ending, implicit caching only, fast Flash churn",
+      "Google strong on intelligence per dollar; OpenAI's Sol on cost per task",
+      "Cache reads can be 95%+ of agent tokens (Menlo, an Anthropic investor)",
+      "No one leads every board; cite independent ones that fit the job",
+      "SWE-bench Verified and Pro lost OpenAI's endorsement in 2026"
+    ],
+    "Segment three: control": [
+      "Self-host: weights, data, operator access, or jurisdiction?",
+      "Open weights: Gemma 4 Apache 2.0, Mistral EU inference; licence drift",
+      "Lock-in lives in stateful managed services and platform churn",
+      "MCP under the Linux Foundation's AAIF; Claude Code reads AGENTS.md",
+      "Gateways are tier-zero: LiteLLM attack, Portkey and OpenRouter sold",
+      "Compliance belongs to the endpoint, not the logo"
+    ],
+    "Segment four: when the answer is not Claude": [
+      "No first-party image, video, music, speech or embedding models",
+      "Google leads text-to-video; OpenAI leads text-to-image",
+      "Realtime voice: OpenAI and Google, not Anthropic",
+      "Leave working chat rollouts alone",
+      "Hold the line on agentic coding and long-running agents"
+    ],
+    "Cold open: the verdict": [
+      "Answer: C, Claude through Microsoft Foundry",
+      "Foundry billing counts against the Azure commitment",
+      "Check: no Managed Agents or batch API on Foundry",
+      "Check: CSP-bought Azure cannot buy Claude",
+      "Tell: 'only through the Azure bill', 'behind on the commitment'"
+    ],
+    "Five to remember": [
+      "Microsoft shop and commitments are route to market: match features",
+      "Price is cost per accepted result: caching, routing, post-promo price",
+      "No one leads every benchmark: independent, job-shaped, your own tasks",
+      "Compliance belongs to the endpoint: FedRAMP and HIPAA point to Bedrock",
+      "Recommend competitors for media, voice, open weights; keep the exit open"
+    ],
+    "Recap: the conversation tells": [
+      "'Microsoft shop' → is Claude already on in your tenant?",
+      "'Our money is on AWS' → which features? Bedrock or Claude Platform on AWS",
+      "'Staff use ChatGPT' → governed rollout? Then leave it",
+      "'Gemini is cheaper' or 'a benchmark says' → cost per result on your tasks",
+      "'We must self-host' → weights, data, operators or jurisdiction?",
+      "'No lock-in' → aliases, pinned versions, your own evals",
+      "'FedRAMP or HIPAA' → which endpoint holds the authorisation?",
+      "'We need video or voice' → recommend the competitor"
+    ]
+  }
+}

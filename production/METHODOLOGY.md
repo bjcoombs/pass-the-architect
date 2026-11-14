@@ -1,6 +1,6 @@
 # Making an exam-prep podcast series
 
-This is how the two Pass the Architect series were made, written so the same process can produce a series for another exam. Paths are relative to `production/`.
+This is how the Pass the Architect series were made, written so the same process can produce a series for another exam. Paths are relative to `production/`.
 
 ## What the series is for
 
@@ -86,3 +86,12 @@ Then commit `docs/` and push.
 1. Copy `production/` with an empty `transcripts/`. Write a new bible from the new guide, and a listener profile.
 2. Add the series to `SERIES` in `tools/publish.py`: slug, title, iCloud folder, colour, label and listening order. Mark it `"draft": True` until it is rendered: publish then writes only its cover. Add its episode ID prefix to `FOLDERS`.
 3. Follow steps 2 to 7 above. Before writing anything, estimate the credits from the word targets: total characters times 0.2.
+
+## A series with no exam behind it
+
+Know the Field (`KNOW-THE-FIELD.md`) uses the same format for a subject with no exam guide: the companies Claude competes with. Two changes make that work.
+
+1. **Research comes first and goes in the repository.** One research agent per vendor group writes a fact sheet in `field/research/`, with a source URL, an as-of date and a High, Moderate or Low confidence mark on every fact. The sheets replace the exam guide as the primary source: writers state High facts plainly, hedge Moderate ones and drop Low ones. A fact-check pass then checks each episode against the sheets.
+2. **Fast-moving facts are kept in one episode.** Prices, benchmark ranks and model versions go in K08, whose title carries the month, so a refresh means new research and one re-recorded episode. The other episodes teach structure, licences, protocols and sales channels, which change slowly.
+
+Drills become customer scenarios. The fairness rules in `briefs/field-writer-brief.md` require at least one drill per episode whose right answer is a competitor's product or a Claude purchase through a competitor's cloud.

@@ -73,10 +73,22 @@ SERIES = [
                        "Follows the v1.0 exam guide (July 2026), for exams sat before 7 December 2026.",
         "episodes": [f"A{n:02d}" for n in range(10)],
     },
+    {
+        "slug": "know-the-field",
+        "title": "Pass the Architect: Know the Field",
+        "folder": "Pass the Architect Know the Field",
+        "colour": "#6b4e16",
+        "label": "FIELD",
+        "description": "A two-host series on the companies Claude competes with: OpenAI, Google, Microsoft, AWS, "
+                       "xAI and the open-weight labs. Where each is stronger, where Claude is, and how to answer "
+                       "a customer who asks why Claude.",
+        "episodes": [f"K{n:02d}" for n in range(9)],
+        "draft": True,
+    },
 ]
 LIVE = [s for s in SERIES if not s.get("draft")]
 # Episode ID prefix to transcript folder; IDs without a prefix are CCAR-P episodes.
-FOLDERS = {"F": "foundations", "D": "developer", "A": "associate"}
+FOLDERS = {"F": "foundations", "D": "developer", "A": "associate", "K": "field"}
 
 
 def front_matter(path):
