@@ -8,7 +8,7 @@ Study podcasts for the Claude certification exams, and a series on the companies
 | CCAR-F retake (Foundations) | https://bjcoombs.github.io/pass-the-architect/ccar-f-retake.xml |
 | CCDV-F (Developer, Foundations) | https://bjcoombs.github.io/pass-the-architect/ccdv-f.xml |
 | CCAO-F (Associate, Foundations) | https://bjcoombs.github.io/pass-the-architect/ccao-f.xml |
-| Know the Field (OpenAI, Google, Microsoft, AWS, xAI and open weights) | https://bjcoombs.github.io/pass-the-architect/know-the-field.xml (episodes 0 to 4 so far; 5 to 8 follow) |
+| Know the Field (OpenAI, Google, Microsoft, AWS, xAI and open weights) | https://bjcoombs.github.io/pass-the-architect/know-the-field.xml |
 
 To get them all at once, import https://bjcoombs.github.io/pass-the-architect/podcasts.opml. The feeds are unlisted, so subscribe by URL (in Apple Podcasts: Library, then Follow a Show by URL).
 
