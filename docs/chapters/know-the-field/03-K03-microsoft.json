@@ -1,0 +1,101 @@
+{
+  "version": "1.2.0",
+  "title": "Microsoft: competitor and channel",
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "In this episode",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/03-K03-microsoft/00.jpg"
+    },
+    {
+      "startTime": 72.82,
+      "title": "Cold open: the Azure commitment - Question 1: Logistics company with an Azure commitment",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/03-K03-microsoft/01.jpg"
+    },
+    {
+      "startTime": 193.59,
+      "title": "Segment one: Foundry, two ways to host Claude",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/03-K03-microsoft/02.jpg"
+    },
+    {
+      "startTime": 377.26,
+      "title": "Question 2: Retailer on Foundry, hosted on Azure",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/03-K03-microsoft/03.jpg"
+    },
+    {
+      "startTime": 414.74,
+      "title": "Answer 2",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/03-K03-microsoft/04.jpg"
+    },
+    {
+      "startTime": 430.66,
+      "title": "Segment two: Agent Framework and Foundry Agent Service",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/03-K03-microsoft/05.jpg"
+    },
+    {
+      "startTime": 592.23,
+      "title": "Question 3: C# insurer with Semantic Kernel code",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/03-K03-microsoft/06.jpg"
+    },
+    {
+      "startTime": 641.32,
+      "title": "Answer 3",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/03-K03-microsoft/07.jpg"
+    },
+    {
+      "startTime": 682.46,
+      "title": "Segment three: Claude inside Microsoft 365 Copilot",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/03-K03-microsoft/08.jpg"
+    },
+    {
+      "startTime": 928.18,
+      "title": "Pause and answer 4",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/03-K03-microsoft/09.jpg"
+    },
+    {
+      "startTime": 975.08,
+      "title": "Answer 4",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/03-K03-microsoft/10.jpg"
+    },
+    {
+      "startTime": 998.3,
+      "title": "Segment four: GitHub Copilot and Claude Code",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/03-K03-microsoft/11.jpg"
+    },
+    {
+      "startTime": 1140.3,
+      "title": "Question 5: GitHub Enterprise shop, 2,000 developers",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/03-K03-microsoft/12.jpg"
+    },
+    {
+      "startTime": 1192.88,
+      "title": "Answer 5",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/03-K03-microsoft/13.jpg"
+    },
+    {
+      "startTime": 1214.28,
+      "title": "Cold open: the verdict",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/03-K03-microsoft/14.jpg"
+    },
+    {
+      "startTime": 1233.55,
+      "title": "Answer 1",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/03-K03-microsoft/15.jpg"
+    },
+    {
+      "startTime": 1275.4,
+      "title": "Five to remember",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/03-K03-microsoft/16.jpg"
+    },
+    {
+      "startTime": 1359.62,
+      "title": "Recap: the conversation tells - Pause and answer 6",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/03-K03-microsoft/17.jpg"
+    },
+    {
+      "startTime": 1366.99,
+      "title": "Answer 6",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/03-K03-microsoft/18.jpg"
+    }
+  ]
+}

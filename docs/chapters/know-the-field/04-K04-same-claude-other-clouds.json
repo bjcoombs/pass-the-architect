@@ -1,0 +1,106 @@
+{
+  "version": "1.2.0",
+  "title": "Same Claude, different cloud",
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "In this episode",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/04-K04-same-claude-other-clouds/00.jpg"
+    },
+    {
+      "startTime": 68.87,
+      "title": "Cold open: the health insurer - Question 1: US health insurer on AWS",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/04-K04-same-claude-other-clouds/01.jpg"
+    },
+    {
+      "startTime": 127.24,
+      "title": "Segment one: two questions",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/04-K04-same-claude-other-clouds/02.jpg"
+    },
+    {
+      "startTime": 253.15,
+      "title": "Segment two: the A W S doors",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/04-K04-same-claude-other-clouds/03.jpg"
+    },
+    {
+      "startTime": 453.35,
+      "title": "Pause and answer 2",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/04-K04-same-claude-other-clouds/04.jpg"
+    },
+    {
+      "startTime": 494.22,
+      "title": "Answer 2",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/04-K04-same-claude-other-clouds/05.jpg"
+    },
+    {
+      "startTime": 517.3,
+      "title": "Segment three: Google Cloud and Azure",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/04-K04-same-claude-other-clouds/06.jpg"
+    },
+    {
+      "startTime": 683.73,
+      "title": "Question 3: Azure manufacturer with a MACC",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/04-K04-same-claude-other-clouds/07.jpg"
+    },
+    {
+      "startTime": 740.57,
+      "title": "Answer 3",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/04-K04-same-claude-other-clouds/08.jpg"
+    },
+    {
+      "startTime": 764.07,
+      "title": "Segment four: the table in your head",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/04-K04-same-claude-other-clouds/09.jpg"
+    },
+    {
+      "startTime": 901.8,
+      "title": "Question 4: Retailer on Google Cloud",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/04-K04-same-claude-other-clouds/10.jpg"
+    },
+    {
+      "startTime": 937.75,
+      "title": "Answer 4",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/04-K04-same-claude-other-clouds/11.jpg"
+    },
+    {
+      "startTime": 962.96,
+      "title": "Segment five: A W S's own stack",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/04-K04-same-claude-other-clouds/12.jpg"
+    },
+    {
+      "startTime": 1186.6,
+      "title": "Question 5: Multi-framework agents on AWS",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/04-K04-same-claude-other-clouds/13.jpg"
+    },
+    {
+      "startTime": 1225.66,
+      "title": "Answer 5",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/04-K04-same-claude-other-clouds/14.jpg"
+    },
+    {
+      "startTime": 1250.77,
+      "title": "Cold open: the verdict",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/04-K04-same-claude-other-clouds/15.jpg"
+    },
+    {
+      "startTime": 1266.85,
+      "title": "Answer 1",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/04-K04-same-claude-other-clouds/16.jpg"
+    },
+    {
+      "startTime": 1314.3,
+      "title": "Five to remember",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/04-K04-same-claude-other-clouds/17.jpg"
+    },
+    {
+      "startTime": 1379.54,
+      "title": "Recap: conversation tells - Pause and answer 6",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/04-K04-same-claude-other-clouds/18.jpg"
+    },
+    {
+      "startTime": 1386.53,
+      "title": "Answer 6",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/04-K04-same-claude-other-clouds/19.jpg"
+    }
+  ]
+}

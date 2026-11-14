@@ -1,0 +1,106 @@
+{
+  "version": "1.2.0",
+  "title": "Google",
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "In this episode",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/02-K02-google/00.jpg"
+    },
+    {
+      "startTime": 66.64,
+      "title": "Cold open: the Workspace retailer - Question 1: Workspace retailer, legal wants Claude",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/02-K02-google/01.jpg"
+    },
+    {
+      "startTime": 133.56,
+      "title": "Segment one: the models",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/02-K02-google/02.jpg"
+    },
+    {
+      "startTime": 360.01,
+      "title": "Question 2: Real-time voice contact centre",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/02-K02-google/03.jpg"
+    },
+    {
+      "startTime": 411.33,
+      "title": "Answer 2",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/02-K02-google/04.jpg"
+    },
+    {
+      "startTime": 439.09,
+      "title": "Segment two: two front doors",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/02-K02-google/05.jpg"
+    },
+    {
+      "startTime": 565.39,
+      "title": "Pause and answer 3",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/02-K02-google/06.jpg"
+    },
+    {
+      "startTime": 597.43,
+      "title": "Answer 3",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/02-K02-google/07.jpg"
+    },
+    {
+      "startTime": 615.17,
+      "title": "Segment three: the agent stack",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/02-K02-google/08.jpg"
+    },
+    {
+      "startTime": 786.67,
+      "title": "Question 4: Java agent platform calling a partner",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/02-K02-google/09.jpg"
+    },
+    {
+      "startTime": 837.24,
+      "title": "Answer 4",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/02-K02-google/10.jpg"
+    },
+    {
+      "startTime": 872.63,
+      "title": "Segment four: the coding agent",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/02-K02-google/11.jpg"
+    },
+    {
+      "startTime": 1038.42,
+      "title": "Question 5: Jules and Gemini CLI users before year end",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/02-K02-google/12.jpg"
+    },
+    {
+      "startTime": 1085.74,
+      "title": "Answer 5",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/02-K02-google/13.jpg"
+    },
+    {
+      "startTime": 1112.67,
+      "title": "Segment five: the enterprise wrapper",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/02-K02-google/14.jpg"
+    },
+    {
+      "startTime": 1193.16,
+      "title": "Cold open: the verdict",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/02-K02-google/15.jpg"
+    },
+    {
+      "startTime": 1205.84,
+      "title": "Answer 1",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/02-K02-google/16.jpg"
+    },
+    {
+      "startTime": 1271.87,
+      "title": "Five to remember",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/02-K02-google/17.jpg"
+    },
+    {
+      "startTime": 1338.83,
+      "title": "Recap: conversation tells - Pause and answer 6",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/02-K02-google/18.jpg"
+    },
+    {
+      "startTime": 1347.63,
+      "title": "Answer 6",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/know-the-field/02-K02-google/19.jpg"
+    }
+  ]
+}
