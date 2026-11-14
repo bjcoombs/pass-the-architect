@@ -1,0 +1,111 @@
+{
+  "version": "1.2.0",
+  "title": "LLM fundamentals and choosing a model",
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "In this episode",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/05-D05-models/00.jpg"
+    },
+    {
+      "startTime": 61.54,
+      "title": "Cold open: two million emails - Question 1: Two million emails a day",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/05-D05-models/01.jpg"
+    },
+    {
+      "startTime": 154.14,
+      "title": "How a model writes",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/05-D05-models/02.jpg"
+    },
+    {
+      "startTime": 269.0,
+      "title": "Question 2: Exact-match test fails at random",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/05-D05-models/03.jpg"
+    },
+    {
+      "startTime": 325.03,
+      "title": "Answer 2",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/05-D05-models/04.jpg"
+    },
+    {
+      "startTime": 362.04,
+      "title": "Thinking, effort and speed",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/05-D05-models/05.jpg"
+    },
+    {
+      "startTime": 495.88,
+      "title": "Question 3: Long wait before the first word",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/05-D05-models/06.jpg"
+    },
+    {
+      "startTime": 561.06,
+      "title": "Answer 3",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/05-D05-models/07.jpg"
+    },
+    {
+      "startTime": 566.61,
+      "title": "Pause and answer 4",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/05-D05-models/08.jpg"
+    },
+    {
+      "startTime": 590.51,
+      "title": "Answer 4",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/05-D05-models/09.jpg"
+    },
+    {
+      "startTime": 602.41,
+      "title": "Zero, one and many shots",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/05-D05-models/10.jpg"
+    },
+    {
+      "startTime": 675.98,
+      "title": "Question 5: Output copies the example's currency",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/05-D05-models/11.jpg"
+    },
+    {
+      "startTime": 712.14,
+      "title": "Answer 5",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/05-D05-models/12.jpg"
+    },
+    {
+      "startTime": 724.19,
+      "title": "Choosing a model, and when it changes",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/05-D05-models/13.jpg"
+    },
+    {
+      "startTime": 893.18,
+      "title": "Question 6: Prefill breaks on a newer model",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/05-D05-models/14.jpg"
+    },
+    {
+      "startTime": 923.85,
+      "title": "Answer 6",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/05-D05-models/15.jpg"
+    },
+    {
+      "startTime": 944.72,
+      "title": "Cold open: the verdict",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/05-D05-models/16.jpg"
+    },
+    {
+      "startTime": 953.92,
+      "title": "Answer 1",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/05-D05-models/17.jpg"
+    },
+    {
+      "startTime": 997.24,
+      "title": "Five to remember",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/05-D05-models/18.jpg"
+    },
+    {
+      "startTime": 1072.65,
+      "title": "Recap: the exam tells - Pause and answer 7",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/05-D05-models/19.jpg"
+    },
+    {
+      "startTime": 1078.66,
+      "title": "Answer 7",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/05-D05-models/20.jpg"
+    }
+  ]
+}

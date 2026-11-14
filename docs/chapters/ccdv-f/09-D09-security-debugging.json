@@ -1,0 +1,101 @@
+{
+  "version": "1.2.0",
+  "title": "Security, hooks, secrets and debugging",
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "In this episode",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/09-D09-security-debugging/00.jpg"
+    },
+    {
+      "startTime": 61.77,
+      "title": "Cold open: the refund email - Question 1: Support agent with a refund tool",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/09-D09-security-debugging/01.jpg"
+    },
+    {
+      "startTime": 145.75,
+      "title": "Segment one: untrusted input and leakage",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/09-D09-security-debugging/02.jpg"
+    },
+    {
+      "startTime": 352.48,
+      "title": "Question 2: Patient assistant",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/09-D09-security-debugging/03.jpg"
+    },
+    {
+      "startTime": 412.72,
+      "title": "Answer 2",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/09-D09-security-debugging/04.jpg"
+    },
+    {
+      "startTime": 434.26,
+      "title": "Segment two: guardrail layers and hooks",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/09-D09-security-debugging/05.jpg"
+    },
+    {
+      "startTime": 601.28,
+      "title": "Pause and answer 3",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/09-D09-security-debugging/06.jpg"
+    },
+    {
+      "startTime": 639.97,
+      "title": "Answer 3",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/09-D09-security-debugging/07.jpg"
+    },
+    {
+      "startTime": 661.0,
+      "title": "Segment three: secrets and keys",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/09-D09-security-debugging/08.jpg"
+    },
+    {
+      "startTime": 737.63,
+      "title": "Question 4: API keys across environments",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/09-D09-security-debugging/09.jpg"
+    },
+    {
+      "startTime": 799.89,
+      "title": "Answer 4",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/09-D09-security-debugging/10.jpg"
+    },
+    {
+      "startTime": 836.21,
+      "title": "Segment four: debugging and error handling",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/09-D09-security-debugging/11.jpg"
+    },
+    {
+      "startTime": 999.48,
+      "title": "Question 5: Invoice extraction",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/09-D09-security-debugging/12.jpg"
+    },
+    {
+      "startTime": 1038.31,
+      "title": "Answer 5",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/09-D09-security-debugging/13.jpg"
+    },
+    {
+      "startTime": 1061.57,
+      "title": "Cold open: the verdict",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/09-D09-security-debugging/14.jpg"
+    },
+    {
+      "startTime": 1070.49,
+      "title": "Answer 1",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/09-D09-security-debugging/15.jpg"
+    },
+    {
+      "startTime": 1118.92,
+      "title": "Five to remember",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/09-D09-security-debugging/16.jpg"
+    },
+    {
+      "startTime": 1184.53,
+      "title": "Recap: the exam tells - Pause and answer 6",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/09-D09-security-debugging/17.jpg"
+    },
+    {
+      "startTime": 1190.59,
+      "title": "Answer 6",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/09-D09-security-debugging/18.jpg"
+    }
+  ]
+}

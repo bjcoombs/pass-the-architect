@@ -1,0 +1,36 @@
+{
+  "version": "1.2.0",
+  "title": "Exam day",
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "In this episode",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/11-D11-exam-day/00.jpg"
+    },
+    {
+      "startTime": 37.8,
+      "title": "Before you start",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/11-D11-exam-day/01.jpg"
+    },
+    {
+      "startTime": 103.29,
+      "title": "The noteboard",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/11-D11-exam-day/02.jpg"
+    },
+    {
+      "startTime": 224.12,
+      "title": "Item formats",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/11-D11-exam-day/03.jpg"
+    },
+    {
+      "startTime": 284.96,
+      "title": "When an item stalls you",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/11-D11-exam-day/04.jpg"
+    },
+    {
+      "startTime": 326.83,
+      "title": "The last ten minutes",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/11-D11-exam-day/05.jpg"
+    }
+  ]
+}

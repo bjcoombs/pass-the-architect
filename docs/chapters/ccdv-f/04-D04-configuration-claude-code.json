@@ -1,0 +1,111 @@
+{
+  "version": "1.2.0",
+  "title": "Configuration and Claude Code",
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "In this episode",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/04-D04-configuration-claude-code/00.jpg"
+    },
+    {
+      "startTime": 57.22,
+      "title": "Cold open: the overnight change - Question 1: Nightly job changes overnight",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/04-D04-configuration-claude-code/01.jpg"
+    },
+    {
+      "startTime": 146.57,
+      "title": "The CLAUDE.md hierarchy and rules",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/04-D04-configuration-claude-code/02.jpg"
+    },
+    {
+      "startTime": 299.0,
+      "title": "Question 2: Personal sandbox instructions",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/04-D04-configuration-claude-code/03.jpg"
+    },
+    {
+      "startTime": 336.13,
+      "title": "Answer 2",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/04-D04-configuration-claude-code/04.jpg"
+    },
+    {
+      "startTime": 353.43,
+      "title": "Settings, pinning and plugins",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/04-D04-configuration-claude-code/05.jpg"
+    },
+    {
+      "startTime": 503.82,
+      "title": "Pause and answer 3",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/04-D04-configuration-claude-code/06.jpg"
+    },
+    {
+      "startTime": 536.63,
+      "title": "Answer 3",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/04-D04-configuration-claude-code/07.jpg"
+    },
+    {
+      "startTime": 549.19,
+      "title": "Skills, commands and agents",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/04-D04-configuration-claude-code/08.jpg"
+    },
+    {
+      "startTime": 679.26,
+      "title": "Question 4: Review subagent that learns",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/04-D04-configuration-claude-code/09.jpg"
+    },
+    {
+      "startTime": 710.5,
+      "title": "Answer 4",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/04-D04-configuration-claude-code/10.jpg"
+    },
+    {
+      "startTime": 721.1,
+      "title": "Sessions, headless and auto mode",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/04-D04-configuration-claude-code/11.jpg"
+    },
+    {
+      "startTime": 793.97,
+      "title": "Question 5: Unattended pipeline run",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/04-D04-configuration-claude-code/12.jpg"
+    },
+    {
+      "startTime": 834.94,
+      "title": "Answer 5",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/04-D04-configuration-claude-code/13.jpg"
+    },
+    {
+      "startTime": 882.49,
+      "title": "Question 6: Long refactor, fewer prompts",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/04-D04-configuration-claude-code/14.jpg"
+    },
+    {
+      "startTime": 915.1,
+      "title": "Answer 6",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/04-D04-configuration-claude-code/15.jpg"
+    },
+    {
+      "startTime": 956.1,
+      "title": "Cold open: the verdict",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/04-D04-configuration-claude-code/16.jpg"
+    },
+    {
+      "startTime": 964.88,
+      "title": "Answer 1",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/04-D04-configuration-claude-code/17.jpg"
+    },
+    {
+      "startTime": 1003.98,
+      "title": "Five to remember",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/04-D04-configuration-claude-code/18.jpg"
+    },
+    {
+      "startTime": 1080.5,
+      "title": "Recap: the exam tells - Pause and answer 7",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/04-D04-configuration-claude-code/19.jpg"
+    },
+    {
+      "startTime": 1087.12,
+      "title": "Answer 7",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/04-D04-configuration-claude-code/20.jpg"
+    }
+  ]
+}

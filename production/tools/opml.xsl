@@ -44,6 +44,7 @@
               </li>
             </xsl:for-each>
           </ul>
+          <p class="muted">Scripts, artwork and tools: <a href="https://github.com/bjcoombs/pass-the-architect">github.com/bjcoombs/pass-the-architect</a></p>
         </main>
       </body>
     </html>

@@ -1,0 +1,96 @@
+{
+  "version": "1.2.0",
+  "title": "Software engineering for Claude applications",
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "In this episode",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/02-D02-engineering-foundations/00.jpg"
+    },
+    {
+      "startTime": 69.29,
+      "title": "Cold open: the catalogue import - Question 1: Async fan-out and rate limits",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/02-D02-engineering-foundations/01.jpg"
+    },
+    {
+      "startTime": 337.93,
+      "title": "Pause and answer 2",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/02-D02-engineering-foundations/02.jpg"
+    },
+    {
+      "startTime": 374.27,
+      "title": "Answer 2",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/02-D02-engineering-foundations/03.jpg"
+    },
+    {
+      "startTime": 403.32,
+      "title": "Segment two: SDKs that wrap REST",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/02-D02-engineering-foundations/04.jpg"
+    },
+    {
+      "startTime": 530.27,
+      "title": "Question 3: SDKs that wrap REST",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/02-D02-engineering-foundations/05.jpg"
+    },
+    {
+      "startTime": 589.49,
+      "title": "Answer 3",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/02-D02-engineering-foundations/06.jpg"
+    },
+    {
+      "startTime": 616.42,
+      "title": "Segment three: async, streaming and websockets",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/02-D02-engineering-foundations/07.jpg"
+    },
+    {
+      "startTime": 812.07,
+      "title": "Question 4: Streaming and websockets",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/02-D02-engineering-foundations/08.jpg"
+    },
+    {
+      "startTime": 892.79,
+      "title": "Answer 4",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/02-D02-engineering-foundations/09.jpg"
+    },
+    {
+      "startTime": 928.22,
+      "title": "Segment four: version control, CI, review and refactoring",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/02-D02-engineering-foundations/10.jpg"
+    },
+    {
+      "startTime": 1163.3,
+      "title": "Question 5: Large-scale refactoring",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/02-D02-engineering-foundations/11.jpg"
+    },
+    {
+      "startTime": 1223.03,
+      "title": "Answer 5",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/02-D02-engineering-foundations/12.jpg"
+    },
+    {
+      "startTime": 1255.58,
+      "title": "Cold open: the verdict",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/02-D02-engineering-foundations/13.jpg"
+    },
+    {
+      "startTime": 1264.91,
+      "title": "Answer 1",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/02-D02-engineering-foundations/14.jpg"
+    },
+    {
+      "startTime": 1314.46,
+      "title": "Five to remember",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/02-D02-engineering-foundations/15.jpg"
+    },
+    {
+      "startTime": 1386.38,
+      "title": "Recap: the exam tells - Pause and answer 6",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/02-D02-engineering-foundations/16.jpg"
+    },
+    {
+      "startTime": 1392.4,
+      "title": "Answer 6",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/02-D02-engineering-foundations/17.jpg"
+    }
+  ]
+}

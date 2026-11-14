@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="feed.xsl"?>
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:podcast="https://podcastindex.org/namespace/1.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pass the Architect: CCAO-F</title>
+    <link>https://bjcoombs.github.io/pass-the-architect/</link>
+    <atom:link href="https://bjcoombs.github.io/pass-the-architect/ccao-f.xml" rel="self" type="application/rss+xml"/>
+    <language>en-gb</language>
+    <description>A two-host study series for the Claude Certified Associate - Foundations exam: prompting, checking outputs, products and models, workflows, Projects, responsible use and troubleshooting. Follows the v1.0 exam guide (July 2026), for exams sat before 7 December 2026.</description>
+    <itunes:summary>A two-host study series for the Claude Certified Associate - Foundations exam: prompting, checking outputs, products and models, workflows, Projects, responsible use and troubleshooting. Follows the v1.0 exam guide (July 2026), for exams sat before 7 December 2026.</itunes:summary>
+    <itunes:author>Pass the Architect</itunes:author>
+    <itunes:image href="https://bjcoombs.github.io/pass-the-architect/cover-ccao-f.png"/>
+    <image><url>https://bjcoombs.github.io/pass-the-architect/cover-ccao-f.png</url><title>Pass the Architect: CCAO-F</title><link>https://bjcoombs.github.io/pass-the-architect/</link></image>
+    <itunes:type>serial</itunes:type>
+    <itunes:block>Yes</itunes:block>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:category text="Education"/>
+    <item>
+      <title>09. Exam day</title>
+      <description>A short episode for the morning of the Associate Foundations exam: what to bring and the rules on the day, a noteboard built from the series method, how to read the countdown clock, the item formats, and what to do in the last ten minutes.</description>
+      <enclosure url="https://github.com/bjcoombs/pass-the-architect/releases/download/ccao-f/09-A09-exam-day.mp3" length="6675278" type="audio/mpeg"/>
+      <guid isPermaLink="false">pass-the-architect-ccao-f-A09-exam-day-72e3c997</guid>
+      <pubDate>Sun, 18 Oct 2026 06:09:00 +0000</pubDate>
+      <itunes:duration>0:06:12</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <podcast:chapters url="https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/09-A09-exam-day.json" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>08. Associate final drill</title>
+      <description>Thirty-five quick items across all seven Associate domains, weighted like the paper, then the wrong-answer families to strike on sight, the exam-day essentials in brief, and one last retrieval before you sleep.</description>
+      <enclosure url="https://github.com/bjcoombs/pass-the-architect/releases/download/ccao-f/08-A08-final-drill.mp3" length="28573153" type="audio/mpeg"/>
+      <guid isPermaLink="false">pass-the-architect-ccao-f-A08-final-drill-7a2e96e7</guid>
+      <pubDate>Sun, 18 Oct 2026 06:08:00 +0000</pubDate>
+      <itunes:duration>0:20:17</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <podcast:chapters url="https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/08-A08-final-drill.json" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>07. Troubleshooting and optimisation</title>
+      <description>Diagnose a poor output by finding what changed, match each symptom to its fix, turn feedback into a tested change, and streamline a repeated workflow without overspending.</description>
+      <enclosure url="https://github.com/bjcoombs/pass-the-architect/releases/download/ccao-f/07-A07-troubleshooting.mp3" length="18231841" type="audio/mpeg"/>
+      <guid isPermaLink="false">pass-the-architect-ccao-f-A07-troubleshooting-b67cb9cf</guid>
+      <pubDate>Sun, 18 Oct 2026 06:07:00 +0000</pubDate>
+      <itunes:duration>0:15:49</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <podcast:chapters url="https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/07-A07-troubleshooting.json" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>06. Governance, risk and responsible use</title>
+      <description>Sorting use cases by what happens when the output is wrong, sending only the data a task needs into an approved workspace, what to do when the AI policy is silent or something has gone wrong, and the ethics of bias, disclosure and accountability.</description>
+      <enclosure url="https://github.com/bjcoombs/pass-the-architect/releases/download/ccao-f/06-A06-responsible-use.mp3" length="21657105" type="audio/mpeg"/>
+      <guid isPermaLink="false">pass-the-architect-ccao-f-A06-responsible-use-8a57c42b</guid>
+      <pubDate>Sun, 18 Oct 2026 06:06:00 +0000</pubDate>
+      <itunes:duration>0:19:08</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <podcast:chapters url="https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/06-A06-responsible-use.json" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>05. Projects, knowledge and connectors</title>
+      <description>Setting up a Project with instructions and knowledge, choosing between uploaded files and connectors such as Google Drive and Gmail, writing project instructions that work, and keeping a shared configuration current.</description>
+      <enclosure url="https://github.com/bjcoombs/pass-the-architect/releases/download/ccao-f/05-A05-projects-knowledge.mp3" length="20484110" type="audio/mpeg"/>
+      <guid isPermaLink="false">pass-the-architect-ccao-f-A05-projects-knowledge-ea8f8061</guid>
+      <pubDate>Sun, 18 Oct 2026 06:05:00 +0000</pubDate>
+      <itunes:duration>0:17:50</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <podcast:chapters url="https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/05-A05-projects-knowledge.json" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>04. Bringing Claude into a workflow</title>
+      <description>Pulling requirements out of messy notes without settling the arguments, research and process optimisation that start from real detail, prototyping versus escalating, augmenting a step versus redesigning a process, and explaining Claude's value and limits to a sponsor.</description>
+      <enclosure url="https://github.com/bjcoombs/pass-the-architect/releases/download/ccao-f/04-A04-workflows.mp3" length="24023814" type="audio/mpeg"/>
+      <guid isPermaLink="false">pass-the-architect-ccao-f-A04-workflows-0501fcf2</guid>
+      <pubDate>Sun, 18 Oct 2026 06:04:00 +0000</pubDate>
+      <itunes:duration>0:20:52</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <podcast:chapters url="https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/04-A04-workflows.json" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>03. Choosing the product and the model</title>
+      <description>When to use chat, a Project, research or an artifact; how Haiku, Sonnet and Opus trade cost, speed and quality; and when a long conversation should be restarted, summarised or persisted.</description>
+      <enclosure url="https://github.com/bjcoombs/pass-the-architect/releases/download/ccao-f/03-A03-products-models.mp3" length="20740899" type="audio/mpeg"/>
+      <guid isPermaLink="false">pass-the-architect-ccao-f-A03-products-models-32ab17eb</guid>
+      <pubDate>Sun, 18 Oct 2026 06:03:00 +0000</pubDate>
+      <itunes:duration>0:18:17</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <podcast:chapters url="https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/03-A03-products-models.json" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>02. Checking what Claude gives you</title>
+      <description>The heaviest domain on the Associate paper: judging accuracy and completeness, catching invented details, contradictions and slanted framing, checking against the source, deciding when a person must review, adapting drafts for the reader, and choosing between inline, artifact and structured data.</description>
+      <enclosure url="https://github.com/bjcoombs/pass-the-architect/releases/download/ccao-f/02-A02-output-validation.mp3" length="26206491" type="audio/mpeg"/>
+      <guid isPermaLink="false">pass-the-architect-ccao-f-A02-output-validation-dab4e9c0</guid>
+      <pubDate>Sun, 18 Oct 2026 06:02:00 +0000</pubDate>
+      <itunes:duration>0:23:09</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <podcast:chapters url="https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/02-A02-output-validation.json" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>01. Prompting and task execution</title>
+      <description>How to write a prompt a capable newcomer could act on, break a big request into stages, iterate by changing one thing at a time, and adapt the approach for analysis, research, drafting and brainstorming.</description>
+      <enclosure url="https://github.com/bjcoombs/pass-the-architect/releases/download/ccao-f/01-A01-prompting.mp3" length="22110974" type="audio/mpeg"/>
+      <guid isPermaLink="false">pass-the-architect-ccao-f-A01-prompting-09e8ee54</guid>
+      <pubDate>Sun, 18 Oct 2026 06:01:00 +0000</pubDate>
+      <itunes:duration>0:19:43</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <podcast:chapters url="https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/01-A01-prompting.json" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>00. Associate game plan</title>
+      <description>How the Associate Foundations exam is built: sixty items, seven domain weights, countdown-clock pacing and dropdown items, and a four-step method for reading any item in plain business language, worked through the three official sample questions.</description>
+      <enclosure url="https://github.com/bjcoombs/pass-the-architect/releases/download/ccao-f/00-A00-game-plan.mp3" length="16738447" type="audio/mpeg"/>
+      <guid isPermaLink="false">pass-the-architect-ccao-f-A00-game-plan-99f45e7b</guid>
+      <pubDate>Sun, 18 Oct 2026 06:00:00 +0000</pubDate>
+      <itunes:duration>0:14:52</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <podcast:chapters url="https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/00-A00-game-plan.json" type="application/json+chapters"/>
+    </item>
+  </channel>
+</rss>

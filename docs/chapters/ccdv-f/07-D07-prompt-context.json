@@ -1,0 +1,96 @@
+{
+  "version": "1.2.0",
+  "title": "Prompts, context and output handling",
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "In this episode",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/07-D07-prompt-context/00.jpg"
+    },
+    {
+      "startTime": 61.81,
+      "title": "Cold open: the forgetful field agent - Question 1: Long-running agent",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/07-D07-prompt-context/01.jpg"
+    },
+    {
+      "startTime": 123.58,
+      "title": "Context engineering",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/07-D07-prompt-context/02.jpg"
+    },
+    {
+      "startTime": 331.09,
+      "title": "Question 2: Context isolation",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/07-D07-prompt-context/03.jpg"
+    },
+    {
+      "startTime": 386.22,
+      "title": "Answer 2",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/07-D07-prompt-context/04.jpg"
+    },
+    {
+      "startTime": 411.38,
+      "title": "Prompt engineering",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/07-D07-prompt-context/05.jpg"
+    },
+    {
+      "startTime": 681.7,
+      "title": "Pause and answer 3",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/07-D07-prompt-context/06.jpg"
+    },
+    {
+      "startTime": 715.46,
+      "title": "Answer 3",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/07-D07-prompt-context/07.jpg"
+    },
+    {
+      "startTime": 748.3,
+      "title": "Question 4: Input sanitisation",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/07-D07-prompt-context/08.jpg"
+    },
+    {
+      "startTime": 799.25,
+      "title": "Answer 4",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/07-D07-prompt-context/09.jpg"
+    },
+    {
+      "startTime": 823.53,
+      "title": "Output handling",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/07-D07-prompt-context/10.jpg"
+    },
+    {
+      "startTime": 947.02,
+      "title": "Question 5: Output validation",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/07-D07-prompt-context/11.jpg"
+    },
+    {
+      "startTime": 1024.45,
+      "title": "Answer 5",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/07-D07-prompt-context/12.jpg"
+    },
+    {
+      "startTime": 1048.73,
+      "title": "Cold open: the verdict",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/07-D07-prompt-context/13.jpg"
+    },
+    {
+      "startTime": 1061.32,
+      "title": "Answer 1",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/07-D07-prompt-context/14.jpg"
+    },
+    {
+      "startTime": 1095.54,
+      "title": "Five to remember",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/07-D07-prompt-context/15.jpg"
+    },
+    {
+      "startTime": 1161.33,
+      "title": "Recap: the exam tells - Pause and answer 6",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/07-D07-prompt-context/16.jpg"
+    },
+    {
+      "startTime": 1167.95,
+      "title": "Answer 6",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccdv-f/07-D07-prompt-context/17.jpg"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "version": "1.2.0",
+  "title": "Exam day",
+  "chapters": [
+    {
+      "startTime": 0.0,
+      "title": "In this episode",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/09-A09-exam-day/00.jpg"
+    },
+    {
+      "startTime": 39.06,
+      "title": "Before you start",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/09-A09-exam-day/01.jpg"
+    },
+    {
+      "startTime": 100.62,
+      "title": "The noteboard",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/09-A09-exam-day/02.jpg"
+    },
+    {
+      "startTime": 222.68,
+      "title": "Item formats",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/09-A09-exam-day/03.jpg"
+    },
+    {
+      "startTime": 263.22,
+      "title": "When an item rattles you",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/09-A09-exam-day/04.jpg"
+    },
+    {
+      "startTime": 318.1,
+      "title": "The last ten minutes",
+      "img": "https://bjcoombs.github.io/pass-the-architect/chapters/ccao-f/09-A09-exam-day/05.jpg"
+    }
+  ]
+}
